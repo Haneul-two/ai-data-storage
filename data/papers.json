@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-22T03:38:11Z",
+  "updatedAt": "2026-05-25T03:46:32Z",
   "items": [
     {
       "title": "SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation",
@@ -360,7 +360,7 @@
     },
     {
       "title": "Shiny Stories, Hidden Struggles: Investigating the Representation of Disability Through the Lens of LLMs",
-      "titleKo": "",
+      "titleKo": "빛나는 이야기, 숨겨진 투쟁: 법학 석사의 렌즈를 통해 장애의 표현 조사",
       "authors": [
         "Marco Bombieri, Simone Paolo Ponzetto, Marco Rospocher"
       ],
@@ -374,7 +374,7 @@
     },
     {
       "title": "Leveraging Large Language Models for Sentiment Analysis: Multi-Modal Analysis of Decentraland's MANA Token",
-      "titleKo": "",
+      "titleKo": "감정 분석을 위한 대규모 언어 모델 활용: Decentraland MANA 토큰의 다중 모드 분석",
       "authors": [
         "Xintong Wu, Peiting Tsai, Jing Yuan, Michael Yu, Greg Sun, Luyao Zhang"
       ],
@@ -388,7 +388,7 @@
     },
     {
       "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification",
-      "titleKo": "",
+      "titleKo": "다중 패스 프롬프트 검증을 통한 정성 분석의 정량화된 모델 성능 개선",
       "authors": [
         "Aisvarya Adeseye, Jouni Isoaho, Adeyemi Adeseye"
       ],
@@ -404,7 +404,7 @@
     },
     {
       "title": "Parallel LLM Reasoning for Bias-Resilient, Robust Conceptual Abstraction",
-      "titleKo": "",
+      "titleKo": "편향 탄력적이고 견고한 개념 추상화를 위한 병렬 LLM 추론",
       "authors": [
         "Aisvarya Adeseye, Jouni Isoaho, Adeyemi Adeseye"
       ],
@@ -420,7 +420,7 @@
     },
     {
       "title": "Pseudo-Siamese Network for Planning in Target-Oriented Proactive Dialogues",
-      "titleKo": "",
+      "titleKo": "목표 지향 사전 대화 계획을 위한 의사-샴 네트워크",
       "authors": [
         "Xinyue Kang, Maodong Li, Yibin Zheng, Fang Kong"
       ],
@@ -436,7 +436,7 @@
     },
     {
       "title": "Data Scaling as Progressive Coverage of a Predictive Contribution Spectrum",
-      "titleKo": "",
+      "titleKo": "예측 기여 스펙트럼의 점진적인 적용 범위로서의 데이터 확장",
       "authors": [
         "Zihui Song, Shihao Ji, Hongxi Li, Shuaizhi Cheng, Chunlin Huang"
       ],
@@ -452,7 +452,7 @@
     },
     {
       "title": "MedicalBench: Evaluating Large Language Models Toward Improved Medical Concept Extraction",
-      "titleKo": "",
+      "titleKo": "MedicalBench: 향상된 의료 개념 추출을 위한 대규모 언어 모델 평가",
       "authors": [
         "Zhichao Yang, Gregory D. Lyng, Sanjit Singh Batra, Robert E. Tillman"
       ],
@@ -466,7 +466,7 @@
     },
     {
       "title": "FlowLM: Few-Step Language Modeling via Diffusion-to-Flow Adaptation",
-      "titleKo": "",
+      "titleKo": "FlowLM: 확산-흐름 적응을 통한 몇 단계 언어 모델링",
       "authors": [
         "Runzhe Zhang, Letian Chen, Wenpeng Zhang, Zhouhan Lin, Peilin Zhao"
       ],
@@ -481,7 +481,7 @@
     },
     {
       "title": "Long-Context Reasoning Through Proxy-Based Chain-of-Thought Tuning",
-      "titleKo": "",
+      "titleKo": "프록시 기반 사고 사슬 조정을 통한 장기 상황 추론",
       "authors": [
         "Miao Li, Irina Saparina, Alexander Gurung, Mirella Lapata"
       ],
@@ -497,7 +497,7 @@
     },
     {
       "title": "Under Pressure: Emotional Framing Induces Measurable Behavioral Shifts and Structured Internal Geometry in Small Language Models",
-      "titleKo": "",
+      "titleKo": "압박감 속에서: 감정적 프레이밍은 소규모 언어 모델에서 측정 가능한 행동 변화와 구조화된 내부 기하학을 유도합니다",
       "authors": [
         "Rana Muhammad Usman"
       ],
@@ -512,7 +512,7 @@
     },
     {
       "title": "Mix-Quant: Quantized Prefilling, Precise Decoding for Agentic LLMs",
-      "titleKo": "",
+      "titleKo": "Mix-Quant: 양자화된 사전 채우기, Agentic LLM을 위한 정확한 디코딩",
       "authors": [
         "Haiquan Lu, Zigeng Chen, Gongfan Fang, Xinyin Ma, Xinchao Wang"
       ],
@@ -526,7 +526,7 @@
     },
     {
       "title": "Synchronization and Turn-Taking in Full-Duplex Speech Dialogue Models",
-      "titleKo": "",
+      "titleKo": "전이중 음성 대화 모델의 동기화 및 순서 지정",
       "authors": [
         "Pablo Riera, Pablo Brusco, Cristina Kuo, Marcelo Sancinetti, S. R. K. Branavan"
       ],
