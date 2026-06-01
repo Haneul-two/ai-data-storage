@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-29T03:34:39Z",
+  "updatedAt": "2026-06-01T04:02:18Z",
   "items": [
     {
       "name": "nexu-io/open-design",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-04-28",
-      "stars": 54927,
+      "stars": 56562,
       "language": "TypeScript",
-      "pushed": "2026-05-29",
+      "pushed": "2026-06-01",
       "trending": true
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 197452,
+      "stars": 200831,
       "language": "JavaScript",
-      "pushed": "2026-05-28",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 195301,
+      "stars": 195346,
       "language": "C++",
-      "pushed": "2026-05-29",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -86,27 +86,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 184623,
+      "stars": 184683,
       "language": "Python",
-      "pushed": "2026-05-29",
-      "trending": false
-    },
-    {
-      "name": "ollama/ollama",
-      "desc": "Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma 및 기타 모델을 시작하고 실행해 보세요.",
-      "url": "https://github.com/ollama/ollama",
-      "tags": [
-        "deepseek",
-        "gemma",
-        "gemma3",
-        "glm",
-        "go"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-06-26",
-      "stars": 172546,
-      "language": "Go",
-      "pushed": "2026-05-28",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -122,9 +104,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 171764,
+      "stars": 174900,
       "language": "Python",
-      "pushed": "2026-05-29",
+      "pushed": "2026-06-01",
+      "trending": false
+    },
+    {
+      "name": "ollama/ollama",
+      "desc": "Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma 및 기타 모델을 시작하고 실행해 보세요.",
+      "url": "https://github.com/ollama/ollama",
+      "tags": [
+        "deepseek",
+        "gemma",
+        "gemma3",
+        "glm",
+        "go"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-06-26",
+      "stars": 172764,
+      "language": "Go",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -140,7 +140,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 163333,
+      "stars": 163369,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 162988,
+      "stars": 163128,
       "language": "HTML",
-      "pushed": "2026-05-28",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -176,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 161032,
+      "stars": 161136,
       "language": "Python",
-      "pushed": "2026-05-29",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 148856,
+      "stars": 148954,
       "language": "Python",
-      "pushed": "2026-05-29",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -212,9 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 143026,
+      "stars": 143329,
       "language": "TypeScript",
-      "pushed": "2026-05-29",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -230,9 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 139099,
+      "stars": 139429,
       "language": "Python",
-      "pushed": "2026-05-28",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 137909,
+      "stars": 138153,
       "language": "Python",
-      "pushed": "2026-05-28",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -266,9 +266,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 125820,
+      "stars": 126935,
       "language": "TypeScript",
-      "pushed": "2026-05-28",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -284,7 +284,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 111482,
+      "stars": 111551,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-28",
       "trending": false
@@ -302,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 100241,
+      "stars": 100302,
       "language": "Python",
-      "pushed": "2026-05-29",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -320,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 96201,
+      "stars": 96429,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-23",
       "trending": false
@@ -338,9 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 93416,
+      "stars": 93509,
       "language": "Python",
-      "pushed": "2026-05-24",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -356,9 +356,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 87680,
+      "stars": 87714,
       "language": "C++",
-      "pushed": "2026-05-28",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -374,7 +374,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 86016,
+      "stars": 86106,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-26",
       "trending": false
@@ -392,27 +392,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 81624,
+      "stars": 81669,
       "language": "",
       "pushed": "2026-05-10",
-      "trending": false
-    },
-    {
-      "name": "mlabonne/llm-course",
-      "desc": "로드맵과 Colab 노트북을 사용하여 LLM(대형 언어 모델)을 시작하는 과정입니다.",
-      "url": "https://github.com/mlabonne/llm-course",
-      "tags": [
-        "course",
-        "large-language-models",
-        "llm",
-        "machine-learning",
-        "roadmap"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-06-17",
-      "stars": 79705,
-      "language": "",
-      "pushed": "2026-02-05",
       "trending": false
     },
     {
@@ -428,9 +410,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 79438,
+      "stars": 79927,
       "language": "TypeScript",
       "pushed": "2026-05-29",
+      "trending": false
+    },
+    {
+      "name": "mlabonne/llm-course",
+      "desc": "로드맵과 Colab 노트북을 사용하여 LLM(대형 언어 모델)을 시작하는 과정입니다.",
+      "url": "https://github.com/mlabonne/llm-course",
+      "tags": [
+        "course",
+        "large-language-models",
+        "llm",
+        "machine-learning",
+        "roadmap"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-06-17",
+      "stars": 79784,
+      "language": "",
+      "pushed": "2026-02-05",
       "trending": false
     },
     {
@@ -446,9 +446,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 75192,
+      "stars": 75515,
       "language": "Python",
-      "pushed": "2026-05-28",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 75046,
+      "stars": 75126,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 65887,
+      "stars": 66103,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-25",
       "trending": false
@@ -500,9 +500,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 53178,
+      "stars": 53239,
       "language": "TypeScript",
-      "pushed": "2026-05-29",
+      "pushed": "2026-05-30",
       "trending": false
     },
     {
@@ -515,9 +515,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 50747,
+      "stars": 50913,
       "language": "Python",
-      "pushed": "2026-05-19",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -533,7 +533,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 47831,
+      "stars": 47865,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-09",
       "trending": false
@@ -551,9 +551,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2014-11-17",
-      "stars": 43467,
+      "stars": 43500,
       "language": "Lua",
-      "pushed": "2026-05-28",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -569,9 +569,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 40886,
+      "stars": 41049,
       "language": "",
-      "pushed": "2026-05-28",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -605,7 +605,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 26375,
+      "stars": 26552,
       "language": "Python",
       "pushed": "2026-05-21",
       "trending": false
@@ -623,9 +623,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12343,
+      "stars": 12359,
       "language": "Python",
-      "pushed": "2025-10-24",
+      "pushed": "2026-05-31",
       "trending": false
     },
     {
@@ -641,7 +641,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 10680,
+      "stars": 10694,
       "language": "Python",
       "pushed": "2026-03-27",
       "trending": false
@@ -659,7 +659,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 8793,
+      "stars": 8798,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -677,9 +677,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 7450,
+      "stars": 7475,
       "language": "Rust",
-      "pushed": "2026-05-29",
+      "pushed": "2026-05-30",
       "trending": false
     },
     {
@@ -695,7 +695,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-06",
-      "stars": 7213,
+      "stars": 7216,
       "language": "Python",
       "pushed": "2025-10-30",
       "trending": false
@@ -713,7 +713,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7044,
+      "stars": 7048,
       "language": "Python",
       "pushed": "2026-05-28",
       "trending": false
