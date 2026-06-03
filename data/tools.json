@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T04:02:18Z",
+  "updatedAt": "2026-06-03T04:04:14Z",
   "items": [
     {
       "name": "nexu-io/open-design",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-04-28",
-      "stars": 56562,
+      "stars": 57715,
       "language": "TypeScript",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": true
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 200831,
+      "stars": 204254,
       "language": "JavaScript",
-      "pushed": "2026-05-31",
+      "pushed": "2026-06-02",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 195346,
+      "stars": 195402,
       "language": "C++",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -86,9 +86,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 184683,
+      "stars": 184717,
       "language": "Python",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -104,9 +104,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 174900,
+      "stars": 177620,
       "language": "Python",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 172764,
+      "stars": 172976,
       "language": "Go",
-      "pushed": "2026-05-31",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -140,7 +140,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 163369,
+      "stars": 163404,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 163128,
+      "stars": 163213,
       "language": "HTML",
-      "pushed": "2026-05-31",
+      "pushed": "2026-06-02",
       "trending": false
     },
     {
@@ -176,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 161136,
+      "stars": 161219,
       "language": "Python",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 148954,
+      "stars": 149141,
       "language": "Python",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -212,9 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 143329,
+      "stars": 143607,
       "language": "TypeScript",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -230,9 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 139429,
+      "stars": 139748,
       "language": "Python",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-02",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 138153,
+      "stars": 138359,
       "language": "Python",
-      "pushed": "2026-05-31",
+      "pushed": "2026-06-02",
       "trending": false
     },
     {
@@ -266,9 +266,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 126935,
+      "stars": 127826,
       "language": "TypeScript",
-      "pushed": "2026-05-31",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -284,7 +284,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 111551,
+      "stars": 111609,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-28",
       "trending": false
@@ -302,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 100302,
+      "stars": 100351,
       "language": "Python",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -320,9 +320,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 96429,
+      "stars": 96538,
       "language": "Jupyter Notebook",
-      "pushed": "2026-05-23",
+      "pushed": "2026-06-02",
       "trending": false
     },
     {
@@ -338,7 +338,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 93509,
+      "stars": 93574,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -356,9 +356,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 87714,
+      "stars": 87744,
       "language": "C++",
-      "pushed": "2026-05-31",
+      "pushed": "2026-06-02",
       "trending": false
     },
     {
@@ -374,7 +374,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 86106,
+      "stars": 86249,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-26",
       "trending": false
@@ -392,7 +392,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 81669,
+      "stars": 81696,
       "language": "",
       "pushed": "2026-05-10",
       "trending": false
@@ -410,7 +410,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 79927,
+      "stars": 80305,
       "language": "TypeScript",
       "pushed": "2026-05-29",
       "trending": false
@@ -428,7 +428,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 79784,
+      "stars": 79816,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -446,9 +446,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 75515,
+      "stars": 75689,
       "language": "Python",
-      "pushed": "2026-05-31",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 75126,
+      "stars": 75219,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 66103,
+      "stars": 66302,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-25",
       "trending": false
@@ -500,9 +500,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 53239,
+      "stars": 53290,
       "language": "TypeScript",
-      "pushed": "2026-05-30",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -515,9 +515,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 50913,
+      "stars": 51047,
       "language": "Python",
-      "pushed": "2026-05-31",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {
@@ -533,7 +533,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 47865,
+      "stars": 47889,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-09",
       "trending": false
@@ -551,9 +551,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2014-11-17",
-      "stars": 43500,
+      "stars": 43510,
       "language": "Lua",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -569,9 +569,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 41049,
+      "stars": 41172,
       "language": "",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -605,9 +605,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 26552,
+      "stars": 26655,
       "language": "Python",
-      "pushed": "2026-05-21",
+      "pushed": "2026-06-02",
       "trending": false
     },
     {
@@ -623,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12359,
+      "stars": 12366,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -641,7 +641,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 10694,
+      "stars": 10709,
       "language": "Python",
       "pushed": "2026-03-27",
       "trending": false
@@ -659,7 +659,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 8798,
+      "stars": 8803,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -677,9 +677,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 7475,
+      "stars": 7507,
       "language": "Rust",
-      "pushed": "2026-05-30",
+      "pushed": "2026-06-02",
       "trending": false
     },
     {
@@ -695,7 +695,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-06",
-      "stars": 7216,
+      "stars": 7215,
       "language": "Python",
       "pushed": "2025-10-30",
       "trending": false
@@ -713,9 +713,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7048,
+      "stars": 7055,
       "language": "Python",
-      "pushed": "2026-05-28",
+      "pushed": "2026-06-01",
       "trending": false
     },
     {

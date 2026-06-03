@@ -1,6 +1,535 @@
 {
-  "updatedAt": "2026-06-01T04:02:16Z",
+  "updatedAt": "2026-06-03T04:04:11Z",
   "items": [
+    {
+      "title": "Visual Graph Scaffolds for Structural Reasoning in Large Language Models",
+      "titleKo": "대규모 언어 모델의 구조적 추론을 위한 시각적 그래프 스캐폴드",
+      "authors": [
+        "Runlin Lei, Xiaokui Xiao, Zhewei Wei"
+      ],
+      "arxivId": "2606.02673",
+      "url": "https://arxiv.org/abs/2606.02673",
+      "abstract": "arXiv:2606.02673v1 Announce Type: new  Abstract: Graphs have been used to enhance large language models (LLMs) for structured reasoning, mostly as external knowledge sources are provided to models at test time. In this paper, we take a different view: the value of graphs for LLMs lie not only in sup",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "AURA: Action-Gated Memory for Robot Policies at Constant VRAM",
+      "titleKo": "AURA: 고정 VRAM에서 로봇 정책을 위한 Action-Gated 메모리",
+      "authors": [
+        "Josef Chen"
+      ],
+      "arxivId": "2606.02775",
+      "url": "https://arxiv.org/abs/2606.02775",
+      "abstract": "arXiv:2606.02775v1 Announce Type: new  Abstract: The KV-cache is the right memory for datacenters but the wrong memory for robots. Datacenter inference batches many short requests and resets them, amortizing an attention cache across a crowd. Embodied agents instead run one long, non-resetting episo",
+      "categories": [
+        "cs.AI",
+        "cs.AR",
+        "cs.DC"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Evaluating Transformer and LSTM Frameworks for Prediction in Ungauged Basins",
+      "titleKo": "측정되지 않은 분지의 예측을 위한 Transformer 및 LSTM 프레임워크 평가",
+      "authors": [
+        "Taye Akinrele, James Halgren, Noorbakhsh Amiri Golilarz, Sudip Mittal, Shahram Rahimi"
+      ],
+      "arxivId": "2606.02791",
+      "url": "https://arxiv.org/abs/2606.02791",
+      "abstract": "arXiv:2606.02791v1 Announce Type: new  Abstract: Watershed networks exhibit convergent topologies in which multiple tributaries merge into downstream channels,integrating diverse upstream hydrological processes. In ungauged basins, the absence of direct observations increases uncertainty and limits ",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "BehaviorBench: Modeling Real-World User Decisions from Behavioral Traces",
+      "titleKo": "BehaviorBench: 행동 추적을 통해 실제 사용자 결정 모델링",
+      "authors": [
+        "Liangwei Yang, Jielin Qiu, Zixiang Chen, Ming Zhu, Juntao Tan, Zhiwei Liu, Wenting Zhao, Zhujun Lan, Akshara Prabhakar, Silvio Savarese, Huan Wang, Shelby Heinecke"
+      ],
+      "arxivId": "2606.02798",
+      "url": "https://arxiv.org/abs/2606.02798",
+      "abstract": "arXiv:2606.02798v1 Announce Type: new  Abstract: Many decision-support settings require systems that adapt to individual users, but evaluation data for this problem remain limited. Existing benchmarks for user understanding often rely on simulated users or model-generated behavior, even though recen",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "ChatHealthAI: Aligning Electronic Health Record Representations with Large Language Models for Grounded Clinical Reasoning",
+      "titleKo": "ChatHealthAI: 근거 있는 임상 추론을 위해 전자 건강 기록 표현을 대규모 언어 모델과 정렬",
+      "authors": [
+        "Bo-Hong Wang, Baicheng Peng, Ruilin Wang, Jun Bai, Ziyang Song, Yue Li"
+      ],
+      "arxivId": "2606.02802",
+      "url": "https://arxiv.org/abs/2606.02802",
+      "abstract": "arXiv:2606.02802v1 Announce Type: new  Abstract: Large language models (LLMs) exhibit strong natural-language reasoning abilities for clinical decision support, but struggle to effectively model structured longitudinal electronic health records (EHRs). In contrast, EHR foundation models can learn pr",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Traj-Evolve: A Self-Evolving Multi-Agent System for Patient Trajectory Modeling in Lung Cancer Early Detection",
+      "titleKo": "Traj-Evolve: 폐암 조기 발견에서 환자 궤적 모델링을 위한 자가 진화 다중 에이전트 시스템",
+      "authors": [
+        "Sihang Zeng, Matthew Thompson, Ruth Etzioni, Meliha Yetisgen"
+      ],
+      "arxivId": "2606.02812",
+      "url": "https://arxiv.org/abs/2606.02812",
+      "abstract": "arXiv:2606.02812v1 Announce Type: new  Abstract: Modeling patient trajectories from longitudinal electronic health records (EHRs) requires reasoning over sparse, noisy, and long-context multimodal sequences. Existing LLM-based multi-agent systems address context length but process patients in isolat",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "An Exploration of Collision-based Enemy Morphology Generation",
+      "titleKo": "충돌 기반 적 형태 생성 탐색",
+      "authors": [
+        "Johor Jara Gonzalez, Matthew Guzdial"
+      ],
+      "arxivId": "2606.02832",
+      "url": "https://arxiv.org/abs/2606.02832",
+      "abstract": "arXiv:2606.02832v1 Announce Type: new  Abstract: Despite a great deal of prior research into Procedural Content Generation (PCG), relatively little prior work has explored generating enemies for video games. In particular, there is almost no work on generating enemy morphologies, the basic body plan",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Thinking Past the Answer: Evaluating Harmful Overthinking in Large Reasoning Models",
+      "titleKo": "답을 넘어서 생각하기: 대규모 추론 모델에서 유해한 과잉 사고 평가",
+      "authors": [
+        "Simone Caldarella, Davide Talon, Rahaf Aljundi, Elisa Ricci, Massimiliano Mancini"
+      ],
+      "arxivId": "2606.02835",
+      "url": "https://arxiv.org/abs/2606.02835",
+      "abstract": "arXiv:2606.02835v1 Announce Type: new  Abstract: Large Reasoning Models (LRMs) improve performance by generating explicit intermediate reasoning traces through increased test-time compute, yet the assumption that longer reasoning is consistently beneficial remains under-examined. While recent eviden",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Toward a Modular Architecture for Embedded AI Agent Systems at the Edge",
+      "titleKo": "엣지에 내장된 AI 에이전트 시스템을 위한 모듈형 아키텍처를 향하여",
+      "authors": [
+        "Marcus R\\\"ub, Michael Gerhards"
+      ],
+      "arxivId": "2606.02862",
+      "url": "https://arxiv.org/abs/2606.02862",
+      "abstract": "arXiv:2606.02862v1 Announce Type: new  Abstract: The rise of Large Language Models (LLMs) has enabled agentic AI capable of complex reasoning and tool use; however, deploying such autonomy in pervasive computing environments remains challenging due to the strict memory and energy constraints of embe",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Don't Gamble, GAMBLe: An Analytical Framework for AI-Driven Research Systems",
+      "titleKo": "도박하지 마세요, GAMBLe: AI 기반 연구 시스템을 위한 분석 프레임워크",
+      "authors": [
+        "Marquita Ellis, Paul Castro"
+      ],
+      "arxivId": "2606.02863",
+      "url": "https://arxiv.org/abs/2606.02863",
+      "abstract": "arXiv:2606.02863v1 Announce Type: new  Abstract: AI-Driven Research Systems (ADRS) -- systems coupling LLMs with automated evaluation to discover algorithms, proofs, and designs -- are being optimized and adopted across domains, but the tools to analyze them have not kept pace. ADRS performance depe",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "When Helping Hurts and How to Fix It: Multi-Agent Debate for Data Cleaning",
+      "titleKo": "상처를 도울 때와 해결 방법: 데이터 정리를 위한 다중 에이전트 토론",
+      "authors": [
+        "Chirag Parmar, Akshat Mehta, Henglin Wu, Jagadish Ramamurthy, Shweta Medhekar"
+      ],
+      "arxivId": "2606.02866",
+      "url": "https://arxiv.org/abs/2606.02866",
+      "abstract": "arXiv:2606.02866v1 Announce Type: new  Abstract: When does multi-agent debate help data cleaning, and when does it hurt? Across three benchmarks, four model families, and over 6,000 task-condition pairs, we find debate's effect reverses sign: it degrades generation across all four models (-1.6 to -1",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Handoff Debt: The Rediscovery Cost When Coding Agents Take Over Interrupted Tasks",
+      "titleKo": "핸드오프 부채: 코딩 에이전트가 중단된 작업을 인수할 때 재발견 비용",
+      "authors": [
+        "Dipesh KC, Anjila Budathoki"
+      ],
+      "arxivId": "2606.02875",
+      "url": "https://arxiv.org/abs/2606.02875",
+      "abstract": "arXiv:2606.02875v1 Announce Type: new  Abstract: Coding-agent benchmarks evaluate whether a single uninterrupted agent can resolve a repository issue. Real software work is messier: tasks are interrupted, reassigned, reviewed, and resumed from partial states left by another agent or engineer. We stu",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Human-in-the-Loop Contextual Bandits for Short-Term Rental Dynamic Pricing: Structural Equivalence of Historical Warm-Up and Approval-Gated Live Learning",
+      "titleKo": "단기 임대 동적 가격 책정을 위한 Human-in-the-Loop 상황별 도적: 역사적 워밍업 및 승인 기반 실시간 학습의 구조적 동등성",
+      "authors": [
+        "Oleg Miroshnichenko"
+      ],
+      "arxivId": "2606.02595",
+      "url": "https://arxiv.org/abs/2606.02595",
+      "abstract": "arXiv:2606.02595v1 Announce Type: new  Abstract: Dynamic pricing in short-term rental (STR) markets presents a distinctive challenge for online learning algorithms: pricing decisions carry significant financial risk, operators require explainability, and market feedback is sparse (one booking outcom",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Spectral Asymptotics of Neural Network Loss Landscapes: An Exact Decomposition of the Curvature Exponent",
+      "titleKo": "신경망 손실 환경의 스펙트럼 점근학: 곡률 지수의 정확한 분해",
+      "authors": [
+        "Anherutowa Calvo"
+      ],
+      "arxivId": "2606.02596",
+      "url": "https://arxiv.org/abs/2606.02596",
+      "abstract": "arXiv:2606.02596v1 Announce Type: new  Abstract: The curvature exponent $\\alpha$ in $h_k \\propto \\sigma_k^\\alpha$ -- governing how Hessian eigenvalues scale with gradient singular values -- varies systematically across layer types ($\\alpha \\approx 2$ for convolutions, $\\approx 1$ for transformer att",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Making Brain-Computer Interfaces More Secure",
+      "titleKo": "뇌-컴퓨터 인터페이스를 더욱 안전하게 만들기",
+      "authors": [
+        "Md Fahimul Kabir Chowdhury, Gahangir Hossain"
+      ],
+      "arxivId": "2606.02597",
+      "url": "https://arxiv.org/abs/2606.02597",
+      "abstract": "arXiv:2606.02597v1 Announce Type: new  Abstract: The development of brain-computer interfaces (BCIs) based on electroencephalograms (EEGs) has advanced significantly mainly to machine learning. Although the majority of earlier research has been on increasing classification accuracy, relatively littl",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Assessing Region-Level EEG Contributions to Cognitive Workload Prediction",
+      "titleKo": "인지 작업량 예측에 대한 지역 수준 EEG 기여도 평가",
+      "authors": [
+        "Jacob Wong, Sohan Singh, Prannaya Gupta, Jin Xing Ang, Kritika Johari, U-Xuan Tan"
+      ],
+      "arxivId": "2606.02598",
+      "url": "https://arxiv.org/abs/2606.02598",
+      "abstract": "arXiv:2606.02598v1 Announce Type: new  Abstract: Accurate and generalizable estimation of cognitive workload from electroencephalography (EEG) is critical for human-centered and safety-critical systems. Although EEG is widely used for workload assessment, the consistency of region-level EEG contribu",
+      "categories": [
+        "cs.LG",
+        "cs.HC"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Testing the Test: Score-Direction Instability in Class-Split Anomaly Detection",
+      "titleKo": "테스트 테스트: 클래스 분할 이상 탐지의 점수 방향 불안정성",
+      "authors": [
+        "Alejandro Ascarate, Leo Lebrat, Rodrigo Santa Cruz, Clinton Fookes, Olivier Salvado"
+      ],
+      "arxivId": "2606.02601",
+      "url": "https://arxiv.org/abs/2606.02601",
+      "abstract": "arXiv:2606.02601v1 Announce Type: new  Abstract: Within-dataset class-split evaluation is widely used as a proxy for fully unconditional out-of-distribution anomaly detection. We show that this protocol can become ill-posed when the held-out anomaly class overlaps the normal mixture in representatio",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Graph Mamba Survival Analysis Based on Topology-Aware ordering",
+      "titleKo": "토폴로지 인식 순서를 기반으로 한 그래프 Mamba 생존 분석",
+      "authors": [
+        "Yuanfang Chen, Peiqiang Yan, Yuntao Shou, Qian Zhao, Xiangyong Cao"
+      ],
+      "arxivId": "2606.02602",
+      "url": "https://arxiv.org/abs/2606.02602",
+      "abstract": "arXiv:2606.02602v1 Announce Type: new  Abstract: In computational pathology, Whole Slide Images (WSIs) survival analysis is crucial for patient prognosis assessment, but it faces multiple technical challenges. Although the Transformer captures long-range dependencies through its self-attention mecha",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Auditable Climate Risk Intelligence from Fragmented ESG Data: Deterministic Orchestration and Imbalance-Aware Learning for Scope 1-3 Validation",
+      "titleKo": "단편화된 ESG 데이터에서 감사 가능한 기후 위험 인텔리전스: 범위 1-3 검증을 위한 결정론적 오케스트레이션 및 불균형 인식 학습",
+      "authors": [
+        "Karan Sehgal, Khawar Naveed Bhatti"
+      ],
+      "arxivId": "2606.02604",
+      "url": "https://arxiv.org/abs/2606.02604",
+      "abstract": "arXiv:2606.02604v1 Announce Type: new  Abstract: ESG and climate risk data remain fragmented across heterogeneous Scope 1, Scope 2, and Scope 3 reporting environments, while conventional validation pipelines lack provenance aware auditability, hidden drift detection, and reproducibility oriented gov",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Cross-Modal Contrastive Learning of ECG and Angiography Representations for Severe Stenosis Classification",
+      "titleKo": "심한 협착증 분류를 위한 ECG 및 혈관 조영술 표현의 교차 모달 대조 학습",
+      "authors": [
+        "Nikola Cenikj, \\\"Ozg\\\"un Turgut, Alexander M\\\"uller, Alexander Steger, Jan Kehrer, Marcus Brugger, Daniel Rueckert, Philip M\\\"uller"
+      ],
+      "arxivId": "2606.02605",
+      "url": "https://arxiv.org/abs/2606.02605",
+      "abstract": "arXiv:2606.02605v1 Announce Type: new  Abstract: Coronary artery stenosis is a common cardiovascular disease, with severe, untreated cases posing significant risks of heart attack. Although coronary (X-ray) angiograms remain the standard for stenosis diagnosis, they are invasive, time- and resource-",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "ReLoRA: Knowledge-Reusing Adaptation for Fast Rollout of Evolving LLM Services",
+      "titleKo": "",
+      "authors": [
+        "Yang Xu, Zihuai Xu, Hongli Xu, Yunming Liao, Zhiwei Yao, Xitong Fu"
+      ],
+      "arxivId": "2606.02606",
+      "url": "https://arxiv.org/abs/2606.02606",
+      "abstract": "arXiv:2606.02606v1 Announce Type: new  Abstract: Large Language Models (LLMs) are increasingly deployed as continuously evolving services, where frequent base-model updates may invalidate previously deployed task-specific Low-Rank Adaptation (LoRA) adapters. For service providers managing numerous d",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Geometry-Aware Tabular Diffusion",
+      "titleKo": "",
+      "authors": [
+        "David Turtora Zagardo"
+      ],
+      "arxivId": "2606.02607",
+      "url": "https://arxiv.org/abs/2606.02607",
+      "abstract": "arXiv:2606.02607v1 Announce Type: new  Abstract: Tabular synthesis is critical for privacy-preserving sharing and augmentation, yet diffusion models rely on implicit mechanisms to capture inter-column relationships. We introduce Geometry-Aware Tabular Diffusion (GATD), which augments tabular diffusi",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Pruning Deep Neural Networks via the Marchenko--Pastur Distribution",
+      "titleKo": "",
+      "authors": [
+        "Leonid Berlyand, Theo Bourdais, Houman Owhad, Yitzchak Shmalo"
+      ],
+      "arxivId": "2606.02608",
+      "url": "https://arxiv.org/abs/2606.02608",
+      "abstract": "arXiv:2606.02608v1 Announce Type: new  Abstract: We study a Marchenko--Pastur (MP) random-matrix approach to pruning deep neural networks with very small post-pruning fine-tuning budgets. The main practical contribution is accuracy retention under short calibration and fine-tuning schedules, rather ",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Building Better Activation Oracles",
+      "titleKo": "",
+      "authors": [
+        "Jan Bauer, Celeste De Schamphelaere, Adam Karvonen, Niclas Luick, Neel Nanda"
+      ],
+      "arxivId": "2606.02609",
+      "url": "https://arxiv.org/abs/2606.02609",
+      "abstract": "arXiv:2606.02609v1 Announce Type: new  Abstract: Activation Oracles (AOs) are promising methods for interpreting residual stream activations. However, current AOs face important issues, such as hallucinations and vagueness. Additionally, text-inversion confounds make them hard to evaluate. To this e",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "IdiomX A Multilingual Benchmark for Idiom Understanding, Retrieval, and Interpretation",
+      "titleKo": "",
+      "authors": [
+        "Ayman Ali Sharara"
+      ],
+      "arxivId": "2606.02584",
+      "url": "https://arxiv.org/abs/2606.02584",
+      "abstract": "arXiv:2606.02584v1 Announce Type: new  Abstract: Idiomatic expressions remain a persistent challenge for natural language processing because their meanings are often non-compositional, context-dependent, and difficult to align across languages. Existing idiom resources are often limited in scale, co",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Greener Than Humans? Environmental Attitudes in Large Language Models",
+      "titleKo": "",
+      "authors": [
+        "Stefanie Kunkel, Tilman Hartwig, Marcus Voss, Emma K. Sch\\\"utt, Angelika Gellrich"
+      ],
+      "arxivId": "2606.02741",
+      "url": "https://arxiv.org/abs/2606.02741",
+      "abstract": "arXiv:2606.02741v1 Announce Type: new  Abstract: Large language models (LLMs) are increasingly used in sustainability-related decision support, reporting, and public communication, yet little systematic evidence exists on the environmental attitudes embedded in their outputs. This paper develops a b",
+      "categories": [
+        "cs.CL",
+        "cs.CY"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "On the Persistent Effects of Lexicality in Large Language Mod",
+      "titleKo": "",
+      "authors": [
+        "Hammad Rizwan, Muhammad Umair Haider, Nishant Subramani, Mona T. Diab, A. B. Siddique, Hassan Sajjad"
+      ],
+      "arxivId": "2606.02750",
+      "url": "https://arxiv.org/abs/2606.02750",
+      "abstract": "arXiv:2606.02750v1 Announce Type: new  Abstract: Representations extracted from large language models (LLMs) play an important role in many downstream applications. However, the structure of these representations is often influenced by lexical overlap rather than semantic content. Our understanding ",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Topics as Proxies for Sociodemographics: How Conversational Context Affects LLM Answers",
+      "titleKo": "",
+      "authors": [
+        "Vera Neplenbroek, Gabriele Sarti, Arianna Bisazza, Raquel Fern\\'andez"
+      ],
+      "arxivId": "2606.02776",
+      "url": "https://arxiv.org/abs/2606.02776",
+      "abstract": "arXiv:2606.02776v1 Announce Type: new  Abstract: When large language models (LLMs) are used in high-stakes scenarios, such as legal, medical and financial advice, even a single conversation history is enough to drive differences in outcomes between users. Prior work has demonstrated that this result",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Do Value Vectors in Deep Layers Need Context from the Residual Stream?",
+      "titleKo": "",
+      "authors": [
+        "Muyu He, Yuchen Liu, Qingya Huang, Li Zhang"
+      ],
+      "arxivId": "2606.02780",
+      "url": "https://arxiv.org/abs/2606.02780",
+      "abstract": "arXiv:2606.02780v1 Announce Type: new  Abstract: The success of the transformer architecture as the backbone of modern LLMs is in large part due to its use of attention layers. An attention layer follows the standard neural network paradigm: it takes the residual stream as input and thereby produces",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Translating Classical Poetry into Modern Prose",
+      "titleKo": "",
+      "authors": [
+        "Chalamalasetti Kranti, Sowmya Vajjala"
+      ],
+      "arxivId": "2606.02806",
+      "url": "https://arxiv.org/abs/2606.02806",
+      "abstract": "arXiv:2606.02806v1 Announce Type: new  Abstract: We introduce Padyam2Gadyam, a dataset for the task of poem-to-prose translation from 13th-17th Century Telugu Classical Poetry to contemporary Telugu and English prose. The dataset consists of 600 poems and their human-verified Telugu and English pros",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Fixing FOLIO and MALLS: Verified Annotations and an LLM-assisted Framework to Focus Human Relabeling",
+      "titleKo": "",
+      "authors": [
+        "Andrea Brunello, Cristian Curaba, Luca Geatti, Michele Mignani, Angelo Montanari, Nicola Saccomanno"
+      ],
+      "arxivId": "2606.02837",
+      "url": "https://arxiv.org/abs/2606.02837",
+      "abstract": "arXiv:2606.02837v1 Announce Type: new  Abstract: Accurate translation from Natural Language to First-Order Logic (NL-to-FOL) underpins neurosymbolic AI systems and Natural Language Inference (NLI), making the quality of NL-to-FOL benchmarks essential -- yet these datasets have never been rigorously ",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Economy of Minds: Emerging Multi-Agent Intelligence with Economic Interactions",
+      "titleKo": "",
+      "authors": [
+        "Zhenting Qi, Huangyuan Su, Ao Qu, Chenyu Wang, Yu Yao, Han Zheng, Kushal Chattopadhyay, Guowei Xu, Zihan Wang, Weirui Ye, Vijay Janapa Reddi, Ju Li, Paul Pu Liang, Himabindu Lakkaraju, Sham Kakade, Yilun Du"
+      ],
+      "arxivId": "2606.02859",
+      "url": "https://arxiv.org/abs/2606.02859",
+      "abstract": "arXiv:2606.02859v1 Announce Type: new  Abstract: How can a population of agents self-orchestrate and self-adapt into stronger collective intelligence without centralized control? Inspired by Friedrich Hayek's economic theory of decentralized coordination in markets, we study this question through an",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Adaptive Latent Agentic Reasoning",
+      "titleKo": "",
+      "authors": [
+        "Dongwon Jung, Peng Shi, Yi Zhang, Junshan Zhang, Muhao Chen"
+      ],
+      "arxivId": "2606.02871",
+      "url": "https://arxiv.org/abs/2606.02871",
+      "abstract": "arXiv:2606.02871v1 Announce Type: new  Abstract: Large reasoning models improve performance by generating extended chain-of-thought (CoT) reasoning, but this behavior becomes inefficient when applied to LLM agents. Current LLM agents often generate verbose textual reasoning at every decision step an",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "Linear Probes Detect Task Format, Not Reasoning Mode in Language Model Hidden States",
+      "titleKo": "",
+      "authors": [
+        "Subramanyam Sahoo, Vinija Jain, Aman Chadha, Divya Chaudhary"
+      ],
+      "arxivId": "2606.02907",
+      "url": "https://arxiv.org/abs/2606.02907",
+      "abstract": "arXiv:2606.02907v1 Announce Type: new  Abstract: Linear probing of large language model (LLM) hidden states is widely used to claim that models learn distinct representations for different reasoning types. We test this by probing Qwen3-14B on three benchmarks spanning the classical trichotomy: LogiQ",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "WRIT: Write-Read Intensive Trajectory Synthesis for Multi-Turn User-Facing Agents",
+      "titleKo": "",
+      "authors": [
+        "Hengrui Gu, Xiaotian Han, Kaixiong Zhou"
+      ],
+      "arxivId": "2606.02908",
+      "url": "https://arxiv.org/abs/2606.02908",
+      "abstract": "arXiv:2606.02908v1 Announce Type: new  Abstract: Multi-turn user-facing agents must infer user intent from incomplete requests, collect missing information through dialogue and tools, and execute valid actions. A training trajectory records this process as an interleaved sequence of user messages, a",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pubDate": "2026-06-03"
+    },
+    {
+      "title": "The Ghost Annotator: a Framework to Explore Human Label Variation in Content Moderation through Conformal Prediction",
+      "titleKo": "",
+      "authors": [
+        "Mirko Lai, Alessandra Urbinati, Simona Frenda, Fabiana Vernero, Marco Antonio Stranisci"
+      ],
+      "arxivId": "2606.02911",
+      "url": "https://arxiv.org/abs/2606.02911",
+      "abstract": "arXiv:2606.02911v1 Announce Type: new  Abstract: Current research primarily focuses on model performance, while comparatively less attention has been devoted to uncertainty estimation, particularly in settings where LLMs are increasingly used to generate annotated data. We introduce a framework comb",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-06-03"
+    },
     {
       "title": "PhyDrawGen: Physically Grounded Diagram Generation from Natural Language",
       "titleKo": "PhyDrawGen: 자연어에서 물리적 기반 다이어그램 생성",
@@ -292,7 +821,7 @@
     },
     {
       "title": "LongDS-Bench: On the Failure of Long-Horizon Agentic Data Analysis",
-      "titleKo": "",
+      "titleKo": "LongDS-Bench: Long-Horizon Agentic 데이터 분석의 실패에 대하여",
       "authors": [
         "Kewei Xu, Xiaoben Lu, Shuofei Qiao, Zihan Ding, Haoming Xu, Lei Liang, Ningyu Zhang"
       ],
@@ -308,7 +837,7 @@
     },
     {
       "title": "Calibrated Preference Learning: The Case of Label Ranking",
-      "titleKo": "",
+      "titleKo": "보정된 선호 학습: 라벨 순위 지정 사례",
       "authors": [
         "Santo M. A. R. Thies, Viktor Bengs, Timo Kaufmann, Sebastian J. Vollmer, Eyke H\\\"ullermeier"
       ],
@@ -323,7 +852,7 @@
     },
     {
       "title": "Bounded Behavioral Indistinguishability for Black-Box LLM Distillation",
-      "titleKo": "",
+      "titleKo": "블랙박스 LLM 증류에 대한 제한된 행동 구별 불가능성",
       "authors": [
         "Munawar Hasan"
       ],
@@ -338,7 +867,7 @@
     },
     {
       "title": "VeriGate: Verifier-Gated Step-Level Supervision for GRPO",
-      "titleKo": "",
+      "titleKo": "VeriGate: GRPO에 대한 Veriifier-Gated 단계 수준 감독",
       "authors": [
         "Aakriti Agrawal, Minghui Liu, Furong Huang"
       ],
@@ -352,7 +881,7 @@
     },
     {
       "title": "Protocol for evaluating ChatGPT in biomedical association generation and verification using a RAG-enabled, cross-model majority voting workflow",
-      "titleKo": "",
+      "titleKo": "RAG 지원 교차 모델 다수 투표 워크플로를 사용하여 생의학 협회 생성 및 검증에서 ChatGPT를 평가하기 위한 프로토콜",
       "authors": [
         "Ahmed Abdeen Hamed, Luis M. Rocha"
       ],
@@ -366,7 +895,7 @@
     },
     {
       "title": "Exploring Autonomous Agentic Data Engineering for Model Specialization",
-      "titleKo": "",
+      "titleKo": "모델 전문화를 위한 자율 에이전트 데이터 엔지니어링 탐색",
       "authors": [
         "Yujie Luo, Xiangyuan Ru, Jingsheng Zheng, Jingjing Wang, Yuqi Zhu, Jintian Zhang, Runnan Fang, Kewei Xu, Ye Liu, Zheng Wei, Jiang Bian, Zang Li, Shumin Deng"
       ],
@@ -382,7 +911,7 @@
     },
     {
       "title": "Domain Adaptation and Reasoning Frameworks in Language Models: A Controlled Experiment with Historical Cosmology",
-      "titleKo": "",
+      "titleKo": "언어 모델의 영역 적응 및 추론 프레임워크: 역사적 우주론을 사용한 통제된 실험",
       "authors": [
         "Francesco De Bernardis"
       ],
@@ -397,7 +926,7 @@
     },
     {
       "title": "Cross-Lingual Steering for Figurative Language Generation",
-      "titleKo": "",
+      "titleKo": "비유적 언어 생성을 위한 교차 언어 조정",
       "authors": [
         "Linfeng Liu, Tiffany Zhan, Louie Hong Yao, Saptarshi Ghosh, Tianyu Jiang"
       ],
@@ -411,7 +940,7 @@
     },
     {
       "title": "Can LLM Teams Play What? Where? When?",
-      "titleKo": "",
+      "titleKo": "LLM 팀은 무엇을 할 수 있나요? 어디? 언제?",
       "authors": [
         "Anastasia Kotelnikova, Viktor Byzov, Maria Dolzhenkova, Evgeny Kotelnikov"
       ],
@@ -425,7 +954,7 @@
     },
     {
       "title": "Knowledge Graph-Enhanced Zero-Shot Topic Classification: A Multi-Strategy Comparative Study",
-      "titleKo": "",
+      "titleKo": "지식 그래프로 강화된 제로샷 주제 분류: 다중 전략 비교 연구",
       "authors": [
         "Shahana Akter, Yatharth Vohra, Ankita Shukla, Souvika Sarkar"
       ],
@@ -2437,536 +2966,6 @@
         "cs.LG"
       ],
       "pubDate": "2026-05-19"
-    },
-    {
-      "title": "AdaGraph: A Graph-Native Clustering Algorithm That Overcomes the Curse of Dimensionality and Enables Scientific Discovery",
-      "titleKo": "AdaGraph: 차원성의 저주를 극복하고 과학적 발견을 가능하게 하는 그래프 기반 클러스터링 알고리즘",
-      "authors": [
-        "Ahmed Elmahdi"
-      ],
-      "arxivId": "2605.16320",
-      "url": "https://arxiv.org/abs/2605.16320",
-      "abstract": "arXiv:2605.16320v1 Announce Type: new  Abstract: We present AdaGraph, a graph-native clustering algorithm born from the Structure-Centric Machine Learning (SC-ML) paradigm -- a new field of unsupervised learning that replaces geometry-centric (distance-based) computation with structure-centric (topo",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Language Game: Talking to Non-Human Systems",
-      "titleKo": "언어 게임: 인간이 아닌 시스템과 대화하기",
-      "authors": [
-        "Yanbo Zhang, Michael Levin"
-      ],
-      "arxivId": "2605.16321",
-      "url": "https://arxiv.org/abs/2605.16321",
-      "abstract": "arXiv:2605.16321v1 Announce Type: new  Abstract: Language carries thought and coordination among humans but rarely reaches further along the spectrum of diverse intelligence. Yet non-neural systems -- from gene regulatory networks and microbial consortia to fungi -- are increasingly recognized as su",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Bi-Level Chaotic Fusion Based Graph Convolutional Network for Stock Market Prediction Interval",
-      "titleKo": "주식 시장 예측 구간에 대한 Bi-level Chaotic Fusion 기반 그래프 컨벌루션 네트워크",
-      "authors": [
-        "Eshwar Sai Kandimalla, Sravan Chowdary Kankanala, Sumana Bhimineni, Hem Sundhar Korukunda, Vivek Yelleti"
-      ],
-      "arxivId": "2605.16324",
-      "url": "https://arxiv.org/abs/2605.16324",
-      "abstract": "arXiv:2605.16324v1 Announce Type: new  Abstract: Financial market forecasting is inherently uncertain, yet most deep learning approaches rely on point predictions that provide only single-value estimates without quantifying uncertainty. Such predictions are insufficient for risk-aware decision-makin",
-      "categories": [
-        "cs.LG",
-        "cs.CE"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Phase Transitions in Driven Informational Systems: A Two-Field Perspective on Learning Theory and Non-Equilibrium Chemistry",
-      "titleKo": "구동 정보 시스템의 위상 전환: 학습 이론과 비평형 화학에 대한 2장 관점",
-      "authors": [
-        "Truong Xuan Khanh"
-      ],
-      "arxivId": "2605.16325",
-      "url": "https://arxiv.org/abs/2605.16325",
-      "abstract": "arXiv:2605.16325v1 Announce Type: new  Abstract: Phase-transition phenomena in deep learning (grokking, emergent capabilities, and ontological reorganization under context shift) have been studied through several lenses, including representational compression, singular learning theory, and informati",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "The Scaling Laws of Skills in LLM Agent Systems",
-      "titleKo": "LLM 에이전트 시스템의 기술 확장 법칙",
-      "authors": [
-        "Charles Chen, Qiming Yu, Yuhang Gu, Zhuoye Huang, Hanjing Li, Hongyu Liu, Simin Liu, Jinhao Liu, Dengyun Peng, Jiangyi Wang, Zheng Yan, Fanqing Meng, Ethan Qin, Carl Che, Mengkang Hu"
-      ],
-      "arxivId": "2605.16508",
-      "url": "https://arxiv.org/abs/2605.16508",
-      "abstract": "arXiv:2605.16508v1 Announce Type: new  Abstract: As agent systems scale, skills accumulate into large reusable libraries, yet their scaling laws remain poorly understood. Across 15 frontier LLMs, 1,141 real-world skills, and over 3M routing or execution decisions, we identify two coupled laws. Routi",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "PQR: A Framework to Generate Diverse and Realistic User Queries that Elicit QA Agent Failures",
-      "titleKo": "PQR: QA 에이전트 실패를 유도하는 다양하고 현실적인 사용자 쿼리를 생성하는 프레임워크",
-      "authors": [
-        "Yunan Lu, Luigi Liu, Omar Yahia, Arpit Sharma, Zhou Yu"
-      ],
-      "arxivId": "2605.16551",
-      "url": "https://arxiv.org/abs/2605.16551",
-      "abstract": "arXiv:2605.16551v1 Announce Type: new  Abstract: Evaluating LLM-based agents remains challenging because identifying meaningful failure cases often requires substantial human effort to design realistic test scenarios. Prior works primarily focus on automatically discovering agent failures induced by",
-      "categories": [
-        "cs.CL"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Scaling Accessible Mathematics on arXiv: HTML Conversion and MathML 4",
-      "titleKo": "arXiv에서 접근 가능한 수학 확장: HTML 변환 및 MathML 4",
-      "authors": [
-        "Deyan Ginev, Brian Caruso, Bruce Miller, Jeff Sank, Jacob Weiskoff"
-      ],
-      "arxivId": "2605.16562",
-      "url": "https://arxiv.org/abs/2605.16562",
-      "abstract": "arXiv:2605.16562v1 Announce Type: new  Abstract: We report on the ongoing development of arXiv's HTML Papers offering, available on every new TeX/LaTeX submission since its initial release in 2023.   The main highlights from 2025 and early 2026 are:   (i) community-driven improvements to HTML fideli",
-      "categories": [
-        "cs.CL",
-        "cs.DL"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Beyond Sentiment Classification: A Generative Framework for Emotion Intensity Evaluation in Text",
-      "titleKo": "감정 분류를 넘어서: 텍스트의 감정 강도 평가를 위한 생성적 프레임워크",
-      "authors": [
-        "Francesco A. Fabozzi, Dasol Kim, William N. Goetzmann"
-      ],
-      "arxivId": "2605.16613",
-      "url": "https://arxiv.org/abs/2605.16613",
-      "abstract": "arXiv:2605.16613v1 Announce Type: new  Abstract: We introduce a novel approach to emotion modeling that shifts the focus from   identification to evaluation, addressing the limitations of discrete classification in   applied domains such as finance. By constructing a dataset of emotional intensity  ",
-      "categories": [
-        "cs.CL"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "SKG-Eval: Stateful Evaluation of Multi-Turn Dialogue via Incremental Semantic Knowledge Graphs",
-      "titleKo": "SKG-Eval: 증분 의미론적 지식 그래프를 통한 다중 회전 대화의 상태 기반 평가",
-      "authors": [
-        "Avijit Shil, Suman Samui"
-      ],
-      "arxivId": "2605.16650",
-      "url": "https://arxiv.org/abs/2605.16650",
-      "abstract": "arXiv:2605.16650v1 Announce Type: new  Abstract: Evaluating multi-turn dialogue systems remains challenging because response quality depends not only on the current prompt, but also on previously established entities, claims, and conversational commitments. Existing automatic evaluators, including L",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "A Scalable Tool for Measuring Manner and Result Verbs in Developmental Language Research",
-      "titleKo": "발달 언어 연구에서 방식 및 결과 동사를 측정하기 위한 확장 가능한 도구",
-      "authors": [
-        "Divyesh Pratap Singh, Dakshesh Gusain, Federica Bulgarelli, Alison Eisel Hendricks, John Beavers, Nathan M. Beers, Ifeoma Nwogu"
-      ],
-      "arxivId": "2605.16654",
-      "url": "https://arxiv.org/abs/2605.16654",
-      "abstract": "arXiv:2605.16654v1 Announce Type: new  Abstract: Manner and result verbs encode different aspects of event structure and have been discussed in developmental work as a potentially informative distinction for studying early verb learning. However, this distinction remains difficult to measure at scal",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?",
-      "titleKo": "CHI-벤치: AI 에이전트가 엔드투엔드, 장거리, 정책이 풍부한 의료 워크플로를 자동화할 수 있습니까?",
-      "authors": [
-        "Haolin Chen, Deon Metelski, Leon Qi, Tao Xia, Joonyul Lee, Steve Brown, Kevin Riley, Frank Wang, T. Y. Alvin Liu, Hank Capps MD, Zeyu Tang, Xiangchen Song, Lingjing Kong, Fan Feng, Tianyi Zeng, Zhiwei Liu, Zixian Ma, Hang Jiang, Fangli Geng, Yuan Yuan, Chenyu You, Qingsong Wen, Hua Wei, Yanjie Fu, Yue Zhao, Carl Yang, Biwei Huang, Kun Zhang, Caiming Xiong, Sanmi Koyejo, Eric P. Xing, Philip S. Yu, Weiran Yao"
-      ],
-      "arxivId": "2605.16679",
-      "url": "https://arxiv.org/abs/2605.16679",
-      "abstract": "arXiv:2605.16679v2 Announce Type: new  Abstract: End-to-end automation of realistic healthcare operations stresses three capabilities underrepresented in current benchmarks: policy density, decisions must be grounded in a large library of medical, insurance, and operational rules; Multi-role composi",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Language Acquisition Device in Large Language Models",
-      "titleKo": "대규모 언어 모델의 언어 습득 장치",
-      "authors": [
-        "Masato Mita, Taiga Someya, Ryo Yoshida, Yohei Oseki"
-      ],
-      "arxivId": "2605.16758",
-      "url": "https://arxiv.org/abs/2605.16758",
-      "abstract": "arXiv:2605.16758v1 Announce Type: new  Abstract: Large Language Models (LLMs) remain substantially less data-efficient than humans. Pre-pretraining (PPT) on synthetic languages has been proposed to close this gap, with prior work emphasizing highly expressive formal languages such as $k$-Shuffle Dyc",
-      "categories": [
-        "cs.CL"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Retrieval-Based Multi-Label Legal Annotation: Extensible, Data-Efficient and Hallucination-Free",
-      "titleKo": "검색 기반 다중 레이블 법적 주석: 확장 가능하고 데이터 효율적이며 환각이 없습니다.",
-      "authors": [
-        "Li Zhang, Jaromir Savelka, Kevin Ashley"
-      ],
-      "arxivId": "2605.16767",
-      "url": "https://arxiv.org/abs/2605.16767",
-      "abstract": "arXiv:2605.16767v1 Announce Type: new  Abstract: Multi-label legal annotation requires assigning multiple labels from large, evolving taxonomies to long, fact-intensive documents, often under limited supervision. Parametric encoders typically require task-specific training and retraining when the la",
-      "categories": [
-        "cs.CL"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Exploring Lightweight Large Language Models for Court View Generation",
-      "titleKo": "법원 보기 생성을 위한 경량 대형 언어 모델 탐색",
-      "authors": [
-        "Zhitian Hou, Tianyong Hao, Nanli Zeng, Zhixiong Chao, Kun Zeng"
-      ],
-      "arxivId": "2605.16770",
-      "url": "https://arxiv.org/abs/2605.16770",
-      "abstract": "arXiv:2605.16770v1 Announce Type: new  Abstract: Criminal Court View Generation (CVG) is a critical task in Legal Artificial Intelligence (Legal AI), involving the generation of court view based on case facts. In this work, we systematically explore the capabilities of lightweight (smaller than 2B) ",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "AgentKernelArena: Generalization-Aware Benchmarking of GPU Kernel Optimization Agents",
-      "titleKo": "AgentKernelArena: GPU 커널 최적화 에이전트의 일반화 인식 벤치마킹",
-      "authors": [
-        "Sharareh Younesian, Wenwen Ouyang, Sina Rafati, Mehdi Rezagholizadeh, Sharon Zhou, Ji Liu, Yue Liu, Yuchen Yang, Hao Li, Ziqiong Liu, Dong Li, Vikram Appia, Zhenyu Gu, Emad Barsoum"
-      ],
-      "arxivId": "2605.16819",
-      "url": "https://arxiv.org/abs/2605.16819",
-      "abstract": "arXiv:2605.16819v1 Announce Type: new  Abstract: GPU kernel optimization is increasingly critical for efficient deep learning systems, but writing high-performance kernels still requires substantial low-level expertise. Recent AI coding agents can iteratively read code, invoke compilers and profiler",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Constrained Code Generation with Discrete Diffusion",
-      "titleKo": "이산 확산을 통한 제한된 코드 생성",
-      "authors": [
-        "Lize Shao, Michael Cardei, Zichen Xie, Ferdinando Fioretto, Wenxi Wang"
-      ],
-      "arxivId": "2605.16829",
-      "url": "https://arxiv.org/abs/2605.16829",
-      "abstract": "arXiv:2605.16829v1 Announce Type: new  Abstract: Discrete diffusion models are a powerful, emerging paradigm for code generation. They construct programs through iterative refinement of partially corrupted token sequences and enable parallel token refinement. Importantly, this paradigm exposes a glo",
-      "categories": [
-        "cs.CL",
-        "cs.PL"
-      ],
-      "pubDate": "2026-05-19"
-    },
-    {
-      "title": "Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents",
-      "titleKo": "두 번 생각하고 한 번만 행동하세요: 구체화된 에이전트에 대한 검증자 기반 작업 선택",
-      "authors": [
-        "Nishad Singhi, Christian Bialas, Snehal Jauhri, Vignesh Prasad, Georgia Chalvatzaki, Marcus Rohrbach, Anna Rohrbach"
-      ],
-      "arxivId": "2605.12620",
-      "url": "https://arxiv.org/abs/2605.12620",
-      "abstract": "arXiv:2605.12620v1 Announce Type: new  Abstract: Building generalist embodied agents capable of solving complex real-world tasks remains a fundamental challenge in AI. Multimodal Large Language Models (MLLMs) have significantly advanced the reasoning capabilities of such agents through strong vision",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Macro-Action Based Multi-Agent Instruction Following through Value Cancellation",
-      "titleKo": "값 취소를 통한 매크로 액션 기반 다중 에이전트 명령",
-      "authors": [
-        "Wo Wei Lin, Ethan Rathbun, Enrico Marchesini Xiang Zhi Tan"
-      ],
-      "arxivId": "2605.12655",
-      "url": "https://arxiv.org/abs/2605.12655",
-      "abstract": "arXiv:2605.12655v1 Announce Type: new  Abstract: Multi-agent reinforcement learning (MARL) in real-world use cases may need to adapt to external natural language instructions that interrupt ongoing behavior and conflict with long-horizon objectives. However, conditioning rewards on instructions intr",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack",
-      "titleKo": "안드로이드는 게임 깨기를 꿈꾸는가? BenchJack을 사용하여 AI 에이전트 벤치마크를 체계적으로 감사",
-      "authors": [
-        "Hao Wang, Hanchen Li, Qiuyang Mang, Alvin Cheung, Koushik Sen, Dawn Song"
-      ],
-      "arxivId": "2605.12673",
-      "url": "https://arxiv.org/abs/2605.12673",
-      "abstract": "arXiv:2605.12673v1 Announce Type: new  Abstract: Agent benchmarks have become the de facto measure of frontier AI competence, guiding model selection, investment, and deployment. However, reward hacking, where agents maximize a score without performing the intended task, emerges spontaneously in fro",
-      "categories": [
-        "cs.AI",
-        "cs.CR"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Revealing Interpretable Failure Modes of VLMs",
-      "titleKo": "VLM의 해석 가능한 실패 모드 공개",
-      "authors": [
-        "Isha Chaudhary, Vedaant V Jain, Kavya Sachdeva, Sayan Ranu, Gagandeep Singh"
-      ],
-      "arxivId": "2605.12674",
-      "url": "https://arxiv.org/abs/2605.12674",
-      "abstract": "arXiv:2605.12674v1 Announce Type: new  Abstract: Vision-Language Models (VLMs) are increasingly used in safety-critical applications because of their broad reasoning capabilities and ability to generalize with minimal task-specific engineering. Despite these advantages, they can exhibit catastrophic",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Learning Transferable Latent User Preferences for Human-Aligned Decision Making",
-      "titleKo": "인간 중심 의사결정을 위한 이전 가능한 잠재 사용자 선호도 학습",
-      "authors": [
-        "Alina Hyk, Sandhya Saisubramanian"
-      ],
-      "arxivId": "2605.12682",
-      "url": "https://arxiv.org/abs/2605.12682",
-      "abstract": "arXiv:2605.12682v1 Announce Type: new  Abstract: Large language models (LLMs) are increasingly used as reasoning modules in many applications. While they are efficient in certain tasks, LLMs often struggle to produce human-aligned solutions. Human-aligned decision making requires accounting for both",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "On the Size Complexity and Decidability of First-Order Progression",
-      "titleKo": "1차 진행의 크기 복잡성과 결정 가능성",
-      "authors": [
-        "Jens Classen, Daxin Liu"
-      ],
-      "arxivId": "2605.12691",
-      "url": "https://arxiv.org/abs/2605.12691",
-      "abstract": "arXiv:2605.12691v1 Announce Type: new  Abstract: Progression, the task of updating a knowledge base to reflect action effects, generally requires second-order logic. Identifying first-order special cases, by restricting either the knowledge base or action effects, has long been a central topic in re",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "DisaBench: A Participatory Evaluation Framework for Disability Harms in Language Models",
-      "titleKo": "DisaBench: 언어 모델의 장애 피해에 대한 참여 평가 프레임워크",
-      "authors": [
-        "Eugenia Kim, Ioana Tanase, Christina Mallon"
-      ],
-      "arxivId": "2605.12702",
-      "url": "https://arxiv.org/abs/2605.12702",
-      "abstract": "arXiv:2605.12702v1 Announce Type: new  Abstract: General-purpose safety benchmarks for large language models do not adequately evaluate disability-related harms. We introduce DisaBench: a taxonomy of twelve disability harm categories co-created with people with disabilities and red teaming experts, ",
-      "categories": [
-        "cs.AI",
-        "cs.HC"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "CHAL: Council of Hierarchical Agentic Language",
-      "titleKo": "CAL: 계층적 에이전트 언어 협의회",
-      "authors": [
-        "Tommaso Giovannelli, Griffin D. Kent"
-      ],
-      "arxivId": "2605.12718",
-      "url": "https://arxiv.org/abs/2605.12718",
-      "abstract": "arXiv:2605.12718v1 Announce Type: new  Abstract: Multi-agent debate has emerged as a promising approach for improving LLM reasoning on ground-truth tasks, yet current methodologies face certain structural limitations: debate tends to induce a martingale over belief trajectories, majority voting acco",
-      "categories": [
-        "cs.AI",
-        "cs.LG",
-        "cs.MA"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "BEHAVE: A Hybrid AI Framework for Real-Time Modeling of Collective Human Dynamics",
-      "titleKo": "BEHAVE: 집단적 인간 역학의 실시간 모델링을 위한 하이브리드 AI 프레임워크",
-      "authors": [
-        "Helene Malyutina"
-      ],
-      "arxivId": "2605.12730",
-      "url": "https://arxiv.org/abs/2605.12730",
-      "abstract": "arXiv:2605.12730v1 Announce Type: new  Abstract: Existing AI systems for modeling human behavior operate at the level of individuals or detect events after they occur. As a result, they systematically fail to capture the collective dynamics that determine whether a group remains stable or transition",
-      "categories": [
-        "cs.AI",
-        "cs.GR",
-        "cs.MA"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "State-Centric Decision Process",
-      "titleKo": "국가 중심 의사결정 과정",
-      "authors": [
-        "Sungheon Jeong, Ryozo Masukawa, Sanggeon Yun, Mahdi Imani, Mohsen Imani"
-      ],
-      "arxivId": "2605.12755",
-      "url": "https://arxiv.org/abs/2605.12755",
-      "abstract": "arXiv:2605.12755v1 Announce Type: new  Abstract: Language environments such as web browsers, code terminals, and interactive simulations emit raw text rather than states, and provide none of the runtime structure that MDP analysis requires. No explicit state space, no observation-to-state mapping, n",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "PROMETHEUS: Automating Deep Causal Research Integrating Text, Data and Models",
-      "titleKo": "PROMETHEUS: 텍스트, 데이터 및 모델을 통합하는 심층 인과 연구 자동화",
-      "authors": [
-        "Sridhar Mahadevan"
-      ],
-      "arxivId": "2605.12835",
-      "url": "https://arxiv.org/abs/2605.12835",
-      "abstract": "arXiv:2605.12835v1 Announce Type: new  Abstract: Large language models can extract local causal claims from text, but those claims become more useful when organized as persistent, navigable world models rather than as flat summaries. We introduce PROMETHEUS, a framework that turns retrieved literatu",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Multimodal Hidden Markov Models for Persistent Emotional State Tracking",
-      "titleKo": "지속적인 감정 상태 추적을 위한 다중 모달 은닉 마르코프 모델",
-      "authors": [
-        "Anamika Ragu, Aneesh Jonelagadda"
-      ],
-      "arxivId": "2605.12838",
-      "url": "https://arxiv.org/abs/2605.12838",
-      "abstract": "arXiv:2605.12838v1 Announce Type: new  Abstract: Tracking an interpretable emotional arc of a conversation via the sentiment of individual utterances processed as a whole is central to both understanding and guiding communication in applied, especially clinical, conversational contexts. Existing app",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Learning When to Act: Communication-Efficient Reinforcement Learning via Run-Time Assurance",
-      "titleKo": "행동 시기 학습: 런타임 보장을 통한 의사소통 효율적인 강화 학습",
-      "authors": [
-        "Adam Haroon, Erick J. Rodr\\'iguez-Seda, Cody Fleming, Tristan Schuler"
-      ],
-      "arxivId": "2605.12561",
-      "url": "https://arxiv.org/abs/2605.12561",
-      "abstract": "arXiv:2605.12561v1 Announce Type: new  Abstract: Safe reinforcement learning (RL) typically asks $\\textit{what}$ an agent should do. We ask $\\textit{when}$ it needs to act, and show that a single policy can jointly learn control inputs and communication-efficient timing decisions under a pointwise L",
-      "categories": [
-        "cs.LG",
-        "cs.RO"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "CAWI: Copula-Aligned Weight Initialization for Randomized Neural Networks",
-      "titleKo": "CAWI: 무작위 신경망을 위한 코퓰라 정렬 가중치 초기화",
-      "authors": [
-        "Mushir Akhtar, M. Tanveer, Mohd. Arshad"
-      ],
-      "arxivId": "2605.12580",
-      "url": "https://arxiv.org/abs/2605.12580",
-      "abstract": "arXiv:2605.12580v1 Announce Type: new  Abstract: Randomized neural networks (RdNNs) enable efficient, backpropagation-free training by freezing randomly initialized input-to-hidden weights, which permits a closed-form solution for the output layer. However, conventional random initialization is blin",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Towards Robust Federated Multimodal Graph Learning under Modality Heterogeneity",
-      "titleKo": "양식 이질성 하에서 강력한 연합 다중 모드 그래프 학습을 향하여",
-      "authors": [
-        "Sirui Zhang, Haonan Wang, Xunkai Li, Zekai Chen, Shumeng Li, Hongchao Qin, Rong-Hua Li, Guoren Wang"
-      ],
-      "arxivId": "2605.12584",
-      "url": "https://arxiv.org/abs/2605.12584",
-      "abstract": "arXiv:2605.12584v1 Announce Type: new  Abstract: Recently, multimodal graph learning (MGL) has garnered significant attention for integrating diverse modality information and structured context to support various network applications. However, real-world graphs are often isolated due to data-sharing",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "OceanCBM: A Concept Bottleneck Model for Mechanistic Interpretability in Ocean Forecasting",
-      "titleKo": "OceanCBM: 해양 예측의 기계적 해석성을 위한 개념 병목 모델",
-      "authors": [
-        "Sanah Suri, Kieran Ringel, Maike Sonnewald"
-      ],
-      "arxivId": "2605.12639",
-      "url": "https://arxiv.org/abs/2605.12639",
-      "abstract": "arXiv:2605.12639v1 Announce Type: new  Abstract: Extreme ocean phenomena are challenging not only to predict but to diagnose, as accurate forecasts alone do not reveal the underlying physical drivers. While recent machine learning approaches achieve strong predictive skill, they remain largely opaqu",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Learning to Decide with AI Assistance under Human-Alignment",
-      "titleKo": "인간 정렬 하에서 AI 지원을 통해 결정하는 방법 학습",
-      "authors": [
-        "Nina Corvelo Benz, Eleni Straitouri, Manuel Gomez-Rodriguez"
-      ],
-      "arxivId": "2605.12646",
-      "url": "https://arxiv.org/abs/2605.12646",
-      "abstract": "arXiv:2605.12646v1 Announce Type: new  Abstract: It is widely agreed that when AI models assist decision-makers in high-stakes domains by predicting an outcome of interest, they should communicate the confidence of their predictions. However, empirical evidence suggests that decision-makers often st",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.HC"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Population Risk Bounds for Kolmogorov-Arnold Networks Trained by DP-SGD with Correlated Noise",
-      "titleKo": "DP-SGD에서 상관 노이즈를 사용하여 훈련한 Kolmogorov-Arnold 네트워크의 모집단 위험 한계",
-      "authors": [
-        "Puyu Wang, Jan Schuchardt, Nikita Kalinin, Junyu Zhou, Sophie Fellenz, Christoph Lampert, Marius Kloft"
-      ],
-      "arxivId": "2605.12648",
-      "url": "https://arxiv.org/abs/2605.12648",
-      "abstract": "arXiv:2605.12648v1 Announce Type: new  Abstract: We establish the first population risk bounds for Kolmogorov-Arnold Networks (KANs) trained by mini-batch SGD with gradient clipping, covering non-private SGD as well as differentially private SGD (DP-SGD) with Gaussian perturbations that interpolate ",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Runtime Monitoring of Perception-Based Autonomous Systems via Embedding Temporal Logic",
-      "titleKo": "시간 논리 내장을 통한 인지 기반 자율 시스템의 런타임 모니터링",
-      "authors": [
-        "Parv Kapoor, Abigail Hammer, Ashish Kapoor, Karen Leung, Eunsuk Kang"
-      ],
-      "arxivId": "2605.12651",
-      "url": "https://arxiv.org/abs/2605.12651",
-      "abstract": "arXiv:2605.12651v2 Announce Type: new  Abstract: Runtime monitoring of autonomous systems traditionally relies on mapping continuous sensor observations to discrete logical propositions defined over low-dimensional state variables. This abstraction breaks down in perception-driven settings, where su",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-05-14"
-    },
-    {
-      "title": "Multi-Rollout On-Policy Distillation via Peer Successes and Failures",
-      "titleKo": "피어 성공 및 실패를 통한 다중 롤아웃 정책 기반 증류",
-      "authors": [
-        "Weichen Yu, Xiaomin Li, Yizhou Zhao, Xiaoze Liu, Ruowang Zhang, Haixin Wang, Yinyi Luo, Chen Henry Wu, Gaurav Mittal, Matt Fredrikson, Yu Hu"
-      ],
-      "arxivId": "2605.12652",
-      "url": "https://arxiv.org/abs/2605.12652",
-      "abstract": "arXiv:2605.12652v1 Announce Type: new  Abstract: Large language models are often post-trained with sparse verifier rewards, which indicate whether a sampled trajectory succeeds but provide limited guidance about where reasoning succeeds or fails. On-policy distillation (OPD) offers denser token-leve",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "pubDate": "2026-05-14"
     }
   ]
 }
