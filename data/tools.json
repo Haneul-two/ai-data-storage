@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-03T04:04:14Z",
+  "updatedAt": "2026-06-05T03:42:32Z",
   "items": [
     {
       "name": "nexu-io/open-design",
@@ -86,9 +86,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 184717,
+      "stars": 184768,
       "language": "Python",
-      "pushed": "2026-06-03",
+      "pushed": "2026-06-05",
       "trending": false
     },
     {
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 163213,
+      "stars": 163304,
       "language": "HTML",
-      "pushed": "2026-06-02",
+      "pushed": "2026-06-04",
       "trending": false
     },
     {
@@ -320,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 96538,
+      "stars": 96669,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-02",
       "trending": false
@@ -338,7 +338,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 93574,
+      "stars": 93605,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -410,9 +410,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 80305,
+      "stars": 80703,
       "language": "TypeScript",
-      "pushed": "2026-05-29",
+      "pushed": "2026-06-03",
       "trending": false
     },
     {
@@ -446,9 +446,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 75689,
+      "stars": 75865,
       "language": "Python",
-      "pushed": "2026-06-03",
+      "pushed": "2026-06-04",
       "trending": false
     },
     {
@@ -500,9 +500,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 53290,
+      "stars": 53348,
       "language": "TypeScript",
-      "pushed": "2026-06-03",
+      "pushed": "2026-06-05",
       "trending": false
     },
     {
@@ -515,7 +515,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 51047,
+      "stars": 51147,
       "language": "Python",
       "pushed": "2026-06-01",
       "trending": false
@@ -533,7 +533,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 47889,
+      "stars": 47954,
       "language": "Jupyter Notebook",
       "pushed": "2026-05-09",
       "trending": false
@@ -551,9 +551,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2014-11-17",
-      "stars": 43510,
+      "stars": 43520,
       "language": "Lua",
-      "pushed": "2026-06-03",
+      "pushed": "2026-06-04",
       "trending": false
     },
     {
