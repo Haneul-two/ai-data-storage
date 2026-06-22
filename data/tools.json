@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T04:16:17Z",
+  "updatedAt": "2026-06-22T04:12:12Z",
   "items": [
     {
       "name": "nexu-io/open-design",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-04-28",
-      "stars": 67524,
+      "stars": 68713,
       "language": "TypeScript",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-22",
       "trending": true
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 217838,
+      "stars": 219412,
       "language": "JavaScript",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-22",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 197077,
+      "stars": 199152,
       "language": "Python",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-22",
       "trending": false
     },
     {
@@ -68,9 +68,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 195764,
+      "stars": 195811,
       "language": "C++",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-22",
       "trending": false
     },
     {
@@ -104,9 +104,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 185020,
+      "stars": 185063,
       "language": "Python",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 174488,
+      "stars": 174691,
       "language": "Go",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -140,9 +140,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 163903,
+      "stars": 164058,
       "language": "HTML",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -158,7 +158,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 163784,
+      "stars": 163824,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -176,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 161710,
+      "stars": 161782,
       "language": "Python",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 149829,
+      "stars": 149916,
       "language": "Python",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-22",
       "trending": false
     },
     {
@@ -212,9 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 145769,
+      "stars": 146087,
       "language": "TypeScript",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-22",
       "trending": false
     },
     {
@@ -230,9 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 142189,
+      "stars": 142553,
       "language": "Python",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-19",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 139670,
+      "stars": 139836,
       "language": "Python",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -266,9 +266,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 134833,
+      "stars": 136403,
       "language": "TypeScript",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -284,9 +284,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 112131,
+      "stars": 112194,
       "language": "Jupyter Notebook",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -302,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 100866,
+      "stars": 100942,
       "language": "Python",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-22",
       "trending": false
     },
     {
@@ -320,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 97368,
+      "stars": 97507,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-02",
       "trending": false
@@ -338,7 +338,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 93963,
+      "stars": 94046,
       "language": "Python",
       "pushed": "2026-06-14",
       "trending": false
@@ -356,9 +356,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 89250,
+      "stars": 89301,
       "language": "C++",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-19",
       "trending": false
     },
     {
@@ -374,7 +374,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 87013,
+      "stars": 87141,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-09",
       "trending": false
@@ -392,9 +392,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 83163,
+      "stars": 83607,
       "language": "TypeScript",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -410,9 +410,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 81852,
+      "stars": 81889,
       "language": "",
-      "pushed": "2026-06-18",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -428,7 +428,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 80237,
+      "stars": 80276,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -446,9 +446,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 77688,
+      "stars": 77951,
       "language": "Python",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 75729,
+      "stars": 75826,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 67534,
+      "stars": 67683,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-18",
       "trending": false
@@ -500,7 +500,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 53713,
+      "stars": 53881,
       "language": "TypeScript",
       "pushed": "2026-06-16",
       "trending": false
@@ -515,7 +515,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 51935,
+      "stars": 52026,
       "language": "Python",
       "pushed": "2026-06-01",
       "trending": false
@@ -533,27 +533,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 48211,
+      "stars": 48344,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-11",
-      "trending": false
-    },
-    {
-      "name": "Kong/kong",
-      "desc": "🦍 API 및 AI 게이트웨이",
-      "url": "https://github.com/Kong/kong",
-      "tags": [
-        "ai",
-        "ai-gateway",
-        "api-gateway",
-        "api-management",
-        "apis"
-      ],
-      "source": "GitHub",
-      "pubDate": "2014-11-17",
-      "stars": 43617,
-      "language": "Lua",
-      "pushed": "2026-06-17",
       "trending": false
     },
     {
@@ -569,9 +551,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 43367,
+      "stars": 44566,
       "language": "",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-22",
+      "trending": false
+    },
+    {
+      "name": "Kong/kong",
+      "desc": "🦍 API 및 AI 게이트웨이",
+      "url": "https://github.com/Kong/kong",
+      "tags": [
+        "ai",
+        "ai-gateway",
+        "api-gateway",
+        "api-management",
+        "apis"
+      ],
+      "source": "GitHub",
+      "pubDate": "2014-11-17",
+      "stars": 43640,
+      "language": "Lua",
+      "pushed": "2026-06-17",
       "trending": false
     },
     {
@@ -605,7 +605,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 27334,
+      "stars": 27393,
       "language": "Python",
       "pushed": "2026-06-15",
       "trending": false
@@ -623,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12394,
+      "stars": 12395,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -641,7 +641,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 10771,
+      "stars": 10795,
       "language": "Python",
       "pushed": "2026-03-27",
       "trending": false
@@ -677,9 +677,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 7673,
+      "stars": 7705,
       "language": "Rust",
-      "pushed": "2026-06-19",
+      "pushed": "2026-06-21",
       "trending": false
     },
     {
@@ -695,7 +695,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-06",
-      "stars": 7227,
+      "stars": 7229,
       "language": "Python",
       "pushed": "2025-10-30",
       "trending": false
@@ -713,7 +713,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7106,
+      "stars": 7109,
       "language": "Python",
       "pushed": "2026-06-17",
       "trending": false

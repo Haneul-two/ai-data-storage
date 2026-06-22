@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T04:16:15Z",
+  "updatedAt": "2026-06-22T04:12:09Z",
   "items": [
     {
       "title": "Deontic Policies for Runtime Governance of Agentic AI Systems",
@@ -298,7 +298,7 @@
     },
     {
       "title": "ProMUSE: Progressive Multi-modal Uncertainty-guided Staged Evidential Alzheimer Disease Classification",
-      "titleKo": "",
+      "titleKo": "ProMUSE: 점진적 다중 모드 불확실성 기반 단계적 증거 알츠하이머병 분류",
       "authors": [
         "Long Doan, Branden Chen, Ethan Litton, Huan Huang, Jiajing Huang, Yixin Xie, Weihua Zhou, Nandakumar Narayanan, Chen Zhao"
       ],
@@ -314,7 +314,7 @@
     },
     {
       "title": "cAPM: Continual AI-Assisted Pace-Mapping with Active Learning",
-      "titleKo": "",
+      "titleKo": "cAPM: 능동적 학습을 통한 지속적인 AI 지원 페이스 매핑",
       "authors": [
         "Dylan O'Hara, Pradeep Bajracharya, Casey Meisenzahl, Karli Gillette, Anton J. Prassl, Gernot Plank, Saman Nazarian, Roderick Tung, John L Sapp, Linwei Wang"
       ],
@@ -329,7 +329,7 @@
     },
     {
       "title": "Protein Representation Learning with Secondary-Structure and Energy-Filtered Hydrogen-Bond Graphs",
-      "titleKo": "",
+      "titleKo": "2차 구조 및 에너지 필터링된 수소 결합 그래프를 사용한 단백질 표현 학습",
       "authors": [
         "Mohamed Mouhajir, Limei Wang, El Houcine Bergou, Hajar El Hammouti, Lamiae Azizi, Dongqi Fu"
       ],
@@ -344,7 +344,7 @@
     },
     {
       "title": "Physics-Informed Discovery of Yield Functions in Plasticity via Convex Neural Representations",
-      "titleKo": "",
+      "titleKo": "볼록 신경 표현을 통한 가소성의 항복 함수에 대한 물리학 기반 발견",
       "authors": [
         "Hyeonbin Moon, Donghyuk Cho, Jecheon Yu, Jeong Whan Yoon, Seunghwa Ryu"
       ],
@@ -358,7 +358,7 @@
     },
     {
       "title": "Exposing the Unsaid: Visualizing Hidden LLM Bias through Stochastic Path Aggregation",
-      "titleKo": "",
+      "titleKo": "말하지 않은 내용 노출: 확률적 경로 집계를 통해 숨겨진 LLM 편향 시각화",
       "authors": [
         "Matteo Pelossi, Rita Sevastjanova, Thilo Spinner, Mennatallah El-Assady"
       ],
@@ -373,7 +373,7 @@
     },
     {
       "title": "Ensembles of Large Language Models for Identifying EQ-5D Studies in PubMed Based on Their Abstracts",
-      "titleKo": "",
+      "titleKo": "초록을 기반으로 PubMed에서 EQ-5D 연구를 식별하기 위한 대규모 언어 모델의 앙상블",
       "authors": [
         "Zhyar Rzgar K. Rostam, M\\'arta P\\'entek, J\\'anos Tibor Czere, Zsombor Zrubka, L\\'aszl\\'o Gul\\'acsi, G\\'abor Kert\\'esz"
       ],
@@ -388,7 +388,7 @@
     },
     {
       "title": "Disentangling Linguistic Relatedness from Task Alignment in Cross-Lingual Transfer",
-      "titleKo": "",
+      "titleKo": "교차 언어 전송의 작업 정렬에서 언어 관련성을 분리합니다.",
       "authors": [
         "Ahmed Haj Ahmed, Ruochen Zhang, Alvin Grissom II"
       ],
@@ -403,7 +403,7 @@
     },
     {
       "title": "How LLMs Fail and Generalize in RTL Coding for Hardware Design?",
-      "titleKo": "",
+      "titleKo": "하드웨어 설계를 위한 RTL 코딩에서 LLM이 어떻게 실패하고 일반화됩니까?",
       "authors": [
         "Guan-Ting Liu, Chao-Han Huck Yang, Chenhui Deng, Zhongzhi Yu, Brucek Khailany, Yu-Chiang Frank Wang"
       ],
@@ -419,7 +419,7 @@
     },
     {
       "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
-      "titleKo": "",
+      "titleKo": "DeepSeek-V4: 매우 효율적인 백만 토큰 컨텍스트 인텔리전스를 향하여",
       "authors": [
         "DeepSeek-AI, Anyi Xu, Bangcai Lin, Bing Xue, Bingxuan Wang, Bingzheng Xu, Bochao Wu, Bowei Zhang, Chaofan Lin, Chen Dong, Chenchen Ling, Chengda Lu, Chenggang Zhao, Chengqi Deng, Chengyu Hou, Chenhao Xu, Chenze Shao, Chong Ruan, Conner Sun, Damai Dai, Daya Guo, Dejian Yang, Deli Chen, Donghao Li, Dongjie Ji, Erhang Li, Fang Wei, Fangyun Lin, Fangzhou Yuan, Feiyu Xia, Fucong Dai, Guangbo Hao, Guanting Chen, Guoai Cao, Guolai Meng, Guowei Li, Han Yu, Han Zhang, Hanwei Xu, Hao Li, Haofen Liang, Haoling Zhang, Haoming Luo, Haoran Wei, Haotian Yuan, Haowei Zhang, Haowen Luo, Haoyu Chen, Haozhe Ji, Hengqing Zhang, Honghui Ding, Hongxuan Tang, Huanqi Cao, Huazuo Gao, Hui Qu, Hui Zeng, J Yang, JQ Zhu, Jia Luo, Jia Song, Jia Yu, Jialiang Huang, Jialu Cai, Jian Liang, Jiangting Zhou, Jiasheng Ye, Jiashi Li, Jiaxin Xu, Jiewen Hu, Jieyu Yang, Jin Chen, Jin Yan, Jingchang Chen, Jingli Zhou, Jingting Xiang, Jingyang Yuan, Jingyuan Cheng, Jingzi Zhou, Jinhua Zhu, Jiping Yu, Joseph Sun, Jun Ran, Junguang Jiang, Junjie Qiu, Junlong Li, Junmin Zheng, Junxiao Song, Kai Dong, Kaige Gao, Kang Guan, Kexing Zhou, Kezhao Huang, Kuai Yu, Lean Wang, Lecong Zhang, Lei Wang, Leyi Xia, Li Zhang, Liang Zhao, Lihua Guo, Lingxiao Luo, Linwang Ma, Linyan Zhu, Litong Wang, Liyu Cai, Liyue Zhang, Longhao Chen, MS Di, MY Xu, Max Mei, Miaojun Wang, Mingchuan Zhang, Minghua Zhang, Minghui Tang, Mingming Li, Mingxu Zhou, Minmin Han, Ning Wang, Panpan Huang, Panpan Wang, Peixin Cong, Peiyi Wang, Peng Zhang, Qiancheng Wang, Qihao Zhu, Qingyang Li, Qinyu Chen, Qiushi Du, Qiwei Jiang, Rui Tian, Ruifan Xu, Ruijie Lu, Ruiling Xu, Ruiqi Ge, Ruisong Zhang, Ruizhe Pan, Runji Wang, Runqian Chen, Runqiu Yin, Runxin Xu, Ruomeng Shen, Ruoyu Zhang, Ruyi Chen, SH Liu, Shanghao Lu, Shangmian Sun, Shangyan Zhou, Shanhuang Chen, Shaofei Cai, Shaoheng Nie, Shaoqing Wu, Shaoyuan Chen, Shengding Hu, Shengyu Liu, Shiqiang Hu, Shirong Ma, Shiyu Wang, Shuiping Yu, Shunfeng Zhou, Shuting Pan, Shuying Yu, Songyang Zhou, Tao Ni, Tao Yun, Tian Jin, Tian Pei, Tian Ye, Tianle Lin, Tianran Ji, Tianyi Cui, Tianyuan Yue, Tingting Yu, Tun Wang, W Zhang, WL Xiao, Wangding Zeng, Wei An, Weilin Zhao, Wen Liu, Wenfeng Liang, Wenjie Pang, Wenjing Luo, Wenjing Yao, Wenjun Gao, Wenkai Yang, Wenlve Huang, Wenqing Hou, Wentao Zhang, Wenting Ma, Xi Gao, Xiang He, Xiangwen Wang, Xianzu Wang, Xiao Bi, Xiaodong Liu, Xiaohan Wang, Xiaokang Chen, Xiaokang Zhang, Xiaotao Nie, Xiaowen Sun, Xiaoxiang Wang, Xin Cheng, Xin Liu, Xin Xie, Xingchao Liu, Xingchen Liu, Xingkai Yu, Xingyou Li, Xinyu Yang, Xinyu Zhang, Xu Chen, Xuanyu Wang, Xuecheng Su, Xueyin Chen, Xuheng Lin, Xuwei Fu, YC Yan, YQ Wang, YW Ma, Yanfeng Luo, Yang Zhang, Yanhong Xu, Yanru Ma, Yanwen Huang, Yao Li, Yao Li, Yao Xu, Yao Zhao, Yaofeng Sun, Yaohui Wang, Yi Qian, Yi Shao, Yi Yu, Yichao Zhang, Yifan Ding, Yifan Shi, Yijia Wu, Yiliang Xiong, Yiling Ma, Ying He, Ying Tang, Ying Zhou, Yingjia Luo, Yinmin Zhong, Yishi Piao, Yisong Wang, Yixiang Zhang, Yixiao Chen, Yixuan Tan, Yixuan Wei, Yiyang Ma, Yiyuan Liu, Yonglun Yang, Yongqiang Guo, Yongtong Wu, Yu Wu, YuKun Li, Yuan Cheng, Yuan Ou, Yuanfan Xu, Yuanhao Li, Yuduan Wang, Yuehan Yang, Yuer Xu, Yuhan Wu, Yuhao Meng, Yuheng Zou, Yukun Zha, Yunfan Xiong, Yupeng Chen, Yuping Lin, Yuqian Cao, Yuqian Wang, Yushun Zhang, Yuting Yan, Yutong Lin, Yuxian Gu, Yuxiang Luo, Yuxiang You, Yuxuan Liu, Yuxuan Zhou, Yuyang Zhou, Yuzhen Huang, ZF Wu, Zehao Wang, Zehua Zhao, Zehui Ren, Zekai Zhang, Zhangli Sha, Zhe Fu, Zhe Ju, Zhean Xu, Zhenda Xie, Zhengyan Zhang, Zheren Gao, Zhewen Hao, Zhibin Gou, Zhicheng Ma, Zhigang Yan, Zhihong Shao, Zhixian Huang, Zhixuan Chen, Zhiyu Wu, Zhizhou Ren, Zhongyu Wu, Zhuoshu Li, Zhuping Zhang, Zian Xu, Zihao Wang, Zihua Qu, Zihui Gu, Zijia Zhu, Zilin Li, Zipeng Zhang, Ziwei Xie, Ziyi Gao, Ziyi Wan, Zizheng Pan, Zongqing Yao"
       ],
@@ -434,7 +434,7 @@
     },
     {
       "title": "Where to Place the Query? Unveiling and Mitigating Positional Bias in In-Context Learning for Diffusion LLMs via Decoding Dynamics",
-      "titleKo": "",
+      "titleKo": "쿼리를 어디에 배치해야 합니까? 디코딩 역학을 통해 확산 LLM에 대한 상황별 학습에서 위치 편향 공개 및 완화",
       "authors": [
         "Zhengheng Li, Panrui Li, Xuyang Liu, Puzhi Xia"
       ],
@@ -449,7 +449,7 @@
     },
     {
       "title": "Pruning via Causal Attribution Preserves Reasoning Performance in Large Language Models",
-      "titleKo": "",
+      "titleKo": "인과 관계 분석을 통한 가지치기는 대규모 언어 모델에서 추론 성능을 보존합니다.",
       "authors": [
         "Amogh Sheth, Biruk Assefa, Yi Wen Huang, Andrew Lin, Yuhao Ge"
       ],
@@ -463,7 +463,7 @@
     },
     {
       "title": "Detecting Hallucinations for Large Language Model-based Knowledge Graph Reasoning",
-      "titleKo": "",
+      "titleKo": "대규모 언어 모델 기반 지식 그래프 추론을 위한 환각 감지",
       "authors": [
         "Xinyan Zhu, Yaoqi Liu, Yue Gao, Huadong Ma, Cheng Yang, Chuan Shi"
       ],
@@ -478,7 +478,7 @@
     },
     {
       "title": "Sign-Language Datasets at Scale: A Comprehensive Survey on Resources, Benchmarks, and Annotation Standards",
-      "titleKo": "",
+      "titleKo": "대규모 수화 데이터 세트: 리소스, 벤치마크 및 주석 표준에 대한 종합적인 조사",
       "authors": [
         "Yiming Ni, Zhi-Qi Cheng, Jiayu Li, Wei Cheng"
       ],
@@ -493,7 +493,7 @@
     },
     {
       "title": "Quantifying Aleatoric Uncertainty of In-Context Learning for Robust Measure of LLM Prediction Confidence",
-      "titleKo": "",
+      "titleKo": "LLM 예측 신뢰도의 강력한 측정을 위한 상황별 학습의 우연적 불확실성을 정량화",
       "authors": [
         "Jinseok Chung, Minkyoung Song, Hyunji Jung, Namhoon Lee"
       ],
@@ -508,7 +508,7 @@
     },
     {
       "title": "Granularity-Regulated Adaptive Computational Efficiency for Optimal Verification in Test-Time Scaling",
-      "titleKo": "",
+      "titleKo": "테스트 시간 확장에서 최적의 검증을 위한 세분성 조절 적응형 컴퓨팅 효율성",
       "authors": [
         "Ardit Krasniqi, Luan Vejsiu, Elira Dervishi"
       ],
@@ -523,7 +523,7 @@
     },
     {
       "title": "Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol",
-      "titleKo": "",
+      "titleKo": "신뢰할 수 있는 다중 에이전트 시스템: Argent 신호 프로토콜을 사용하여 의미 드리프트 완화",
       "authors": [
         "Anantha Sharma"
       ],
@@ -981,7 +981,7 @@
     },
     {
       "title": "Are Online Skill and Memory Modules Always Worth Their Tokens? A Budget-Constrained Study of Web Agents",
-      "titleKo": "",
+      "titleKo": "온라인 스킬과 메모리 모듈은 항상 토큰 가치가 있나요? 예산이 제한된 웹 에이전트에 대한 연구",
       "authors": [
         "Sina Hajimiri, Masih Aminbeidokhti, Jose Dolz, Ismail Ben Ayed, Issam H. Laradji, Spandana Gella, Nicolas Gontier"
       ],
@@ -995,7 +995,7 @@
     },
     {
       "title": "Deep Temporal Modeling and Ensemble Fusion for Multimodal Emotion Recognition from Physiological Signals",
-      "titleKo": "",
+      "titleKo": "생리적 신호로부터 다중 모드 감정 인식을 위한 심층 시간 모델링 및 앙상블 융합",
       "authors": [
         "Desta Haileselassie Hagos, Saurav Keshari Aryal, Patrick Ymele-Leki, Anietie Andy, Legand L. Burge"
       ],
@@ -1009,7 +1009,7 @@
     },
     {
       "title": "ReportQA: QA-Based Radiology Report Evaluation",
-      "titleKo": "",
+      "titleKo": "ReportQA: QA 기반 방사선 보고서 평가",
       "authors": [
         "Yiming Shi, Shaoshuai Yang, Xi Chen, Haolin Li, Hengyu Zhang, Che Jiang, Kaiwen Wang, Xun Zhu, Dong Xie, Fei Wang, Dejing Dou, Miao Li, Ji Wu"
       ],
@@ -1024,7 +1024,7 @@
     },
     {
       "title": "Equity with Efficiency: An Empirical Study of Tokenizers for Multilingual Large Language Models",
-      "titleKo": "",
+      "titleKo": "효율성과 형평성: 다국어 대형 언어 모델을 위한 토크나이저에 대한 실증적 연구",
       "authors": [
         "Kieron Seven Jun Wei Lee, Muhammad Reza Qorib, Andrew Ivan Soegeng, Hwee Tou Ng"
       ],
@@ -1038,7 +1038,7 @@
     },
     {
       "title": "A Practical Evaluation Method for Long-Form Simultaneous Speech-to-Speech Translation",
-      "titleKo": "",
+      "titleKo": "장문 동시 음성-음성 번역을 위한 실제 평가 방법",
       "authors": [
         "Yulin Xue, Siqi Ouyang, Lei Li"
       ],
@@ -1052,7 +1052,7 @@
     },
     {
       "title": "CoCoGEC: Counterfactual Generation for Robust Grammatical Error Correction",
-      "titleKo": "",
+      "titleKo": "CoCoGEC: 강력한 문법 오류 수정을 위한 반사실적 생성",
       "authors": [
         "Qianyu Wang, Xiaoman Wang, Yuanyuan Liang, Xinyuan Li, Yunshi Lan"
       ],
@@ -1506,7 +1506,7 @@
     },
     {
       "title": "Hybrid Classical-Quantum Variational Autoencoder for Neural Topic Modeling",
-      "titleKo": "",
+      "titleKo": "신경 주제 모델링을 위한 하이브리드 고전-양자 변이 자동 인코더",
       "authors": [
         "Ivan Kankeu"
       ],
@@ -1520,7 +1520,7 @@
     },
     {
       "title": "SANA: What Matters for QA Agents over Massive Data Lakes?",
-      "titleKo": "",
+      "titleKo": "SANA: 대규모 데이터 레이크에서 QA 에이전트에게 중요한 것은 무엇입니까?",
       "authors": [
         "Austin Senna Wijaya, Jiaxiang Liu, Haonan Wang, Eugene Wu"
       ],
@@ -1536,7 +1536,7 @@
     },
     {
       "title": "DLawBench: Evaluating LLMs Through Multi-Turn Legal Consultation",
-      "titleKo": "",
+      "titleKo": "DLawBench: 다단계 법률 상담을 통한 LLM 평가",
       "authors": [
         "Li Zhang, Yuzhen Shi, Yiran Hu, Jingwen Zhang, Wenbo Lv, Yubo Ma, Wei Wang, Rongyao Shi, Yuanyang Qiu, Xinran Xu, Yuemeng Qi, Linlin Miao, Jaromir Savelka, Yun Liu, Kevin Ashley, Bing Zhao, Hu Wei, Lin Qu"
       ],
@@ -1550,7 +1550,7 @@
     },
     {
       "title": "Can Post-Training Turn LLMs into Good Medical Coders? An Empirical Study of Generative ICD Coding",
-      "titleKo": "",
+      "titleKo": "교육 후 LLM을 훌륭한 의료 코더로 바꿀 수 있습니까? 생성적 ICD 코딩에 대한 실증적 연구",
       "authors": [
         "Ziqing Wang, Weihao Li, Shijie Chen, Yuan Luo, Kaize Ding"
       ],
@@ -1564,7 +1564,7 @@
     },
     {
       "title": "LLMs Contain Multitudes: How Deployment Context Reshapes Model-Level Preferences and Values",
-      "titleKo": "",
+      "titleKo": "LLM에는 다수가 포함됩니다: 배포 컨텍스트가 모델 수준 기본 설정 및 값을 재구성하는 방법",
       "authors": [
         "Filip Trhlik, Aoife O'Flynn, Angela Yu, Arduin Findeis, Paula Buttery"
       ],
@@ -1578,7 +1578,7 @@
     },
     {
       "title": "MedLatentDx: Latent Multi-Agent Communication for Cross-Hospital Rare-Disease Diagnosis",
-      "titleKo": "",
+      "titleKo": "MedLatentDx: 병원 간 희귀 질환 진단을 위한 잠재 다중 에이전트 통신",
       "authors": [
         "Ziqing Wang, Lili Zhao, Kaize Ding"
       ],
@@ -2098,7 +2098,7 @@
     },
     {
       "title": "T2MM: An LLM Supported Architecture For Inquiry-Based Modeling",
-      "titleKo": "",
+      "titleKo": "T2MM: 쿼리 기반 모델링을 위한 LLM 지원 아키텍처",
       "authors": [
         "John Kos, Rudra Singh, Ashok Goel"
       ],
@@ -2114,7 +2114,7 @@
     },
     {
       "title": "Calibration Drift Under Reasoning: How Chain-of-Thought Budgets Induce Overconfidence in Large Language Models",
-      "titleKo": "",
+      "titleKo": "추론에 따른 보정 드리프트: 사고 사슬 예산이 대규모 언어 모델에서 과신을 유도하는 방법",
       "authors": [
         "Prakul Sunil Hiremath, Harshit R. Hiremath"
       ],
