@@ -1,24 +1,6 @@
 {
-  "updatedAt": "2026-06-26T03:39:20Z",
+  "updatedAt": "2026-06-29T03:53:07Z",
   "items": [
-    {
-      "name": "nexu-io/open-design",
-      "desc": "🎨 Anthropic의 Claude Design에 대한 로컬 우선 오픈 소스 대안입니다. ⚡ 19가지 기술 · ✨ 71가지 브랜드급 디자인 시스템 🖼 웹 생성 · 데스크탑 · 모바일 프로토타입 · 슬라이드 · 이미지 · 비디오 · HyperFrames 📦 샌드박스 미리보기 · HTML/PDF/PPTX/MP4 내보내기 🤖 Claude Code/Codex/Cursor/Gemini/Op에서 실행",
-      "url": "https://github.com/nexu-io/open-design",
-      "tags": [
-        "agent-skills",
-        "ai-agents",
-        "ai-design",
-        "byok",
-        "claude"
-      ],
-      "source": "GitHub",
-      "pubDate": "2026-04-28",
-      "stars": 71252,
-      "language": "TypeScript",
-      "pushed": "2026-06-26",
-      "trending": true
-    },
     {
       "name": "affaan-m/ECC",
       "desc": "에이전트 하네스 성능 최적화 시스템. Claude Code, Codex, Opencode, Cursor 등을 위한 기술, 본능, 기억력, 보안 및 연구 우선 개발.",
@@ -32,7 +14,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 221795,
+      "stars": 223122,
       "language": "JavaScript",
       "pushed": "2026-06-25",
       "trending": false
@@ -50,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 203170,
+      "stars": 205087,
       "language": "Python",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -68,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 195909,
+      "stars": 196089,
       "language": "C++",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -104,9 +86,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 185159,
+      "stars": 185202,
       "language": "Python",
-      "pushed": "2026-06-25",
+      "pushed": "2026-06-28",
       "trending": false
     },
     {
@@ -122,9 +104,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 174914,
+      "stars": 175090,
       "language": "Go",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-28",
       "trending": false
     },
     {
@@ -140,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 164355,
+      "stars": 164488,
       "language": "HTML",
-      "pushed": "2026-06-25",
+      "pushed": "2026-06-28",
       "trending": false
     },
     {
@@ -158,7 +140,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 163885,
+      "stars": 163923,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -176,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 161925,
+      "stars": 162001,
       "language": "Python",
-      "pushed": "2026-06-25",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -194,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 150098,
+      "stars": 150172,
       "language": "Python",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -212,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 146593,
+      "stars": 146894,
       "language": "TypeScript",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -230,27 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 143021,
+      "stars": 143366,
       "language": "Python",
-      "pushed": "2026-06-25",
-      "trending": false
-    },
-    {
-      "name": "langchain-ai/langchain",
-      "desc": "에이전트 엔지니어링 플랫폼.",
-      "url": "https://github.com/langchain-ai/langchain",
-      "tags": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "anthropic",
-        "chatgpt"
-      ],
-      "source": "GitHub",
-      "pubDate": "2022-10-17",
-      "stars": 140223,
-      "language": "Python",
-      "pushed": "2026-06-24",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -266,8 +230,26 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 139286,
+      "stars": 140888,
       "language": "TypeScript",
+      "pushed": "2026-06-29",
+      "trending": false
+    },
+    {
+      "name": "langchain-ai/langchain",
+      "desc": "에이전트 엔지니어링 플랫폼.",
+      "url": "https://github.com/langchain-ai/langchain",
+      "tags": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "chatgpt"
+      ],
+      "source": "GitHub",
+      "pubDate": "2022-10-17",
+      "stars": 140429,
+      "language": "Python",
       "pushed": "2026-06-26",
       "trending": false
     },
@@ -284,7 +266,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 112310,
+      "stars": 112367,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-25",
       "trending": false
@@ -302,9 +284,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 101030,
+      "stars": 101186,
       "language": "Python",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -320,7 +302,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 97753,
+      "stars": 98096,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-02",
       "trending": false
@@ -338,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 94176,
+      "stars": 94402,
       "language": "Python",
       "pushed": "2026-06-24",
       "trending": false
@@ -356,9 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 89389,
+      "stars": 89438,
       "language": "C++",
-      "pushed": "2026-06-25",
+      "pushed": "2026-06-28",
       "trending": false
     },
     {
@@ -374,7 +356,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 87338,
+      "stars": 87481,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-23",
       "trending": false
@@ -392,9 +374,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 84316,
+      "stars": 84927,
       "language": "TypeScript",
-      "pushed": "2026-06-25",
+      "pushed": "2026-06-28",
       "trending": false
     },
     {
@@ -410,9 +392,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 81930,
+      "stars": 82027,
       "language": "",
-      "pushed": "2026-06-25",
+      "pushed": "2026-06-28",
       "trending": false
     },
     {
@@ -428,7 +410,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 80382,
+      "stars": 80468,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -446,9 +428,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 78358,
+      "stars": 78610,
       "language": "Python",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -464,9 +446,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 75985,
+      "stars": 76055,
       "language": "MDX",
       "pushed": "2026-03-11",
+      "trending": false
+    },
+    {
+      "name": "nexu-io/open-design",
+      "desc": "🎨 Anthropic의 Claude Design에 대한 로컬 우선 오픈 소스 대안입니다. ⚡ 19가지 기술 · ✨ 71가지 브랜드급 디자인 시스템 🖼 웹 생성 · 데스크탑 · 모바일 프로토타입 · 슬라이드 · 이미지 · 비디오 · HyperFrames 📦 샌드박스 미리보기 · HTML/PDF/PPTX/MP4 내보내기 🤖 Claude Code/Codex/Cursor/Gemini/Op에서 실행",
+      "url": "https://github.com/nexu-io/open-design",
+      "tags": [
+        "agent-skills",
+        "ai-agents",
+        "ai-design",
+        "byok",
+        "claude"
+      ],
+      "source": "GitHub",
+      "pubDate": "2026-04-28",
+      "stars": 72516,
+      "language": "TypeScript",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 67975,
+      "stars": 68128,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-25",
       "trending": false
@@ -500,7 +500,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 54014,
+      "stars": 54092,
       "language": "TypeScript",
       "pushed": "2026-06-26",
       "trending": false
@@ -515,9 +515,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 52204,
+      "stars": 52297,
       "language": "Python",
-      "pushed": "2026-06-01",
+      "pushed": "2026-06-28",
       "trending": false
     },
     {
@@ -533,7 +533,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 48455,
+      "stars": 48538,
       "language": "Jupyter Notebook",
       "pushed": "2026-06-11",
       "trending": false
@@ -551,9 +551,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 46092,
+      "stars": 46907,
       "language": "",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {
@@ -569,7 +569,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2014-11-17",
-      "stars": 43675,
+      "stars": 43691,
       "language": "Lua",
       "pushed": "2026-06-17",
       "trending": false
@@ -605,7 +605,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 27662,
+      "stars": 27808,
       "language": "Python",
       "pushed": "2026-06-25",
       "trending": false
@@ -623,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12404,
+      "stars": 12412,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -641,7 +641,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 10868,
+      "stars": 10887,
       "language": "Python",
       "pushed": "2026-03-27",
       "trending": false
@@ -659,7 +659,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 8846,
+      "stars": 8857,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -677,9 +677,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 7752,
+      "stars": 7777,
       "language": "Rust",
-      "pushed": "2026-06-26",
+      "pushed": "2026-06-27",
       "trending": false
     },
     {
@@ -713,9 +713,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7121,
+      "stars": 7131,
       "language": "Python",
-      "pushed": "2026-06-25",
+      "pushed": "2026-06-29",
       "trending": false
     },
     {

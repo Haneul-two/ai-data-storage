@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T03:39:17Z",
+  "updatedAt": "2026-06-29T03:53:05Z",
   "items": [
     {
       "title": "The Hitchhiker's Guide to Agentic AI: From Foundations to Systems",
@@ -357,7 +357,7 @@
     },
     {
       "title": "Graph-Based Phonetic Error Correction of Noisy ASR",
-      "titleKo": "",
+      "titleKo": "시끄러운 ASR의 그래프 기반 음성 오류 수정",
       "authors": [
         "Pratik Rakesh Singh, Mohammadi Zaki, Aneesh Mukkamala, Pankaj Wasnik"
       ],
@@ -372,7 +372,7 @@
     },
     {
       "title": "Small edits, large models: How Wikipedia advocacy shapes LLM values",
-      "titleKo": "",
+      "titleKo": "작은 편집, 큰 모델: Wikipedia 옹호가 LLM 가치를 형성하는 방법",
       "authors": [
         "Jasmine Brazilek, Maria Navas, Alexa Gnauck"
       ],
@@ -388,7 +388,7 @@
     },
     {
       "title": "AgentOdyssey: Open-Ended Long-Horizon Text Game Generation for Test-Time Continual Learning Agents",
-      "titleKo": "",
+      "titleKo": "AgentOdyssey: 테스트 시간 연속 학습 에이전트를 위한 개방형 장거리 텍스트 게임 생성",
       "authors": [
         "Zheyuan Zhang, Zehao Wen, Alvin Zhang, Andrew Wang, Jianwen Xie, Daniel Khashabi, Tianmin Shu"
       ],
@@ -402,7 +402,7 @@
     },
     {
       "title": "Error-Aware TF-IDF Retrieval-Augmented Generation for ASR Error Correction",
-      "titleKo": "",
+      "titleKo": "ASR 오류 수정을 위한 오류 인식 TF-IDF 검색 증강 생성",
       "authors": [
         "Mohammad Aref Jafari-Raddani"
       ],
@@ -418,7 +418,7 @@
     },
     {
       "title": "Perfect Detection, Failed Control: The Geometry of Knowing vs. Steering in Language Models",
-      "titleKo": "",
+      "titleKo": "완벽한 탐지, 실패한 제어: 언어 모델의 지식 대 조정의 기하학",
       "authors": [
         "Cosimo Galeone, Anna Ettorre, Minsu Park, Giuseppe Ettorre, Daniele Ligorio"
       ],
@@ -434,7 +434,7 @@
     },
     {
       "title": "Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding",
-      "titleKo": "",
+      "titleKo": "Dustin: 추론적 디코딩을 통한 효율적인 장기 컨텍스트 생성을 위한 초안 증강 희소 검증",
       "authors": [
         "WenHung Lee, Jian-Jia Chen, Xiaolin Lin, Pei-Shuo Wang, Chi-Chih Chang, Chun-Che Yang, Ning-Chi Huang, Grace Li Zhang, Kai-Chiang Wu"
       ],
@@ -449,7 +449,7 @@
     },
     {
       "title": "LLM Performance on a Real, Double-Marked GCSE Benchmark",
-      "titleKo": "",
+      "titleKo": "실제 이중 표시 GCSE 벤치마크에 대한 LLM 성과",
       "authors": [
         "Malachy Fox, Kavi Samra, Paul Jung"
       ],
@@ -465,7 +465,7 @@
     },
     {
       "title": "LLM-Based Scientific Peer Review: Methods, Benchmarks, and Reliability Challenges",
-      "titleKo": "",
+      "titleKo": "LLM 기반 과학 동료 검토: 방법, 벤치마크 및 신뢰성 문제",
       "authors": [
         "Thi Huyen Nguyen, Zahra Ahmadi"
       ],
@@ -479,7 +479,7 @@
     },
     {
       "title": "Dream at SemEval-2026 Task 13: SALSA for Single-Pass Machine-Generated Code Detection",
-      "titleKo": "",
+      "titleKo": "Dream at SemEval-2026 작업 13: 단일 패스 기계 생성 코드 감지를 위한 SALSA",
       "authors": [
         "Ruslan Berdichevsky, Shai Nahum-Gefen, Elad Ben-Zaken"
       ],
@@ -493,7 +493,7 @@
     },
     {
       "title": "The cognitive, affective, and behavioral expression of self-stigma among people who use drugs in online substance use communities",
-      "titleKo": "",
+      "titleKo": "온라인 약물 남용 커뮤니티에서 약물을 사용하는 사람들의 자기 낙인에 대한 인지적, 정서적, 행동적 표현",
       "authors": [
         "Layla Bouzoubaa, Hyung Wook Choi, Milan Varghese, Valerie Earnshaw, Rezvaneh Rezapour"
       ],
@@ -507,7 +507,7 @@
     },
     {
       "title": "Hitting a Moving Target: Test-Time Adaptation for AI Text Detection under Continual Distribution Shift",
-      "titleKo": "",
+      "titleKo": "움직이는 대상 타격: 연속 분포 변화 하에서 AI 텍스트 감지를 위한 테스트 시간 적응",
       "authors": [
         "Kevin Ren, Manish Raghavan, Nikhil Garg"
       ],
@@ -522,7 +522,7 @@
     },
     {
       "title": "What Intermediate Layers Know: Detecting Jailbreaks from Entropy Dynamics",
-      "titleKo": "",
+      "titleKo": "중간 계층이 알고 있는 것: 엔트로피 역학에서 탈옥 감지",
       "authors": [
         "Sofiia Nikolenko, Michele Papucci, Mina Rezaei, Shireen Kudukkil Manchingal"
       ],
