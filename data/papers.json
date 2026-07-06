@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T02:55:03Z",
+  "updatedAt": "2026-07-06T03:29:01Z",
   "items": [
     {
       "title": "Constructive Alignment: Governing Preference Dynamics in Human-AI Interaction",
@@ -355,7 +355,7 @@
     },
     {
       "title": "Persona Without Substrate: Regime-Dependence and the LLM Individuation Problem",
-      "titleKo": "",
+      "titleKo": "기질 없는 페르소나: 정권 의존성과 LLM 개별화 문제",
       "authors": [
         "Shuaizhi Cheng"
       ],
@@ -370,7 +370,7 @@
     },
     {
       "title": "Controllable Narrative Rendering for Enhanced Assisted Writing",
-      "titleKo": "",
+      "titleKo": "향상된 글쓰기 지원을 위한 제어 가능한 내러티브 렌더링",
       "authors": [
         "Mingzhe Lu, Yanbing Liu, Jiayue Wu, Jiarui Zhang, Qihao Wang, Yue Hu, Yunpeng Li, Yangyan Xu"
       ],
@@ -385,7 +385,7 @@
     },
     {
       "title": "Harnessing the Latent Space: From Steering Vectors to Model Calibrators for Control and Trust",
-      "titleKo": "",
+      "titleKo": "잠재 공간 활용: 조정 벡터에서 제어 및 신뢰를 위한 모델 교정기까지",
       "authors": [
         "Nishant Subramani"
       ],
@@ -401,7 +401,7 @@
     },
     {
       "title": "Benchmarking Frontier LLMs on Arabic Cultural and Sociolinguistic Knowledge: A Cross-Evaluation Framework with Human SME Ground Truth",
-      "titleKo": "",
+      "titleKo": "아랍어 문화 및 사회 언어 지식에 대한 프론티어 LLM 벤치마킹: 인간 SME Ground Truth를 사용한 교차 평가 프레임워크",
       "authors": [
         "Sajjad Abdoli, Ghassan Al-Sumaidaee, Ahmad ElShiekh, Clayton W. Taylor, Ahmed Rashad"
       ],
@@ -415,7 +415,7 @@
     },
     {
       "title": "Hate Speech Detection in Turkish and Arabic Languages: A Comprehensive Study",
-      "titleKo": "",
+      "titleKo": "터키어 및 아랍어의 증오심 표현 탐지: 종합 연구",
       "authors": [
         "Somaiyeh Dehghan, G\\\"ok\\c{c}e Uludo\\u{g}an, Mehmet Umut \\c{S}en, Elif Erol, Arzucan \\\"Ozg\\\"ur, Berrin Yanikoglu"
       ],
@@ -430,7 +430,7 @@
     },
     {
       "title": "Readable but Not Controllable: Neuron-Level Evidence for Medical LLM Hallucination",
-      "titleKo": "",
+      "titleKo": "읽을 수는 있지만 제어할 수 없음: 의학 LLM 환각에 대한 뉴런 수준의 증거",
       "authors": [
         "Vijay Vankadaru, Asha Matthews, Tanya Roosta, Peyman Passban"
       ],
@@ -444,7 +444,7 @@
     },
     {
       "title": "Identifying and Resolving Pitfalls of Knowledge-Based VQA Benchmarks: Auditing, Repairing, and Augmenting",
-      "titleKo": "",
+      "titleKo": "지식 기반 VQA 벤치마크의 함정 식별 및 해결: 감사, 수정 및 강화",
       "authors": [
         "Qian Ma, S M Rayeed, Charles V. Stewart, Qiong Wu, Yao Ma"
       ],
@@ -460,7 +460,7 @@
     },
     {
       "title": "ALEE: Any-Language Evaluation of Embeddings via English-Centric Minimal Pairs",
-      "titleKo": "",
+      "titleKo": "ALEE: 영어 중심 최소 쌍을 통한 임베딩의 모든 언어 평가",
       "authors": [
         "Andrianos Michail, Stylianos Psychias, Michelle Wastl, Simon Clematide, Rico Sennrich, Juri Opitz"
       ],
@@ -474,7 +474,7 @@
     },
     {
       "title": "Structural Pattern Mining in Inka Khipus: Unsupervised Clustering, Provenance Classification, and a Computational Validation of the Santa Valley Match",
-      "titleKo": "",
+      "titleKo": "Inka Khipus의 구조적 패턴 마이닝: 비지도 클러스터링, 출처 분류 및 Santa Valley Match의 전산 검증",
       "authors": [
         "Maria Contreras"
       ],
@@ -488,7 +488,7 @@
     },
     {
       "title": "SLIM-RL: Risk-Budgeted Random-Masking RL for Diffusion LLMs Without Trajectory Slicing",
-      "titleKo": "",
+      "titleKo": "SLIM-RL: 궤적 슬라이싱이 없는 확산 LLM을 위한 위험 예산이 책정된 무작위 마스킹 RL",
       "authors": [
         "Ruikang Zhao, Zhenting Wang, Han Gao, Ligong Han"
       ],
@@ -504,7 +504,7 @@
     },
     {
       "title": "LV-ROVER-MLT: Low-Resource Maltese OCR by Multi-Stream Voting",
-      "titleKo": "",
+      "titleKo": "LV-ROVER-MLT: 다중 스트림 투표를 통한 저자원 몰타어 OCR",
       "authors": [
         "Adam Darmanin"
       ],
@@ -519,7 +519,7 @@
     },
     {
       "title": "SEFORA: Student Essays with Feedback Corpus and LLM Feedback Evaluation Framework",
-      "titleKo": "",
+      "titleKo": "SEFORA: 피드백 코퍼스 및 LLM 피드백 평가 프레임워크를 사용한 학생 에세이",
       "authors": [
         "Shayan Peyghambari Oskoui, Norah Almousa, Zhaoyi Joey Hou, Carolina Gustafson, Gayle Rogers, Raquel Coelho, Diane Litman, Xiang Lorraine Li"
       ],
