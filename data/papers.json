@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T02:58:29Z",
+  "updatedAt": "2026-07-13T02:43:20Z",
   "items": [
     {
       "title": "AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation",
@@ -358,7 +358,7 @@
     },
     {
       "title": "Audio Sentiment Analysis via Distillation and Cross-Modal Integration of Generated Multilingual Transcripts",
-      "titleKo": "",
+      "titleKo": "생성된 다국어 녹취록의 증류 및 교차 모달 통합을 통한 오디오 감정 분석",
       "authors": [
         "Andrei-George Durdun, Victor Constantinescu, Radu Tudor Ionescu"
       ],
@@ -374,7 +374,7 @@
     },
     {
       "title": "Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering",
-      "titleKo": "",
+      "titleKo": "더 건강한 LLM: 공중 보건 질문 답변을 위한 검색 강화 생성",
       "authors": [
         "Felix Feldman, Joshua Harris, Timothy Laurence, Leo Loman, Ollie Higgins, Fan Grayson, Poonam Soma, Bethany Pace-Bonello, Michael Borowitz, Toby Nonnenmacher"
       ],
@@ -390,7 +390,7 @@
     },
     {
       "title": "Ad Headline Generation using Self-Critical Masked Language Model",
-      "titleKo": "",
+      "titleKo": "자기 비판적 마스크 언어 모델을 사용한 광고 헤드라인 생성",
       "authors": [
         "Yashal Shakti Kanungo, Sumit Negi, Aruna Rajan"
       ],
@@ -406,7 +406,7 @@
     },
     {
       "title": "Gradient-Based Speech-to-Text Alignment for Any ASR Model: From CTC to Speech LLMs",
-      "titleKo": "",
+      "titleKo": "모든 ASR 모델에 대한 그라데이션 기반 음성-텍스트 정렬: CTC에서 음성 LLM까지",
       "authors": [
         "Albert Zeyer, Ralf Schl\\\"uter, Hermann Ney"
       ],
@@ -422,7 +422,7 @@
     },
     {
       "title": "LLMs Silently Correct African American English: Auditing and Mitigating Dialect Bias via Activation Steering",
-      "titleKo": "",
+      "titleKo": "LLM은 아프리카계 미국인 영어를 조용히 교정합니다: 활성화 조정을 통해 방언 편견을 감사하고 완화합니다",
       "authors": [
         "Huan Wu, Ali Emami, Muhammad Furquan Hassan, Osaretin Igbinoba, Osakpolor Idusuyi, Osamede Igbinoba, Faiza Khan Khattak, Laleh Seyyed-Kalantari"
       ],
@@ -436,7 +436,7 @@
     },
     {
       "title": "Comprehensive Evaluation of Large Language Model Responses: A Multi-Factor Scoring System",
-      "titleKo": "",
+      "titleKo": "대규모 언어 모델 응답의 종합 평가: 다단계 채점 시스템",
       "authors": [
         "Yiming Gai, Junde Lu, Xuefei Huang"
       ],
@@ -451,7 +451,7 @@
     },
     {
       "title": "MILES: Modular Instruction Memory with Learnable Selection for Self-Improving LLM Reasoning",
-      "titleKo": "",
+      "titleKo": "MILES: LLM 추론 자체 개선을 위한 학습 가능한 선택 기능을 갖춘 모듈형 명령 메모리",
       "authors": [
         "Ruilin Tong, Dong Gong"
       ],
@@ -466,7 +466,7 @@
     },
     {
       "title": "Riemannian Geometry for Pre-trained Language Model Embeddings",
-      "titleKo": "",
+      "titleKo": "사전 훈련된 언어 모델 임베딩을 위한 리만 기하학",
       "authors": [
         "Szczepan Konior, Alexandre Quemy, Przemys{\\l}aw Klocek, Gr\\'egoire Cattan, Bart{\\l}omiej Sobieski"
       ],
@@ -481,7 +481,7 @@
     },
     {
       "title": "Behavior Leverage Imbalance in Multi-Teacher On-Policy Distillation",
-      "titleKo": "",
+      "titleKo": "다중 교사 정책 기반 증류의 행동 활용 불균형",
       "authors": [
         "Jiabin Shen, Guang Chen, Chengjun Mao"
       ],
@@ -496,7 +496,7 @@
     },
     {
       "title": "From Text to Parameters: Predicting Item Parameters from Embedding Regularization with Reliability and Design Ceilings",
-      "titleKo": "",
+      "titleKo": "텍스트에서 매개변수까지: 신뢰성 및 설계 상한을 갖춘 정규화 내장을 통해 항목 매개변수 예측",
       "authors": [
         "Shi-Ting Chen, Jinsong Chen"
       ],
@@ -510,7 +510,7 @@
     },
     {
       "title": "Evaluation of Multilingual Ability to Use Spatial Deictic Expressions in Vision-Language Models",
-      "titleKo": "",
+      "titleKo": "시각-언어 모델의 공간적 표현 표현을 활용하는 다국어 능력 평가",
       "authors": [
         "Kaito Watanabe, Taisei Yamamoto, Tomoki Doi, Hitomi Yanaka"
       ],
@@ -524,7 +524,7 @@
     },
     {
       "title": "Understanding Interpretation Difficulty in Harmful Online Communication: Insights from Cybercrime Communities",
-      "titleKo": "",
+      "titleKo": "유해한 온라인 커뮤니케이션의 통역 어려움 이해: 사이버 범죄 커뮤니티의 통찰력",
       "authors": [
         "Tomohiro Okatsu, Naoki Takada, Yin Min Pa Pa, Katsunari Yoshioka, Tatsunori Mori"
       ],
