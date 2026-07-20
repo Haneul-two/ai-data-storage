@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T02:34:28Z",
+  "updatedAt": "2026-07-20T03:35:31Z",
   "items": [
     {
       "title": "OriginBlame: Record- and Token-Level Data Provenance for AI Training Datasets",
@@ -365,7 +365,7 @@
     },
     {
       "title": "FixItFlow: Automated Troubleshooting Guide Generation from Cloud Incidents",
-      "titleKo": "",
+      "titleKo": "FixItFlow: 클라우드 사고로부터 자동 문제 해결 가이드 생성",
       "authors": [
         "Srihari Unnikrishnan, Jaskaran Singh Walia, Drishti Goel, Supriyo Ghosh"
       ],
@@ -381,7 +381,7 @@
     },
     {
       "title": "Ask Before You Diagnose: Safe-Psych, a Sequential Evaluation Benchmark for LLMs in Psychiatry",
-      "titleKo": "",
+      "titleKo": "진단하기 전에 물어보세요: 정신의학 LLM을 위한 순차적 평가 벤치마크인 Safe-Psych",
       "authors": [
         "Oriana Presacan, Andreea Grama, Larisa Irimin\\u{a}, Alireza Nik, Jaya Ojha, Vajira Thambawita, Ciprian I. B\\u{a}cil\\u{a}, Bogdan Ionescu, Michael A. Riegler"
       ],
@@ -396,7 +396,7 @@
     },
     {
       "title": "The Perplexity Trap: When Patent Law Makes Human Writing Look Like AI",
-      "titleKo": "",
+      "titleKo": "당혹의 함정: 특허법이 인간의 글쓰기를 AI처럼 보이게 만들 때",
       "authors": [
         "Anubhab Banerjee"
       ],
@@ -411,7 +411,7 @@
     },
     {
       "title": "Do LLMs Need Architectural Changes for Simultaneous Speech Translation? A Prefix-to-Prefix Data Driven Approach",
-      "titleKo": "",
+      "titleKo": "LLM은 동시 음성 번역을 위해 아키텍처 변경이 필요합니까? 접두사 간 데이터 기반 접근 방식",
       "authors": [
         "Junkun Chen, Jian Xue, Ming Tang, Abdel Heba, Hoda Gholami, Ruchao Fan, Jinyu Li"
       ],
@@ -425,7 +425,7 @@
     },
     {
       "title": "What Models Express, Suppress, and Resist: Auditing Open-Weight LLMs with Persona Vectors",
-      "titleKo": "",
+      "titleKo": "모델이 표현하고, 억제하고, 저항하는 것: 페르소나 벡터를 사용한 개방형 LLM 감사",
       "authors": [
         "Winston Zeng, Ali Emami, Jinho D. Choi"
       ],
@@ -440,7 +440,7 @@
     },
     {
       "title": "Text2Sign: A Single-GPU Diffusion Baseline for Text-to-Sign Language Video Generation",
-      "titleKo": "",
+      "titleKo": "Text2Sign: 텍스트-수화 비디오 생성을 위한 단일 GPU 확산 기준선",
       "authors": [
         "Ruize Xia"
       ],
@@ -456,7 +456,7 @@
     },
     {
       "title": "RAGthoven at SemEval-2026 Task 1: A Multi-Stage Pipeline Walks Into a Benchmark and Barely Clears the Bar",
-      "titleKo": "",
+      "titleKo": "SemEval-2026의 RAGthoven 작업 1: 다단계 파이프라인이 벤치마크에 진입하고 간신히 기준을 통과함",
       "authors": [
         "Marek \\v{S}uppa, Vikt\\'oria Ondrejov\\'a, Lucia Ganajov\\'a, Gregor Karetka, Daniel Skala"
       ],
@@ -471,7 +471,7 @@
     },
     {
       "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
-      "titleKo": "",
+      "titleKo": "KV 캐시의 적응형 필터링: LLM 추론의 구조적 역할 편향 진단 및 수정",
       "authors": [
         "Soumil Mandal"
       ],
@@ -487,7 +487,7 @@
     },
     {
       "title": "GSM-Plus-BN: A Perturbation-Based Benchmark for Bangla Mathematical Reasoning in Large Language Models",
-      "titleKo": "",
+      "titleKo": "GSM-Plus-BN: 대규모 언어 모델의 방글라 수학적 추론을 위한 섭동 기반 벤치마크",
       "authors": [
         "Bidyarthi Paul, Nahida Jannat Mayouree, Md. Asif Karim, Sagar Chandra Nath, Swastika Kundu"
       ],
@@ -501,7 +501,7 @@
     },
     {
       "title": "Discourse-Aware Policy Analysis with Argumentation: A Hybrid LLM-Symbolic Framework for Disaster Governance",
-      "titleKo": "",
+      "titleKo": "논증을 통한 담론 인식 정책 분석: 재해 거버넌스를 위한 하이브리드 LLM 기호 프레임워크",
       "authors": [
         "Stylianos Loukas Vasileiou, Olga Derendiaeva"
       ],
@@ -516,7 +516,7 @@
     },
     {
       "title": "Finding the Right Tables and Columns: A Benchmark and Corpus-Adaptive Embeddings for SQL Schema Retrieval",
-      "titleKo": "",
+      "titleKo": "올바른 테이블과 열 찾기: SQL 스키마 검색을 위한 벤치마크 및 코퍼스 적응형 임베딩",
       "authors": [
         "Qingcheng Zeng, Puxuan Yu, Aman Mehta, Fuheng Zhao, Rajhans Samdani"
       ],
@@ -530,7 +530,7 @@
     },
     {
       "title": "Meta-Learning Preferences for Multilingual LLM Alignment",
-      "titleKo": "",
+      "titleKo": "다국어 LLM 정렬을 위한 메타 학습 기본 설정",
       "authors": [
         "Jiaying Lin, Seongho Son, Nam Phuong Tran, Long Tran-thanh, Ilija Bogunovic, Debmalya Mandal"
       ],
