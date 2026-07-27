@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T02:36:55Z",
+  "updatedAt": "2026-07-27T02:51:23Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 232597,
+      "stars": 233697,
       "language": "JavaScript",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-26",
       "trending": false
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 219548,
+      "stars": 220981,
       "language": "Python",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 196484,
+      "stars": 196556,
       "language": "C++",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -86,9 +86,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 185663,
+      "stars": 185701,
       "language": "Python",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-26",
       "trending": false
     },
     {
@@ -104,9 +104,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 176744,
+      "stars": 176951,
       "language": "Go",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 166267,
+      "stars": 166399,
       "language": "HTML",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-25",
       "trending": false
     },
     {
@@ -140,7 +140,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 164245,
+      "stars": 164278,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 162893,
+      "stars": 163010,
       "language": "Python",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -176,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 155152,
+      "stars": 156507,
       "language": "TypeScript",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-26",
       "trending": false
     },
     {
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 152293,
+      "stars": 152449,
       "language": "Python",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -212,9 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 150012,
+      "stars": 150340,
       "language": "TypeScript",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -230,9 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 146512,
+      "stars": 146840,
       "language": "Python",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 142454,
+      "stars": 142636,
       "language": "Python",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -266,7 +266,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 113442,
+      "stars": 113537,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-23",
       "trending": false
@@ -284,9 +284,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 101895,
+      "stars": 101988,
       "language": "Python",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -302,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 99681,
+      "stars": 99901,
       "language": "Jupyter Notebook",
-      "pushed": "2026-07-11",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -320,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 95162,
+      "stars": 95283,
       "language": "Python",
       "pushed": "2026-07-23",
       "trending": false
@@ -338,8 +338,26 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 90108,
+      "stars": 90152,
       "language": "C++",
+      "pushed": "2026-07-27",
+      "trending": false
+    },
+    {
+      "name": "thedotmack/claude-mem",
+      "desc": "모든 에이전트에 대해 세션 전반에 걸쳐 지속적인 컨텍스트 – 에이전트가 세션 중에 수행하는 모든 작업을 캡처하고 AI로 압축한 후 향후 세션에 관련 컨텍스트를 다시 주입합니다. Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode 등과 함께 작동합니다.",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "ai-memory",
+        "anthropic",
+        "artificial-intelligence"
+      ],
+      "source": "GitHub",
+      "pubDate": "2025-08-31",
+      "stars": 88657,
+      "language": "TypeScript",
       "pushed": "2026-07-23",
       "trending": false
     },
@@ -356,27 +374,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 88512,
+      "stars": 88610,
       "language": "Jupyter Notebook",
-      "pushed": "2026-07-16",
-      "trending": false
-    },
-    {
-      "name": "thedotmack/claude-mem",
-      "desc": "모든 에이전트에 대해 세션 전반에 걸쳐 지속적인 컨텍스트 – 에이전트가 세션 중에 수행하는 모든 작업을 캡처하고 AI로 압축한 후 향후 세션에 관련 컨텍스트를 다시 주입합니다. Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode 등과 함께 작동합니다.",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "tags": [
-        "ai",
-        "ai-agents",
-        "ai-memory",
-        "anthropic",
-        "artificial-intelligence"
-      ],
-      "source": "GitHub",
-      "pubDate": "2025-08-31",
-      "stars": 88380,
-      "language": "TypeScript",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-26",
       "trending": false
     },
     {
@@ -392,7 +392,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 82687,
+      "stars": 82723,
       "language": "",
       "pushed": "2026-07-07",
       "trending": false
@@ -410,27 +410,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 81881,
+      "stars": 82207,
       "language": "Python",
-      "pushed": "2026-07-23",
-      "trending": false
-    },
-    {
-      "name": "mlabonne/llm-course",
-      "desc": "로드맵과 Colab 노트북을 사용하여 LLM(대형 언어 모델)을 시작하는 과정입니다.",
-      "url": "https://github.com/mlabonne/llm-course",
-      "tags": [
-        "course",
-        "large-language-models",
-        "llm",
-        "machine-learning",
-        "roadmap"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-06-17",
-      "stars": 81183,
-      "language": "",
-      "pushed": "2026-02-05",
+      "pushed": "2026-07-26",
       "trending": false
     },
     {
@@ -446,9 +428,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-04-28",
-      "stars": 81051,
+      "stars": 81755,
       "language": "TypeScript",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
+      "trending": false
+    },
+    {
+      "name": "mlabonne/llm-course",
+      "desc": "로드맵과 Colab 노트북을 사용하여 LLM(대형 언어 모델)을 시작하는 과정입니다.",
+      "url": "https://github.com/mlabonne/llm-course",
+      "tags": [
+        "course",
+        "large-language-models",
+        "llm",
+        "machine-learning",
+        "roadmap"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-06-17",
+      "stars": 81259,
+      "language": "",
+      "pushed": "2026-02-05",
       "trending": false
     },
     {
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 76864,
+      "stars": 77051,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 70190,
+      "stars": 70394,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-22",
       "trending": false
@@ -500,9 +500,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 60059,
+      "stars": 60729,
       "language": "",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -518,9 +518,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 54872,
+      "stars": 54950,
       "language": "TypeScript",
-      "pushed": "2026-07-24",
+      "pushed": "2026-07-25",
       "trending": false
     },
     {
@@ -533,7 +533,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 53785,
+      "stars": 53871,
       "language": "Python",
       "pushed": "2026-07-23",
       "trending": false
@@ -551,9 +551,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 52754,
+      "stars": 52911,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-21",
+      "trending": false
+    },
+    {
+      "name": "usestrix/strix",
+      "desc": "앱의 취약점을 찾아 수정하는 오픈 소스 AI 침투 테스트 도구입니다.",
+      "url": "https://github.com/usestrix/strix",
+      "tags": [
+        "agents",
+        "ai-hacking",
+        "ai-penetration-testing",
+        "ai-pentesting",
+        "ai-security"
+      ],
+      "source": "GitHub",
+      "pubDate": "2025-08-05",
+      "stars": 44585,
+      "language": "Python",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -605,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 28598,
+      "stars": 28648,
       "language": "Python",
       "pushed": "2026-07-20",
       "trending": false
@@ -623,7 +641,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12537,
+      "stars": 12554,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -641,9 +659,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 11025,
+      "stars": 11045,
       "language": "Python",
-      "pushed": "2026-03-27",
+      "pushed": "2026-07-26",
       "trending": false
     },
     {
@@ -659,7 +677,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 8923,
+      "stars": 8931,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -677,9 +695,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 8026,
+      "stars": 8066,
       "language": "Rust",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {
@@ -695,7 +713,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-06",
-      "stars": 7247,
+      "stars": 7248,
       "language": "Python",
       "pushed": "2025-10-30",
       "trending": false
@@ -713,9 +731,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7231,
+      "stars": 7236,
       "language": "Python",
-      "pushed": "2026-07-22",
+      "pushed": "2026-07-27",
       "trending": false
     },
     {

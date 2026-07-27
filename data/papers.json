@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T02:36:52Z",
+  "updatedAt": "2026-07-27T02:51:19Z",
   "items": [
     {
       "title": "FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads",
@@ -350,7 +350,7 @@
     },
     {
       "title": "Stateful Guardrails for Multi-Turn LLM Systems: A Conversational Risk Accumulation Framework",
-      "titleKo": "",
+      "titleKo": "다중 회전 LLM 시스템을 위한 상태 저장 가드레일: 대화형 위험 축적 프레임워크",
       "authors": [
         "Sanjay Mishra, Divya Chukkapalli, Ganesh R. Naik"
       ],
@@ -365,7 +365,7 @@
     },
     {
       "title": "When Reasoning Narrows the Move: Diversity Collapse in LLM Game Play",
-      "titleKo": "",
+      "titleKo": "추론으로 움직임이 좁아질 때: LLM 게임 플레이의 다양성 붕괴",
       "authors": [
         "Junyi Sha, Renfei Tan, David Simchi-Levi"
       ],
@@ -379,7 +379,7 @@
     },
     {
       "title": "On the Computational Complexity of Structural Generalization",
-      "titleKo": "",
+      "titleKo": "구조적 일반화의 계산 복잡성",
       "authors": [
         "Zichao Wei"
       ],
@@ -394,7 +394,7 @@
     },
     {
       "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
-      "titleKo": "",
+      "titleKo": "대규모 언어 모델에서 하이퍼네트워크 기반 지식 주입을 위한 확장 법칙",
       "authors": [
         "Nischay Dhankhar, Dos Baha, Abulhair Saparov"
       ],
@@ -409,7 +409,7 @@
     },
     {
       "title": "Task Competence Is Not Instruction Following: Evaluating Instruction-Conflicting Behavior in Small Language Models",
-      "titleKo": "",
+      "titleKo": "작업 역량은 다음 지시가 아닙니다: 소규모 언어 모델에서 지시 충돌 행동 평가",
       "authors": [
         "Mahdiyeh Farajidizaji, Vatsal Raina"
       ],
@@ -423,7 +423,7 @@
     },
     {
       "title": "Adaptive Capitulation: A Structural Failure Mode of LLM Responses in Vulnerability Contexts",
-      "titleKo": "",
+      "titleKo": "적응형 항복: 취약성 상황에서 LLM 응답의 구조적 실패 모드",
       "authors": [
         "Eunna Lee"
       ],
@@ -439,7 +439,7 @@
     },
     {
       "title": "Reference-Free Evaluation of Reasoning in Open-Ended Question Answering",
-      "titleKo": "",
+      "titleKo": "개방형 질문 답변에서 추론에 대한 참조 없는 평가",
       "authors": [
         "Guneet Singh Kohli, Yuxiang Zhou, Michael Sejr Schlichtkrull, Gregory E Dean, Maria Liakata"
       ],
@@ -455,7 +455,7 @@
     },
     {
       "title": "Multi-Mask Diffusion Language Models for Few-Step Generation",
-      "titleKo": "",
+      "titleKo": "소수 단계 생성을 위한 다중 마스크 확산 언어 모델",
       "authors": [
         "Sijin Chen, Yinuo Ren, Heyang Zhao, Ziheng Cheng, Quanquan Gu, Lexing Ying"
       ],
@@ -470,7 +470,7 @@
     },
     {
       "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
-      "titleKo": "",
+      "titleKo": "SLPO: 대리 정책을 통한 잠재 추론 확장",
       "authors": [
         "Runyang You, Zhiyuan Liu, Yongqi Li, Wenjie Li"
       ],
@@ -486,7 +486,7 @@
     },
     {
       "title": "Lightweight Person-Place Relation Extraction from Historical Newspapers with Dependency Graphs and Proximity Features",
-      "titleKo": "",
+      "titleKo": "종속성 그래프 및 근접성 기능을 사용하여 역사 신문에서 간단한 개인-장소 관계 추출",
       "authors": [
         "Mlen-Too Wesley"
       ],
@@ -500,7 +500,7 @@
     },
     {
       "title": "Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking",
-      "titleKo": "",
+      "titleKo": "관련성 중심 검색을 넘어서: 루브릭 중심 문서 세트 선택 및 순위 지정",
       "authors": [
         "Kailin Jiang, Lei Liu, Jian Xi, Hui Xu, Junlin Liu, Baochen Fu, Bin Li,  Vichwang, Yu Lu, Haibo Shi"
       ],
@@ -514,7 +514,7 @@
     },
     {
       "title": "Learning the Arabic Dialect Continuum as a Continuous Space: A Regression Approach to Speaker Origin Prediction",
-      "titleKo": "",
+      "titleKo": "연속 공간으로서의 아랍어 방언 연속체 학습: 화자 원점 예측에 대한 회귀 접근법",
       "authors": [
         "Mohamed Aziz Khadraoui, Adel Ammar, Bilel Benjdira, Zahid Khan, Skander Turki, Wadii Boulila"
       ],
