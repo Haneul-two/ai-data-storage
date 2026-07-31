@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T02:33:07Z",
+  "updatedAt": "2026-07-31T02:44:45Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,7 +14,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 234883,
+      "stars": 236271,
       "language": "JavaScript",
       "pushed": "2026-07-29",
       "trending": false
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 221943,
+      "stars": 222930,
       "language": "Python",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 196573,
+      "stars": 196619,
       "language": "C++",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -86,9 +86,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 185739,
+      "stars": 185755,
       "language": "Python",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -104,9 +104,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 177142,
+      "stars": 177351,
       "language": "Go",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 166483,
+      "stars": 166540,
       "language": "HTML",
-      "pushed": "2026-07-28",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -140,7 +140,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 164293,
+      "stars": 164315,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 163076,
+      "stars": 163185,
       "language": "Python",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -176,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 157560,
+      "stars": 158395,
       "language": "TypeScript",
-      "pushed": "2026-07-28",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 152545,
+      "stars": 152644,
       "language": "Python",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -212,9 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 150594,
+      "stars": 150844,
       "language": "TypeScript",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -230,7 +230,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 147126,
+      "stars": 147395,
       "language": "Python",
       "pushed": "2026-07-27",
       "trending": false
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 142826,
+      "stars": 143045,
       "language": "Python",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -266,9 +266,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 113649,
+      "stars": 113756,
       "language": "Jupyter Notebook",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -284,9 +284,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 102045,
+      "stars": 102081,
       "language": "Python",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -302,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 100065,
+      "stars": 100187,
       "language": "Jupyter Notebook",
-      "pushed": "2026-07-27",
+      "pushed": "2026-07-29",
       "trending": false
     },
     {
@@ -320,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 95334,
+      "stars": 95420,
       "language": "Python",
       "pushed": "2026-07-28",
       "trending": false
@@ -338,9 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 90186,
+      "stars": 90222,
       "language": "C++",
-      "pushed": "2026-07-28",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -356,7 +356,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 88884,
+      "stars": 89093,
       "language": "TypeScript",
       "pushed": "2026-07-29",
       "trending": false
@@ -374,7 +374,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 88707,
+      "stars": 88782,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-28",
       "trending": false
@@ -392,27 +392,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 82792,
+      "stars": 82833,
       "language": "",
       "pushed": "2026-07-07",
-      "trending": false
-    },
-    {
-      "name": "OpenHands/OpenHands",
-      "desc": "🙌 OpenHands: AI 기반 개발",
-      "url": "https://github.com/OpenHands/OpenHands",
-      "tags": [
-        "agent",
-        "artificial-intelligence",
-        "chatgpt",
-        "claude-ai",
-        "cli"
-      ],
-      "source": "GitHub",
-      "pubDate": "2024-03-13",
-      "stars": 82436,
-      "language": "Python",
-      "pushed": "2026-07-28",
       "trending": false
     },
     {
@@ -428,9 +410,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-04-28",
-      "stars": 82295,
+      "stars": 82780,
       "language": "TypeScript",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-31",
+      "trending": false
+    },
+    {
+      "name": "OpenHands/OpenHands",
+      "desc": "🙌 OpenHands: AI 기반 개발",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "tags": [
+        "agent",
+        "artificial-intelligence",
+        "chatgpt",
+        "claude-ai",
+        "cli"
+      ],
+      "source": "GitHub",
+      "pubDate": "2024-03-13",
+      "stars": 82626,
+      "language": "Python",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -446,7 +446,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 81292,
+      "stars": 81337,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 77100,
+      "stars": 77149,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -482,9 +482,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 70592,
+      "stars": 70759,
       "language": "Jupyter Notebook",
-      "pushed": "2026-07-22",
+      "pushed": "2026-07-29",
       "trending": false
     },
     {
@@ -500,9 +500,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 61186,
+      "stars": 61540,
       "language": "",
-      "pushed": "2026-07-27",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -518,24 +518,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 55005,
+      "stars": 55052,
       "language": "TypeScript",
-      "pushed": "2026-07-27",
-      "trending": false
-    },
-    {
-      "name": "jingyaogong/minimind",
-      "desc": "🧠\"대형 모델\"은 2시간 만에 64M 작은 매개변수 LLM을 0부터 완전히 훈련합니다! 단 2시간 만에 64M 매개변수 LLM을 처음부터 훈련하세요!",
-      "url": "https://github.com/jingyaogong/minimind",
-      "tags": [
-        "artificial-intelligence",
-        "large-language-model"
-      ],
-      "source": "GitHub",
-      "pubDate": "2024-07-27",
-      "stars": 53964,
-      "language": "Python",
-      "pushed": "2026-07-23",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -551,9 +536,24 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 53105,
+      "stars": 54129,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-21",
+      "trending": false
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "desc": "🧠\"대형 모델\"은 2시간 만에 64M 작은 매개변수 LLM을 0부터 완전히 훈련합니다! 단 2시간 만에 64M 매개변수 LLM을 처음부터 훈련하세요!",
+      "url": "https://github.com/jingyaogong/minimind",
+      "tags": [
+        "artificial-intelligence",
+        "large-language-model"
+      ],
+      "source": "GitHub",
+      "pubDate": "2024-07-27",
+      "stars": 54109,
+      "language": "Python",
+      "pushed": "2026-07-23",
       "trending": false
     },
     {
@@ -569,9 +569,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-05",
-      "stars": 45375,
+      "stars": 45937,
       "language": "Python",
-      "pushed": "2026-07-28",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -623,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 28722,
+      "stars": 28812,
       "language": "Python",
       "pushed": "2026-07-20",
       "trending": false
@@ -641,7 +641,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12569,
+      "stars": 12593,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -659,7 +659,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 11057,
+      "stars": 11072,
       "language": "Python",
       "pushed": "2026-07-26",
       "trending": false
@@ -677,7 +677,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 8940,
+      "stars": 8946,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -695,9 +695,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 8084,
+      "stars": 8106,
       "language": "Rust",
-      "pushed": "2026-07-29",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
@@ -713,7 +713,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-06",
-      "stars": 7249,
+      "stars": 7253,
       "language": "Python",
       "pushed": "2025-10-30",
       "trending": false
@@ -731,9 +731,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7241,
+      "stars": 7248,
       "language": "Python",
-      "pushed": "2026-07-28",
+      "pushed": "2026-07-30",
       "trending": false
     },
     {
