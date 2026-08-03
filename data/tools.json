@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T02:44:45Z",
+  "updatedAt": "2026-08-03T02:43:11Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 236271,
+      "stars": 237094,
       "language": "JavaScript",
-      "pushed": "2026-07-29",
+      "pushed": "2026-08-02",
       "trending": false
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 222930,
+      "stars": 224356,
       "language": "Python",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-03",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 196619,
+      "stars": 196689,
       "language": "C++",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-03",
       "trending": false
     },
     {
@@ -86,9 +86,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 185755,
+      "stars": 185775,
       "language": "Python",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-02",
       "trending": false
     },
     {
@@ -104,7 +104,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 177351,
+      "stars": 177626,
       "language": "Go",
       "pushed": "2026-07-31",
       "trending": false
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 166540,
+      "stars": 166646,
       "language": "HTML",
-      "pushed": "2026-07-30",
+      "pushed": "2026-08-02",
       "trending": false
     },
     {
@@ -140,7 +140,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 164315,
+      "stars": 164358,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 163185,
+      "stars": 163265,
       "language": "Python",
-      "pushed": "2026-07-30",
+      "pushed": "2026-08-03",
       "trending": false
     },
     {
@@ -176,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 158395,
+      "stars": 159590,
       "language": "TypeScript",
-      "pushed": "2026-07-30",
+      "pushed": "2026-08-02",
       "trending": false
     },
     {
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 152644,
+      "stars": 152766,
       "language": "Python",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-03",
       "trending": false
     },
     {
@@ -212,9 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 150844,
+      "stars": 151115,
       "language": "TypeScript",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-03",
       "trending": false
     },
     {
@@ -230,9 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 147395,
+      "stars": 147652,
       "language": "Python",
-      "pushed": "2026-07-27",
+      "pushed": "2026-08-02",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 143045,
+      "stars": 143258,
       "language": "Python",
-      "pushed": "2026-07-30",
+      "pushed": "2026-08-02",
       "trending": false
     },
     {
@@ -266,9 +266,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 113756,
+      "stars": 114856,
       "language": "Jupyter Notebook",
-      "pushed": "2026-07-30",
+      "pushed": "2026-08-01",
       "trending": false
     },
     {
@@ -284,9 +284,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 102081,
+      "stars": 102141,
       "language": "Python",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-03",
       "trending": false
     },
     {
@@ -302,7 +302,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 100187,
+      "stars": 100402,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-29",
       "trending": false
@@ -320,9 +320,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 95420,
+      "stars": 95495,
       "language": "Python",
-      "pushed": "2026-07-28",
+      "pushed": "2026-08-01",
       "trending": false
     },
     {
@@ -338,9 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 90222,
+      "stars": 90262,
       "language": "C++",
-      "pushed": "2026-07-30",
+      "pushed": "2026-08-01",
       "trending": false
     },
     {
@@ -356,9 +356,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 89093,
+      "stars": 89347,
       "language": "TypeScript",
-      "pushed": "2026-07-29",
+      "pushed": "2026-08-02",
       "trending": false
     },
     {
@@ -374,27 +374,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 88782,
+      "stars": 88914,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-28",
-      "trending": false
-    },
-    {
-      "name": "Developer-Y/cs-video-courses",
-      "desc": "비디오 강의가 포함된 컴퓨터 과학 강좌 목록입니다.",
-      "url": "https://github.com/Developer-Y/cs-video-courses",
-      "tags": [
-        "algorithms",
-        "bioinformatics",
-        "computational-biology",
-        "computational-physics",
-        "computer-architecture"
-      ],
-      "source": "GitHub",
-      "pubDate": "2016-10-21",
-      "stars": 82833,
-      "language": "",
-      "pushed": "2026-07-07",
       "trending": false
     },
     {
@@ -410,9 +392,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-04-28",
-      "stars": 82780,
+      "stars": 83233,
       "language": "TypeScript",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-03",
       "trending": false
     },
     {
@@ -428,9 +410,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 82626,
+      "stars": 82911,
       "language": "Python",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-03",
+      "trending": false
+    },
+    {
+      "name": "Developer-Y/cs-video-courses",
+      "desc": "비디오 강의가 포함된 컴퓨터 과학 강좌 목록입니다.",
+      "url": "https://github.com/Developer-Y/cs-video-courses",
+      "tags": [
+        "algorithms",
+        "bioinformatics",
+        "computational-biology",
+        "computational-physics",
+        "computer-architecture"
+      ],
+      "source": "GitHub",
+      "pubDate": "2016-10-21",
+      "stars": 82900,
+      "language": "",
+      "pushed": "2026-07-07",
       "trending": false
     },
     {
@@ -446,7 +446,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 81337,
+      "stars": 81390,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 77149,
+      "stars": 77211,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 70759,
+      "stars": 71008,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-29",
       "trending": false
@@ -500,26 +500,8 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 61540,
+      "stars": 62011,
       "language": "",
-      "pushed": "2026-07-30",
-      "trending": false
-    },
-    {
-      "name": "FlowiseAI/Flowise",
-      "desc": "시각적으로 AI 에이전트 구축",
-      "url": "https://github.com/FlowiseAI/Flowise",
-      "tags": [
-        "agentic-ai",
-        "agentic-workflow",
-        "agents",
-        "artificial-intelligence",
-        "chatbot"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-03-31",
-      "stars": 55052,
-      "language": "TypeScript",
       "pushed": "2026-07-30",
       "trending": false
     },
@@ -536,9 +518,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 54129,
+      "stars": 59278,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-21",
+      "trending": false
+    },
+    {
+      "name": "FlowiseAI/Flowise",
+      "desc": "시각적으로 AI 에이전트 구축",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "tags": [
+        "agentic-ai",
+        "agentic-workflow",
+        "agents",
+        "artificial-intelligence",
+        "chatbot"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-03-31",
+      "stars": 55108,
+      "language": "TypeScript",
+      "pushed": "2026-07-31",
       "trending": false
     },
     {
@@ -551,7 +551,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 54109,
+      "stars": 54218,
       "language": "Python",
       "pushed": "2026-07-23",
       "trending": false
@@ -569,9 +569,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-05",
-      "stars": 45937,
+      "stars": 46684,
       "language": "Python",
-      "pushed": "2026-07-31",
+      "pushed": "2026-08-03",
       "trending": false
     },
     {
@@ -623,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 28812,
+      "stars": 28924,
       "language": "Python",
       "pushed": "2026-07-20",
       "trending": false
@@ -641,7 +641,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12593,
+      "stars": 12595,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -659,7 +659,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 11072,
+      "stars": 11079,
       "language": "Python",
       "pushed": "2026-07-26",
       "trending": false
@@ -677,7 +677,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 8946,
+      "stars": 8950,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -695,27 +695,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 8106,
+      "stars": 8144,
       "language": "Rust",
-      "pushed": "2026-07-30",
-      "trending": false
-    },
-    {
-      "name": "InternLM/InternLM",
-      "desc": "InternLM 시리즈(InternLM, InternLM2, InternLM2.5, InternLM3) 공식 출시.",
-      "url": "https://github.com/InternLM/InternLM",
-      "tags": [
-        "chatbot",
-        "chinese",
-        "fine-tuning-llm",
-        "flash-attention",
-        "gpt"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-07-06",
-      "stars": 7253,
-      "language": "Python",
-      "pushed": "2025-10-30",
+      "pushed": "2026-08-02",
       "trending": false
     },
     {
@@ -731,9 +713,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7248,
+      "stars": 7261,
       "language": "Python",
-      "pushed": "2026-07-30",
+      "pushed": "2026-07-31",
+      "trending": false
+    },
+    {
+      "name": "InternLM/InternLM",
+      "desc": "InternLM 시리즈(InternLM, InternLM2, InternLM2.5, InternLM3) 공식 출시.",
+      "url": "https://github.com/InternLM/InternLM",
+      "tags": [
+        "chatbot",
+        "chinese",
+        "fine-tuning-llm",
+        "flash-attention",
+        "gpt"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-07-06",
+      "stars": 7256,
+      "language": "Python",
+      "pushed": "2025-10-30",
       "trending": false
     },
     {

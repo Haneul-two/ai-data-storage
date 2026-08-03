@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T02:44:43Z",
+  "updatedAt": "2026-08-03T02:43:09Z",
   "items": [
     {
       "title": "Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models",
@@ -354,7 +354,7 @@
     },
     {
       "title": "Large-Scale ChatBot Validation Through Customer Digital Twin Simulations",
-      "titleKo": "",
+      "titleKo": "고객 디지털 트윈 시뮬레이션을 통한 대규모 ChatBot 검증",
       "authors": [
         "Cristovao Iglesias, Devesh Batra, Alankar Atreya, Stefan Wagner, Robert Hankache, Patrick Sinclair, Giulio Pelosio, Michael McMillan, Greig A. Cowan, Raad Khraishi"
       ],
@@ -369,7 +369,7 @@
     },
     {
       "title": "Do Methods Support the Claims? Intra-Paper Verification for Peer Review",
-      "titleKo": "",
+      "titleKo": "방법이 주장을 뒷받침하는가? 동료 검토를 위한 논문 내 검증",
       "authors": [
         "Ranjitha Shivaprasad Ballakuraya, Arash Mahyari, Ashok Srinivasan"
       ],
@@ -385,7 +385,7 @@
     },
     {
       "title": "DuplexGen: Adaptive Synthesis of Human-AI Turn-Taking Dialogues",
-      "titleKo": "",
+      "titleKo": "DuplexGen: 인간-AI ​​차례 대화의 적응형 합성",
       "authors": [
         "Takyoung Kim, Kang-wook Kim, Sang Hoon Woo, Julia Hirschberg, Gunhee Kim, Dilek Hakkani-T\\\"ur"
       ],
@@ -399,7 +399,7 @@
     },
     {
       "title": "Choosing Where and How to Moderate: End-to-End Trade-offs in Filter Placement and Response Rewriting",
-      "titleKo": "",
+      "titleKo": "조정 위치 및 방법 선택: 필터 배치 및 응답 재작성 시 종단 간 절충",
       "authors": [
         "Mengya Hu, Susie Park, Suzana Ilic, Qiong Wei, Sandeep Atluri, Myra Deng, Tucker Fross, Curt Tigges"
       ],
@@ -413,7 +413,7 @@
     },
     {
       "title": "Characterizing Human-Likeness in AI Generated Poetry: A Zero-shot Classification Study",
-      "titleKo": "",
+      "titleKo": "AI 생성 시에서 인간 유사성 특성화: 제로샷 분류 연구",
       "authors": [
         "A. N. Biswas, T. Tabassum, A. A. Shohid, R. M. Mou, A. A. Esha, F. Sadeque, A. Ahmed"
       ],
@@ -427,7 +427,7 @@
     },
     {
       "title": "Steering Instruction Hierarchies at Inference Time",
-      "titleKo": "",
+      "titleKo": "추론 시간의 조종 지침 계층",
       "authors": [
         "Siqi Zeng, Sewoong Lee, Han Zhao, Julia Hockenmaier"
       ],
@@ -441,7 +441,7 @@
     },
     {
       "title": "A large-scale corpus of religious radio broadcast transcripts from webstream recordings in the United States",
-      "titleKo": "",
+      "titleKo": "미국의 웹스트림 녹음에서 나온 대규모 종교 라디오 방송 녹취록 모음",
       "authors": [
         "Samuel Bestvater, Athena Chapekis, Skyler Seets, Anna Lieb, Sono Shah, Aaron Smith"
       ],
@@ -457,7 +457,7 @@
     },
     {
       "title": "Robostreet Flow: A Lightweight, Ultra-Low-Drag Electric Tractor and Four-Truck Hybrid Convoy Architecture for Minimum-Cost Point-to-Point Freight",
-      "titleKo": "",
+      "titleKo": "Robostreet Flow: 최소 비용의 지점 간 화물 운송을 위한 경량, 초저 항력 전기 트랙터 및 4트럭 하이브리드 호송 아키텍처",
       "authors": [
         "Wei Wang, Yiru Veronika Wang, Sumukh Veeramalla, Xiaohui Liang, for the Robostreet Research Team"
       ],
@@ -471,7 +471,7 @@
     },
     {
       "title": "Evaluating Prompt Scope and Demonstration Similarity in Local LLM Machine Translation",
-      "titleKo": "",
+      "titleKo": "로컬 LLM 기계 번역의 프롬프트 범위 및 시연 유사성 평가",
       "authors": [
         "Mihael Arcan"
       ],
@@ -485,7 +485,7 @@
     },
     {
       "title": "AgentGUI: An Interface for Observing and Steering Long-Running AI Agents",
-      "titleKo": "",
+      "titleKo": "AgentGUI: 장기 실행 AI 에이전트를 관찰하고 조정하기 위한 인터페이스",
       "authors": [
         "Xuan Zhao, Jiwoong Sohn, Qinyue Zheng, Michael Moor"
       ],
@@ -501,7 +501,7 @@
     },
     {
       "title": "When Synthetic Users Fail: A Cross-Domain Benchmark of LLM-Simulated Human Survey Responses",
-      "titleKo": "",
+      "titleKo": "합성 사용자가 실패하는 경우: LLM 시뮬레이션 인간 설문 조사 응답의 도메인 간 벤치마크",
       "authors": [
         "Zihan Chen, Di Zhu, Lei Nico Zheng"
       ],
@@ -517,7 +517,7 @@
     },
     {
       "title": "Symphony of Bias: Exploring Gender Associations with Musical Instruments in Multimodal LLMs",
-      "titleKo": "",
+      "titleKo": "편견의 교향곡: 다중 모드 LLM에서 악기와 성별 연관성 탐색",
       "authors": [
         "Farhan Farsi, Shayan Bali, Mohammad Heydari Rad, Negar Heidary, Donya Rooein"
       ],
