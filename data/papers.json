@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T02:37:14Z",
+  "updatedAt": "2026-08-10T01:43:18Z",
   "items": [
     {
       "title": "A Long-Run Persistence Theory for AI Systems under the Redundancy-Adjusted Artificial Age Score (AAS)",
@@ -359,7 +359,7 @@
     },
     {
       "title": "Transfer Learning for Named Entity Recognition of Classical Latin through LLM Prompting",
-      "titleKo": "",
+      "titleKo": "LLM 프롬프트를 통한 고전 라틴어의 명명된 개체 인식을 위한 전이 학습",
       "authors": [
         "Callum Chan"
       ],
@@ -373,7 +373,7 @@
     },
     {
       "title": "When More Becomes Less: Position-Dependent Repetition Effects in Language Models",
-      "titleKo": "",
+      "titleKo": "많을수록 적을 때: 언어 모델의 위치 의존적 반복 효과",
       "authors": [
         "Han-yu Wang"
       ],
@@ -388,7 +388,7 @@
     },
     {
       "title": "Reconstructing Persistent Worlds from Narratives for Narrative-Grounded Interactive Experiences",
-      "titleKo": "",
+      "titleKo": "내러티브 기반 상호작용 경험을 위해 내러티브로부터 지속성 세계 재구성",
       "authors": [
         "Yi-Chun Chen"
       ],
@@ -404,7 +404,7 @@
     },
     {
       "title": "Learning Sexism Detection Using Multi-Agent Perspectivist Preference Optimization",
-      "titleKo": "",
+      "titleKo": "다중 에이전트 관점주의자 선호도 최적화를 사용하여 성차별 탐지 ​​학습",
       "authors": [
         "Hadi Mohammadi, Tina Shahedi, Robert A. Bagheri, Mehdi Dastani, Masoume M. Raeissi"
       ],
@@ -420,7 +420,7 @@
     },
     {
       "title": "Mind the Cap: Output-Budget Regimes Change the Measured Multilingual Reasoning Gap",
-      "titleKo": "",
+      "titleKo": "한계에 주의하세요: 산출 예산 체제로 인해 측정된 다국어 추론 격차가 변경됩니다.",
       "authors": [
         "Ankit Goyal, Jaideep Ray"
       ],
@@ -435,7 +435,7 @@
     },
     {
       "title": "Visualizing Graph-to-Answer Mechanism Recovery in Materials-Science Hypothesis Generation",
-      "titleKo": "",
+      "titleKo": "재료 과학 가설 생성에서 그래프-응답 메커니즘 복구 시각화",
       "authors": [
         "Shashwat Sourav, Subhadeep Pal, Markus J. Buehler, Sanjay Das, Fiona Y. Wang, Dominik Soos, Tirthankar Ghosal"
       ],
@@ -450,7 +450,7 @@
     },
     {
       "title": "Test, then Route: How Language Models Execute In-Context Conditional Rules Across Models and Languages",
-      "titleKo": "",
+      "titleKo": "테스트 후 라우팅: 언어 모델이 모델과 언어 전반에 걸쳐 상황에 맞는 조건부 규칙을 실행하는 방법",
       "authors": [
         "Luxshan Thavarasa, Sivasuthan Sukumar"
       ],
@@ -464,7 +464,7 @@
     },
     {
       "title": "Large Language Models for Low-Resource Languages: A Conceptual Framework for an Electronic Explanatory Dictionary of the Tajik Language",
-      "titleKo": "",
+      "titleKo": "저자원 언어를 위한 대규모 언어 모델: 타지크어 전자 설명 사전의 개념적 프레임워크",
       "authors": [
         "Mullosharaf K. Arabov, S. S. Pirov, B. Sultonov"
       ],
@@ -478,7 +478,7 @@
     },
     {
       "title": "Patients-like-me: A Variational LM--GNN Framework for Explainable Clinical Prediction",
-      "titleKo": "",
+      "titleKo": "나와 같은 환자: 설명 가능한 임상 예측을 위한 변형 LM--GNN 프레임워크",
       "authors": [
         "Xinyu Wang, Yixuan Li, Hanwei Wu, Qincheng Lu, Chi-Kuang Yeh, Xiao-Wen Chang, Ziyang Song"
       ],
@@ -493,7 +493,7 @@
     },
     {
       "title": "Hallucinations on the Board: Tool-Augmented Evaluation of LLM Chess Commentary",
-      "titleKo": "",
+      "titleKo": "보드 위의 환각: LLM 체스 해설의 도구 강화 평가",
       "authors": [
         "S. Ashwin Hebbar, Peiyao Sheng, Sewoong Oh, Pramod Viswanath"
       ],
@@ -508,7 +508,7 @@
     },
     {
       "title": "Towards End-to-End Multilingual Metaphor Processing: Integrating Detection, Translation, and Evaluation",
-      "titleKo": "",
+      "titleKo": "엔드투엔드 다국어 은유 처리를 향하여: 감지, 번역 및 평가 통합",
       "authors": [
         "Jiahui Liang, Lifeng Han"
       ],
@@ -522,7 +522,7 @@
     },
     {
       "title": "The Fairness Collapse Phenomenon: Bias Amplification in Language Models Trained on Synthetic Data",
-      "titleKo": "",
+      "titleKo": "공정성 붕괴 현상: 합성 데이터로 훈련된 언어 모델의 편향 증폭",
       "authors": [
         "Irina Proskurina, Antoine Gourru, Julien Velcin"
       ],
