@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T01:43:20Z",
+  "updatedAt": "2026-08-12T01:51:37Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 239029,
+      "stars": 239490,
       "language": "JavaScript",
-      "pushed": "2026-08-09",
+      "pushed": "2026-08-11",
       "trending": false
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 227955,
+      "stars": 229056,
       "language": "Python",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 196942,
+      "stars": 196955,
       "language": "C++",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -68,9 +68,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 186465,
+      "stars": 186530,
       "language": "Python",
-      "pushed": "2026-08-09",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -104,9 +104,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 178143,
+      "stars": 178298,
       "language": "Go",
-      "pushed": "2026-08-09",
+      "pushed": "2026-08-11",
       "trending": false
     },
     {
@@ -122,27 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 166924,
+      "stars": 167009,
       "language": "HTML",
-      "pushed": "2026-08-09",
-      "trending": false
-    },
-    {
-      "name": "AUTOMATIC1111/stable-diffusion-webui",
-      "desc": "안정적인 확산 웹 UI",
-      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
-      "tags": [
-        "ai",
-        "ai-art",
-        "deep-learning",
-        "diffusion",
-        "gradio"
-      ],
-      "source": "GitHub",
-      "pubDate": "2022-08-22",
-      "stars": 164462,
-      "language": "Python",
-      "pushed": "2026-03-02",
+      "pushed": "2026-08-11",
       "trending": false
     },
     {
@@ -158,9 +140,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 164218,
+      "stars": 165903,
       "language": "TypeScript",
-      "pushed": "2026-08-09",
+      "pushed": "2026-08-11",
+      "trending": false
+    },
+    {
+      "name": "AUTOMATIC1111/stable-diffusion-webui",
+      "desc": "안정적인 확산 웹 UI",
+      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+      "tags": [
+        "ai",
+        "ai-art",
+        "deep-learning",
+        "diffusion",
+        "gradio"
+      ],
+      "source": "GitHub",
+      "pubDate": "2022-08-22",
+      "stars": 164482,
+      "language": "Python",
+      "pushed": "2026-03-02",
       "trending": false
     },
     {
@@ -176,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 163506,
+      "stars": 163823,
       "language": "Python",
-      "pushed": "2026-08-09",
+      "pushed": "2026-08-11",
       "trending": false
     },
     {
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 152988,
+      "stars": 153071,
       "language": "Python",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -212,9 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 151879,
+      "stars": 152126,
       "language": "TypeScript",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -230,9 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 148331,
+      "stars": 148513,
       "language": "Python",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-11",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 143814,
+      "stars": 144009,
       "language": "Python",
-      "pushed": "2026-08-09",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -266,27 +266,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 117187,
+      "stars": 117528,
       "language": "Jupyter Notebook",
       "pushed": "2026-08-06",
-      "trending": false
-    },
-    {
-      "name": "pytorch/pytorch",
-      "desc": "강력한 GPU 가속 기능을 갖춘 Python의 Tensor 및 동적 신경망",
-      "url": "https://github.com/pytorch/pytorch",
-      "tags": [
-        "autograd",
-        "deep-learning",
-        "gpu",
-        "machine-learning",
-        "neural-network"
-      ],
-      "source": "GitHub",
-      "pubDate": "2016-08-13",
-      "stars": 102303,
-      "language": "Python",
-      "pushed": "2026-08-10",
       "trending": false
     },
     {
@@ -302,9 +284,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 102067,
+      "stars": 102440,
       "language": "Jupyter Notebook",
       "pushed": "2026-08-10",
+      "trending": false
+    },
+    {
+      "name": "pytorch/pytorch",
+      "desc": "강력한 GPU 가속 기능을 갖춘 Python의 Tensor 및 동적 신경망",
+      "url": "https://github.com/pytorch/pytorch",
+      "tags": [
+        "autograd",
+        "deep-learning",
+        "gpu",
+        "machine-learning",
+        "neural-network"
+      ],
+      "source": "GitHub",
+      "pubDate": "2016-08-13",
+      "stars": 102325,
+      "language": "Python",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -320,27 +320,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 95838,
+      "stars": 95873,
       "language": "Python",
       "pushed": "2026-08-07",
-      "trending": false
-    },
-    {
-      "name": "opencv/opencv",
-      "desc": "오픈 소스 컴퓨터 비전 라이브러리",
-      "url": "https://github.com/opencv/opencv",
-      "tags": [
-        "c-plus-plus",
-        "computer-vision",
-        "deep-learning",
-        "image-processing",
-        "opencv"
-      ],
-      "source": "GitHub",
-      "pubDate": "2012-07-19",
-      "stars": 90356,
-      "language": "C++",
-      "pushed": "2026-08-09",
       "trending": false
     },
     {
@@ -356,9 +338,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 90217,
+      "stars": 90451,
       "language": "TypeScript",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-12",
+      "trending": false
+    },
+    {
+      "name": "opencv/opencv",
+      "desc": "오픈 소스 컴퓨터 비전 라이브러리",
+      "url": "https://github.com/opencv/opencv",
+      "tags": [
+        "c-plus-plus",
+        "computer-vision",
+        "deep-learning",
+        "image-processing",
+        "opencv"
+      ],
+      "source": "GitHub",
+      "pubDate": "2012-07-19",
+      "stars": 90379,
+      "language": "C++",
+      "pushed": "2026-08-11",
       "trending": false
     },
     {
@@ -374,7 +374,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 89210,
+      "stars": 89288,
       "language": "Jupyter Notebook",
       "pushed": "2026-08-05",
       "trending": false
@@ -392,9 +392,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-04-28",
-      "stars": 84747,
+      "stars": 85142,
       "language": "TypeScript",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -410,9 +410,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 83558,
+      "stars": 83739,
       "language": "Python",
-      "pushed": "2026-08-09",
+      "pushed": "2026-08-11",
       "trending": false
     },
     {
@@ -428,7 +428,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 82965,
+      "stars": 83003,
       "language": "",
       "pushed": "2026-07-07",
       "trending": false
@@ -446,7 +446,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 81568,
+      "stars": 81613,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 77372,
+      "stars": 77421,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 71740,
+      "stars": 71933,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-29",
       "trending": false
@@ -500,7 +500,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 64048,
+      "stars": 64627,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-21",
       "trending": false
@@ -518,7 +518,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 62632,
+      "stars": 62742,
       "language": "",
       "pushed": "2026-08-07",
       "trending": false
@@ -536,9 +536,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 55280,
+      "stars": 55331,
       "language": "TypeScript",
-      "pushed": "2026-08-07",
+      "pushed": "2026-08-10",
       "trending": false
     },
     {
@@ -551,7 +551,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 54499,
+      "stars": 54567,
       "language": "Python",
       "pushed": "2026-08-06",
       "trending": false
@@ -569,9 +569,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-05",
-      "stars": 50343,
+      "stars": 51246,
       "language": "Python",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-11",
       "trending": false
     },
     {
@@ -623,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 29287,
+      "stars": 29409,
       "language": "Python",
       "pushed": "2026-07-20",
       "trending": false
@@ -659,7 +659,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 11086,
+      "stars": 11100,
       "language": "Python",
       "pushed": "2026-07-26",
       "trending": false
@@ -677,7 +677,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 8963,
+      "stars": 8968,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -695,9 +695,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 8222,
+      "stars": 8245,
       "language": "Rust",
-      "pushed": "2026-08-10",
+      "pushed": "2026-08-12",
       "trending": false
     },
     {
@@ -713,7 +713,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7287,
+      "stars": 7294,
       "language": "Python",
       "pushed": "2026-08-04",
       "trending": false
@@ -731,7 +731,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-06",
-      "stars": 7261,
+      "stars": 7260,
       "language": "Python",
       "pushed": "2025-10-30",
       "trending": false
