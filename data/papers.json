@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T01:51:23Z",
+  "updatedAt": "2026-08-17T01:11:31Z",
   "items": [
     {
       "title": "Dynamic Governance of Multi-LLM Agent Systems for Collaborative Conversational Outcomes",
@@ -362,7 +362,7 @@
     },
     {
       "title": "Backtrader-Bench: Benchmarking LLM Agents on Algorithmic Trading with Self-Generated MCQs",
-      "titleKo": "",
+      "titleKo": "Backtrader-Bench: 자체 생성 MCQ를 사용한 알고리즘 거래에 대한 LLM 에이전트 벤치마킹",
       "authors": [
         "Ruoxi Zhao, Maziar Raissi"
       ],
@@ -377,7 +377,7 @@
     },
     {
       "title": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
-      "titleKo": "",
+      "titleKo": "반복 깊이를 사전 훈련된 언어 모델로 개조: 두 매개변수 예산에서 설치, 외삽, 전송 및 유지",
       "authors": [
         "Mark Shapiro"
       ],
@@ -393,7 +393,7 @@
     },
     {
       "title": "TRACE Bench: Task-driven Roleplay Agentic Checklist Evaluation",
-      "titleKo": "",
+      "titleKo": "TRACE 벤치: 작업 중심 역할극 에이전트 체크리스트 평가",
       "authors": [
         "Jiahui Zhang, Ziwei Zhang, Yipeng Wang, Yibo Liu, Haozhou Pang, Yikai Hu, Hongyan Ren, Lan Zhou, Qi Gan, Kai Sheng"
       ],
@@ -408,7 +408,7 @@
     },
     {
       "title": "Lost in Compaction: Evaluating Side-Constraint Loss under Context Compaction",
-      "titleKo": "",
+      "titleKo": "압축 손실: 컨텍스트 압축에서 측면 제약 손실 평가",
       "authors": [
         "Zhiqi Wang, Yichi Zhang, Dongwon Lee, Yuchen Yang"
       ],
@@ -423,7 +423,7 @@
     },
     {
       "title": "Diffuse to Compress: Leveraging Diffusion LMs for Lossless Compression",
-      "titleKo": "",
+      "titleKo": "확산에서 압축으로: 무손실 압축을 위해 확산 LM 활용",
       "authors": [
         "Angelo Nardone, Paolo Ferragina"
       ],
@@ -439,7 +439,7 @@
     },
     {
       "title": "Gloss-Free Representation Learning for Cross-Dataset Sign Spotting",
-      "titleKo": "",
+      "titleKo": "데이터세트 간 표시 발견을 위한 무광택 표현 학습",
       "authors": [
         "O\\u{g}uz Akif T\\\"ufekcio\\u{g}lu, Ezgi Ekin, Mustafa Kaan \\c{C}evik, Hacer Yalim Keles"
       ],
@@ -454,7 +454,7 @@
     },
     {
       "title": "Better, Faster, Stronger: Programmatic Skill Learning Best Reduces Agent Cost",
-      "titleKo": "",
+      "titleKo": "더 좋고, 더 빠르고, 더 강력합니다: 프로그래밍 방식 기술 학습으로 상담사 비용 절감 효과가 가장 좋습니다.",
       "authors": [
         "Zixi Huang, Xiheng Wang, Andrew Wang, William Jurayj, Bernal Jim\\'enez Guti\\'errez, Daniel Khashabi, Nicholas Andrews"
       ],
@@ -469,7 +469,7 @@
     },
     {
       "title": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
-      "titleKo": "",
+      "titleKo": "Skill-Harness Evolution을 통해 자체 진화하는 구체화된 에이전트",
       "authors": [
         "Peidong Wang, Zhiming Ma, Ying Chang, Xufang Luo, Xiaocui Yang, Shi Feng, Yuqing Yang, Dongsheng Li"
       ],
@@ -484,7 +484,7 @@
     },
     {
       "title": "ODE-Based Transformer Decoders for Iterative Sign Language Translation",
-      "titleKo": "",
+      "titleKo": "반복 수화 번역을 위한 ODE 기반 변환기 디코더",
       "authors": [
         "Tu\\u{g}\\c{c}e K{\\i}z{\\i}ltepe, Hacer Yalim Keles"
       ],
@@ -499,7 +499,7 @@
     },
     {
       "title": "Measure, Don't Optimize: Forecasting Recovery in LLM Unlearning",
-      "titleKo": "",
+      "titleKo": "측정하고 최적화하지 마세요: LLM 언러닝의 회복 예측",
       "authors": [
         "Zirui Song, Huaxing Liu, Xiang Wang, Shuai Li, Xinye Li, Lang Gao, Jinghui Zhang, Zheng Lu, Fengxian Ji, Xiaojun Chang, Xiuying Chen"
       ],
@@ -513,7 +513,7 @@
     },
     {
       "title": "Is Convergence Inevitable? Tracing Output Homogeneity Back to Base Models",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Alexandrine Fortier, Hazel Chen, Peter West"
       ],
@@ -527,7 +527,7 @@
     },
     {
       "title": "Stigma and Support in Online Sexual Violence Narratives on Reddit",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Shirlene Rose Bandela, Karan Bindal, Vaibhav Garg, Rezvaneh Rezapour"
       ],

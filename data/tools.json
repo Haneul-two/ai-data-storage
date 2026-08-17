@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T01:51:25Z",
+  "updatedAt": "2026-08-17T01:11:34Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 239990,
+      "stars": 240495,
       "language": "JavaScript",
-      "pushed": "2026-08-13",
+      "pushed": "2026-08-17",
       "trending": false
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 230157,
+      "stars": 231521,
       "language": "Python",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-17",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 197006,
+      "stars": 197087,
       "language": "C++",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-16",
       "trending": false
     },
     {
@@ -68,9 +68,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 186597,
+      "stars": 186646,
       "language": "Python",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-17",
       "trending": false
     },
     {
@@ -104,27 +104,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 178487,
+      "stars": 178719,
       "language": "Go",
-      "pushed": "2026-08-13",
-      "trending": false
-    },
-    {
-      "name": "f/prompts.chat",
-      "desc": "f.k.a. 멋진 ChatGPT 프롬프트. 커뮤니티에서 메시지를 공유하고 발견하고 수집하세요. 무료 오픈 소스 — 완전한 개인 정보 보호를 보장하는 조직의 자체 호스트입니다.",
-      "url": "https://github.com/f/prompts.chat",
-      "tags": [
-        "ai",
-        "artificial-intelligence",
-        "awesome-list",
-        "chatgpt",
-        "chatgpt-prompts"
-      ],
-      "source": "GitHub",
-      "pubDate": "2022-12-05",
-      "stars": 167098,
-      "language": "HTML",
-      "pushed": "2026-08-13",
+      "pushed": "2026-08-16",
       "trending": false
     },
     {
@@ -140,9 +122,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 166996,
+      "stars": 168211,
       "language": "TypeScript",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-16",
+      "trending": false
+    },
+    {
+      "name": "f/prompts.chat",
+      "desc": "f.k.a. 멋진 ChatGPT 프롬프트. 커뮤니티에서 메시지를 공유하고 발견하고 수집하세요. 무료 오픈 소스 — 완전한 개인 정보 보호를 보장하는 조직의 자체 호스트입니다.",
+      "url": "https://github.com/f/prompts.chat",
+      "tags": [
+        "ai",
+        "artificial-intelligence",
+        "awesome-list",
+        "chatgpt",
+        "chatgpt-prompts"
+      ],
+      "source": "GitHub",
+      "pubDate": "2022-12-05",
+      "stars": 167285,
+      "language": "HTML",
+      "pushed": "2026-08-16",
       "trending": false
     },
     {
@@ -158,7 +158,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 164514,
+      "stars": 164535,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -176,9 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 164079,
+      "stars": 164165,
       "language": "Python",
-      "pushed": "2026-08-13",
+      "pushed": "2026-08-16",
       "trending": false
     },
     {
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 153201,
+      "stars": 153338,
       "language": "Python",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-17",
       "trending": false
     },
     {
@@ -212,9 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 152379,
+      "stars": 152641,
       "language": "TypeScript",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-16",
       "trending": false
     },
     {
@@ -230,9 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 148721,
+      "stars": 148961,
       "language": "Python",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-15",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 144191,
+      "stars": 144353,
       "language": "Python",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-16",
       "trending": false
     },
     {
@@ -266,7 +266,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 117699,
+      "stars": 117877,
       "language": "Jupyter Notebook",
       "pushed": "2026-08-13",
       "trending": false
@@ -284,7 +284,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 102614,
+      "stars": 102799,
       "language": "Jupyter Notebook",
       "pushed": "2026-08-10",
       "trending": false
@@ -302,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 102360,
+      "stars": 102430,
       "language": "Python",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-17",
       "trending": false
     },
     {
@@ -320,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 95921,
+      "stars": 95975,
       "language": "Python",
       "pushed": "2026-08-13",
       "trending": false
@@ -338,9 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 90658,
+      "stars": 90916,
       "language": "TypeScript",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-16",
       "trending": false
     },
     {
@@ -356,9 +356,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 90418,
+      "stars": 90458,
       "language": "C++",
-      "pushed": "2026-08-13",
+      "pushed": "2026-08-15",
       "trending": false
     },
     {
@@ -374,7 +374,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 89355,
+      "stars": 89443,
       "language": "Jupyter Notebook",
       "pushed": "2026-08-12",
       "trending": false
@@ -410,9 +410,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 83956,
+      "stars": 84234,
       "language": "Python",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-16",
       "trending": false
     },
     {
@@ -428,7 +428,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 83042,
+      "stars": 83060,
       "language": "",
       "pushed": "2026-07-07",
       "trending": false
@@ -446,7 +446,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 81659,
+      "stars": 81725,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 77456,
+      "stars": 77505,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 72094,
+      "stars": 72320,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-29",
       "trending": false
@@ -500,7 +500,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 64828,
+      "stars": 65056,
       "language": "Jupyter Notebook",
       "pushed": "2026-07-21",
       "trending": false
@@ -518,9 +518,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 62855,
+      "stars": 63023,
       "language": "",
-      "pushed": "2026-08-13",
+      "pushed": "2026-08-15",
       "trending": false
     },
     {
@@ -536,7 +536,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 55364,
+      "stars": 55378,
       "language": "TypeScript",
       "pushed": "2026-08-13",
       "trending": false
@@ -551,7 +551,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 54681,
+      "stars": 54746,
       "language": "Python",
       "pushed": "2026-08-06",
       "trending": false
@@ -569,9 +569,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-05",
-      "stars": 51861,
+      "stars": 53390,
       "language": "Python",
-      "pushed": "2026-08-13",
+      "pushed": "2026-08-14",
+      "trending": false
+    },
+    {
+      "name": "rohitg00/ai-engineering-from-scratch",
+      "desc": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "tags": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "computer-vision"
+      ],
+      "source": "GitHub",
+      "pubDate": "2026-03-18",
+      "stars": 46939,
+      "language": "Python",
+      "pushed": "2026-08-10",
       "trending": false
     },
     {
@@ -623,7 +641,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 29486,
+      "stars": 29633,
       "language": "Python",
       "pushed": "2026-07-20",
       "trending": false
@@ -641,7 +659,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12614,
+      "stars": 12621,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -659,7 +677,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 11106,
+      "stars": 11109,
       "language": "Python",
       "pushed": "2026-07-26",
       "trending": false
@@ -677,7 +695,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 8974,
+      "stars": 8983,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -695,9 +713,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 8261,
+      "stars": 8284,
       "language": "Rust",
-      "pushed": "2026-08-14",
+      "pushed": "2026-08-17",
       "trending": false
     },
     {
@@ -713,7 +731,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7299,
+      "stars": 7307,
       "language": "Python",
       "pushed": "2026-08-12",
       "trending": false
