@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T09:44:42Z",
+  "updatedAt": "2026-08-31T03:53:18Z",
   "items": [
     {
       "title": "EduRiskX: A Neuro-Symbolic Framework with F-Logic Reasoning for Early Academic Risk Prediction",
@@ -353,7 +353,7 @@
     },
     {
       "title": "TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding",
-      "titleKo": "",
+      "titleKo": "TreeGraft: 트리 기반 추측 디코딩을 위한 적응형 다중 드래프터 접목",
       "authors": [
         "Jiaming Fan, Daming Cao, Canchen Huang, Jiale Fu, Jin Zhang, Junjie Gao, Kai Yang, Xiangzhong Luo, Xu Yang"
       ],
@@ -367,7 +367,7 @@
     },
     {
       "title": "ElementCheck: Complexity-Aware Long-Form Text Factuality Evaluation via Sentence Elements",
-      "titleKo": "",
+      "titleKo": "ElementCheck: 문장 요소를 통한 복잡성 인식 긴 형식 텍스트 사실성 평가",
       "authors": [
         "Xinming Wang, Haoran Du, Yi Chen, Jian Xu, Hongming Yang, Han Hu, Yulong Chen, Cheng-Lin Liu, Xu-Yao Zhang"
       ],
@@ -381,7 +381,7 @@
     },
     {
       "title": "DeflectBench: A Benchmark for Evaluating Rhetorical Fallacy Generation in LLMs",
-      "titleKo": "",
+      "titleKo": "DeflectBench: LLM의 수사적 오류 생성을 평가하기 위한 벤치마크",
       "authors": [
         "Art Kanke"
       ],
@@ -395,7 +395,7 @@
     },
     {
       "title": "Recipes for Steering and Scaling LLMs via Sampling",
-      "titleKo": "",
+      "titleKo": "샘플링을 통한 LLM 조정 및 확장 레시피",
       "authors": [
         "Jiajun He, Zongyu Guo, Jos\\'e Miguel Hern\\'andez-Lobato, Yuanqi Du"
       ],
@@ -410,7 +410,7 @@
     },
     {
       "title": "Can a Model Catch Its Own Hallucinations for Free?: Label-Free Doubt Signals Hold Their Own Against a Labelled Dataset for Abstention",
-      "titleKo": "",
+      "titleKo": "모델이 무료로 자신의 환각을 포착할 수 있습니까?: 기권을 위해 레이블이 지정된 데이터 세트에 대해 레이블이 없는 의심 신호가 자체적으로 유지됩니다.",
       "authors": [
         "Ali Asaria, Tony Salomone, Deep Gandhi"
       ],
@@ -425,7 +425,7 @@
     },
     {
       "title": "Which India Survives Translation? Narrative Homogenisation Across Indian Oral Traditions in LLMs",
-      "titleKo": "",
+      "titleKo": "인도에서 번역이 살아남는 곳은 어디입니까? LLM의 인도 구전 전통에 걸친 서술적 균질화",
       "authors": [
         "Paarth Singh Rathore"
       ],
@@ -439,7 +439,7 @@
     },
     {
       "title": "Natural-Language Policies to Executable Decisions: An Interpretable Large Language Model Framework",
-      "titleKo": "",
+      "titleKo": "실행 가능한 결정에 대한 자연어 정책: 해석 가능한 대규모 언어 모델 프레임워크",
       "authors": [
         "Ziqiang Zhang, Jing Ma, Zilong Wang, Jiayuan Chen, Yi Qiao, Yu He, Wei Zhang, Dai Cheng, Xiaoyu Shen"
       ],
@@ -453,7 +453,7 @@
     },
     {
       "title": "Training-Time Explainability for Multilingual Hate Speech Detection: Aligning Model Reasoning with Human Rationales",
-      "titleKo": "",
+      "titleKo": "다국어 증오심 표현 탐지를 위한 훈련 시간 설명 가능성: 모델 추론을 인간의 이론적 근거에 맞추기",
       "authors": [
         "Muhammad Deedahwar Mazhar Qureshi, Sannaan Khan, Muhammad Atif Qureshi, Wael Rashwan"
       ],
@@ -468,7 +468,7 @@
     },
     {
       "title": "TelecomGPT-R1: A Unified Open-Source Reasoner for the Telecom Stack",
-      "titleKo": "",
+      "titleKo": "TelecomGPT-R1: 통신 스택을 위한 통합 오픈 소스 추론기",
       "authors": [
         "Bohao Wang, Chenwei Wu, Haoyu Li, Hang Zou, Yu Tian, Lina Bariah, Li Wei, Chongwen Huang, Yongliang Shen, Zhaoyang Zhang, Merouane Debbah"
       ],
@@ -483,7 +483,7 @@
     },
     {
       "title": "FIRSTPASS: A Multi-Domain, Multi-Round Peer Review Dataset Grounded in Real Editorial Outcomes",
-      "titleKo": "",
+      "titleKo": "FIRSTPASS: 실제 편집 결과에 기반을 둔 다중 도메인, 다중 라운드 피어 리뷰 데이터 세트",
       "authors": [
         "Prabhjot Singh, Somnath Luitel, Manmeet Singh, Josh Durkee"
       ],
@@ -499,7 +499,7 @@
     },
     {
       "title": "Agents Don't Paginate: First-Chunk Selection for LLM Tool Responses",
-      "titleKo": "",
+      "titleKo": "에이전트는 페이지를 매기지 않습니다: LLM 도구 응답을 위한 첫 번째 청크 선택",
       "authors": [
         "Tatiana Petrova, Andrei Mazniak, Radu State"
       ],
@@ -514,7 +514,7 @@
     },
     {
       "title": "Evaluating Language Models in Realistic Conversational Contexts",
-      "titleKo": "",
+      "titleKo": "현실적인 대화 상황에서 언어 모델 평가",
       "authors": [
         "Ilija Subasic, Andrew Rabinovich, Zhao Chen"
       ],
