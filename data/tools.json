@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T03:05:03Z",
+  "updatedAt": "2026-09-07T03:04:44Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 247283,
+      "stars": 251534,
       "language": "JavaScript",
-      "pushed": "2026-09-03",
+      "pushed": "2026-09-05",
       "trending": false
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 240914,
+      "stars": 242612,
       "language": "Python",
-      "pushed": "2026-09-04",
+      "pushed": "2026-09-07",
       "trending": false
     },
     {
@@ -68,9 +68,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 187108,
+      "stars": 187177,
       "language": "Python",
-      "pushed": "2026-09-04",
+      "pushed": "2026-09-07",
       "trending": false
     },
     {
@@ -104,9 +104,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 180094,
+      "stars": 180325,
       "language": "Go",
-      "pushed": "2026-09-04",
+      "pushed": "2026-09-05",
       "trending": false
     },
     {
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 176192,
+      "stars": 177315,
       "language": "TypeScript",
-      "pushed": "2026-09-04",
+      "pushed": "2026-09-06",
       "trending": false
     },
     {
@@ -140,9 +140,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 169055,
+      "stars": 169523,
       "language": "HTML",
-      "pushed": "2026-09-03",
+      "pushed": "2026-09-06",
+      "trending": false
+    },
+    {
+      "name": "huggingface/transformers",
+      "desc": "🤗 Transformers: 추론과 훈련 모두를 위한 텍스트, 비전, 오디오 및 다중 모드 모델의 최첨단 기계 학습 모델을 위한 모델 정의 프레임워크입니다.",
+      "url": "https://github.com/huggingface/transformers",
+      "tags": [
+        "audio",
+        "deep-learning",
+        "deepseek",
+        "gemma",
+        "glm"
+      ],
+      "source": "GitHub",
+      "pubDate": "2018-10-29",
+      "stars": 164919,
+      "language": "Python",
+      "pushed": "2026-09-06",
       "trending": false
     },
     {
@@ -164,24 +182,6 @@
       "trending": false
     },
     {
-      "name": "huggingface/transformers",
-      "desc": "🤗 Transformers: 추론과 훈련 모두를 위한 텍스트, 비전, 오디오 및 다중 모드 모델의 최첨단 기계 학습 모델을 위한 모델 정의 프레임워크입니다.",
-      "url": "https://github.com/huggingface/transformers",
-      "tags": [
-        "audio",
-        "deep-learning",
-        "deepseek",
-        "gemma",
-        "glm"
-      ],
-      "source": "GitHub",
-      "pubDate": "2018-10-29",
-      "stars": 164761,
-      "language": "Python",
-      "pushed": "2026-09-04",
-      "trending": false
-    },
-    {
       "name": "langgenius/dify",
       "desc": "에이전트 워크플로 개발을 위한 프로덕션 지원 플랫폼입니다.",
       "url": "https://github.com/langgenius/dify",
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 154381,
+      "stars": 154655,
       "language": "TypeScript",
-      "pushed": "2026-09-04",
+      "pushed": "2026-09-07",
       "trending": false
     },
     {
@@ -230,9 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 150857,
+      "stars": 151154,
       "language": "Python",
-      "pushed": "2026-09-04",
+      "pushed": "2026-09-06",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 145604,
+      "stars": 145825,
       "language": "Python",
-      "pushed": "2026-09-04",
+      "pushed": "2026-09-07",
       "trending": false
     },
     {
@@ -284,7 +284,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 104302,
+      "stars": 104486,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-01",
       "trending": false
@@ -320,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 96479,
+      "stars": 96524,
       "language": "Python",
       "pushed": "2026-08-29",
       "trending": false
@@ -338,9 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 93116,
+      "stars": 93358,
       "language": "TypeScript",
-      "pushed": "2026-09-03",
+      "pushed": "2026-09-07",
       "trending": false
     },
     {
@@ -392,9 +392,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 86115,
+      "stars": 86387,
       "language": "Python",
-      "pushed": "2026-09-03",
+      "pushed": "2026-09-07",
       "trending": false
     },
     {
@@ -500,9 +500,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 68035,
+      "stars": 68164,
       "language": "Jupyter Notebook",
-      "pushed": "2026-07-21",
+      "pushed": "2026-09-04",
       "trending": false
     },
     {
@@ -536,9 +536,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-05",
-      "stars": 60407,
+      "stars": 60971,
       "language": "Python",
-      "pushed": "2026-09-03",
+      "pushed": "2026-09-06",
       "trending": false
     },
     {
@@ -551,9 +551,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 58279,
+      "stars": 59201,
       "language": "Python",
-      "pushed": "2026-08-31",
+      "pushed": "2026-09-04",
       "trending": false
     },
     {
@@ -569,7 +569,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 55407,
+      "stars": 55426,
       "language": "TypeScript",
       "pushed": "2026-08-13",
       "trending": false

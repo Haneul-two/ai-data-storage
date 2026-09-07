@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T03:05:01Z",
+  "updatedAt": "2026-09-07T03:04:43Z",
   "items": [
     {
       "title": "EvalDetectBench: A Benchmark for Measuring Evaluation Awareness in Frontier Language Models",
@@ -352,7 +352,7 @@
     },
     {
       "title": "PRO-Step: Step-level Process Reward Optimization for Retrieval-Augmented Generation",
-      "titleKo": "",
+      "titleKo": "PRO-Step: 검색 증강 생성을 위한 단계 수준 프로세스 보상 최적화",
       "authors": [
         "MinKeon Kim, Namjun Lee, Jaekwang Kim"
       ],
@@ -367,7 +367,7 @@
     },
     {
       "title": "Learning Evidence Sufficiency Boundaries for Selective Answering in Grounded Multi-Hop QA",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Haruto Sato, Yuki Tanaka, Ren Nakamura, Aoi Kobayashi, Mei Ito"
       ],
@@ -381,7 +381,7 @@
     },
     {
       "title": "SpeakPay: Domain-Adaptive LoRA Fine-Tuning of Whisper for Low-Resource Nepali Financial Speech Recognition",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Biraj Subedi"
       ],
@@ -395,7 +395,7 @@
     },
     {
       "title": "MemeCULT-1K: Benchmarking South Asian Cultural Context and Humor Understanding of Multimodal Models",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Tawsif Tashwar Dipto, Mehedi Ahamed, Radib Bin Kabir, Mueeze Al Mushabbir, Mohammed Saidul Islam, Mir Rayat Imtiaz Hossain, Md Tahmid Rahman Laskar, Sabbir Ahmed"
       ],
@@ -410,7 +410,7 @@
     },
     {
       "title": "VakyArth: Evaluating Pragmatic Competence in LLMs across Indic Languages",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Usneek Singh, Poorvaja Veera Balaji Kumar, Parth Nanda, Anand Madhusoodanan, Geyang Guo, Wei Xu, Junyi Jessy L"
       ],
@@ -425,7 +425,7 @@
     },
     {
       "title": "Disentangling Statistical Preemption from Entrenchment in Language Models' Avoidance of Overgeneralization",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Yixuan Wang, Freda Shi, Kanishka Misra"
       ],
@@ -439,7 +439,7 @@
     },
     {
       "title": "How Do Prompt Variations Affect Energy Consumption in On-Device LLMs?",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Wei Hu, Xiaolong Tu, Dawei Chen, Yitao Chen, Kyungtae Han, Haoxin Wang"
       ],
@@ -453,7 +453,7 @@
     },
     {
       "title": "TalkFa: A Unified Benchmark for Farsi Dialogue Generation and Understanding",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Neda Jamshidi, Kamyar Zeinalipour, Fahimeh Akbari, Monica Bianchini, Marco Maggini, Marco Gori"
       ],
@@ -467,7 +467,7 @@
     },
     {
       "title": "AVERT: Audio-Verified Adjudication for Spoken Dialogue State Tracking",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Chunggi Lee, Hanspeter Pfister"
       ],
@@ -481,7 +481,7 @@
     },
     {
       "title": "Interpretable Symptom Vectors for Depression in a Large Language Model",
-      "titleKo": "",
+      "titleKo": "대규모 언어 모델에서 우울증에 대한 해석 가능한 증상 벡터",
       "authors": [
         "Fangyi Zhu, Ajay Subramanian, Allison Constant, Camille Wang, Ravish Gupta, Corey J. Keller"
       ],
@@ -497,7 +497,7 @@
     },
     {
       "title": "Candidate Generation and Definition-Guided Verification for Sentence-Level Depression Symptom Recognition",
-      "titleKo": "",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
       "authors": [
         "Weiming Li, Catarina Barata, Miguel Constante, Joao Sanches"
       ],
@@ -511,7 +511,7 @@
     },
     {
       "title": "Cite or Decline: A Strict Course-Grounded Chatbot for STEM Lecture Videos",
-      "titleKo": "",
+      "titleKo": "인용 또는 거부: STEM 강의 동영상을 위한 엄격한 과정 기반 챗봇",
       "authors": [
         "S M Masrur Ahmed, Jaspal Subhlok"
       ],
