@@ -1,6 +1,531 @@
 {
-  "updatedAt": "2026-09-09T03:16:35Z",
+  "updatedAt": "2026-09-11T03:11:41Z",
   "items": [
+    {
+      "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Aayam Bansal, Keertan Balaji"
+      ],
+      "arxivId": "2609.09203",
+      "url": "https://arxiv.org/abs/2609.09203",
+      "abstract": "arXiv:2609.09203v1 Announce Type: new  Abstract: Existing benchmarks for autonomous AI scientists evaluate only final outputs---generated code, hypotheses, or papers---yet discard the reasoning process by which those outputs were obtained. This makes it impossible to audit scientific methodology, di",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Haochen Li, Xinshuai Guo, Jingdong Ouyang, Wei Zhang, Leilei Shi"
+      ],
+      "arxivId": "2609.09226",
+      "url": "https://arxiv.org/abs/2609.09226",
+      "abstract": "arXiv:2609.09226v1 Announce Type: new  Abstract: We introduce a probability-wave framework for modeling the collective behavior of interacting adaptive agents, deriving testable eigenmodes through a generalized behavioral intelligence (GBI) nonlocal probability-wave equation. This framework captures",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Wasu Top Piriyakulkij, Rachel Lawrence, Alicia Curth, Sushrut Karmalkar, Niranjani Prasad"
+      ],
+      "arxivId": "2609.09233",
+      "url": "https://arxiv.org/abs/2609.09233",
+      "abstract": "arXiv:2609.09233v1 Announce Type: new  Abstract: How can language model agents effectively leverage libraries of reusable knowledge to solve long-horizon tasks? Recent work has increasingly focused on agent skills: reusable capabilities represented as skill packages, i.e., multi-file bundles contain",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Gradland: On Phenomenal Experience, Differentiated Across Many Dimensions",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "David Balduzzi"
+      ],
+      "arxivId": "2609.09306",
+      "url": "https://arxiv.org/abs/2609.09306",
+      "abstract": "arXiv:2609.09306v1 Announce Type: new  Abstract: This paper investigates the hypothesis that the first-order structure of physical interactions, i.e. gradients or Jacobians, characterizes the structure of phenomenal experience. It does so in an idealized world inhabited by neural networks, Gradland,",
+      "categories": [
+        "cs.AI",
+        "cs.NE"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "An Autonomous GeoAI Agent for Arctic Eco-Navigation",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Samira Alkaee Taleghan, Younghyun Koo, Farnoush Banaei-Kashani"
+      ],
+      "arxivId": "2609.09374",
+      "url": "https://arxiv.org/abs/2609.09374",
+      "abstract": "arXiv:2609.09374v1 Announce Type: new  Abstract: Arctic maritime navigation is becoming increasingly important as changing sea-ice conditions expand seasonal accessibility while simultaneously introducing substantial operational, environmental, and community risks. Arctic route planning is inherentl",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "The Menu Is an Execution Prior: State-Path Tool Menus for Online Agents",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Bo Yan, Weikai Lin, Song Wang"
+      ],
+      "arxivId": "2609.09395",
+      "url": "https://arxiv.org/abs/2609.09395",
+      "abstract": "arXiv:2609.09395v1 Announce Type: new  Abstract: Language models act through tools, yet practical agents face libraries containing thousands of interfaces. We introduce the tool menu as the short, ordered subset of available tools shown to an agent before execution. The agent can call only tools in ",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Decision-Focused Active Learning for Scale-Aware Critical-Materials Recovery",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Niranjan Srinivas, Debajyoti Ray, Elias Nakouzi"
+      ],
+      "arxivId": "2609.09413",
+      "url": "https://arxiv.org/abs/2609.09413",
+      "abstract": "arXiv:2609.09413v1 Announce Type: new  Abstract: Choosing a recovery process for scale-up requires connecting laboratory results with product requirements, process costs, and scale effects. We analyze records from Pacific Northwest National Laboratory's Computer Intelligence for Critical Element Rec",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.RO"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Valerant: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Yiran Qiao, Feng Wang, Jing Ma"
+      ],
+      "arxivId": "2609.09418",
+      "url": "https://arxiv.org/abs/2609.09418",
+      "abstract": "arXiv:2609.09418v1 Announce Type: new  Abstract: World Action Models (WAMs) couple predictive world modeling with action generation, allowing anticipated future states to guide agent behavior. Although WAMs are rapidly advancing embodied AI, general-purpose counterparts remain largely unexplored in ",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "XAI-Arena: Can LLMs Assess the Quality of XAI Explanations?",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Yanfei Hu Fleischhauer, Alona Zharova, Nadja Klein, Stefan Feuerriegel"
+      ],
+      "arxivId": "2609.09428",
+      "url": "https://arxiv.org/abs/2609.09428",
+      "abstract": "arXiv:2609.09428v1 Announce Type: new  Abstract: Evaluating the quality of explanations produced by explainable AI (XAI) methods remains challenging because existing approaches often rely on subjective human judgment, limiting reproducibility, scalability, and comparability between studies. We exami",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Do Agents Know When They Succeed? Calibrating Agent Confidence from Internal Representations",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Priyanka Mary Mammen, Emil Joswin, Srujananjali Medicherla"
+      ],
+      "arxivId": "2609.09448",
+      "url": "https://arxiv.org/abs/2609.09448",
+      "abstract": "arXiv:2609.09448v1 Announce Type: new  Abstract: As agentic systems getting adopted rapidly in safety critical applications, it is vital to measure the confidence associated with the agentic actions. In comparison to the traditional machine learning systems, agentic workflows have complex failure mo",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "ContractEval: Query-Conditioned Execution Matching for Procedural Instruction Conformance",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Praphul Singh, Shanu Kumar, Akshat Agarwal, Ganesh Kumar"
+      ],
+      "arxivId": "2609.09458",
+      "url": "https://arxiv.org/abs/2609.09458",
+      "abstract": "arXiv:2609.09458v1 Announce Type: new  Abstract: As LLM agents move from answering questions to carrying out procedures, failures can be unwarranted rather than visibly wrong: the final response looks acceptable even though the system skipped the check, branch, dependency, or invariant that made the",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Multi-Agent Agentic Graph Learning via Structural Signatures",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Liang Qu, Jianxin Li, Hua Wang"
+      ],
+      "arxivId": "2609.09565",
+      "url": "https://arxiv.org/abs/2609.09565",
+      "abstract": "arXiv:2609.09565v1 Announce Type: new  Abstract: Agentic graph learning (AGL) has recently achieved promising results on graph reasoning tasks, where an agent powered by a large language model (LLM) sequentially samples the graph as evidence to support its final prediction. Existing methods either e",
+      "categories": [
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Spectral origin of the topological gap exponent d + {\\eta}: mechanism, kernel, decomposition, and scope",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Matthew Loftus"
+      ],
+      "arxivId": "2609.09159",
+      "url": "https://arxiv.org/abs/2609.09159",
+      "abstract": "arXiv:2609.09159v1 Announce Type: new  Abstract: The topological gap $\\Delta$ -- the excess $H_1$ total persistence of a critical point cloud over a density-matched null -- scales as $\\Delta \\sim L^{d+\\eta}$. We derive this analytically: the spectral integral $I(\\alpha) = \\sum_{k\\neq 0} S_{\\mathrm{c",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Physics-informed neural networks by Gradient-Guided Gaussian Adaptive Sampling (3GAS-PINNs)",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Yousen Wang, Wei Zhao"
+      ],
+      "arxivId": "2609.09162",
+      "url": "https://arxiv.org/abs/2609.09162",
+      "abstract": "arXiv:2609.09162v1 Announce Type: new  Abstract: Physics-informed neural networks (PINNs) provide a mesh-free framework for solving partial differential equations, yet their performance in nonlinear problems is often limited by slow convergence, gradient imbalance, and insufficient resolution to cap",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "World-Time Compute with Verified Code World Models",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "James Schwoebel, Ingrida Semenec, Jenia Rousseva, Marcos Ortiz, Collin Overbay, Christopher Klaus, Anderson Edmond, Manish Bhatt, Rome Thorstenson, Jessica Tsai, Martin G. Frasch"
+      ],
+      "arxivId": "2609.09163",
+      "url": "https://arxiv.org/abs/2609.09163",
+      "abstract": "arXiv:2609.09163v1 Announce Type: new  Abstract: LLMs generalize across a domain only after seeing many real, labeled examples, which most domains lack. We study a way to manufacture it cheaply. When a domain's dynamics can be written as code, one template instantiates into many world models: execut",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Anirudh Malik, M Sparsh Mehra, Poojith Devan"
+      ],
+      "arxivId": "2609.09240",
+      "url": "https://arxiv.org/abs/2609.09240",
+      "abstract": "arXiv:2609.09240v1 Announce Type: new  Abstract: Ultra-low-bit language models promise reductions in storage and memory traffic, but a nominal \"1.58-bit\" label does not specify the deployed representation or its execution cost. We study a scale-up of an aggressive post-training conversion pipeline f",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Dohyeon Kim, Bedionita Soro, Sung Ju Hwang"
+      ],
+      "arxivId": "2609.09241",
+      "url": "https://arxiv.org/abs/2609.09241",
+      "abstract": "arXiv:2609.09241v1 Announce Type: new  Abstract: Mixture-of-Experts (MoE) architectures have emerged as a powerful paradigm for scaling model capacity while preserving efficient inference in large foundation models. However, most MoE models use a fixed top-$k$ expert selection policy, assigning the ",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "DiffLUT-Net: Differentiable Training of FPGA LUT Networks with Learnable Connectivity",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Jiaqi Ye, Xinrui Gong, Jingcun Wang, Olga Kondrateva, Bing Li, Grace Li Zhang"
+      ],
+      "arxivId": "2609.09254",
+      "url": "https://arxiv.org/abs/2609.09254",
+      "abstract": "arXiv:2609.09254v1 Announce Type: new  Abstract: Field-programmable gate arrays (FPGAs) enable efficient neural-network inference, but most deployment flows either accelerate multiply-accumulate operations or convert pretrained quantized models into lookup tables (LUTs). We present DiffLUT-Net, an F",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.AR"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Accountable and uncertainty-aware evaluation of sensor-based AI under distribution shift: devices, subjects, and nearly three years underground",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Benny Platte (Mittweida University of Applied Sciences), Rico Thomanek (Mittweida University of Applied Sciences), Christian Roschke (Mittweida University of Applied Sciences), Marc Ritter (Mittweida University of Applied Sciences)"
+      ],
+      "arxivId": "2609.09257",
+      "url": "https://arxiv.org/abs/2609.09257",
+      "abstract": "arXiv:2609.09257v1 Announce Type: new  Abstract: Sensor-based AI systems are rarely operated under the conditions under which they were trained: devices, personnel and recording epochs change, and each change degrades performance in ways a random train-test split cannot reveal. We propose a staged, ",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Literati: Towards Anytime Optimal Shape Generalized Trees via AO*",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Nakul Upadhya, Eldan Cohen"
+      ],
+      "arxivId": "2609.09299",
+      "url": "https://arxiv.org/abs/2609.09299",
+      "abstract": "arXiv:2609.09299v1 Announce Type: new  Abstract: Decision trees are prized for their interpretability and strong performance on tabular data, but popular greedy top-down induction algorithms can yield suboptimal and unnecessarily complex structures. Optimal decision tree methods address this through",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Explaining f-Divergence-Based Regularization via Local Curvature and Sharpness-Aware Minimization",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Nour Jamoussi, Marios Kountouris"
+      ],
+      "arxivId": "2609.09367",
+      "url": "https://arxiv.org/abs/2609.09367",
+      "abstract": "arXiv:2609.09367v1 Announce Type: new  Abstract: Divergence-based regularization and Sharpness-Aware Minimization (SAM) are two prominent approaches for improving generalization in deep learning, both motivated by robustness to perturbations. However, their relationship has remained largely unexplor",
+      "categories": [
+        "cs.LG",
+        "cs.IT"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Constraint-Aware Discrete Black-Box Optimization Using Tensor Decomposition",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Keisuke Onoue, Ryosuke Kojima"
+      ],
+      "arxivId": "2609.09370",
+      "url": "https://arxiv.org/abs/2609.09370",
+      "abstract": "arXiv:2609.09370v1 Announce Type: new  Abstract: Discrete black-box optimization is often addressed using approaches such as Sequential Model-Based Optimization (SMBO), which aims to improve sample efficiency by fitting surrogate models that approximate a costly objective function over a discrete se",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "XAI-Refine: An Automated Explanation-Knowledge Loop for Brain-Age Prediction",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Yang Qiao, Junjie Wu, Deqiang Qiu, James J. Lah, Liang Zhao"
+      ],
+      "arxivId": "2609.09388",
+      "url": "https://arxiv.org/abs/2609.09388",
+      "abstract": "arXiv:2609.09388v1 Announce Type: new  Abstract: Brain-age prediction models are commonly evaluated by predictive accuracy, yet accurate predictions alone do not establish that a model relies on reproducible or neurobiologically supported mechanisms. Post-hoc explanation methods can expose these mec",
+      "categories": [
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Applying foundation model embeddings towards urban livability evaluation",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Ayush Khot, Wen Zhou, Shaowen Wang"
+      ],
+      "arxivId": "2609.09429",
+      "url": "https://arxiv.org/abs/2609.09429",
+      "abstract": "arXiv:2609.09429v1 Announce Type: new  Abstract: While accurate measurement of socioeconomic indicators remains challenging in data-scarce regions, which limits policy interventions and resource allocation, high-resolution geospatial data is widely available and can contain information on various li",
+      "categories": [
+        "cs.LG",
+        "cs.CY"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Jaeduk Lee, Wan Choi"
+      ],
+      "arxivId": "2609.09166",
+      "url": "https://arxiv.org/abs/2609.09166",
+      "abstract": "arXiv:2609.09166v1 Announce Type: new  Abstract: This paper investigates collaborative speculative decoding (CoSD), a distributed large language model (LLM) inference framework in which an on-device small language model (SLM) drafts candidate tokens and a server LLM verifies them. Existing CoSD meth",
+      "categories": [
+        "cs.CL",
+        "cs.DC",
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "StochBench: A Domain-Specific Benchmark for Stochastic Processes in Lean",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Idan Davidovich, Debargha Ganguly, Vikash Singh, Vipin Chaudhary"
+      ],
+      "arxivId": "2609.09264",
+      "url": "https://arxiv.org/abs/2609.09264",
+      "abstract": "arXiv:2609.09264v1 Announce Type: new  Abstract: Leading benchmarks for formal theorem proving with large language models are small collections drawn from competition math, such as the IMO and Putnam, that poorly represent field-specific applications. We introduce StochBench, a Lean 4 benchmark of 4",
+      "categories": [
+        "cs.CL",
+        "cs.LO"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Fengxiang Bie, Yuqing Jian, Yifan Yu, Zhongzhu Zhou, Zelei Shao, Ben Athiwaratkun, Shuaiwen Leon Song, Chenfeng Xu, Xiaoxia Wu, Tianyi Zhang"
+      ],
+      "arxivId": "2609.09338",
+      "url": "https://arxiv.org/abs/2609.09338",
+      "abstract": "arXiv:2609.09338v1 Announce Type: new  Abstract: Speculative decoding is critical for accelerating LLM inference. However, the speedup is fragile: drafters are typically trained against a narrow distribution for a single target model, and their acceptance rate collapses under workload shifts. This i",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "SWORD: Wikidata-based Distortions Reveal Hidden Cross-Lingual Inconsistencies in LLM Factual Error Rejection",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Sanghyeok Park, Minji Kang, Hosung Kwak, Jinhyuk Yun"
+      ],
+      "arxivId": "2609.09349",
+      "url": "https://arxiv.org/abs/2609.09349",
+      "abstract": "arXiv:2609.09349v1 Announce Type: new  Abstract: Modern LLMs demonstrate impressive multilingual performance, yet standard benchmarks primarily reward selecting correct answers rather than evaluating genuine factual understanding. We introduce Systematic Wikidata-based Object-Relation Distortion (SW",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Auditable Emergency Triage for Maternal and Newborn Care in India",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Shobhit Jagga, Aman Dalmia, Niharika Priyadarshini, Neelima Devadas, Amrita K Prasen, Nikhil Nalin, Santhosh SJ, Sreeram Nurani Ramasubramanian, Muhammed Afeer K, Anubhav Arora"
+      ],
+      "arxivId": "2609.09356",
+      "url": "https://arxiv.org/abs/2609.09356",
+      "abstract": "arXiv:2609.09356v1 Announce Type: new  Abstract: At Noora Health, our nurses answer more than 50,000 medical queries per month on our WhatsApp-based service that provides caregivers with on-demand support. Their most time-critical task is emergency triage: deciding which queries need immediate in-pe",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Do LLMs Make More Mistakes If They Do Not Believe the Input Data?",
+      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "authors": [
+        "Peter Kochelka, Ale\\v{s} Manuel Pap\\'a\\v{c}ek, Vojt\\v{e}ch Dvo\\v{r}\\'ak, Ond\\v{r}ej Du\\v{s}ek"
+      ],
+      "arxivId": "2609.09363",
+      "url": "https://arxiv.org/abs/2609.09363",
+      "abstract": "arXiv:2609.09363v1 Announce Type: new  Abstract: Large language models (LLMs) are prone to hallucinating or misinterpreting facts, which impairs their usability in retrieval-augmented generation or data-to-text systems. We analyse how faithfulness of LLMs to provided context depends on how plausible",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Benchmarking Hybrid Deep Research Across Database Querying and Web Search",
+      "titleKo": "",
+      "authors": [
+        "Ruofan Wu, Peiran Xu, Xiaolong Li, Fan Shu, Soyoung Yoon, Yite Wang, Xiaodong Yu, Boyi Liu, Feng Yan, Debiao Li, Yuxiong He, Zhewei Yao"
+      ],
+      "arxivId": "2609.09410",
+      "url": "https://arxiv.org/abs/2609.09410",
+      "abstract": "arXiv:2609.09410v1 Announce Type: new  Abstract: While autonomous agents have made significant strides in \"deep research\" by iteratively navigating the open web to synthesize information, real-world problem-solving is rarely confined to a single environment. Complex analytical tasks inherently requi",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Edu-QuRating: Multi-Dimensional Educational Data Curation with Distilled Pairwise Judgements",
+      "titleKo": "",
+      "authors": [
+        "Oliver G. B. Garrod, Robin A. A. Ince, Meng Liu, Mohamed Huti, Moritz Boos, Amy Waldock, Dominic Andrews, Romana Alonso-Kropil, Paul Atherton"
+      ],
+      "arxivId": "2609.09425",
+      "url": "https://arxiv.org/abs/2609.09425",
+      "abstract": "arXiv:2609.09425v2 Announce Type: new  Abstract: Educational data filters have become a practical way to improve language-model pre-training, but most filters treat educational value as a single scalar property. This may be too broad for some applications, especially if the data set already features",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "The Mutations of Machine Speech",
+      "titleKo": "",
+      "authors": [
+        "Mauricio Figueroa"
+      ],
+      "arxivId": "2609.09496",
+      "url": "https://arxiv.org/abs/2609.09496",
+      "abstract": "arXiv:2609.09496v1 Announce Type: new  Abstract: Algorithmic outputs now populate the digital environments through which contemporary life is organized. The role of law in facilitating and constituting (rather than merely responding to) these processes is gaining increasing traction across scholarly",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.HC"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "TEFM: Token-Efficient Faithful Modeling for Structured Data",
+      "titleKo": "",
+      "authors": [
+        "Zhichao Hou, Lingdao Sha, Xueyu Mao, Yang Liu, Peijie Qiu, Rui Song"
+      ],
+      "arxivId": "2609.09552",
+      "url": "https://arxiv.org/abs/2609.09552",
+      "abstract": "arXiv:2609.09552v1 Announce Type: new  Abstract: In this paper, we solve two fundamental obstacles in applying LLMs to critical domains: token efficiency and faithfulness. To address both constraints jointly, we present TEFM (Token-Efficient Faithful Modeling), a framework designed for structured da",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "BuzzASR: A Swarm of 100+ Monolingual Speech Recognition Models",
+      "titleKo": "",
+      "authors": [
+        "Shivam Singh, Aditya Yadavalli, Catherine Arnett, Alex Warstadt"
+      ],
+      "arxivId": "2609.09554",
+      "url": "https://arxiv.org/abs/2609.09554",
+      "abstract": "arXiv:2609.09554v1 Announce Type: new  Abstract: We introduce BuzzASR, a collection of language-specialized fine-tuned Whisper models adapted for automatic speech recognition (ASR) in 102 languages. Large end-to-end Transformer-based ASR models such as Whisper have revolutionized ASR, but most promi",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-09-10"
+    },
+    {
+      "title": "Towards Automatic Evolution Tree Generation from Citation Graphs",
+      "titleKo": "",
+      "authors": [
+        "Zexing Zhao, Yuntong Hu, Liang Zhao"
+      ],
+      "arxivId": "2609.09561",
+      "url": "https://arxiv.org/abs/2609.09561",
+      "abstract": "arXiv:2609.09561v1 Announce Type: new  Abstract: Surveys remain the primary way researchers grasp the lineage of methods within an AI subfield, but they scale poorly against the current rate of publication. Existing taxonomy-induction methods are largely leaf-bound and time-agnostic; they tend to fo",
+      "categories": [
+        "cs.CL"
+      ],
+      "pubDate": "2026-09-10"
+    },
     {
       "title": "EvalDetectBench: A Benchmark for Measuring Evaluation Awareness in Frontier Language Models",
       "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
@@ -2405,536 +2930,6 @@
         "cs.LG"
       ],
       "pubDate": "2026-08-20"
-    },
-    {
-      "title": "DOW-KE: Anchor-Free Multi-Layer Knowledge Editing via Direct End-to-End Weight Optimization",
-      "titleKo": "DOW-KE: 직접적인 엔드투엔드 가중치 최적화를 통한 앵커 없는 다층 지식 편집",
-      "authors": [
-        "Ran Chen, Junbo Zhang, Qianli Zhou, Xinyang Deng, Wen Jiang"
-      ],
-      "arxivId": "2608.16932",
-      "url": "https://arxiv.org/abs/2608.16932",
-      "abstract": "arXiv:2608.16932v1 Announce Type: new  Abstract: Multi-layer locate-then-edit methods for knowledge editing first optimize target residual-stream activations (anchors) at selected layers, then realize them layer by layer as weight updates. This pipeline optimizes an intermediate representation but d",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Study-Strategy Clusters from EdNet Logs Track Engagement, Not Mastery",
-      "titleKo": "EdNet 로그의 학습 전략 클러스터는 숙달이 아닌 참여를 추적합니다.",
-      "authors": [
-        "Qingchuan Lyu, Yingxin Li, Albert Yang"
-      ],
-      "arxivId": "2608.16963",
-      "url": "https://arxiv.org/abs/2608.16963",
-      "abstract": "arXiv:2608.16963v1 Announce Type: new  Abstract: Learning analytics often treats unsupervised clusters of intelligent tutoring system (ITS) logs as learner types that should predict learning. We test that assumption on EdNet-KT3. Clustering study-strategy features (resource use, revision, video, pro",
-      "categories": [
-        "cs.LG",
-        "cs.CY"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "RoBell-RVFL: A Robust Generalized Bell Random Vector Functional Link Network",
-      "titleKo": "RoBell-RVFL: 견고한 일반 벨 랜덤 벡터 기능 링크 네트워크",
-      "authors": [
-        "A. Rahaman, A. Quadir, M. Tanveer"
-      ],
-      "arxivId": "2608.16965",
-      "url": "https://arxiv.org/abs/2608.16965",
-      "abstract": "arXiv:2608.16965v1 Announce Type: new  Abstract: The dominance of majority classes in real-world datasets poses a fundamental challenge to randomized neural networks, often biasing decision boundaries and overlooking critical minority samples. Existing remedies, such as synthetic minority over-sampl",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "MultiSigBERT: Beyond Survival Analysis through Multimodal and Sequential Modeling in Oncology",
-      "titleKo": "MultiSigBERT: 종양학의 다중 모드 및 순차 모델링을 통한 생존 분석 그 이상",
-      "authors": [
-        "Paul Minchella, St\\'ephane Chr\\'etien, Guillaume Metzler, Lo\\\"ic Verlingue, R\\'emi Vaucher"
-      ],
-      "arxivId": "2608.16972",
-      "url": "https://arxiv.org/abs/2608.16972",
-      "abstract": "arXiv:2608.16972v1 Announce Type: new  Abstract: Machine learning has become an essential component of modern healthcare, where the integration of heterogeneous data sources offers unprecedented opportunities to improve clinical decision-making. Electronic Health Records (EHR) contain complementary ",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "LongNovel: A Multi-Scale Benchmark for Hallucination Detection in Long-Context Novel Summarization",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Ruizhi Zhang, Jinwei Chen, Xiangju Lu, He Yan, Mo Yu, Junmin Zhu, Wei Zhang"
-      ],
-      "arxivId": "2608.18082",
-      "url": "https://arxiv.org/abs/2608.18082",
-      "abstract": "arXiv:2608.18082v1 Announce Type: new  Abstract: Although context windows have expanded significantly in recent years, hallucinations in long-context summarization remain a challenge. Long novels are better suited than news or papers for researching these hallucinations, due to their intrinsic infor",
-      "categories": [
-        "cs.CL"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Entity tracking emerges in sub-billion parameter language models and exceeds human performance in naturalistic narratives",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Karolina Dro\\.zd\\.z, Micha Heilbron"
-      ],
-      "arxivId": "2608.18083",
-      "url": "https://arxiv.org/abs/2608.18083",
-      "abstract": "arXiv:2608.18083v1 Announce Type: new  Abstract: Understanding language requires tracking entities across discourse - i.e., knowing where things are and how they change, even when not explicitly stated. Whether language models perform such tracking in a human-like fashion remains unclear, in part be",
-      "categories": [
-        "cs.CL"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Compiler-Guided Adaptive Proof Search with Cross-Model Synergy on Context-Dependent Theorem Proving",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Zhuo Liu, Ding Yu, Hangfeng He"
-      ],
-      "arxivId": "2608.18084",
-      "url": "https://arxiv.org/abs/2608.18084",
-      "abstract": "arXiv:2608.18084v1 Announce Type: new  Abstract: Theorem proving in real-world Lean 4 projects is challenging because proofs often depend on project-specific context. While iterative refinement can use compiler errors to repair failed proofs, reusing failed attempts requires careful search control: ",
-      "categories": [
-        "cs.CL",
-        "cs.PL"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Persona-Guided LLM Agents for Task-Oriented Dialogue",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Maryam Shoaeinaeini, Brent Harrison, A. B. Siddique"
-      ],
-      "arxivId": "2608.18085",
-      "url": "https://arxiv.org/abs/2608.18085",
-      "abstract": "arXiv:2608.18085v1 Announce Type: new  Abstract: Prior work has shown that large language models (LLMs) can express diverse personality traits in open-ended text generation. However, it remains unclear whether they can do so in a goal-directed dialogue without compromising task completion, and wheth",
-      "categories": [
-        "cs.CL"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "SuTRA : Structurally-Unified Tokenization with Root Awareness",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Vaibhav Rathore, Siddhant Gole, Dadhichi Telwadkar, Rooshil Bhatia, Maulik Ruparel, Siddharth Surekha, Neha Bhargava"
-      ],
-      "arxivId": "2608.18087",
-      "url": "https://arxiv.org/abs/2608.18087",
-      "abstract": "arXiv:2608.18087v1 Announce Type: new  Abstract: Existing subword tokenizers optimize statistical compression but ignore morphological structure, particularly the relationship between roots and affixes. This is harmful for morphologically rich Indic languages, where basic units are complex orthograp",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Latent Space Refusal Anchoring for Low-Resource African Languages: Mechanistic Safety Recovery Without Retraining",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Godwin Abuh Faruna"
-      ],
-      "arxivId": "2608.18089",
-      "url": "https://arxiv.org/abs/2608.18089",
-      "abstract": "arXiv:2608.18089v1 Announce Type: new  Abstract: Instruction-tuned models often refuse harmful requests in English but comply with the same requests in Yoruba, Igbo, Igala, and Hausa. This suggests that the refusal mechanism is present in the residual stream but fails to activate for low-resource in",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Nine Emotion Centroids: A Label-Free Valence Axis That Transfers Across Four Modalities",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Yousef Radwan"
-      ],
-      "arxivId": "2608.18090",
-      "url": "https://arxiv.org/abs/2608.18090",
-      "abstract": "arXiv:2608.18090v1 Announce Type: new  Abstract: Inside a modern language model sits a single internal direction that tracks how positive or negative a sentence feels. We show how to find this valence axis (V-axis) from just 9 emotion category names plus 50 short narrative paragraphs per emotion -- ",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Self- and Other-Labels Induce Bidirectional Bias in LLM Judges",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Songeun Chae, Min Kim, Donghoon Jung, Seojin Choi, Seohyon Jung"
-      ],
-      "arxivId": "2608.18091",
-      "url": "https://arxiv.org/abs/2608.18091",
-      "abstract": "arXiv:2608.18091v1 Announce Type: new  Abstract: As LLM-as-a-judge systems become increasingly widespread, self-preference in LLMs -- the tendency to favor one's own outputs -- raises growing concerns about evaluation reliability. However, it has been studied predominantly on generated text, where s",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Abliteration Mitigation via Refusal Aliases",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Nathan Truong"
-      ],
-      "arxivId": "2608.18093",
-      "url": "https://arxiv.org/abs/2608.18093",
-      "abstract": "arXiv:2608.18093v1 Announce Type: new  Abstract: Abliteration, the removal of refusal capabilities from large language models by projecting weight matrices orthogonal to an extracted refusal direction, has emerged as a prominent safety concern through its ability to bypass post-training alignment us",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CR"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "NE-BERT: A Multilingual Language Model for Nine Northeast Indian Languages",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Badal Nyalang"
-      ],
-      "arxivId": "2608.18094",
-      "url": "https://arxiv.org/abs/2608.18094",
-      "abstract": "arXiv:2608.18094v1 Announce Type: new  Abstract: Large pretrained language models have demonstrated remarkable capabilities across diverse languages, yet critically underrepresented low-resource languages remain marginalized. We present NE-BERT, a domain-specific multilingual encoder model trained o",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "Backdoor Learning in Language Models and Vision-Language Models",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Weimin Lyu"
-      ],
-      "arxivId": "2608.18095",
-      "url": "https://arxiv.org/abs/2608.18095",
-      "abstract": "arXiv:2608.18095v1 Announce Type: new  Abstract: Recent advances in deep learning have significantly enhanced the capabilities of Natural Language Processing (NLP) and Vision-Language Models (VLMs). However, these advancements come with increased vulnerabilities, notably through backdoor attacks tha",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "MAVEN: A Macro-Societal Value Evaluation Framework of Multimodal Content with Compact Aligned Evaluators",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Zijuan Zhao, Zheren Fu, Hou Xia, Licheng Zhang, Yi Liu, Zhendong Mao"
-      ],
-      "arxivId": "2608.18096",
-      "url": "https://arxiv.org/abs/2608.18096",
-      "abstract": "arXiv:2608.18096v1 Announce Type: new  Abstract: Assessing whether multimodal content aligns with macro-societal values, such as peace, justice, and freedom, has become an increasingly urgent challenge. Existing frameworks are largely confined to safety-oriented taxonomies, text-only psychometric pr",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-20"
-    },
-    {
-      "title": "FLOPs vs Real Work: The Importance of Replication in AI Efficiency Assessment",
-      "titleKo": "FLOP와 실제 작업: AI 효율성 평가에서 복제의 중요성",
-      "authors": [
-        "Enrique Barba Roque, Lu\\'is Cruz"
-      ],
-      "arxivId": "2608.14550",
-      "url": "https://arxiv.org/abs/2608.14550",
-      "abstract": "arXiv:2608.14550v1 Announce Type: new  Abstract: AI efficiency has recently taken the spotlight in both academy and industry due to massive model scales, high energy demands, and environmental costs. While reporting Floating Point Operations (FLOPs) is a traditional approach for assessing computatio",
-      "categories": [
-        "cs.AI",
-        "cs.PF"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
-      "titleKo": "대규모 언어 모델은 의학적 추론에서 메타인지 민감도를 보여줍니다.",
-      "authors": [
-        "Ahmad Nazzal"
-      ],
-      "arxivId": "2608.14552",
-      "url": "https://arxiv.org/abs/2608.14552",
-      "abstract": "arXiv:2608.14552v1 Announce Type: new  Abstract: Large language models (LLMs) are increasingly evaluated and used in medicine, but clinical usefulness depends on answer accuracy and whether confidence tracks evidence quality and uncertainty. We developed a controlled, psychophysics-inspired clinical",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "The Unwritten Benchmark: A New Challenge for Multimodal Machine Learning in Abstract Perceptual Reasoning",
-      "titleKo": "기록되지 않은 벤치마크: 추상 지각 추론에서 다중 모드 기계 학습을 위한 새로운 과제",
-      "authors": [
-        "Garima Arya Yadav, Nilay Yilmaz, Yezhou Yang"
-      ],
-      "arxivId": "2608.14558",
-      "url": "https://arxiv.org/abs/2608.14558",
-      "abstract": "arXiv:2608.14558v1 Announce Type: new  Abstract: Current multimodal models have demonstrated remarkable proficiency in recognizing static visual and auditory content. However, their capacity for abstract perceptual reasoning, inferring unseen information from dynamic, generative processes, remains a",
-      "categories": [
-        "cs.AI",
-        "cs.CV"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "When to Communicate: Belief Distributions and KL Divergence for Principled Gating in Multi-Agent RL",
-      "titleKo": "의사소통 시기: 다중 에이전트 RL의 원칙적 게이팅에 대한 신뢰 분포 및 KL 발산",
-      "authors": [
-        "Teoman Kaman"
-      ],
-      "arxivId": "2608.14559",
-      "url": "https://arxiv.org/abs/2608.14559",
-      "abstract": "arXiv:2608.14559v1 Announce Type: new  Abstract: Effective communication in multi-agent reinforcement learning requires agents to decide not only \\textit{what} to communicate, but when? Existing approaches either communicate at every timestep or learn a binary gate through REINFORCE policy gradients",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Global AI Regulations for FAIR and Ethics in High-Risk Use Cases: A Comparative Review",
-      "titleKo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "authors": [
-        "Aasish Kumar Sharma, Dimitar Koysev, Christopher Anich, Roshni Kumari Ojha, Julian Kunkel"
-      ],
-      "arxivId": "2608.14562",
-      "url": "https://arxiv.org/abs/2608.14562",
-      "abstract": "arXiv:2608.14562v1 Announce Type: new  Abstract: AI governance is shifting from voluntary ethics to enforceable, risk-based regulation, yet cross-jurisdictional divergence creates compliance uncertainty for operators of high-stakes AI. We present a comparative matrix for the EU, US, and China that m",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Position: AI Lock-In Is in Progress, and We Must Be Prepared",
-      "titleKo": "입장: AI 락인(Lock-In)이 진행 중이므로 우리는 대비해야 합니다.",
-      "authors": [
-        "Jaeho Kim, Seokhyun Lee, Jieun Lee, Changhee Lee"
-      ],
-      "arxivId": "2608.14565",
-      "url": "https://arxiv.org/abs/2608.14565",
-      "abstract": "arXiv:2608.14565v1 Announce Type: new  Abstract: AI safety research has mainly focused on two areas: technical alignment (ensuring AI systems produce human-aligned outputs) and the regulation of generative AI's societal impacts (including unemployment risk and labor market disruption). However, an e",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Position: Evaluations of AI Moral Reasoning Still Miss Half of the Picture",
-      "titleKo": "입장: AI 도덕적 추론에 대한 평가는 여전히 그림의 절반을 놓치고 있습니다.",
-      "authors": [
-        "Aidan Kierans, Ritam Dutt, Kaley Rittichier, Shiri Dori-Hacohen, Avijit Ghosh"
-      ],
-      "arxivId": "2608.14566",
-      "url": "https://arxiv.org/abs/2608.14566",
-      "abstract": "arXiv:2608.14566v1 Announce Type: new  Abstract: Recent work on evaluating the moral competence of large language models (LLMs) has focused primarily on what we call the moral value problem, i.e., whether model outputs align with human moral values. In contrast, the moral norm problem, i.e., whether",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "From Doyle to AGM: A Survey and an Implementation Roadmap for Belief Change",
-      "titleKo": "Doyle에서 AGM까지: 신념 변화를 위한 설문 조사 및 구현 로드맵",
-      "authors": [
-        "Yuri Almeida, Arthur Casals"
-      ],
-      "arxivId": "2608.14567",
-      "url": "https://arxiv.org/abs/2608.14567",
-      "abstract": "arXiv:2608.14567v1 Announce Type: new  Abstract: This paper presents a targeted narrative review establishing the historical and theoretical foundations for computational belief change implementation. Seeded by Doyle and London's foundational 1980 taxonomy, we trace the evolution of belief revision ",
-      "categories": [
-        "cs.AI",
-        "cs.LO"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Position: AI Governance Needs ISO-like Interoperability Protocols, Not Just Laws",
-      "titleKo": "입장: AI 거버넌스에는 법률뿐만 아니라 ISO와 유사한 상호 운용성 프로토콜이 필요합니다.",
-      "authors": [
-        "Azmine Toushik Wasi, Mst Rafia Islam, Mahfuz Ahmed Anik, Taki Hasan Rafi, Md Manjurul Ahsan, Dong-Kyu Chae"
-      ],
-      "arxivId": "2608.14568",
-      "url": "https://arxiv.org/abs/2608.14568",
-      "abstract": "arXiv:2608.14568v1 Announce Type: new  Abstract: As Artificial Intelligence (AI) systems become deeply integrated into critical global infrastructure, the urgency for robust governance frameworks has intensified. However, current approaches, led by jurisdiction-specific laws, policies, and voluntary",
-      "categories": [
-        "cs.AI",
-        "cs.CY",
-        "cs.GT"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Position: Certified Correctness in Neural Constraint Reasoning Requires Symbolic Integration",
-      "titleKo": "입장: 신경 제약 추론의 인증된 정확성에는 기호 통합이 필요합니다.",
-      "authors": [
-        "Shufeng Kong, Xiaochuan Zhang, Caihua Liu"
-      ],
-      "arxivId": "2608.14569",
-      "url": "https://arxiv.org/abs/2608.14569",
-      "abstract": "arXiv:2608.14569v1 Announce Type: new  Abstract: Neural solvers for constraint satisfaction problems have achieved remarkable in-distribution accuracy, yet they suffer from a fundamental limitation persistent constraint violations occur under distribution shifts even when the model reports high conf",
-      "categories": [
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Position: Want Better ML Reviews? Stop Asking Nicely and Start Incentivizing with a Credit System",
-      "titleKo": "직위: 더 나은 ML 리뷰를 원하시나요? 친절하게 묻지 말고 신용 시스템으로 인센티브를 시작하세요",
-      "authors": [
-        "Shaochen Zhong"
-      ],
-      "arxivId": "2608.14571",
-      "url": "https://arxiv.org/abs/2608.14571",
-      "abstract": "arXiv:2608.14571v1 Announce Type: new  Abstract: With soaring submission counts, stricter reciprocal review policies, widespread adoption of platforms like OpenReview, and without the offsetting pressure of publication fees, the machine learning (ML) community has one of the largest scholarly presen",
-      "categories": [
-        "cs.AI",
-        "cs.DL"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Longitudinal and Graph-Augmented Prediction of Adolescent Substance Use Onset in the ABCD Study",
-      "titleKo": "ABCD 연구에서 청소년 약물 남용 발병의 종단적 및 그래프 증강 예측",
-      "authors": [
-        "Yixuan He, Jinni Su, Yun Kang"
-      ],
-      "arxivId": "2608.14578",
-      "url": "https://arxiv.org/abs/2608.14578",
-      "abstract": "arXiv:2608.14578v1 Announce Type: new  Abstract: Early identification of adolescent substance-use risk is an important prevention challenge, yet the relative value of baseline characteristics, longitudinal trajectories, and relational context remains unclear. Using data from approximately 11,860 par",
-      "categories": [
-        "cs.AI",
-        "cs.CY",
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Learning Discrete Riemannian Metrics for Physical Fields with Cochain-Frame Equivarianc",
-      "titleKo": "Cochain-Frame Equivarianc를 사용하여 물리적 필드에 대한 이산 리만 측정법 학습",
-      "authors": [
-        "Dongzhe Zheng, Christine Allen-Blanchette"
-      ],
-      "arxivId": "2608.14556",
-      "url": "https://arxiv.org/abs/2608.14556",
-      "abstract": "arXiv:2608.14556v1 Announce Type: new  Abstract: Physical fields on meshes require a separation between topology and geometry: conservation laws are topological and should be exact, while geometry, material response, and anisotropic coupling must be learned from data. Existing neural surrogates ofte",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Forward Pass Domain Adaptation (Without Cross-Layer Backpropagation)",
-      "titleKo": "순방향 패스 도메인 적응(교차 계층 역전파 없음)",
-      "authors": [
-        "Rivaan Patil, Simon Dennis, Hao Guo, Kevin Shabahang"
-      ],
-      "arxivId": "2608.14563",
-      "url": "https://arxiv.org/abs/2608.14563",
-      "abstract": "arXiv:2608.14563v1 Announce Type: new  Abstract: Forward-Pass-Only MLP training (FPO) adapts large language models without a backward pass through the model body, achieving 2.7--3.2x the throughput of standard fine-tuning at ~40% less peak training memory, while leaving off-domain benchmarks within ",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Coarse-to-Fine Multi-Resolution Diffusion Models for Trajectory Generation in Urban Systems",
-      "titleKo": "도시 시스템의 궤적 생성을 위한 거친 다중 해상도 확산 모델",
-      "authors": [
-        "Wen Ye, Muyan Weng, Chuizheng Meng, Hao Niu, Yizhou Zhang, Yan Liu"
-      ],
-      "arxivId": "2608.14570",
-      "url": "https://arxiv.org/abs/2608.14570",
-      "abstract": "arXiv:2608.14570v1 Announce Type: new  Abstract: Understanding human mobility is critical for a wide range of urban applications, including traffic management, epidemic control, and urban planning. However, due to privacy concerns, the availability of large-scale public trajectory data remains limit",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Geometry Is Not Robustness: A Trajectory-Level Study of PGD Evaluation",
-      "titleKo": "기하학은 견고성이 아니다: PGD 평가에 대한 궤적 수준 연구",
-      "authors": [
-        "Dhairysheel Durgule"
-      ],
-      "arxivId": "2608.14594",
-      "url": "https://arxiv.org/abs/2608.14594",
-      "abstract": "arXiv:2608.14594v1 Announce Type: new  Abstract: Projected Gradient Descent (PGD) is widely used to evaluate adversarial robustness, typically via final adversarial accuracy, which does not capture model behaviour throughout the attack. Recent work proposes trajectory-level diagnostics, such as loss",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "DumpsterCluster: From Dumpster Diving to Serving LLaMA-70B on $60 GPUs",
-      "titleKo": "DumpsterCluster: 덤프스터 다이빙부터 $60 GPU에서 LLaMA-70B 제공까지",
-      "authors": [
-        "Zeyu Cao, Xuan Guo, Cheng Zhang, Cheuk Hang Lau, Ilia Shumailov, Yiren Zhao"
-      ],
-      "arxivId": "2608.14614",
-      "url": "https://arxiv.org/abs/2608.14614",
-      "abstract": "arXiv:2608.14614v1 Announce Type: new  Abstract: As AI datacenters retire functional GPUs, vast quantities of still capable accelerators enter secondary markets. This paper investigates whether these retired GPUs can find a productive afterlife to form a DumpsterCluster that can serve modern LLM inf",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.AR"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Calibrated Trust, Not Sharper Prediction: An Empirical Test of Uncertainty Fusion",
-      "titleKo": "더 날카로운 예측이 아닌 보정된 신뢰: 불확실성 융합에 대한 실증적 테스트",
-      "authors": [
-        "Surya Saka"
-      ],
-      "arxivId": "2608.14617",
-      "url": "https://arxiv.org/abs/2608.14617",
-      "abstract": "arXiv:2608.14617v1 Announce Type: new  Abstract: A recurring proposal in legal AI is to improve case-outcome prediction by fusing uncertainty tools (evidence graphs with belief propagation, sequential Bayesian odds updating, Dempster-Shafer combination, and conformal prediction) into one pipeline. W",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "PIKFNO: An Interpretable Neural Operator Based on Physics Informed Kernel Function",
-      "titleKo": "PIKFNO: 물리학 정보를 바탕으로 한 커널 함수를 기반으로 한 해석 가능한 신경 연산자",
-      "authors": [
-        "Yuan Guo, Hanshu Chen, Zhuojia Fu"
-      ],
-      "arxivId": "2608.14619",
-      "url": "https://arxiv.org/abs/2608.14619",
-      "abstract": "arXiv:2608.14619v1 Announce Type: new  Abstract: This work proposes a new interpretable neural operator framework, termed the Physics Informed Kernel Function Neural Operator (PIKFNO), which explicitly incorporates physics informed kernel functions derived from governing equations into the neural op",
-      "categories": [
-        "cs.LG"
-      ],
-      "pubDate": "2026-08-18"
-    },
-    {
-      "title": "Explaining Reinforcement Learning Decisions in Self-adaptive Systems",
-      "titleKo": "자가 적응 시스템의 강화 학습 결정 설명",
-      "authors": [
-        "Jasmina Gajcin, Juan C. Rosero, Ivana Dusparic"
-      ],
-      "arxivId": "2608.14620",
-      "url": "https://arxiv.org/abs/2608.14620",
-      "abstract": "arXiv:2608.14620v1 Announce Type: new  Abstract: Reinforcement Learning (RL) has been extensively used in autonomous and self-* systems, but RL policies, especially deep RL ones relying on neural networks, lack transparency and are difficult to understand. This can lead to diminished user trust, and",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "pubDate": "2026-08-18"
     }
   ]
 }
