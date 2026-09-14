@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T03:11:41Z",
+  "updatedAt": "2026-09-14T03:33:29Z",
   "items": [
     {
       "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
@@ -440,7 +440,7 @@
     },
     {
       "title": "Benchmarking Hybrid Deep Research Across Database Querying and Web Search",
-      "titleKo": "",
+      "titleKo": "Benchmarking Hybrid Deep Research Across Database Querying and Web Search",
       "authors": [
         "Ruofan Wu, Peiran Xu, Xiaolong Li, Fan Shu, Soyoung Yoon, Yite Wang, Xiaodong Yu, Boyi Liu, Feng Yan, Debiao Li, Yuxiong He, Zhewei Yao"
       ],
@@ -454,7 +454,7 @@
     },
     {
       "title": "Edu-QuRating: Multi-Dimensional Educational Data Curation with Distilled Pairwise Judgements",
-      "titleKo": "",
+      "titleKo": "Edu-QuRating: Multi-Dimensional Educational Data Curation with Distilled Pairwise Judgements",
       "authors": [
         "Oliver G. B. Garrod, Robin A. A. Ince, Meng Liu, Mohamed Huti, Moritz Boos, Amy Waldock, Dominic Andrews, Romana Alonso-Kropil, Paul Atherton"
       ],
@@ -469,7 +469,7 @@
     },
     {
       "title": "The Mutations of Machine Speech",
-      "titleKo": "",
+      "titleKo": "The Mutations of Machine Speech",
       "authors": [
         "Mauricio Figueroa"
       ],
@@ -485,7 +485,7 @@
     },
     {
       "title": "TEFM: Token-Efficient Faithful Modeling for Structured Data",
-      "titleKo": "",
+      "titleKo": "TEFM: Token-Efficient Faithful Modeling for Structured Data",
       "authors": [
         "Zhichao Hou, Lingdao Sha, Xueyu Mao, Yang Liu, Peijie Qiu, Rui Song"
       ],
@@ -500,7 +500,7 @@
     },
     {
       "title": "BuzzASR: A Swarm of 100+ Monolingual Speech Recognition Models",
-      "titleKo": "",
+      "titleKo": "BuzzASR: A Swarm of 100+ Monolingual Speech Recognition Models",
       "authors": [
         "Shivam Singh, Aditya Yadavalli, Catherine Arnett, Alex Warstadt"
       ],
@@ -514,7 +514,7 @@
     },
     {
       "title": "Towards Automatic Evolution Tree Generation from Citation Graphs",
-      "titleKo": "",
+      "titleKo": "Towards Automatic Evolution Tree Generation from Citation Graphs",
       "authors": [
         "Zexing Zhao, Yuntong Hu, Liang Zhao"
       ],
