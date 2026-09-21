@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T03:22:26Z",
+  "updatedAt": "2026-09-21T03:30:20Z",
   "items": [
     {
       "title": "Making AI-Assisted Claims Independently Challengeable: Publication Authority and a Protocol for Falsifiable Publication Records",
@@ -360,7 +360,7 @@
     },
     {
       "title": "Enhancing Extubation Failure Prediction with LLM-Derived Features from Respiratory Therapy Clinical Notes",
-      "titleKo": "",
+      "titleKo": "Enhancing Extubation Failure Prediction with LLM-Derived Features from Respiratory Therapy Clinical Notes",
       "authors": [
         "Izzy Chaiken, Aditya Khowal, Neha A. Sathe, Mark M. Wurfel, Lucy Lu Wang"
       ],
@@ -375,7 +375,7 @@
     },
     {
       "title": "Faking Good and Faking Bad in LLMs: Response Distortion Across Dark Triad Personality Traits",
-      "titleKo": "",
+      "titleKo": "Faking Good and Faking Bad in LLMs: Response Distortion Across Dark Triad Personality Traits",
       "authors": [
         "Victoria Popa, Guglielmo Cola, Caterina Senette, Maurizio Tesconi"
       ],
@@ -389,7 +389,7 @@
     },
     {
       "title": "DANTINOX: A Unified Framework for Multi-Paradigm Language Modeling",
-      "titleKo": "",
+      "titleKo": "DANTINOX: A Unified Framework for Multi-Paradigm Language Modeling",
       "authors": [
         "Marco Simoni, Aleksandar Fontana, Giulio Rossolini, Andrea Saracino"
       ],
@@ -403,7 +403,7 @@
     },
     {
       "title": "Think Before You Comfort: Reflective Cognitive Alignment for Protocol-Grounded Elderly Stimulation Agents",
-      "titleKo": "",
+      "titleKo": "Think Before You Comfort: Reflective Cognitive Alignment for Protocol-Grounded Elderly Stimulation Agents",
       "authors": [
         "Jiyue Jiang, Ziyi Li, He Hu, Sheng Wang, Yuhan Chen, Yanyu Chen, Jingqi Zhou, Pengan Chen, Fei Ma, Irwin King, Yu Li, Chuan Wu"
       ],
@@ -417,7 +417,7 @@
     },
     {
       "title": "Relation Before Entity: Deferred Commitment in Language Model Factual Recall",
-      "titleKo": "",
+      "titleKo": "Relation Before Entity: Deferred Commitment in Language Model Factual Recall",
       "authors": [
         "Divyansh Agarwal"
       ],
@@ -431,7 +431,7 @@
     },
     {
       "title": "From Pixels to Pairs: A Comprehensive Benchmark of LLM-Based Key-Value Extraction in Noisy Document Settings",
-      "titleKo": "",
+      "titleKo": "From Pixels to Pairs: A Comprehensive Benchmark of LLM-Based Key-Value Extraction in Noisy Document Settings",
       "authors": [
         "Zahra Anvari, Vassilis Athitsos"
       ],
@@ -446,7 +446,7 @@
     },
     {
       "title": "MudawanSn: A Gold-Standard Wolof-Arabic Parallel Corpus for Machine Translation",
-      "titleKo": "",
+      "titleKo": "MudawanSn: A Gold-Standard Wolof-Arabic Parallel Corpus for Machine Translation",
       "authors": [
         "Mouhamed Mbaye, Thierno Diop"
       ],
@@ -460,7 +460,7 @@
     },
     {
       "title": "Register Bias in Complexity-Based Large Language Model Routing",
-      "titleKo": "",
+      "titleKo": "Register Bias in Complexity-Based Large Language Model Routing",
       "authors": [
         "Simran Koul"
       ],
@@ -475,7 +475,7 @@
     },
     {
       "title": "Large Language Models Versus Physicians in Traditional Chinese Medicine: A Real-World Clinical Case Evaluation",
-      "titleKo": "",
+      "titleKo": "Large Language Models Versus Physicians in Traditional Chinese Medicine: A Real-World Clinical Case Evaluation",
       "authors": [
         "Jiacheng Xie, Xiaoting Tang, Yang Yu, Jinpu Li, Shouli Li, Congcong Jing, Yantao Yang, Zhiyong Zhao, Ziyang Zhang, Qilin Song, Guanghui An, Dong Xu"
       ],
@@ -490,7 +490,7 @@
     },
     {
       "title": "Legal LLM Hallucination Should Be Evaluated as Failure of Legal Warrant",
-      "titleKo": "",
+      "titleKo": "Legal LLM Hallucination Should Be Evaluated as Failure of Legal Warrant",
       "authors": [
         "Maksym Taranukhin, Vered Shwartz"
       ],
@@ -504,7 +504,7 @@
     },
     {
       "title": "How AI Assistants Respond to Repeated Abuse",
-      "titleKo": "",
+      "titleKo": "How AI Assistants Respond to Repeated Abuse",
       "authors": [
         "William Guey, Wei Zhang, Pierrick Bougault, Yi Wang, Agoston Bodo, Vitor D de Moura, Jos\\'e O Gomes"
       ],
@@ -518,7 +518,7 @@
     },
     {
       "title": "Myovox: Reading Speech from the Muscles of the Face",
-      "titleKo": "",
+      "titleKo": "Myovox: Reading Speech from the Muscles of the Face",
       "authors": [
         "Varshith Madishetty"
       ],
