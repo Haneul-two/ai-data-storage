@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T03:37:25Z",
+  "updatedAt": "2026-09-28T03:51:54Z",
   "items": [
     {
       "title": "Silent Failures in Agent-Tool Interaction: An Audit of ToolUniverse",
@@ -355,7 +355,7 @@
     },
     {
       "title": "COMED: The Missing Middle Between Routing and Collaboration in Multi-LLM Inference",
-      "titleKo": "",
+      "titleKo": "COMED: The Missing Middle Between Routing and Collaboration in Multi-LLM Inference",
       "authors": [
         "Norah Alballa, Wenxuan Zhang, Salma Kharrat, Fares Fourati, Zafar Ayyub Qazi, Mohamed Elhoseiny, Marco Canini"
       ],
@@ -370,7 +370,7 @@
     },
     {
       "title": "Experts Rise Where LLMs Disagree: Using Cross-Model Disagreement to Target Expert Effort in LLM Codebook Revision for Large-Scale Annotation",
-      "titleKo": "",
+      "titleKo": "Experts Rise Where LLMs Disagree: Using Cross-Model Disagreement to Target Expert Effort in LLM Codebook Revision for Large-Scale Annotation",
       "authors": [
         "Zeyu He, Zhuqian Zhou, Kirk Vanacore, Rene F. Kizilcec, Ting-Hao 'Kenneth' Huang"
       ],
@@ -386,7 +386,7 @@
     },
     {
       "title": "Recognized but Not Produced: A Generation Benchmark for Culturally Specific Kinship Terms",
-      "titleKo": "",
+      "titleKo": "Recognized but Not Produced: A Generation Benchmark for Culturally Specific Kinship Terms",
       "authors": [
         "Sahil Pardasani, Madhusudan Singh"
       ],
@@ -401,7 +401,7 @@
     },
     {
       "title": "Classifying Interpretive Canons at the Sentence Level: A Benchmark from the German Federal Constitutional Court",
-      "titleKo": "",
+      "titleKo": "Classifying Interpretive Canons at the Sentence Level: A Benchmark from the German Federal Constitutional Court",
       "authors": [
         "Felix Ringe"
       ],
@@ -416,7 +416,7 @@
     },
     {
       "title": "When Learned Context Planning Fails to Beat Strong Retrieval: A Controlled Study of Planning, Routing, and Reranking for Long-Context QA",
-      "titleKo": "",
+      "titleKo": "When Learned Context Planning Fails to Beat Strong Retrieval: A Controlled Study of Planning, Routing, and Reranking for Long-Context QA",
       "authors": [
         "Yingrui Li, Han Chen"
       ],
@@ -431,7 +431,7 @@
     },
     {
       "title": "LEGO: Synergizing Expert GraphRAG and Expert Chain-of-Thought for Legal Reasoning",
-      "titleKo": "",
+      "titleKo": "LEGO: Synergizing Expert GraphRAG and Expert Chain-of-Thought for Legal Reasoning",
       "authors": [
         "Qingjing Chen, Junkai Zhang, Shaochun Wang, Jiahao Ding, Siyuan Zheng, Yukun Yan, Zhi Zheng, Antonino Rotolo, Yun Liu, Weixing Shen"
       ],
@@ -446,7 +446,7 @@
     },
     {
       "title": "LexLattice: Multilingual Extractive Summarization via Neural Cellular Automata on Document Hierarchies",
-      "titleKo": "",
+      "titleKo": "LexLattice: Multilingual Extractive Summarization via Neural Cellular Automata on Document Hierarchies",
       "authors": [
         "Sujay Uday Rittikar, Sheela Ramanna"
       ],
@@ -462,7 +462,7 @@
     },
     {
       "title": "EduBehaviors: Assertion-based Schemas for Auditable Coding of Educational Dialogues",
-      "titleKo": "",
+      "titleKo": "EduBehaviors: Assertion-based Schemas for Auditable Coding of Educational Dialogues",
       "authors": [
         "Julian Bernado, Ana Trindade Ribeiro, Xander Beberman, Susanna Loeb"
       ],
@@ -478,7 +478,7 @@
     },
     {
       "title": "The Illinois Social Attitudes Aggregate Corpus (ISAAC): An Open Tool and Reproducible Pipeline for Analyzing Social Group Discourse at Scale",
-      "titleKo": "",
+      "titleKo": "The Illinois Social Attitudes Aggregate Corpus (ISAAC): An Open Tool and Reproducible Pipeline for Analyzing Social Group Discourse at Scale",
       "authors": [
         "Babak Hemmatian, Sarah Hadjarab, Jessica Chen, Benedek Kurdi"
       ],
@@ -493,7 +493,7 @@
     },
     {
       "title": "What Changes When Fact-Verification Scores Improve? Evidence and Answer Accounting Across Trained Verifiers and LLMs",
-      "titleKo": "",
+      "titleKo": "What Changes When Fact-Verification Scores Improve? Evidence and Answer Accounting Across Trained Verifiers and LLMs",
       "authors": [
         "Han Chen, Yingrui Li"
       ],
@@ -507,7 +507,7 @@
     },
     {
       "title": "NADI 2026: The Second Multidialectal Arabic Speech Processing Shared Task",
-      "titleKo": "",
+      "titleKo": "NADI 2026: The Second Multidialectal Arabic Speech Processing Shared Task",
       "authors": [
         "Peter Sullivan, Bashar Talafha, Ahmed Ashraf, Fethi Bougares, Haroun Elleuch, Chiyu Zhang, AbdelRahim Elmadany, Youssef Mohamed, Salima Mdhaffar, Yannick Est\\`eve, Mohamed Elhoseiny, Hamzah Luqman, Nizar Habash, Muhammad Abdul-Mageed"
       ],
@@ -521,7 +521,7 @@
     },
     {
       "title": "Giving Credit Where It's Due: Redundancy-Aware Learning for Efficient Reasoning",
-      "titleKo": "",
+      "titleKo": "Giving Credit Where It's Due: Redundancy-Aware Learning for Efficient Reasoning",
       "authors": [
         "Yuqing Zhou, Hong Wang, Manqing Mao, Zhuoer Wang, Samson Koelle, Jie Yuan, Yanjun Lin, James Feng, Nikki Lijing Kuang, Ziwei Zhu, Wei Niu"
       ],
