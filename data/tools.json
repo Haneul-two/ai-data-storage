@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T04:14:51Z",
+  "updatedAt": "2026-10-05T04:15:44Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,7 +14,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 270766,
+      "stars": 273054,
       "language": "JavaScript",
       "pushed": "2026-10-02",
       "trending": false
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 250639,
+      "stars": 251263,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -50,27 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 200660,
+      "stars": 200703,
       "language": "C++",
-      "pushed": "2026-10-02",
-      "trending": false
-    },
-    {
-      "name": "Significant-Gravitas/AutoGPT",
-      "desc": "AutoGPT는 모든 사람이 사용하고 구축할 수 있는 접근 가능한 AI에 대한 비전입니다. 우리의 임무는 귀하가 중요한 일에 집중할 수 있도록 도구를 제공하는 것입니다.",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "tags": [
-        "agentic-ai",
-        "agents",
-        "ai",
-        "artificial-intelligence",
-        "autonomous-agents"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-03-16",
-      "stars": 187652,
-      "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -86,9 +68,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 187637,
+      "stars": 188653,
       "language": "TypeScript",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-04",
+      "trending": false
+    },
+    {
+      "name": "Significant-Gravitas/AutoGPT",
+      "desc": "AutoGPT는 모든 사람이 사용하고 구축할 수 있는 접근 가능한 AI에 대한 비전입니다. 우리의 임무는 귀하가 중요한 일에 집중할 수 있도록 도구를 제공하는 것입니다.",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "tags": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "autonomous-agents"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-03-16",
+      "stars": 187657,
+      "language": "Python",
+      "pushed": "2026-10-04",
       "trending": false
     },
     {
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 182031,
+      "stars": 182209,
       "language": "Go",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-04",
       "trending": false
     },
     {
@@ -140,9 +140,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 171836,
+      "stars": 172048,
       "language": "HTML",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-03",
       "trending": false
     },
     {
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 166899,
+      "stars": 166961,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -176,7 +176,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 165177,
+      "stars": 165199,
       "language": "Python",
       "pushed": "2026-03-02",
       "trending": false
@@ -194,9 +194,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 157706,
+      "stars": 157856,
       "language": "TypeScript",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -212,27 +212,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 155445,
+      "stars": 155506,
       "language": "Python",
-      "pushed": "2026-10-02",
-      "trending": false
-    },
-    {
-      "name": "open-webui/open-webui",
-      "desc": "사용자 친화적인 AI 인터페이스(Ollama, OpenAI API 등 지원)",
-      "url": "https://github.com/open-webui/open-webui",
-      "tags": [
-        "ai",
-        "llm",
-        "llm-ui",
-        "llm-webui",
-        "llms"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-10-06",
-      "stars": 153759,
-      "language": "Python",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -248,9 +230,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-06-12",
-      "stars": 150696,
+      "stars": 155043,
       "language": "JavaScript",
-      "pushed": "2026-09-14",
+      "pushed": "2026-10-05",
+      "trending": false
+    },
+    {
+      "name": "open-webui/open-webui",
+      "desc": "사용자 친화적인 AI 인터페이스(Ollama, OpenAI API 등 지원)",
+      "url": "https://github.com/open-webui/open-webui",
+      "tags": [
+        "ai",
+        "llm",
+        "llm-ui",
+        "llm-webui",
+        "llms"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-10-06",
+      "stars": 153967,
+      "language": "Python",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -266,9 +266,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 147372,
+      "stars": 147449,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-04",
       "trending": false
     },
     {
@@ -284,7 +284,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 120916,
+      "stars": 121014,
       "language": "Jupyter Notebook",
       "pushed": "2026-10-01",
       "trending": false
@@ -302,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 105864,
+      "stars": 106018,
       "language": "Jupyter Notebook",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-02",
       "trending": false
     },
     {
@@ -320,9 +320,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 103608,
+      "stars": 103762,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -338,9 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-09-24",
-      "stars": 96915,
+      "stars": 96921,
       "language": "Python",
-      "pushed": "2026-09-26",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -356,9 +356,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 95145,
+      "stars": 96200,
       "language": "TypeScript",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -374,7 +374,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 91197,
+      "stars": 91265,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-15",
       "trending": false
@@ -392,9 +392,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 91028,
+      "stars": 91069,
       "language": "C++",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-02",
       "trending": false
     },
     {
@@ -410,9 +410,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 89760,
+      "stars": 90008,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -446,7 +446,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 83599,
+      "stars": 83614,
       "language": "",
       "pushed": "2026-09-27",
       "trending": false
@@ -464,7 +464,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 83265,
+      "stars": 83291,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -482,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 78773,
+      "stars": 78830,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -500,7 +500,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 76320,
+      "stars": 76446,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-19",
       "trending": false
@@ -518,7 +518,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 69361,
+      "stars": 69446,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-16",
       "trending": false
@@ -536,9 +536,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 68734,
+      "stars": 68915,
       "language": "",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-04",
       "trending": false
     },
     {
@@ -554,24 +554,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-05",
-      "stars": 65973,
+      "stars": 66528,
       "language": "Python",
-      "pushed": "2026-10-02",
-      "trending": false
-    },
-    {
-      "name": "jingyaogong/minimind",
-      "desc": "🧠\"대형 모델\"은 2시간 만에 64M 작은 매개변수 LLM을 0부터 완전히 훈련합니다! 단 2시간 만에 64M 매개변수 LLM을 처음부터 훈련하세요!",
-      "url": "https://github.com/jingyaogong/minimind",
-      "tags": [
-        "artificial-intelligence",
-        "large-language-model"
-      ],
-      "source": "GitHub",
-      "pubDate": "2024-07-27",
-      "stars": 63057,
-      "language": "Python",
-      "pushed": "2026-09-22",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -587,9 +572,24 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-03-18",
-      "stars": 62482,
+      "stars": 64016,
       "language": "Python",
-      "pushed": "2026-09-30",
+      "pushed": "2026-10-04",
+      "trending": false
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "desc": "🧠\"대형 모델\"은 2시간 만에 64M 작은 매개변수 LLM을 0부터 완전히 훈련합니다! 단 2시간 만에 64M 매개변수 LLM을 처음부터 훈련하세요!",
+      "url": "https://github.com/jingyaogong/minimind",
+      "tags": [
+        "artificial-intelligence",
+        "large-language-model"
+      ],
+      "source": "GitHub",
+      "pubDate": "2024-07-27",
+      "stars": 63186,
+      "language": "Python",
+      "pushed": "2026-09-22",
       "trending": false
     },
     {
@@ -605,7 +605,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 55494,
+      "stars": 55489,
       "language": "TypeScript",
       "pushed": "2026-08-13",
       "trending": false
@@ -659,7 +659,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 31489,
+      "stars": 31538,
       "language": "Python",
       "pushed": "2026-09-25",
       "trending": false
@@ -677,7 +677,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12688,
+      "stars": 12689,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -695,7 +695,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 11216,
+      "stars": 11222,
       "language": "Python",
       "pushed": "2026-07-26",
       "trending": false
@@ -713,7 +713,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 9080,
+      "stars": 9083,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -731,9 +731,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 8790,
+      "stars": 8807,
       "language": "Rust",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-04",
       "trending": false
     },
     {
@@ -749,7 +749,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7489,
+      "stars": 7492,
       "language": "Python",
       "pushed": "2026-09-28",
       "trending": false
@@ -767,7 +767,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-06",
-      "stars": 7279,
+      "stars": 7278,
       "language": "Python",
       "pushed": "2025-10-30",
       "trending": false
