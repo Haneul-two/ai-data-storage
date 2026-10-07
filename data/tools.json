@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T04:15:44Z",
+  "updatedAt": "2026-10-07T04:30:58Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 273054,
+      "stars": 274379,
       "language": "JavaScript",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 251263,
+      "stars": 251748,
       "language": "Python",
-      "pushed": "2026-10-05",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -50,9 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 200703,
+      "stars": 200721,
       "language": "C++",
-      "pushed": "2026-10-05",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -68,9 +68,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 188653,
+      "stars": 189252,
       "language": "TypeScript",
-      "pushed": "2026-10-04",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -86,9 +86,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-16",
-      "stars": 187657,
+      "stars": 187677,
       "language": "Python",
-      "pushed": "2026-10-04",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 182209,
+      "stars": 182416,
       "language": "Go",
-      "pushed": "2026-10-04",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -140,7 +140,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 172048,
+      "stars": 172211,
       "language": "HTML",
       "pushed": "2026-10-03",
       "trending": false
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 166961,
+      "stars": 167004,
       "language": "Python",
-      "pushed": "2026-10-05",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -194,8 +194,26 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-04-12",
-      "stars": 157856,
+      "stars": 157978,
       "language": "TypeScript",
+      "pushed": "2026-10-07",
+      "trending": false
+    },
+    {
+      "name": "DietrichGebert/ponytail",
+      "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "tags": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin"
+      ],
+      "source": "GitHub",
+      "pubDate": "2026-06-12",
+      "stars": 156945,
+      "language": "JavaScript",
       "pushed": "2026-10-05",
       "trending": false
     },
@@ -212,27 +230,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-02-08",
-      "stars": 155506,
+      "stars": 155553,
       "language": "Python",
-      "pushed": "2026-10-05",
-      "trending": false
-    },
-    {
-      "name": "DietrichGebert/ponytail",
-      "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "url": "https://github.com/DietrichGebert/ponytail",
-      "tags": [
-        "agent-skills",
-        "ai-agents",
-        "claude",
-        "claude-code",
-        "claude-code-plugin"
-      ],
-      "source": "GitHub",
-      "pubDate": "2026-06-12",
-      "stars": 155043,
-      "language": "JavaScript",
-      "pushed": "2026-10-05",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -248,9 +248,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-10-06",
-      "stars": 153967,
+      "stars": 154110,
       "language": "Python",
-      "pushed": "2026-10-05",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -266,9 +266,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 147449,
+      "stars": 147510,
       "language": "Python",
-      "pushed": "2026-10-04",
+      "pushed": "2026-10-07",
+      "trending": false
+    },
+    {
+      "name": "shadcn-ui/ui",
+      "desc": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
+      "url": "https://github.com/shadcn-ui/ui",
+      "tags": [
+        "ai",
+        "base-ui",
+        "components",
+        "gen-ui",
+        "generative-ai"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-01-04",
+      "stars": 125219,
+      "language": "TypeScript",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -284,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 121014,
+      "stars": 121088,
       "language": "Jupyter Notebook",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -302,7 +320,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 106018,
+      "stars": 106150,
       "language": "Jupyter Notebook",
       "pushed": "2026-10-02",
       "trending": false
@@ -320,27 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 103762,
+      "stars": 103816,
       "language": "Python",
-      "pushed": "2026-10-05",
-      "trending": false
-    },
-    {
-      "name": "hacksider/Deep-Live-Cam",
-      "desc": "단 하나의 이미지만으로 실시간 얼굴 교환 및 원클릭 비디오 딥페이크",
-      "url": "https://github.com/hacksider/Deep-Live-Cam",
-      "tags": [
-        "ai",
-        "ai-deep-fake",
-        "ai-face",
-        "ai-webcam",
-        "artificial-intelligence"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-09-24",
-      "stars": 96921,
-      "language": "Python",
-      "pushed": "2026-10-05",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -356,8 +356,26 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 96200,
+      "stars": 97252,
       "language": "TypeScript",
+      "pushed": "2026-10-07",
+      "trending": false
+    },
+    {
+      "name": "hacksider/Deep-Live-Cam",
+      "desc": "단 하나의 이미지만으로 실시간 얼굴 교환 및 원클릭 비디오 딥페이크",
+      "url": "https://github.com/hacksider/Deep-Live-Cam",
+      "tags": [
+        "ai",
+        "ai-deep-fake",
+        "ai-face",
+        "ai-webcam",
+        "artificial-intelligence"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-09-24",
+      "stars": 96925,
+      "language": "Python",
       "pushed": "2026-10-05",
       "trending": false
     },
@@ -374,7 +392,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 91265,
+      "stars": 91305,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-15",
       "trending": false
@@ -392,9 +410,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 91069,
+      "stars": 91088,
       "language": "C++",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -410,9 +428,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 90008,
+      "stars": 90131,
       "language": "Python",
-      "pushed": "2026-10-05",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -446,9 +464,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 83614,
+      "stars": 83630,
       "language": "",
-      "pushed": "2026-09-27",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -464,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 83291,
+      "stars": 83313,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -482,7 +500,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 78830,
+      "stars": 78861,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -500,7 +518,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 76446,
+      "stars": 76556,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-19",
       "trending": false
@@ -518,7 +536,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 69446,
+      "stars": 69509,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-16",
       "trending": false
@@ -536,9 +554,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 68915,
+      "stars": 69041,
       "language": "",
-      "pushed": "2026-10-04",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -554,9 +572,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-05",
-      "stars": 66528,
+      "stars": 66922,
       "language": "Python",
-      "pushed": "2026-10-05",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -587,7 +605,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-07-27",
-      "stars": 63186,
+      "stars": 63247,
       "language": "Python",
       "pushed": "2026-09-22",
       "trending": false
@@ -605,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 55489,
+      "stars": 55486,
       "language": "TypeScript",
       "pushed": "2026-08-13",
       "trending": false
@@ -659,9 +677,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 31538,
+      "stars": 31584,
       "language": "Python",
-      "pushed": "2026-09-25",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -677,7 +695,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12689,
+      "stars": 12691,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -713,7 +731,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 9083,
+      "stars": 9080,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -731,9 +749,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 8807,
+      "stars": 8820,
       "language": "Rust",
-      "pushed": "2026-10-04",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -749,7 +767,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7492,
+      "stars": 7494,
       "language": "Python",
       "pushed": "2026-09-28",
       "trending": false
