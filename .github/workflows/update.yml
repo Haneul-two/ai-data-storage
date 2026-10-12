@@ -17,6 +17,7 @@ jobs:
     timeout-minutes: 15
     permissions:
       contents: write
+      pages: write
 
     steps:
       - uses: actions/checkout@v7
@@ -52,6 +53,14 @@ jobs:
           git add data/opportunities.json data/ingest-status.json
           git diff --staged --quiet || git commit -m "chore: auto-update opportunities $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
+
+      # GITHUB_TOKEN으로 push한 commit은 branch 기반 Pages build를 자동 실행하지 않으므로 API로 직접 요청한다.
+      - name: Request Pages rebuild
+        if: steps.collect.outputs.exit_code != '2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh api --method POST "repos/${GH_REPO}/pages/builds"
 
       - name: Fail if collector failed
         if: always() && steps.collect.outcome == 'failure'

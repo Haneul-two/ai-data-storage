@@ -56,3 +56,10 @@
 - 원격 변경 보존: 원격 master가 ee68ae6에서 aa04b7e까지 자동 데이터 갱신 3건만 앞서 있다. 다른 변경을 되돌리지 않고 그대로 보존하며 병합한다.
 - 내부 명세 로컬 보관: `docs/tasks/`(실행 명세)와 `tools/run_claude.py`(로컬 오케스트레이터)는 이번 작업의 내부 도구라 배포 저장소에 공개하지 않으려고 `.gitignore`에 추가했다. 파일은 삭제하지 않고 로컬에 둔다. `tools/browser_check.py`·테스트·검증 결과는 공개 검증 자료로 유지한다.
 - 상태: 반영 진행 중이며 푸시·배포 완료는 아직 아니다.
+
+### 2026-10-12 — 데이터 갱신 뒤 Pages 재빌드 누락 수정 (실행 검증 전)
+
+- 발견한 운영 경계: `GITHUB_TOKEN`으로 push한 commit은 branch 기반(legacy) Pages build를 자동 실행하지 않는다. 현재 Pages는 master/루트 legacy라, 매일 갱신 commit이 생겨도 사이트가 갱신되지 않을 수 있었다.
+- 수정(`.github/workflows/update.yml`): job `permissions`에 `pages: write` 추가(`contents: write` 유지). `Commit changes` 직후·마지막 실패 표시 step 이전에 `Request Pages rebuild` step 추가. `gh api --method POST "repos/${GH_REPO}/pages/builds"`, `GH_TOKEN`·`GH_REPO`는 env로 전달(토큰 값 저장·출력 없음). 종료 코드 2(데이터 손상)에서는 실행하지 않고, 정상/전체 실패(1)는 tests 성공 후 새 상태 JSON이 반영된 최신 master를 재빌드한다.
+- 공식 근거: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site , https://docs.github.com/en/rest/pages/pages#request-a-github-pages-build
+- 상태: 실제 Actions runner에서 성공한 적 없다. 권한·재빌드 검증은 root가 실제 실행으로 한다. 작은 workflow 변경이라 YAML 텍스트 재현 테스트는 추가하지 않았다.

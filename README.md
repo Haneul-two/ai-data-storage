@@ -101,6 +101,8 @@ collectors/opportunities/   수집 파이프라인
 
 `.github/workflows/update.yml`은 하루 1회(09:00 KST) 초안이며, 저장소 변수 `ENABLE_OPPORTUNITY_UPDATES == 'true'`일 때만 실행됩니다(기본 비활성). 변수를 켜는 것은 별도 승인 사항입니다. 수집기가 전부 실패(종료 코드 1)해도 tests 통과 후 `ingest-status.json`의 실패 상태를 commit하고 마지막에 workflow를 실패로 표시합니다. 기존 데이터 손상(종료 코드 2)은 commit하지 않습니다.
 
+`GITHUB_TOKEN`으로 push한 commit은 branch 기반 Pages build를 자동으로 실행하지 않습니다. 그래서 commit 직후 `pages: write` 권한으로 Pages API(`POST /repos/{owner}/{repo}/pages/builds`)를 호출해 최신 master의 재빌드를 명시적으로 요청합니다(종료 코드 2에서는 실행하지 않음). 활성화는 승인됐지만 실제 Actions 실행으로 권한·재빌드를 확인하는 일은 아직 완료되지 않았습니다.
+
 ## 배포
 
 GitHub Pages(Deploy from a branch, root). `design-lab/`도 root에 포함되므로 "배포 제외"가 아닙니다 — 링크하지 않을 뿐입니다. 완전히 제외하려면 이후 Pages artifact workflow가 필요합니다.
