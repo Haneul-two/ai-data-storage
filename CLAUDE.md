@@ -2,6 +2,7 @@
 
 경과·검증·사고 기록은 `docs/HISTORY.md`, 사양은 `docs/spec*.md`, 작업 규칙 요약은 `AGENTS.md`.
 현재 상태(2026-10-12): **운영 시작됨.** PR #1 병합(master d01cbf3), 첫 운영 수집(수동 workflow_dispatch run 38190817956) 성공, Pages 최신 빌드가 데이터 커밋 2427883과 동일, 공개 사이트 https://haneul-two.github.io/ai-data-storage/ 정상. 매일 09:00 KST 갱신 활성화(`ENABLE_OPPORTUNITY_UPDATES=true`)·교차 리뷰 반영 완료. 단, **예약 시각에 자동 발생한 첫 실행은 아직 없어 통과로 쓰지 않는다.** 원격 master의 자동 데이터 갱신 3건(ee68ae6→aa04b7e)은 보존 병합했다. `docs/tasks/`·`tools/run_claude.py`는 내부용이라 git 제외(로컬 보관). 증거·run·commit은 `docs/HISTORY.md`.
+확장 작업(브랜치 feat/expanded-opportunity-sources, 2026-10-12): 공식 행사 소스 3종(seocho·nvidia·aifesta)과 위비티 최대 6페이지 확장을 로컬 구현·수집 1회 완료(전체 109건, 출처 7곳 ok). 검증: Python 142 OK · Node 107 pass · offline 109건 계약 통과, Codex 독립 리뷰 반영, 실제 Edge 로컬 1440/390 8검사 통과(pageErrors 0, `tools/check_expanded_events.py`). **원격 반영·배포·공개 URL 검사는 대기(성공으로 쓰지 않는다).** 상세는 `docs/HISTORY.md`, `docs/collection-expansion.md`.
 이전 상태(역사, 운영 시작 전): 로컬 구현·검증 완료(데이터 전체33 = 활성23 + 종료9 + 마감1), 원격(push·workflow·Pages·예약) 미실행. 증거는 `docs/evidence/final-checks.txt`, 통과표는 `docs/verification.md`.
 
 ## 프로젝트 개요
@@ -41,6 +42,8 @@ data/opportunities.json, ingest-status.json  ←  collectors/opportunities/ (백
 - 수집기 전체 실패(종료 코드 1)도 `ingest-status.json`을 commit해야 사이트에 실패가 전달된다 → workflow는 collector를 `continue-on-error`로 두고 tests 뒤 commit, 마지막에 실패 표시. 종료 코드 2(손상)는 commit하지 않는다.
 - 표준 예외 문구는 괄호 안 실제 국가명이 있어야 한국 참가로 승인한다(`(see rules)`는 거부). curated·신선 결과·저장 항목 모두 `rules.meets_contract`를 거친다.
 
+- 위비티를 1페이지·소스당 20건으로만 읽다 2페이지 10번째의 고용24 해커톤을 놓쳤다 → 위비티는 전용 한도(최대 6페이지·100건)를 쓰고, 이후 페이지 오류는 부분 성공으로 숨기지 않고 소스 실패로 처리한다.
+- 공식 행사 페이지의 서브 프로그램 오픈예정·마감을 행사 전체 상태로 읽을 위험이 있다 → 서초 AI 페스타처럼 근거 없는 접수 상태는 `sourceStatus: unknown`, 마감 null로 두고 NVIDIA는 연도 포함 hero 한 줄만 기간으로 읽는다.
 - 목록 재렌더가 검색 입력을 다시 만들면 포커스·캐럿이 사라진다 → 입력과 필터 버튼은 재생성하지 않는다.
 - 저장 토글이 목록 전체를 다시 그리면 키보드 포커스를 잃는다 → 버튼 상태만 동기화하고, 저장 보기에서만 다시 그린 뒤 포커스를 복원한다.
 - 좁은 화면의 달력 칸은 마커 버튼이 44px을 못 만든다 → 칸에는 점만, 클릭은 월 일정 목록(agenda)에서 받는다.

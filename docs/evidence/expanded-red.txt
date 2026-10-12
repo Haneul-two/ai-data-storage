@@ -1,0 +1,665 @@
+EEEEFEEEEEE..FEEEEEEEE.EEFEEEEEEEFF.EFFFF.F
+======================================================================
+ERROR: test_ended_event_is_kept_as_archived_not_active (tests.test_expanded_sources.AiFestaTest.test_ended_event_is_kept_as_archived_not_active)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 195, in test_ended_event_is_kept_as_archived_not_active
+    item = rules.normalize_item(self.collect().items[0], "aifesta", NOW_ISO)
+                                ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 177, in collect
+    aifesta = source("aifesta")
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.aifesta'
+
+======================================================================
+ERROR: test_event_from_graph (tests.test_expanded_sources.AiFestaTest.test_event_from_graph)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 181, in test_event_from_graph
+    raw = self.collect().items[0]
+          ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 177, in collect
+    aifesta = source("aifesta")
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.aifesta'
+
+======================================================================
+ERROR: test_graph_without_event_is_error (tests.test_expanded_sources.AiFestaTest.test_graph_without_event_is_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 203, in test_graph_without_event_is_error
+    self.collect(html)
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 177, in collect
+    aifesta = source("aifesta")
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.aifesta'
+
+======================================================================
+ERROR: test_unprovided_fee_eligibility_and_deadline_stay_unknown (tests.test_expanded_sources.AiFestaTest.test_unprovided_fee_eligibility_and_deadline_stay_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 188, in test_unprovided_fee_eligibility_and_deadline_stay_unknown
+    raw = self.collect().items[0]
+          ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 177, in collect
+    aifesta = source("aifesta")
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.aifesta'
+
+======================================================================
+ERROR: test_ambiguous_two_events_is_error (tests.test_expanded_sources.JsonLdTest.test_ambiguous_two_events_is_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 108, in test_ambiguous_two_events_is_error
+    self.read(self.wrap([self.EVENT, dict(self.EVENT, name="다른 행사")]))
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 87, in read
+    return source("jsonld").read_event(html, "테스트")
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.jsonld'
+
+======================================================================
+ERROR: test_dates_use_seoul_calendar_day (tests.test_expanded_sources.JsonLdTest.test_dates_use_seoul_calendar_day)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 98, in test_dates_use_seoul_calendar_day
+    self.assertEqual(self.read(self.wrap(event))["startDate"], "2026-12-01")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 87, in read
+    return source("jsonld").read_event(html, "테스트")
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.jsonld'
+
+======================================================================
+ERROR: test_invalid_dates_are_errors (tests.test_expanded_sources.JsonLdTest.test_invalid_dates_are_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 114, in test_invalid_dates_are_errors
+    self.read(self.wrap(dict(self.EVENT, **patch)))
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 87, in read
+    return source("jsonld").read_event(html, "테스트")
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.jsonld'
+
+======================================================================
+ERROR: test_no_event_or_bad_json_is_error_not_empty (tests.test_expanded_sources.JsonLdTest.test_no_event_or_bad_json_is_error_not_empty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 104, in test_no_event_or_bad_json_is_error_not_empty
+    self.read(html)
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 87, in read
+    return source("jsonld").read_event(html, "테스트")
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.jsonld'
+
+======================================================================
+ERROR: test_non_korea_location_is_error (tests.test_expanded_sources.JsonLdTest.test_non_korea_location_is_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 119, in test_non_korea_location_is_error
+    self.read(self.wrap(event))
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 87, in read
+    return source("jsonld").read_event(html, "테스트")
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.jsonld'
+
+======================================================================
+ERROR: test_single_list_and_graph_shapes (tests.test_expanded_sources.JsonLdTest.test_single_list_and_graph_shapes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 92, in test_single_list_and_graph_shapes
+    data = self.read(self.wrap(payload))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 87, in read
+    return source("jsonld").read_event(html, "테스트")
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.jsonld'
+
+======================================================================
+ERROR: test_ascii_tilde_and_nbsp_variants (tests.test_expanded_sources.NvidiaTest.test_ascii_tilde_and_nbsp_variants)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 262, in test_ascii_tilde_and_nbsp_variants
+    raw = self.collect(html).items[0]
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 208, in collect
+    nvidia = source("nvidia")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.nvidia'
+
+======================================================================
+ERROR: test_hero_year_and_range (tests.test_expanded_sources.NvidiaTest.test_hero_year_and_range)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 212, in test_hero_year_and_range
+    data = source("nvidia").parse_main(fixture("nvidia_ai_day.html"))
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.nvidia'
+
+======================================================================
+ERROR: test_item (tests.test_expanded_sources.NvidiaTest.test_item)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 217, in test_item
+    raw = self.collect().items[0]
+          ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 208, in collect
+    nvidia = source("nvidia")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.nvidia'
+
+======================================================================
+ERROR: test_missing_pieces_are_errors (tests.test_expanded_sources.NvidiaTest.test_missing_pieces_are_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 254, in test_missing_pieces_are_errors
+    self.collect(html)
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 208, in collect
+    nvidia = source("nvidia")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.nvidia'
+
+======================================================================
+ERROR: test_program_session_times_do_not_shrink_the_period (tests.test_expanded_sources.NvidiaTest.test_program_session_times_do_not_shrink_the_period)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 230, in test_program_session_times_do_not_shrink_the_period
+    raw = self.collect().items[0]
+          ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 208, in collect
+    nvidia = source("nvidia")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.nvidia'
+
+======================================================================
+ERROR: test_reads_page_year_not_constant (tests.test_expanded_sources.NvidiaTest.test_reads_page_year_not_constant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 235, in test_reads_page_year_not_constant
+    raw = self.collect(html).items[0]
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 208, in collect
+    nvidia = source("nvidia")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.nvidia'
+
+======================================================================
+ERROR: test_status_open_only_with_register_cta (tests.test_expanded_sources.NvidiaTest.test_status_open_only_with_register_cta)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 258, in test_status_open_only_with_register_cta
+    self.assertEqual(self.collect(html).items[0]["sourceStatus"], "unknown")
+                     ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 208, in collect
+    nvidia = source("nvidia")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.nvidia'
+
+======================================================================
+ERROR: test_title_year_must_match_hero_year (tests.test_expanded_sources.NvidiaTest.test_title_year_must_match_hero_year)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 241, in test_title_year_must_match_hero_year
+    self.collect(html)
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 208, in collect
+    nvidia = source("nvidia")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.nvidia'
+
+======================================================================
+ERROR: test_redirect_to_other_host_is_blocked (tests.test_expanded_sources.OfficialFetchPathTest.test_redirect_to_other_host_is_blocked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 296, in test_redirect_to_other_host_is_blocked
+    source("aifesta").collect(fetcher, NOW, 20)
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.aifesta'
+
+======================================================================
+ERROR: test_robots_disallow_blocks_official_source (tests.test_expanded_sources.OfficialFetchPathTest.test_robots_disallow_blocks_official_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 287, in test_robots_disallow_blocks_official_source
+    source("seocho").collect(fetcher, NOW, 20)
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.seocho'
+
+======================================================================
+ERROR: test_fee_and_eligibility_stay_unknown_without_evidence (tests.test_expanded_sources.SeochoTest.test_fee_and_eligibility_stay_unknown_without_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 162, in test_fee_and_eligibility_stay_unknown_without_evidence
+    raw = self.collect(html).items[0]
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 124, in collect
+    seocho = source("seocho")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.seocho'
+
+======================================================================
+ERROR: test_item_from_official_jsonld (tests.test_expanded_sources.SeochoTest.test_item_from_official_jsonld)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 128, in test_item_from_official_jsonld
+    result = self.collect()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 124, in collect
+    seocho = source("seocho")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.seocho'
+
+======================================================================
+ERROR: test_missing_jsonld_is_structure_error (tests.test_expanded_sources.SeochoTest.test_missing_jsonld_is_structure_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 172, in test_missing_jsonld_is_structure_error
+    self.collect("<html><body>점검 중</body></html>")
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 124, in collect
+    seocho = source("seocho")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.seocho'
+
+======================================================================
+ERROR: test_offer_valid_from_is_not_registration_start (tests.test_expanded_sources.SeochoTest.test_offer_valid_from_is_not_registration_start)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 150, in test_offer_valid_from_is_not_registration_start
+    raw = self.collect().items[0]
+          ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 124, in collect
+    seocho = source("seocho")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.seocho'
+
+======================================================================
+ERROR: test_reads_page_values_not_constants (tests.test_expanded_sources.SeochoTest.test_reads_page_values_not_constants)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 156, in test_reads_page_values_not_constants
+    raw = self.collect(html).items[0]
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 124, in collect
+    seocho = source("seocho")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.seocho'
+
+======================================================================
+ERROR: test_street_address_and_contacts_are_not_stored (tests.test_expanded_sources.SeochoTest.test_street_address_and_contacts_are_not_stored)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 167, in test_street_address_and_contacts_are_not_stored
+    blob = json.dumps(rules.normalize_item(self.collect().items[0], "seocho", NOW_ISO), ensure_ascii=False)
+                                           ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 124, in collect
+    seocho = source("seocho")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.seocho'
+
+======================================================================
+ERROR: test_sub_program_states_do_not_close_the_festival (tests.test_expanded_sources.SeochoTest.test_sub_program_states_do_not_close_the_festival)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 141, in test_sub_program_states_do_not_close_the_festival
+    raw = self.collect().items[0]
+          ^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 124, in collect
+    seocho = source("seocho")
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 24, in source
+    return importlib.import_module(f"collectors.opportunities.sources.{name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'collectors.opportunities.sources.seocho'
+
+======================================================================
+ERROR: test_item_limit_function (tests.test_expanded_sources.WevityPagingTest.test_item_limit_function)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 334, in test_item_limit_function
+    self.assertEqual(wevity.item_limit(None), 100)
+                     ^^^^^^^^^^^^^^^^^
+AttributeError: module 'collectors.opportunities.sources.wevity' has no attribute 'item_limit'
+
+======================================================================
+FAIL: test_new_exact_hosts_only (tests.test_expanded_sources.AllowListTest.test_new_exact_hosts_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 69, in test_new_exact_hosts_only
+    self.assertTrue(urlsafe.is_fetch_allowed(ok), ok)
+AssertionError: False is not true : https://seochoai.kr/
+
+======================================================================
+FAIL: test_festival_words_are_events (tests.test_expanded_sources.KindRulesTest.test_festival_words_are_events)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 54, in test_festival_words_are_events
+    self.assertEqual(rules.classify_kind(title), "event", title)
+AssertionError: None != 'event' : 2026 서초 AI 페스타
+
+======================================================================
+FAIL: test_seven_sources_with_existing_priority_first (tests.test_expanded_sources.RegistryTest.test_seven_sources_with_existing_priority_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 76, in test_seven_sources_with_existing_priority_first
+    self.assertEqual([s.id for s in default_sources()], ["devpost", "dacon", "wevity", "aisummit", "seocho", "nvidia", "aifesta"])
+AssertionError: Lists differ: ['devpost', 'dacon', 'wevity', 'aisummit'] != ['devpost', 'dacon', 'wevity', 'aisummit', 'seocho', 'nvidia', 'aifesta']
+
+Second list contains 3 additional elements.
+First extra element 4:
+'seocho'
+
+- ['devpost', 'dacon', 'wevity', 'aisummit']
++ ['devpost', 'dacon', 'wevity', 'aisummit', 'seocho', 'nvidia', 'aifesta']
+
+======================================================================
+FAIL: test_default_limit_is_not_cut_back_to_twenty (tests.test_expanded_sources.WevityPagingTest.test_default_limit_is_not_cut_back_to_twenty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 322, in test_default_limit_is_not_cut_back_to_twenty
+    self.assertEqual(len(result.items), 30)
+AssertionError: 15 != 30
+
+======================================================================
+FAIL: test_explicit_max_items_bounds_detail_fetches_and_paging (tests.test_expanded_sources.WevityPagingTest.test_explicit_max_items_bounds_detail_fetches_and_paging)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 346, in test_explicit_max_items_bounds_detail_fetches_and_paging
+    self.assertEqual(len(wevity.collect(fetcher, NOW, 20).items), 20)
+AssertionError: 15 != 20
+
+======================================================================
+FAIL: test_later_page_failure_preserves_previous_data (tests.test_expanded_sources.WevityPagingTest.test_later_page_failure_preserves_previous_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 385, in test_later_page_failure_preserves_previous_data
+    self.assertEqual(report["sources"][0]["status"], "error")
+AssertionError: 'ok' != 'error'
+- ok
++ error
+
+
+======================================================================
+FAIL: test_later_page_http_error_fails_the_source (tests.test_expanded_sources.WevityPagingTest.test_later_page_http_error_fails_the_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 360, in test_later_page_http_error_fails_the_source
+    with self.assertRaises(FetchError):
+AssertionError: FetchError not raised
+
+======================================================================
+FAIL: test_later_page_structure_error_fails_the_source (tests.test_expanded_sources.WevityPagingTest.test_later_page_structure_error_fails_the_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 366, in test_later_page_structure_error_fails_the_source
+    with self.assertRaises(StructureError):
+AssertionError: StructureError not raised
+
+======================================================================
+FAIL: test_page_and_item_caps (tests.test_expanded_sources.WevityPagingTest.test_page_and_item_caps)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 329, in test_page_and_item_caps
+    self.assertEqual(len(result.items), 90)
+AssertionError: 15 != 90
+
+======================================================================
+FAIL: test_second_page_target_is_collected (tests.test_expanded_sources.WevityPagingTest.test_second_page_target_is_collected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_expanded_sources.py", line 312, in test_second_page_target_is_collected
+    self.assertEqual(sorted(by_ix), ["111124", "111322", "999101"])
+AssertionError: Lists differ: ['111322'] != ['111124', '111322', '999101']
+
+First differing element 0:
+'111322'
+'111124'
+
+Second list contains 2 additional elements.
+First extra element 1:
+'111322'
+
+- ['111322']
++ ['111124', '111322', '999101']
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.320s
+
+FAILED (failures=10, errors=28)

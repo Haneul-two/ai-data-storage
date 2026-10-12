@@ -1,13 +1,13 @@
 # 수집 소스 사실과 한계
 
-기준일 2026-10-02 실측. 구현: `collectors/opportunities/sources/`. 실행: `.venv/Scripts/python.exe collectors/collect_events.py [--dry-run|--offline] [--output PATH] [--max-items N]`.
+기준일 2026-10-02 실측(공식 행사 3종·위비티 다중 페이지는 2026-10-12 추가). 구현: `collectors/opportunities/sources/`. 실행: `.venv/Scripts/python.exe collectors/collect_events.py [--dry-run|--offline] [--output PATH] [--max-items N]`.
 
 ## 공통 정책
 
 - User-Agent `ai-opportunity-board/1.0`. 위비티는 URL이 들어간 긴 UA를 403으로 거절한다(브라우저 흉내는 쓰지 않는다).
-- 허용 호스트: devpost.com(*.devpost.com), wevity.com, dacon.io, aisummit.co.kr(각 www 포함). 모든 요청과 redirect는 HTTPS 443·userinfo 없음·허용목록을 재검증한다. redirect 3회, 응답 2.5MB, 요청 timeout 15초, 요청 간 1초.
+- 허용 호스트: devpost.com(*.devpost.com), wevity.com, dacon.io, aisummit.co.kr(각 www 포함), seochoai.kr(www 포함), www.nvidia.com, aifesta.kr(www 포함) — 새 호스트는 정확한 이름만 허용(하위 도메인 아님). 모든 요청과 redirect는 HTTPS 443·userinfo 없음·허용목록을 재검증한다. redirect 3회, 응답 2.5MB, 요청 timeout 15초, 요청 간 1초.
 - robots.txt는 호스트별로 실행 중 캐시한다. 404/410만 "규칙 없음"이고 timeout·403·5xx는 `blocked`다(허용으로 보지 않는다). 와일드카드(`*`, `$`)와 최장 일치를 직접 해석한다.
-- 소스당 최대 20건(Devpost 기본 10건). 외부 신청 링크(위비티 홈페이지 필드)는 fetch하지 않고 안전한 HTTPS 링크로만 저장한다.
+- 소스당 최대 20건(Devpost 기본 10건, 위비티 예외 아래 참고). 외부 신청 링크(위비티 홈페이지 필드)는 fetch하지 않고 안전한 HTTPS 링크로만 저장한다.
 - 설명은 200자 이내 요약, 이메일·전화는 `[연락처 생략]`으로 치환한다. 연락처 섹션은 추출하지 않는다.
 
 ## Devpost (`devpost`)
@@ -30,6 +30,7 @@
 ## 위비티 (`wevity`)
 
 - 검색은 반드시 `sp=name`(또는 `sp=contents`)이 있어야 필터가 적용된다: `https://www.wevity.com/?c=find&s=1&gub=1&sp=name&sw=AI`. 행 `.list li`(헤더 `li.top`), 제목 `.tit a[href*="gbn=view"]`, `.organ`, `.day .dday`.
+- 목록은 `gp=2..6`으로 최대 6페이지(15개씩, 후보 최대 90)까지 읽고 상세는 최대 100건이다. `--max-items`를 주면 그 값(100 이하)이 한도이며 한도를 채우면 다음 페이지를 읽지 않는다. 같은 `ix`는 한 번만 보고, 빈 페이지나 이미 본 페이지가 오면 멈춘다. 2페이지 이후의 HTTP·구조 오류는 소스 오류가 되어 기존 데이터를 보존한다(부분 결과를 성공으로 쓰지 않음).
 - 제목을 로컬에서 다시 AI 단어 경계로 걸러 상세 `?c=find&s=1&gub=1&gbn=view&ix=ID`를 조회한다. 상세 `ul.cd-info-list`: 응모대상, 주최/주관, 접수기간(`시작 ~ 마감`), 총 상금/1등 상금, 홈페이지.
 - 접수기간 마감은 날짜만 제공 → `deadlineAt` null, `dateNote`에 날짜만 제공 명시. 개최일은 제공되지 않아 start/endDate null. 응모대상이 있으면 그대로 저장(원문 표기, "기타"·"제한없음" 포함).
 - 한계: 다수가 AI 영상/이미지 공모전이다(제목에 AI 포함). 방식은 제목에 온라인/오프라인이 있을 때만 판정.
@@ -40,11 +41,26 @@
 - 컨퍼런스 8/11-12, EXPO 8/11-13, 코엑스, 주최 DMK Global/COEX/KITA. 마감·참가비·자격은 확인 필요(추측하지 않음). 푸터/연락처 텍스트는 저장하지 않고 설명은 구조화 필드로 합성.
 - `aisummit.co.kr/robots.txt`는 `/api/`, `/search`, `?format=` 계열 등을 막지만 `/`는 허용한다.
 
+## 서초 AI 페스타 (`seocho`)
+
+- `https://seochoai.kr/` 한 장. head의 JSON-LD `Event`(공용 `sources/jsonld.py`가 읽음)에서 명칭·시작/종료(서울 날짜+개최 시각)·장소명·주최·무료 여부를 읽는다. 값은 코드에 고정하지 않고 페이지 값을 쓴다. `eventStatus`가 EventCancelled일 때만 `sourceStatus: closed`·dateNote에 `행사 취소`(다른 값·하위 프로그램 상태는 무시).
+- `offers.validFrom`은 행사 접수 시작이라는 근거가 없어 쓰지 않는다. 일부 프로그램의 사전예약 오픈예정·마감은 축제 전체 상태가 아니므로 `sourceStatus: unknown`, 마감 null, `dateNote`에 개최 시각과 "프로그램별 신청은 공식 사이트 확인"을 둔다.
+- 참가비 `무료`는 `isAccessibleForFree`/`price 0` 근거가 있을 때만(서로 어긋나면 `확인 필요`). 자격 `시민 누구나`는 본문에 그 문구가 있을 때만 verified. 도로명 주소는 저장하지 않고 장소명만 쓴다.
+
+## NVIDIA AI Day Seoul (`nvidia`)
+
+- `https://www.nvidia.com/ko-kr/ai-days/`(약 0.5MB). `<title>`의 `AI Day Seoul 연도`, h1 `AI Day Seoul`, h1 뒤 hero 한 줄 `M월 D～D일, 연도 | 장소`(전각 물결·en space는 NFKC로 정규화)에서만 기간을 읽는다. title 연도와 hero 연도가 다르거나 날짜가 잘못되면 오류. 프로그램 탭의 `11월 10일` 같은 세션 시간은 기간으로 쓰지 않는다.
+- 이름은 읽은 연도로 `NVIDIA AI Day Seoul {연도}`. 등록 마감은 null, 참가비는 프로그램별이라 `확인 필요(프로그램별로 다름)`. `sourceStatus: open`은 헤더의 `지금 등록하기` CTA가 https 링크로 있을 때만. 등록 링크(register.nvidia.com)는 허용 호스트가 아니라 저장하지 않고 공식 안내 페이지 URL을 쓴다. 한국어 검색을 위해 tags에 `엔비디아`·`AI 데이`·`서울`을 둔다.
+
+## AI FESTA (`aifesta`)
+
+- `https://www.aifesta.kr/`. 본문은 JS 앱(`#root`)이라 비어 있고 head의 JSON-LD `@graph` 안 `Event`를 읽는다(WebSite·Organization은 무시). 참가비·신청 마감·자격은 제공되지 않아 `확인 필요`. 종료한 행사도 90일 정책으로 저장되고 화면 기본(활성) 목록에서는 빠진다.
+
 ## 저장·병합 규칙
 
 - 전체 원격 실패 시 `data/opportunities.json`은 바이트 불변이고 `data/ingest-status.json`만 갱신된다. 부분 실패는 성공 소스만 교체하고 실패 소스 행·`verifiedAt`·`lastSuccessAt`을 보존한다.
 - 성공 소스에서 사라진 활성 항목은 `stale=true`(verifiedAt 유지), 종료 후 90일이 지난 항목만 제외한다. 날짜가 없는 항목은 verifiedAt 기준.
-- id = `소스id-sha1(canonical sourceUrl)[:12]`. 서로 다른 소스가 같은 canonical `url`을 가리키면 소스 우선순위(devpost > dacon > wevity > aisummit)로 한 건만 남긴다.
+- id = `소스id-sha1(canonical sourceUrl)[:12]`. 서로 다른 소스가 같은 canonical `url`을 가리키면 소스 우선순위(devpost > dacon > wevity > aisummit > seocho > nvidia > aifesta)로 한 건만 남긴다.
 - 기존 JSON이 손상됐거나 계약을 어기면 종료 코드 2로 중단하고 어떤 파일도 쓰지 않는다. 종료 코드 1은 모든 소스 실패.
 - `data/curated.json`(수동 입력, `schemaVersion: 2`, 전체 항목 계약)은 현재 비어 있다. 값이 있으면 검증 후 병합하며 자동 재확인은 하지 않는다(각 항목의 `verifiedAt`이 입력 시점). 기존 `data/events.json`은 건드리지 않는다.
 
@@ -54,12 +70,14 @@
 - 저장된 stale 항목도 병합 때 같은 계약을 다시 검사해 위반분은 출력에서 뺀다(예: 나중에 추가된 internal 대회 규칙).
 - "excluding standard exceptions"는 **괄호 안에 실제 국가명 목록**(예: Brazil, Crimea, Cuba, Iran, North Korea, Quebec, Russia)이 있을 때만 승인한다. `(see rules)`·TBD·빈 괄호는 거부한다.
 - Fetcher는 redirect 대상의 robots.txt를 **요청 전에** 검사한다(중간 redirect 포함).
-- 위비티·DACON은 시간·요청 한도 때문에 목록 **1페이지만** 본다.
+- DACON은 목록 **1페이지만** 본다. 위비티는 AI 검색 최대 6페이지(위 참고).
 - Devpost 상세 한국 참가 문구와 위비티 응모대상은 원문을 그대로 보여주며, 원문이 바뀌면 안전하게 제외 쪽으로 동작한다.
 - workflow Actions 버전은 2026-10-02에 직접 조회한 최신 릴리스 기준이다: [actions/checkout v7.0.1](https://github.com/actions/checkout/releases), [actions/setup-python v7.0.0](https://github.com/actions/setup-python/releases), [actions/setup-node v7.0.0](https://github.com/actions/setup-node/releases) (workflow에는 major `@v7`로 고정).
 
 ## 알려진 한계
 
-- 시간·요청 한도 때문에 위비티/DACON은 1페이지만 본다(위비티 검색 결과 15건, DACON 목록 14건 수준).
+- DACON은 1페이지(14건 수준)만 본다. 위비티는 6페이지·후보 90건 상한이라 그 뒤 항목은 누락될 수 있고, 한 번의 수집에 약 4분(요청 간격 1초)이 든다.
+- 공식 행사 3곳은 지정한 사이트만 매일 확인한다. 웹 전체의 다른 행사는 발견하지 못하며, 사이트 마크업이 바뀌면 오류로 표시되고 이전 데이터가 보존된다.
+- 위비티는 종료·마감 항목(2026-10-12 수집 기준 37건)도 목록에 있어 보드의 마감·종료 필터에 쌓인다.
 - Devpost 한국 참가 판정은 상세 페이지의 문구 휴리스틱이다. 문구가 바뀌면 안전하게 제외 쪽으로 동작한다.
 - 온오프믹스는 일반 UA 자동 수집을 금지해 제외했다.

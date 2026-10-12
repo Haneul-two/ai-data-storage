@@ -12,11 +12,11 @@
 - 크롤러는 robots 정책·도메인 허용목록·타임아웃·요청 한도를 실행 시 적용한다. 로그인, 우회, 유료 API, 자동 참가 신청은 구현하지 않는다.
 - 화면·중간 JSON·로그에는 전화·이메일 등 연락처를 저장하지 않는다. 외부 HTML을 실행하거나 innerHTML에 주입하지 않는다.
 - 수집 전체 실패 시 `data/opportunities.json`은 바이트 단위 불변이다. 매 시도 상태는 `data/ingest-status.json`(`{lastAttemptAt, sources: Source[]}`)에 원자적으로 기록하고 UI loader가 opportunities.sources에 id 기준 overlay한다. 일부 실패 시 성공 소스만 교체하고 실패 소스의 항목/verifiedAt은 보존한다. 성공 소스에서 사라진 활성 항목은 stale=true, 90일 지난 종료 항목만 제외한다. 파일 삭제는 없다.
-- 네트워크 허용 호스트는 devpost.com(*.devpost.com), wevity.com, dacon.io, 공식행사 adapter 시 aisummit.co.kr뿐이며 공인 HTTPS 443·userinfo 없음·redirect 동일 검증. `?debug`/`?now`는 localhost/127.0.0.1에서만 작동한다.
+- 네트워크 허용 호스트는 devpost.com(*.devpost.com), wevity.com, dacon.io, 공식행사 adapter용 aisummit.co.kr·seochoai.kr·www.nvidia.com·aifesta.kr(각 정확한 호스트)뿐이며 공인 HTTPS 443·userinfo 없음·redirect 동일 검증. `?debug`/`?now`는 localhost/127.0.0.1에서만 작동한다.
 - 로컬 실행: `.venv/Scripts/python.exe -m http.server 8012 --bind 127.0.0.1`.
-- 검사 명령(2026-10-02 결과): `.venv/Scripts/python.exe -m unittest discover -s tests -v`(97 OK) · `node --test tests/*.test.mjs`(106 pass) · `.venv/Scripts/python.exe collectors/collect_events.py --offline`(통과) · `.venv/Scripts/python.exe tools/browser_check.py`(35/35, Playwright 1.63.0 + installed Edge). 증거 `docs/evidence/final-checks.txt`.
-- 현재 데이터: `data/opportunities.json` 전체 33건(화면 활성 23 = 모집중21 + 예정2, 종료9, 마감1), 출처 4곳(devpost 6 · dacon 11 · wevity 15 · aisummit 1) 모두 ok.
-- 한계: 위비티·DACON은 1페이지만 보고 소스별 상한이 있다. 자격·일정은 원문 문구 기준이라 불확실할 수 있으며(DACON 자격 `확인 필요`, 위비티 마감은 날짜만) 화면이 그대로 '확인 필요'로 표시한다. 수동 실행 1회와 Pages 운영은 확인했으나 예약 시각에 자동 발생한 첫 실행은 아직 확인하지 않았다.
+- 검사 명령(2026-10-02 결과): `.venv/Scripts/python.exe -m unittest discover -s tests -v`(2026-10-12 기준 142 OK, 그중 확장 45 — 이전 97) · `node --test tests/*.test.mjs`(107 pass; 이전 106) · `.venv/Scripts/python.exe collectors/collect_events.py --offline`(통과) · `.venv/Scripts/python.exe tools/browser_check.py`(35/35, Playwright 1.63.0 + installed Edge). 증거 `docs/evidence/final-checks.txt`.
+- 현재 데이터(2026-10-12 확장 수집 1회): 전체 109건, 출처 7곳 모두 ok(devpost 6 · dacon 10 · wevity 89 · aisummit 1 · seocho 1 · nvidia 1 · aifesta 1). 기존 39건은 모두 보존. 이전 기준(2026-10-02): 전체 33건, 출처 4곳.
+- 한계: 위비티는 AI 검색 최대 6페이지·상세 100건(`--max-items`가 더 작으면 그 값), DACON은 1페이지·소스당 20건 상한이다. 공식 행사 3곳은 지정한 사이트만 본다(웹 전체 발견 아님). 자격·일정은 원문 문구 기준이라 불확실할 수 있으며(DACON 자격 `확인 필요`, 위비티 마감은 날짜만) 화면이 그대로 '확인 필요'로 표시한다. 수동 실행 1회와 Pages 운영은 확인했으나 예약 시각에 자동 발생한 첫 실행은 아직 확인하지 않았다.
 - archived: 종료 후 90일이 지난 항목만 출력에서 뺀다(그 전에는 보존). 병합 때 저장 항목에도 관련성·지역·자격·초대 전용 계약을 다시 검사해 위반분은 출력에서 제외한다(예전 규칙으로 들어온 항목이 영구 보존되지 않게 하려는 것).
 - 기존 `C:/Users/caring/Projects/ai-data-storage` checkout은 그대로 보존했다.
 

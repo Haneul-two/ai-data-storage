@@ -1,4 +1,5 @@
 import { test } from 'node:test';
+import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import {
   DEFAULT_FILTERS, sanitizeFilters, applyFilters, sortItems, selectItems, facetCounts, activeFilterCount,
@@ -134,4 +135,12 @@ test('selectItems는 필터 후 정렬한다', () => {
 test('activeFilterCount는 기본값과 다른 상태·방식만 센다', () => {
   assert.equal(activeFilterCount(DEFAULT_FILTERS), 0);
   assert.equal(activeFilterCount({ ...DEFAULT_FILTERS, status: 'open', mode: 'online', kind: 'event', q: 'x' }), 2);
+});
+
+test('검색: 수집된 NVIDIA AI Day 항목을 한국어 표현으로 찾는다', () => {
+  const doc = JSON.parse(readFileSync(new URL('../data/opportunities.json', import.meta.url), 'utf8'));
+  const items = doc.items.filter((i) => i.sourceId === 'nvidia');
+  assert.equal(items.length, 1);
+  const f = { ...DEFAULT_FILTERS, kind: 'event', q: '엔비디아 AI 데이 서울 2026' };
+  assert.deepEqual(ids(applyFilters(items, f, { now: '2026-10-12T00:00:00Z', savedIds: new Set() })), [items[0].id]);
 });

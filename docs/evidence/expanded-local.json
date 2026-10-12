@@ -1,0 +1,46 @@
+{
+  "base": "http://127.0.0.1:8012/",
+  "checks": [
+    {
+      "width": 1440,
+      "query": "서초 AI 페스타",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "query": "엔비디아 AI 데이 서울 2026",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "hackathon": true,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "query": "서초 AI 페스타",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "query": "엔비디아 AI 데이 서울 2026",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "hackathon": true,
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}
