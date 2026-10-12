@@ -1,0 +1,82 @@
+# frontend RED — 2026-10-02T16:50:54+09:00 — 구현 모듈(assets/*.mjs) 작성 전
+$ node --test tests/*.test.mjs
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\caring\Projects\ai-data-storage-events\assets\calendar.mjs' imported from C:\Users\caring\Projects\ai-data-storage-events\tests\calendar.test.mjs
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/caring/Projects/ai-data-storage-events/assets/calendar.mjs'
+}
+
+Node.js v24.15.0
+✖ tests\calendar.test.mjs (129.8618ms)
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\caring\Projects\ai-data-storage-events\assets\data.mjs' imported from C:\Users\caring\Projects\ai-data-storage-events\tests\data.test.mjs
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/caring/Projects/ai-data-storage-events/assets/data.mjs'
+}
+
+Node.js v24.15.0
+✖ tests\data.test.mjs (113.9933ms)
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\caring\Projects\ai-data-storage-events\assets\filters.mjs' imported from C:\Users\caring\Projects\ai-data-storage-events\tests\filters.test.mjs
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/caring/Projects/ai-data-storage-events/assets/filters.mjs'
+}
+
+Node.js v24.15.0
+✖ tests\filters.test.mjs (111.9541ms)
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\caring\Projects\ai-data-storage-events\assets\status.mjs' imported from C:\Users\caring\Projects\ai-data-storage-events\tests\status.test.mjs
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/caring/Projects/ai-data-storage-events/assets/status.mjs'
+}
+
+Node.js v24.15.0
+✖ tests\status.test.mjs (113.1774ms)
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\caring\Projects\ai-data-storage-events\assets\storage.mjs' imported from C:\Users\caring\Projects\ai-data-storage-events\tests\storage.test.mjs
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/caring/Projects/ai-data-storage-events/assets/storage.mjs'
+}
+
+Node.js v24.15.0
+✖ tests\storage.test.mjs (122.2396ms)
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\caring\Projects\ai-data-storage-events\assets\time.mjs' imported from C:\Users\caring\Projects\ai-data-storage-events\tests\time.test.mjs
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/caring/Projects/ai-data-storage-events/assets/time.mjs'
+}
+
+Node.js v24.15.0
+✖ tests\time.test.mjs (125.74ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 214.3275
+
+✖ failing tests:
+
+test at tests\calendar.test.mjs:1:1
+✖ tests\calendar.test.mjs (129.8618ms)
+  'test failed'

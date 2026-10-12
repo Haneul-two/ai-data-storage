@@ -1,0 +1,101 @@
+# GREEN 2026-10-02T08:04:59Z — 구현 후
+$ .venv/Scripts/python.exe -m unittest discover -s tests -v
+test_ambiguous_year_is_structure_error (test_opportunities.AiSummitTest.test_ambiguous_year_is_structure_error) ... ok
+test_collect_item (test_opportunities.AiSummitTest.test_collect_item) ... ok
+test_parse_promoted_year_not_title_year (test_opportunities.AiSummitTest.test_parse_promoted_year_not_title_year) ... ok
+test_dry_run_with_injected_sources (test_opportunities.CliTest.test_dry_run_with_injected_sources) ... ok
+test_exit_code_1_when_all_sources_fail (test_opportunities.CliTest.test_exit_code_1_when_all_sources_fail) ... [dry-run(파일 미수정)] 갱신=True 항목=1 시각=2026-10-02T08:04:59Z
+ok
+test_offline_corrupt_existing_returns_2 (test_opportunities.CliTest.test_offline_corrupt_existing_returns_2) ... [저장] 갱신=False 항목=0 시각=2026-10-02T08:04:59Z
+ok
+test_offline_validates_without_writing (test_opportunities.CliTest.test_offline_validates_without_writing) ... ok
+test_real_write_and_partial_success_exit_0 (test_opportunities.CliTest.test_real_write_and_partial_success_exit_0) ... [offline] opportunities 항목 파일 없음, curated 항목 파일 없음 — 계약 검증 통과
+ok
+test_collect_all_detail_failures_is_error (test_opportunities.DaconTest.test_collect_all_detail_failures_is_error) ... ok
+test_collect_builds_submission_deadline_not_merge_deadline (test_opportunities.DaconTest.test_collect_builds_submission_deadline_not_merge_deadline) ... ok
+test_collect_limit_and_priority (test_opportunities.DaconTest.test_collect_limit_and_priority) ... ok
+test_detail_parses_inert_strings_only (test_opportunities.DaconTest.test_detail_parses_inert_strings_only) ... ok
+test_infer_mode (test_opportunities.DaconTest.test_infer_mode) ... ok
+test_listing_rows_and_status (test_opportunities.DaconTest.test_listing_rows_and_status) ... ok
+test_listing_structure_error (test_opportunities.DaconTest.test_listing_structure_error) ... ok
+test_submission_end_before_start_is_not_used_as_deadline (test_opportunities.DaconTest.test_submission_end_before_start_is_not_used_as_deadline) ... ok
+test_collect_exact_deadline_and_korea_evidence (test_opportunities.DevpostTest.test_collect_exact_deadline_and_korea_evidence) ... ok
+test_detail_fetch_failure_for_all_is_error (test_opportunities.DevpostTest.test_detail_fetch_failure_for_all_is_error) ... ok
+test_listing_filters_ai_online_non_invite (test_opportunities.DevpostTest.test_listing_filters_ai_online_non_invite) ... ok
+test_listing_structure_error_and_legit_empty (test_opportunities.DevpostTest.test_listing_structure_error_and_legit_empty) ... ok
+test_max_items_caps_detail_requests (test_opportunities.DevpostTest.test_max_items_caps_detail_requests) ... ok
+test_north_korea_exclusion_is_not_south_korea_exclusion (test_opportunities.DevpostTest.test_north_korea_exclusion_is_not_south_korea_exclusion) ... ok
+test_restricted_without_korea_skipped_and_with_korea_kept (test_opportunities.DevpostTest.test_restricted_without_korea_skipped_and_with_korea_kept) ... ok
+test_south_korea_excluded_is_skipped (test_opportunities.DevpostTest.test_south_korea_excluded_is_skipped) ... ok
+test_zero_prize_is_none (test_opportunities.DevpostTest.test_zero_prize_is_none) ... ok
+test_fetch_ok_with_robots_cache_and_throttle (test_opportunities.FetcherTest.test_fetch_ok_with_robots_cache_and_throttle) ... ok
+test_redirect_downgrade_and_loop_capped (test_opportunities.FetcherTest.test_redirect_downgrade_and_loop_capped) ... ok
+test_redirect_to_unsafe_host_rejected (test_opportunities.FetcherTest.test_redirect_to_unsafe_host_rejected) ... ok
+test_rejects_disallowed_host_and_http (test_opportunities.FetcherTest.test_rejects_disallowed_host_and_http) ... ok
+test_response_size_cap_and_http_error_and_timeout (test_opportunities.FetcherTest.test_response_size_cap_and_http_error_and_timeout) ... ok
+test_robots_404_means_no_rules (test_opportunities.FetcherTest.test_robots_404_means_no_rules) ... ok
+test_robots_disallow_blocks (test_opportunities.FetcherTest.test_robots_disallow_blocks) ... ok
+test_robots_errors_are_blocked_not_permissive (test_opportunities.FetcherTest.test_robots_errors_are_blocked_not_permissive) ... ok
+test_safe_redirect_followed (test_opportunities.FetcherTest.test_safe_redirect_followed) ... ok
+test_all_fail_preserves_bytes_and_records_status (test_opportunities.PipelineTest.test_all_fail_preserves_bytes_and_records_status) ... ok
+test_all_fail_without_existing_file_creates_no_opportunities (test_opportunities.PipelineTest.test_all_fail_without_existing_file_creates_no_opportunities) ... ok
+test_archive_retention_90_days (test_opportunities.PipelineTest.test_archive_retention_90_days) ... ok
+test_corrupt_existing_json_errors_and_is_untouched (test_opportunities.PipelineTest.test_corrupt_existing_json_errors_and_is_untouched) ... ok
+test_curated_items_merged_and_validated (test_opportunities.PipelineTest.test_curated_items_merged_and_validated) ... ok
+test_dry_run_writes_nothing (test_opportunities.PipelineTest.test_dry_run_writes_nothing) ... ok
+test_duplicate_urls_collapse_across_sources (test_opportunities.PipelineTest.test_duplicate_urls_collapse_across_sources) ... ok
+test_first_run_writes_items_sources_and_status (test_opportunities.PipelineTest.test_first_run_writes_items_sources_and_status) ... ok
+test_idempotent_stable_payload (test_opportunities.PipelineTest.test_idempotent_stable_payload) ... ok
+test_invalid_raw_rows_are_skipped_not_fatal (test_opportunities.PipelineTest.test_invalid_raw_rows_are_skipped_not_fatal) ... ok
+test_max_items_is_passed_to_sources (test_opportunities.PipelineTest.test_max_items_is_passed_to_sources) ... ok
+test_missing_live_item_becomes_stale_with_old_verified_at (test_opportunities.PipelineTest.test_missing_live_item_becomes_stale_with_old_verified_at) ... ok
+test_partial_failure_preserves_failed_source_rows (test_opportunities.PipelineTest.test_partial_failure_preserves_failed_source_rows) ... ok
+test_unexpected_exception_is_recorded_as_error (test_opportunities.PipelineTest.test_unexpected_exception_is_recorded_as_error) ... ok
+test_zero_results_is_ok_and_makes_old_items_stale (test_opportunities.PipelineTest.test_zero_results_is_ok_and_makes_old_items_stale) ... ok
+test_committed_documents_valid (test_opportunities.RepoDataTest.test_committed_documents_valid) ... ok
+test_empty_disallow_allows_all (test_opportunities.RobotsTest.test_empty_disallow_allows_all) ... ok
+test_specific_group_beats_wildcard (test_opportunities.RobotsTest.test_specific_group_beats_wildcard) ... ok
+test_wildcard_and_longest_match (test_opportunities.RobotsTest.test_wildcard_and_longest_match) ... ok
+test_ai_in_tags_or_description (test_opportunities.RulesTest.test_ai_in_tags_or_description) ... ok
+test_ai_positive (test_opportunities.RulesTest.test_ai_positive) ... ok
+test_ai_word_boundary (test_opportunities.RulesTest.test_ai_word_boundary) ... ok
+test_deadline_at_overrides_deadline_date_with_seoul_date (test_opportunities.RulesTest.test_deadline_at_overrides_deadline_date_with_seoul_date) ... ok
+test_exact_timezone_to_seoul_date (test_opportunities.RulesTest.test_exact_timezone_to_seoul_date) ... ok
+test_kind_excludes_course_and_job_but_not_hackathon_with_job_tag (test_opportunities.RulesTest.test_kind_excludes_course_and_job_but_not_hackathon_with_job_tag) ... ok
+test_kind_priority (test_opportunities.RulesTest.test_kind_priority) ... ok
+test_korea_allowed (test_opportunities.RulesTest.test_korea_allowed) ... ok
+test_mask_contacts (test_opportunities.RulesTest.test_mask_contacts) ... ok
+test_normalize_keeps_unknowns_null_and_strips_html (test_opportunities.RulesTest.test_normalize_keeps_unknowns_null_and_strips_html) ... ok
+test_normalize_masks_contacts_and_shortens_description (test_opportunities.RulesTest.test_normalize_masks_contacts_and_shortens_description) ... ok
+test_normalize_overseas_online_verified_ok (test_opportunities.RulesTest.test_normalize_overseas_online_verified_ok) ... ok
+test_normalize_rejections (test_opportunities.RulesTest.test_normalize_rejections) ... ok
+test_normalize_valid_has_exact_schema_keys (test_opportunities.RulesTest.test_normalize_valid_has_exact_schema_keys) ... ok
+test_parse_date (test_opportunities.RulesTest.test_parse_date) ... ok
+test_canonical_url (test_opportunities.UrlSafetyTest.test_canonical_url) ... ok
+test_fetch_allowlist (test_opportunities.UrlSafetyTest.test_fetch_allowlist) ... ok
+test_safe_https (test_opportunities.UrlSafetyTest.test_safe_https) ... ok
+test_valid_and_invalid_documents (test_opportunities.ValidationTest.test_valid_and_invalid_documents) ... ok
+test_collect_filters_locally_and_masks (test_opportunities.WevityTest.test_collect_filters_locally_and_masks) ... ok
+test_detail (test_opportunities.WevityTest.test_detail) ... ok
+test_detail_prize_without_amount_and_own_site_homepage (test_opportunities.WevityTest.test_detail_prize_without_amount_and_own_site_homepage) ... ok
+test_listing_empty_scaffold_ok_but_missing_scaffold_error (test_opportunities.WevityTest.test_listing_empty_scaffold_ok_but_missing_scaffold_error) ... ok
+test_listing_requires_search_param (test_opportunities.WevityTest.test_listing_requires_search_param) ... ok
+test_listing_rows (test_opportunities.WevityTest.test_listing_rows) ... ok
+
+----------------------------------------------------------------------
+Ran 78 tests in 0.304s
+
+OK
+
+$ .venv/Scripts/python.exe collectors/collect_events.py --offline
+[offline] opportunities 항목 34, curated 항목 0 — 계약 검증 통과
+
+## 실제 수집(저장) 결과 — data/ingest-status.json
+lastAttemptAt 2026-10-02T08:03:13Z
+devpost ok 7 후보 8건 중 7건 사용, 한국 참가 근거/마감 미확인 1건 제외, 조회 실패 0건
+dacon ok 11 AI 관련 후보 14건 중 14건 사용, 상세 조회 실패 0건
+wevity ok 15 AI 관련 후보 15건 중 15건 사용, 상세 조회 실패 0건
+aisummit ok 1 노출 행사 2027년 2027-08-11~2027-08-13. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용
+items 34 {('devpost', 'hackathon'): 7, ('dacon', 'contest'): 9, ('dacon', 'hackathon'): 2, ('wevity', 'contest'): 14, ('wevity', 'hackathon'): 1, ('aisummit', 'event'): 1}
+
+## 전체 실패 시뮬레이션(HTTPS_PROXY 불통, 임시 복사본 --output): 종료코드 1, opportunities.json sha256 불변(OK), ingest-status.json에 blocked 4건 + 이전 lastSuccessAt 보존

@@ -1,643 +1,98 @@
-<!DOCTYPE html>
-<html lang="ko" data-theme="dark">
+<!doctype html>
+<!--
+  Hallmark · macrostructure: Workbench (filter rail / opportunity list / deadline rail) · nav: compact top bar · footer: none (도구형 화면)
+  Hallmark · theme: Cobalt (custom) · tone: modern-minimal · anchor hue: cobalt 225 · enrichment: none — typography and data only
+  Hallmark · pre-emit critique (자체 평가, 5점 만점): Philosophy 4 · Hierarchy 4 · Execution 4 · Specificity 4 · Restraint 5 · Variety 3
+  Design stamp: AI 기회 보드 · 2026-10-02 · tokens.css가 유일한 색·글꼴·간격·반경 원천
+  이전 5개 카테고리 대시보드는 ai-events.html(보관본)과 data/*.json(미사용)로만 남아 있다.
+-->
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Data Storage</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    /* ── open-design dark tokens (claude.ai/design inspired) ── */
-    :root {
-      --bg:          #1a1917;
-      --panel:       #222120;
-      --subtle:      #272523;
-      --muted:       #2e2c29;
-      --elevated:    #2a2825;
-      --border:      #333128;
-      --border-hi:   #46433c;
-      --border-lo:   #2a2825;
-
-      --text:        #e8e4dc;
-      --text-2:      #9a9690;
-      --text-3:      #6e6b65;
-      --text-4:      #4e4b46;
-
-      --shadow-sm:   0 1px 2px rgba(0,0,0,.32), 0 1px 3px rgba(0,0,0,.22);
-      --shadow-md:   0 6px 24px rgba(0,0,0,.42), 0 2px 6px rgba(0,0,0,.26);
-
-      --r:    8px;
-      --r-sm: 6px;
-      --r-xs: 4px;
-
-      /* per-tab accents */
-      --c-events: #6b8fe8;
-      --c-news:   #e09a40;
-      --c-papers: #a87dd4;
-      --c-tools:  #e07a56;
-
-      --clr-expo: #a87dd4;
-      --clr-conf: #6b8fe8;
-      --clr-semi: #4caf72;
-
-      --accent: var(--c-events);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 13.5px;
-      line-height: 1.55;
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    ::-webkit-scrollbar { width: 4px; height: 4px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
-
-    /* ── TOP NAV ── */
-    .topnav {
-      position: sticky; top: 0; z-index: 200;
-      background: var(--panel);
-      border-bottom: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-    }
-    .topnav-inner {
-      max-width: 1140px; margin: 0 auto;
-      display: flex; align-items: center; gap: 4px;
-      padding: 0 20px; height: 52px;
-    }
-    .logo {
-      display: flex; align-items: center; gap: 9px;
-      text-decoration: none; color: inherit; flex-shrink: 0; margin-right: 8px;
-    }
-    .logo-icon {
-      width: 28px; height: 28px; border-radius: 7px;
-      background: linear-gradient(135deg, var(--c-events) 0%, var(--c-papers) 100%);
-      display: flex; align-items: center; justify-content: center; font-size: 14px;
-    }
-    .logo-name { font-size: 13px; font-weight: 600; letter-spacing: -.01em; }
-
-    .tab-nav { display: flex; gap: 2px; flex: 1; }
-    .tab-btn {
-      padding: 6px 14px; border-radius: var(--r-sm);
-      border: 1px solid transparent; background: transparent;
-      font-size: 13px; font-weight: 500; font-family: inherit;
-      color: var(--text-3); cursor: pointer;
-      transition: background .12s, color .12s, border-color .12s;
-      white-space: nowrap;
-    }
-    .tab-btn:hover { background: var(--subtle); color: var(--text-2); }
-    .tab-btn.active {
-      background: color-mix(in srgb, var(--accent) 12%, transparent);
-      border-color: color-mix(in srgb, var(--accent) 22%, transparent);
-      color: var(--accent);
-    }
-
-    .topnav-right {
-      display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-left: 8px;
-    }
-    .updated-badge {
-      font-size: 10px; font-family: 'JetBrains Mono', monospace;
-      color: var(--text-4); background: var(--subtle);
-      border: 1px solid var(--border-lo); border-radius: 4px;
-      padding: 2px 7px; white-space: nowrap;
-    }
-    .refresh-btn {
-      width: 28px; height: 28px; border-radius: var(--r-sm);
-      background: transparent; border: 1px solid var(--border);
-      color: var(--text-3); cursor: pointer; font-size: 14px;
-      display: flex; align-items: center; justify-content: center;
-      transition: background .12s, border-color .12s, color .12s;
-    }
-    .refresh-btn:hover { background: var(--subtle); border-color: var(--border-hi); color: var(--text); }
-    .refresh-btn.loading { animation: spin .7s linear infinite; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ── SUBHEADER ── */
-    .subheader {
-      position: sticky; top: 52px; z-index: 190;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border-lo);
-    }
-    .subheader-inner {
-      max-width: 1140px; margin: 0 auto;
-      padding: 10px 20px; display: flex; align-items: center;
-      gap: 12px; flex-wrap: wrap;
-    }
-    .page-title-wrap { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; }
-    .page-title { font-size: 15px; font-weight: 700; }
-    .page-count { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-4); }
-
-    .search-wrap {
-      display: flex; align-items: center; gap: 7px;
-      background: var(--subtle); border: 1px solid var(--border);
-      border-radius: var(--r-sm); padding: 0 11px;
-      transition: border-color .15s; flex: 1; max-width: 280px;
-    }
-    .search-wrap:focus-within {
-      border-color: color-mix(in srgb, var(--accent) 55%, transparent);
-      box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 12%, transparent);
-    }
-    .search-icon { color: var(--text-4); font-size: 12px; flex-shrink: 0; }
-    .search-input {
-      border: none; background: transparent; outline: none;
-      color: var(--text); font-size: 12.5px; font-family: inherit;
-      width: 100%; padding: 7px 0;
-    }
-    .search-input::placeholder { color: var(--text-4); }
-
-    .filter-pills { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
-    .pill {
-      padding: 4px 12px; border-radius: 99px;
-      border: 1px solid var(--border); background: transparent;
-      font-size: 11.5px; font-weight: 500; font-family: inherit;
-      color: var(--text-3); cursor: pointer;
-      transition: background .12s, color .12s, border-color .12s;
-      white-space: nowrap;
-    }
-    .pill:hover { background: var(--subtle); color: var(--text-2); border-color: var(--border-hi); }
-    .pill.active {
-      background: color-mix(in srgb, var(--accent) 13%, transparent);
-      border-color: color-mix(in srgb, var(--accent) 35%, transparent);
-      color: var(--accent);
-    }
-
-    /* ── CONTENT WRAPPER ── */
-    .content-wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px 60px; }
-
-    /* ── EMPTY / ERROR ── */
-    .empty {
-      display: flex; flex-direction: column; align-items: center;
-      justify-content: center; padding: 80px 20px; gap: 10px; color: var(--text-4);
-    }
-    .empty-icon { font-size: 28px; }
-    .empty-text { font-size: 13px; text-align: center; line-height: 1.7; }
-
-    /* ── NEWS LIST ── */
-    .news-list { display: flex; flex-direction: column; margin-top: 8px; }
-    .news-item {
-      display: flex; align-items: center; gap: 10px;
-      padding: 11px 4px; border-bottom: 1px solid var(--border-lo);
-      text-decoration: none; color: inherit; transition: background .08s;
-      border-radius: var(--r-xs);
-    }
-    .news-item:last-child { border-bottom: none; }
-    .news-item:hover { background: var(--subtle); padding-left: 8px; padding-right: 8px; margin: 0 -4px; }
-
-    /* ── PAPER CARD ── */
-    .paper-list { display: flex; flex-direction: column; gap: 1px; margin-top: 8px; }
-    .paper-card {
-      background: var(--panel); border: 1px solid var(--border-lo);
-      border-radius: var(--r); padding: 16px 18px;
-      transition: border-color .12s, box-shadow .12s;
-    }
-    .paper-card:hover { border-color: var(--border-hi); box-shadow: var(--shadow-sm); }
-
-    /* ── REPO GRID ── */
-    .repo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-      gap: 1px; margin-top: 8px;
-      background: var(--border-lo);
-      border: 1px solid var(--border-lo);
-      border-radius: var(--r); overflow: hidden;
-    }
-    .repo-card {
-      display: block; padding: 16px 18px;
-      background: var(--panel);
-      text-decoration: none; color: inherit; transition: background .1s;
-    }
-    .repo-card:hover { background: var(--subtle); }
-    .repo-card-top {
-      display: flex; justify-content: space-between;
-      align-items: flex-start; gap: 8px; margin-bottom: 7px;
-    }
-    .repo-name {
-      font-family: 'JetBrains Mono', monospace; font-size: 12px;
-      font-weight: 600; color: var(--accent); word-break: break-all; line-height: 1.4;
-    }
-    .repo-meta-top { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-    .trending-badge {
-      font-size: 10px; padding: 2px 7px; border-radius: 99px;
-      background: color-mix(in srgb, var(--c-tools) 12%, transparent);
-      color: var(--c-tools);
-      border: 1px solid color-mix(in srgb, var(--c-tools) 28%, transparent);
-    }
-    .star-count {
-      font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-2);
-    }
-    .repo-desc {
-      font-size: 12.5px; color: var(--text-2); line-height: 1.65; margin-bottom: 12px;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-      min-height: 2.6em;
-    }
-    .repo-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .repo-lang { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-3); }
-    .lang-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-
-    /* ── EVENT CARD ── */
-    .event-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
-    .ev-card {
-      background: var(--panel); border: 1px solid var(--border-lo);
-      border-left: 3px solid var(--clr-conf); border-radius: var(--r);
-      padding: 18px; transition: border-color .12s, box-shadow .12s;
-    }
-    .ev-card:hover { border-color: var(--border-hi); box-shadow: var(--shadow-sm); }
-    .ev-card[data-type="expo"]       { border-left-color: var(--clr-expo); }
-    .ev-card[data-type="conference"] { border-left-color: var(--clr-conf); }
-    .ev-card[data-type="seminar"]    { border-left-color: var(--clr-semi); }
-    .ev-meta {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-      gap: 6px 16px; background: var(--subtle); border: 1px solid var(--border-lo);
-      border-radius: var(--r-sm); padding: 10px 14px; margin: 10px 0;
-    }
-    .ev-meta-key { font-size: 10px; color: var(--text-4); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
-    .ev-meta-val { font-size: 12px; }
-
-    /* ── SHARED COMPONENTS ── */
-    .badge {
-      display: inline-flex; align-items: center;
-      padding: 2px 8px; border-radius: var(--r-xs);
-      font-size: 11px; font-weight: 500; white-space: nowrap; flex-shrink: 0;
-    }
-    .tag-row { display: flex; gap: 4px; flex-wrap: wrap; }
-    .tag {
-      padding: 2px 7px; background: var(--muted); border: 1px solid var(--border-lo);
-      border-radius: var(--r-xs); font-size: 10.5px; color: var(--text-3);
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .link-btn {
-      display: inline-flex; align-items: center; gap: 4px;
-      padding: 5px 12px; background: var(--subtle);
-      border: 1px solid var(--border); border-radius: var(--r-sm);
-      color: var(--text-2); font-size: 12px; text-decoration: none;
-      transition: border-color .12s, color .12s, background .12s;
-    }
-    .link-btn:hover { border-color: var(--accent); color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
-    .mono { font-family: 'JetBrains Mono', monospace; }
-
-    .b-soon     { background: color-mix(in srgb, var(--c-events) 12%, transparent); color: var(--c-events); }
-    .b-upcoming { background: color-mix(in srgb, var(--clr-semi) 12%, transparent); color: var(--clr-semi); }
-    .b-pending  { background: var(--muted); color: var(--text-2); }
-    .b-dday     { background: var(--elevated); border: 1px solid var(--border-hi); color: var(--accent); }
-
-    .pending-box {
-      font-size: 11.5px; color: #e09a40;
-      background: color-mix(in srgb, #e09a40 7%, transparent);
-      border: 1px solid color-mix(in srgb, #e09a40 15%, transparent);
-      border-radius: var(--r-sm); padding: 8px 12px; margin: 8px 0; line-height: 1.6;
-    }
-
-    /* ── OVERLAY ── */
-    .overlay {
-      display: none; position: fixed; inset: 0;
-      background: rgba(0,0,0,.5); backdrop-filter: blur(4px);
-      z-index: 500; align-items: center; justify-content: center;
-    }
-    .overlay.show { display: flex; }
-    .spinner {
-      width: 30px; height: 30px; border: 2px solid var(--border);
-      border-top-color: var(--accent); border-radius: 50%;
-      animation: spin .7s linear infinite;
-    }
-
-    @keyframes fadeUp { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:none; } }
-    .ani { animation: fadeUp .18s ease both; }
-
-    /* ── MOBILE ── */
-    @media (max-width: 680px) {
-      .topnav-inner { padding: 0 14px; gap: 2px; }
-      .logo-name { display: none; }
-      .tab-btn { padding: 5px 10px; font-size: 12px; }
-      .updated-badge { display: none; }
-      .subheader-inner { padding: 8px 14px; }
-      .search-wrap { max-width: none; }
-      .filter-pills { margin-left: 0; }
-      .content-wrap { padding: 0 14px 40px; }
-      .repo-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 기회 보드 — AI 행사·공모전·해커톤</title>
+  <meta name="description" content="국내 전체와 한국에서 참가 가능한 해외 온라인 AI 행사·공모전·해커톤을 마감일 기준으로 비교하는 개인용 보드">
+  <meta name="theme-color" content="#f5f7fb">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="assets/styles/base.css">
+  <link rel="stylesheet" href="assets/styles/layout.css">
+  <link rel="stylesheet" href="assets/styles/components.css">
+  <link rel="stylesheet" href="assets/styles/calendar.css">
+  <link rel="stylesheet" href="assets/styles/detail.css">
+  <script type="module" src="assets/app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#results">본문 바로가기</a>
+  <div id="debug-banner" class="debug-banner" role="status" hidden></div>
 
-<!-- TOP NAV -->
-<header class="topnav">
-  <div class="topnav-inner">
-    <a class="logo" href="#">
-      <div class="logo-icon">🧠</div>
-      <span class="logo-name">AI Storage</span>
-    </a>
-    <nav class="tab-nav" id="tabNav"></nav>
-    <div class="topnav-right">
-      <span class="updated-badge" id="updatedBadge">—</span>
-      <button class="refresh-btn" id="refreshBtn" onclick="refresh()" title="새로고침">↻</button>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-ko">AI 기회 보드</span>
+      <span class="brand-en">AI Opportunity Board</span>
     </div>
-  </div>
-</header>
-
-<!-- SUBHEADER -->
-<div class="subheader">
-  <div class="subheader-inner">
-    <div class="page-title-wrap">
-      <h1 class="page-title" id="pageTitle">행사</h1>
-      <span class="page-count" id="pageCount"></span>
+    <span id="today" class="topbar-today"></span>
+    <div class="topbar-actions">
+      <button id="saved-toggle" type="button" class="btn" aria-pressed="false" aria-label="내 저장 목록만 보기"></button>
+      <button id="refresh" type="button" class="btn" aria-label="새로고침"></button>
     </div>
-    <div class="search-wrap">
-      <span class="search-icon">⌕</span>
-      <input type="text" class="search-input" id="searchInput"
-        placeholder="검색..." oninput="setSearch(this.value)" autocomplete="off">
-    </div>
-    <div class="filter-pills" id="filterPills"></div>
-  </div>
-</div>
+  </header>
 
-<!-- CONTENT -->
-<div class="content-wrap">
-  <div id="grid"></div>
-</div>
+  <main class="page">
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">다음 도전을 찾아보세요</h1>
+      <p class="intro-scope">국내 전체와 한국에서 참가할 수 있는 해외 온라인 AI 행사·공모전·해커톤 <span id="intro-count" class="intro-count"></span></p>
 
-<div class="overlay" id="overlay"><div class="spinner"></div></div>
-
-<script>
-/* ── CONFIG ── */
-const TABS = {
-  events: {
-    label: '행사', accent: '#6b8fe8', file: 'data/events.json',
-    filters: [
-      { k: 'all', label: '전체' }, { k: 'expo', label: '박람회' },
-      { k: 'conference', label: '컨퍼런스' }, { k: 'seminar', label: '세미나' },
-      { k: 'pending', label: '일정 미정' },
-    ],
-  },
-  news: {
-    label: '뉴스', accent: '#e09a40', file: 'data/news.json',
-    filters: [
-      { k: 'all', label: '전체' }, { k: 'AI Times', label: 'AI Times' },
-      { k: 'GeekNews', label: 'GeekNews' },
-    ],
-  },
-  papers: {
-    label: '논문', accent: '#a87dd4', file: 'data/papers.json',
-    filters: [
-      { k: 'all', label: '전체' }, { k: 'cs.AI', label: 'cs.AI' },
-      { k: 'cs.LG', label: 'cs.LG' }, { k: 'cs.CL', label: 'cs.CL' },
-    ],
-  },
-  tools: {
-    label: '레포', accent: '#e07a56', file: 'data/tools.json',
-    filters: [
-      { k: 'all', label: '전체' }, { k: 'trending', label: '🔥 화제' },
-    ],
-  },
-};
-
-const LANG_COLORS = {
-  Python:'#3572A5', JavaScript:'#f1e05a', TypeScript:'#3178c6', Rust:'#dea584',
-  Go:'#00ADD8', 'C++':'#f34b7d', C:'#555555', Java:'#b07219', Kotlin:'#A97BFF',
-  Swift:'#F05138', Ruby:'#701516', Shell:'#89e051', 'Jupyter Notebook':'#DA5B0B',
-  'C#':'#178600', Scala:'#c22d40', HTML:'#e34c26', CSS:'#563d7c',
-};
-
-let tab = 'events';
-let filter = 'all';
-let searchQ = '';
-const cache = {};
-
-/* ── SWITCH ── */
-function switchTab(key) {
-  tab = key; filter = 'all'; searchQ = '';
-  document.getElementById('searchInput').value = '';
-  document.documentElement.style.setProperty('--accent', TABS[key].accent);
-  renderTabNav(); renderPills();
-  document.getElementById('pageTitle').textContent = TABS[key].label;
-  cache[key] ? renderCards(cache[key].items) : loadTab(key);
-}
-
-/* ── LOAD ── */
-async function loadTab(key, force = false) {
-  if (!force && cache[key]) { renderCards(cache[key].items); return; }
-  document.getElementById('overlay').classList.add('show');
-  try {
-    const r = await fetch(`${TABS[key].file}?t=${Date.now()}`);
-    if (!r.ok) throw new Error(r.statusText);
-    const json = await r.json();
-    cache[key] = json;
-    renderCards(json.items || []);
-    if (json.updatedAt) {
-      document.getElementById('updatedBadge').textContent =
-        new Date(json.updatedAt).toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' });
-    }
-    renderTabNav();
-  } catch (e) {
-    document.getElementById('grid').innerHTML =
-      `<div class="empty">
-        <div class="empty-icon">⚠</div>
-        <p class="empty-text">로드 실패: ${e.message}<br>
-        <span style="color:var(--text-4);font-size:11px">로컬: python -m http.server 8000</span></p>
-      </div>`;
-  } finally {
-    document.getElementById('overlay').classList.remove('show');
-  }
-}
-
-/* ── FILTER ── */
-function setFilter(k) { filter = k; renderPills(); if (cache[tab]) renderCards(cache[tab].items); }
-function setSearch(q)  { searchQ = q.trim().toLowerCase(); if (cache[tab]) renderCards(cache[tab].items); }
-
-function applyFilter(items) {
-  let r = items;
-  if (filter !== 'all') {
-    switch (tab) {
-      case 'events':
-        r = filter === 'pending'
-          ? items.filter(e => !e.startDate)
-          : items.filter(e => (!e.endDate || e.endDate >= today()) && e.type === filter);
-        break;
-      case 'news':   r = items.filter(i => i.source === filter); break;
-      case 'papers': r = items.filter(i => (i.categories||[]).includes(filter)); break;
-      case 'tools':  r = items.filter(i => i.trending); break;
-    }
-  } else if (tab === 'events') {
-    r = items.filter(e => !e.endDate || e.endDate >= today());
-  }
-  if (searchQ) {
-    r = r.filter(item => [
-      item.title || item.name || '',
-      item.titleKo || '',
-      item.desc || item.summary || item.abstract || '',
-      item.source || '', item.language || '',
-      (item.tags || []).join(' '),
-      (item.authors || []).join(' '),
-      item.venue || '', item.company || '',
-    ].join(' ').toLowerCase().includes(searchQ));
-  }
-  return r;
-}
-
-/* ── RENDER TAB NAV ── */
-function renderTabNav() {
-  document.getElementById('tabNav').innerHTML = Object.entries(TABS).map(([k, t]) =>
-    `<button class="tab-btn${k === tab ? ' active' : ''}" onclick="switchTab('${k}')">${t.label}</button>`
-  ).join('');
-}
-
-/* ── RENDER PILLS ── */
-function renderPills() {
-  document.getElementById('filterPills').innerHTML = TABS[tab].filters.map(f =>
-    `<button class="pill${filter === f.k ? ' active' : ''}" onclick="setFilter('${f.k}')">${f.label}</button>`
-  ).join('');
-}
-
-/* ── RENDER CARDS ── */
-function renderCards(items) {
-  const filtered = applyFilter(items);
-  document.getElementById('pageCount').textContent = `${filtered.length} / ${items.length}건`;
-
-  const grid = document.getElementById('grid');
-  if (!filtered.length) {
-    grid.innerHTML = `<div class="empty"><div class="empty-icon">○</div><p class="empty-text">항목이 없습니다.</p></div>`;
-    return;
-  }
-
-  const B = { events: buildEvent, news: buildNews, papers: buildPaper, tools: buildTool };
-  const W = { events: 'event-list', news: 'news-list', papers: 'paper-list', tools: 'repo-grid' };
-  grid.innerHTML = `<div class="${W[tab]}">${filtered.map((x, i) => B[tab](x, i)).join('')}</div>`;
-}
-
-/* ── BUILDERS ── */
-function buildEvent(ev, i) {
-  const st = statusBadge(ev.startDate, ev.endDate);
-  if (st === null) return '';
-  const dd = dDay(ev.startDate);
-  const dr = ev.startDate
-    ? (ev.startDate === ev.endDate ? fmtDate(ev.startDate) : `${fmtDate(ev.startDate)} ~ ${fmtDate(ev.endDate)}`)
-    : '미정';
-  const tColor = { expo: 'var(--clr-expo)', conference: 'var(--clr-conf)', seminar: 'var(--clr-semi)' }[ev.type] || 'var(--text-4)';
-  return `
-  <div class="ev-card ani" style="animation-delay:${i*35}ms" data-type="${ev.type}">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px">
-      <div>
-        <div style="font-size:10px;color:${tColor};text-transform:uppercase;letter-spacing:.07em;font-weight:600;margin-bottom:4px">${ev.typeLabel}</div>
-        <div style="font-size:15.5px;font-weight:700;line-height:1.3;margin-bottom:3px">${ev.name}</div>
-        <div style="font-size:12px;color:var(--text-2)">${ev.subtitle || ''}</div>
+      <div class="search">
+        <label class="visually-hidden" for="q">제목·주최·태그·설명 검색</label>
+        <div class="search-field" id="search-field"></div>
       </div>
-      <div style="display:flex;gap:5px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end">
-        ${st ? `<span class="badge b-${st.cls}">${st.label}</span>` : ''}
-        ${dd ? `<span class="badge b-dday mono" style="font-size:11px">${dd}</span>` : ''}
+
+      <div class="tabs">
+        <div id="kind-tabs" class="tab-group" role="group" aria-label="유형"></div>
       </div>
-    </div>
-    <div class="ev-meta">
-      <div><div class="ev-meta-key">날짜</div><div class="ev-meta-val">${dr}</div></div>
-      ${ev.time && ev.time !== '미정' ? `<div><div class="ev-meta-key">시간</div><div class="ev-meta-val">${ev.time}</div></div>` : ''}
-      ${ev.venue ? `<div><div class="ev-meta-key">장소</div><div class="ev-meta-val">${ev.venue}</div></div>` : ''}
-      ${ev.price ? `<div><div class="ev-meta-key">참가비</div><div class="ev-meta-val" style="${ev.priceClass==='price-free'?'color:var(--clr-semi)':'color:var(--text-2)'}">${ev.price}</div></div>` : ''}
-    </div>
-    <p style="font-size:12.5px;color:var(--text-2);line-height:1.7;margin-bottom:12px">${ev.desc || ''}</p>
-    ${ev.pendingInfo ? `<div class="pending-box">⚠ ${ev.pendingInfo}</div>` : ''}
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-      <a href="${ev.site}" target="_blank" rel="noopener" class="link-btn">↗ ${ev.siteLabel || '공식 사이트'}</a>
-      ${dd ? `<span style="font-size:11px;color:var(--text-3)">개막까지 <strong style="color:var(--accent)">${dd}</strong></span>` : ''}
-    </div>
-  </div>`;
-}
+    </section>
 
-function buildNews(item, i) {
-  const c = { 'AI Times':'var(--c-events)', 'GeekNews':'#4caf72' }[item.source] || 'var(--c-news)';
-  return `
-  <a class="news-item ani" style="animation-delay:${i*12}ms" href="${item.url}" target="_blank" rel="noopener">
-    <span class="badge" style="background:color-mix(in srgb,${c} 12%,transparent);color:${c};border:1px solid color-mix(in srgb,${c} 22%,transparent)">${item.source}</span>
-    <span style="flex:1;font-size:13px;color:var(--text);line-height:1.45">${item.title}</span>
-    <span class="mono" style="font-size:10px;color:var(--text-4);flex-shrink:0">${(item.pubDate||'').slice(5)}</span>
-    <span style="color:var(--text-4);font-size:12px">↗</span>
-  </a>`;
-}
+    <div id="notices" class="notices"></div>
 
-function buildPaper(item, i) {
-  const cats = (item.categories||[]).map(c=>`<span class="tag">${c}</span>`).join('');
-  const displayTitle = item.titleKo || item.title;
-  return `
-  <div class="paper-card ani" style="animation-delay:${i*20}ms">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:9px">
-      <span class="badge mono" style="background:color-mix(in srgb,var(--c-papers) 11%,transparent);color:var(--c-papers);border:1px solid color-mix(in srgb,var(--c-papers) 22%,transparent);font-size:10px">arXiv:${item.arxivId}</span>
-      <span class="mono" style="font-size:10px;color:var(--text-4)">${item.pubDate}</span>
+    <div class="board">
+      <aside id="filter-rail" class="filter-rail" aria-label="필터">
+        <button id="rail-toggle" type="button" class="btn rail-toggle" aria-expanded="false" aria-controls="rail-panel"></button>
+        <div id="rail-panel" class="rail-panel">
+          <section aria-labelledby="status-heading">
+            <h2 id="status-heading" class="rail-heading">진행 상태</h2>
+            <div id="status-options" class="option-list" role="group" aria-labelledby="status-heading"></div>
+          </section>
+          <section aria-labelledby="mode-heading">
+            <h2 id="mode-heading" class="rail-heading">참가 방식</h2>
+            <div id="mode-options" class="option-list" role="group" aria-labelledby="mode-heading"></div>
+          </section>
+          <button id="reset-filters" type="button" class="btn">필터 초기화</button>
+        </div>
+      </aside>
+
+      <section id="results" class="results" aria-labelledby="results-heading">
+        <h2 id="results-heading" class="visually-hidden" tabindex="-1">기회 목록</h2>
+        <div class="toolbar">
+          <p id="result-count" class="toolbar-count" aria-live="polite"></p>
+          <label class="visually-hidden" for="sort">정렬</label>
+          <select id="sort" class="select">
+            <option value="deadline">마감 가까운 순</option>
+            <option value="start">개최일 빠른 순</option>
+            <option value="verified">최근 확인 순</option>
+          </select>
+          <div id="view-switch" class="view-switch" role="group" aria-label="보기 방식"></div>
+        </div>
+        <div id="content" aria-busy="true"></div>
+      </section>
+
+      <aside class="urgent-rail" aria-label="마감 임박과 출처 상태">
+        <section id="urgent" class="side-card"></section>
+        <details id="sources" class="side-card"></details>
+      </aside>
     </div>
-    <div style="font-size:14px;font-weight:600;margin-bottom:5px;line-height:1.4">${displayTitle}</div>
-    ${item.titleKo ? `<div style="font-size:11px;color:var(--text-3);margin-bottom:5px;font-style:italic">${item.title}</div>` : ''}
-    <div style="font-size:11.5px;color:var(--text-2);margin-bottom:9px">${(item.authors||[]).join(', ')}${(item.authors||[]).length>=3?' 외':''}</div>
-    <p style="font-size:12px;color:var(--text-2);line-height:1.7;margin-bottom:12px">${item.abstract}</p>
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-      <div class="tag-row">${cats}</div>
-      <a href="${item.url}" target="_blank" rel="noopener" class="link-btn">↗ arXiv</a>
-    </div>
-  </div>`;
-}
+  </main>
 
-function buildTool(item, i) {
-  const langC = LANG_COLORS[item.language] || '#8b8b8b';
-  const tags  = (item.tags||[]).slice(0,4).map(t=>`<span class="tag">${t}</span>`).join('');
-  const stars = item.stars ? fmtStars(item.stars) : null;
-  return `
-  <a class="repo-card ani" href="${item.url}" target="_blank" rel="noopener" style="animation-delay:${i*16}ms">
-    <div class="repo-card-top">
-      <div class="repo-name">${item.name}</div>
-      <div class="repo-meta-top">
-        ${item.trending ? '<span class="trending-badge">🔥 화제</span>' : ''}
-        ${stars ? `<span class="star-count">⭐ ${stars}</span>` : ''}
-      </div>
-    </div>
-    <p class="repo-desc">${item.desc || ''}</p>
-    <div class="repo-footer">
-      <div class="tag-row" style="align-items:center;gap:6px">
-        ${item.language ? `<span class="repo-lang"><span class="lang-dot" style="background:${langC}"></span>${item.language}</span>` : ''}
-        ${tags}
-      </div>
-      <span class="mono" style="font-size:10px;color:var(--text-4)">${(item.pushed||item.pubDate||'').slice(0,7)}</span>
-    </div>
-  </a>`;
-}
-
-/* ── UTILS ── */
-function today() { return new Date().toISOString().slice(0,10); }
-function fmtStars(n) { return n >= 1000 ? (n/1000).toFixed(1).replace('.0','')+'k' : String(n); }
-
-function fmtDate(iso) {
-  if (!iso) return '미정';
-  return new Date(iso+'T00:00:00').toLocaleDateString('ko-KR',
-    { year:'numeric', month:'long', day:'numeric', weekday:'short' });
-}
-function dDay(iso) {
-  if (!iso) return null;
-  const now = new Date(); now.setHours(0,0,0,0);
-  const diff = Math.round((new Date(iso+'T00:00:00') - now) / 86400000);
-  return diff < 0 ? null : diff === 0 ? 'D-Day' : `D-${diff}`;
-}
-function statusBadge(s, e) {
-  if (!s) return { cls:'pending', label:'일정 미정' };
-  const now = new Date(); now.setHours(0,0,0,0);
-  if (now > new Date((e||s)+'T23:59:59')) return null;
-  return Math.round((new Date(s+'T00:00:00')-now)/86400000) <= 30
-    ? { cls:'soon', label:'곧 개최' } : { cls:'upcoming', label:'예정' };
-}
-
-function refresh() {
-  const btn = document.getElementById('refreshBtn');
-  if (btn.classList.contains('loading')) return;
-  btn.classList.add('loading');
-  delete cache[tab];
-  loadTab(tab, true).finally(() => btn.classList.remove('loading'));
-}
-
-/* ── INIT ── */
-document.documentElement.style.setProperty('--accent', TABS.events.accent);
-renderTabNav(); renderPills();
-loadTab('events');
-</script>
+  <noscript><p class="notice notice-warn">이 화면은 JavaScript가 필요해요.</p></noscript>
 </body>
 </html>

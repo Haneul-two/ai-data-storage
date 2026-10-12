@@ -1,0 +1,24 @@
+# RED 2026-10-02T07:54:05Z — 구현 전 (collectors/opportunities 부재)
+$ .venv/Scripts/python.exe -m unittest discover -s tests -v
+test_opportunities (unittest.loader._FailedTest.test_opportunities) ... ERROR
+
+======================================================================
+ERROR: test_opportunities (unittest.loader._FailedTest.test_opportunities)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_opportunities
+Traceback (most recent call last):
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caring\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_opportunities.py", line 13, in <module>
+    from collectors.opportunities import cli, pipeline, robots, rules, urlsafe  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ImportError: cannot import name 'cli' from 'collectors.opportunities' (unknown location)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

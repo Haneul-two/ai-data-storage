@@ -1,20 +1,28 @@
-name: Update AI Data
+name: Update AI Opportunities
 
+# 초안: 저장소 변수 ENABLE_OPPORTUNITY_UPDATES 가 'true'일 때만 어떤 트리거에서도 실행된다(기본 미설정 = 비활성).
 on:
   schedule:
-    - cron: '0 0 * * 1,3,5'
+    - cron: '0 0 * * *' # 매일 00:00 UTC = 09:00 KST
   workflow_dispatch:
+
+concurrency:
+  group: update-opportunities
+  cancel-in-progress: false
 
 jobs:
   update:
+    if: vars.ENABLE_OPPORTUNITY_UPDATES == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
+      pages: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.11'
           cache: pip
@@ -22,22 +30,40 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Collect events
-        run: python collectors/collect_events.py
+      # 종료 코드 1(모든 소스 실패)도 ingest-status.json 실패 상태를 사이트에 전달해야 하므로 여기서 멈추지 않는다.
+      # 종료 코드 2(기존 데이터 손상)는 아무것도 쓰지 않고, 아래 tests가 손상 데이터를 잡아 push를 막는다.
+      - name: Collect opportunities
+        id: collect
+        continue-on-error: true
+        run: |
+          set +e
+          python collectors/collect_events.py
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit $code
 
-      - name: Collect news
-        run: python collectors/collect_news.py
-
-      - name: Collect papers
-        run: python collectors/collect_papers.py
-
-      - name: Collect tools
-        run: python collectors/collect_tools.py
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
 
       - name: Commit changes
+        if: steps.collect.outputs.exit_code != '2'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --staged --quiet || git commit -m "chore: auto-update data $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git add data/opportunities.json data/ingest-status.json
+          git diff --staged --quiet || git commit -m "chore: auto-update opportunities $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
+
+      # GITHUB_TOKEN으로 push한 commit은 branch 기반 Pages build를 자동 실행하지 않으므로 API로 직접 요청한다.
+      - name: Request Pages rebuild
+        if: steps.collect.outputs.exit_code != '2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh api --method POST "repos/${GH_REPO}/pages/builds"
+
+      - name: Fail if collector failed
+        if: always() && steps.collect.outcome == 'failure'
+        run: |
+          echo "collector exit code: ${{ steps.collect.outputs.exit_code }} (1=모든 소스 실패, 2=기존 데이터 손상)"
+          exit 1

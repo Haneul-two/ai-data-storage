@@ -1,0 +1,30 @@
+# review-fixes 증거 (2026-10-02T08:14:52Z)
+
+## RED (수정 전, ReviewFixesTest 12건 중 11건 실패)
+FAIL: test_devpost_kind_from_title (tests.test_opportunities.ReviewFixesTest.test_devpost_kind_from_title)
+FAIL: test_devpost_period_start_year (tests.test_opportunities.ReviewFixesTest.test_devpost_period_start_year)
+FAIL: test_different_contests_sharing_organizer_root_are_kept (tests.test_opportunities.ReviewFixesTest.test_different_contests_sharing_organizer_root_are_kept)
+FAIL: test_empty_userinfo_rejected (tests.test_opportunities.ReviewFixesTest.test_empty_userinfo_rejected)
+FAIL: test_intermediate_redirect_robots_checked_and_allowed_chain_followed (tests.test_opportunities.ReviewFixesTest.test_intermediate_redirect_robots_checked_and_allowed_chain_followed)
+FAIL: test_invite_only_titles_excluded_but_public_student_contests_kept (tests.test_opportunities.ReviewFixesTest.test_invite_only_titles_excluded_but_public_student_contests_kept)
+FAIL: test_korea_allowed_exclusion_context_and_including (tests.test_opportunities.ReviewFixesTest.test_korea_allowed_exclusion_context_and_including)
+FAIL: test_korea_allowed_unconfirmed_standard_exceptions_stay_rejected_with_other_lines (tests.test_opportunities.ReviewFixesTest.test_korea_allowed_unconfirmed_standard_exceptions_stay_rejected_with_other_lines)
+FAIL: test_redirect_target_robots_checked_before_request (tests.test_opportunities.ReviewFixesTest.test_redirect_target_robots_checked_before_request)
+FAIL: test_same_detail_url_and_source_url_from_different_sources_collapses (tests.test_opportunities.ReviewFixesTest.test_same_detail_url_and_source_url_from_different_sources_collapses)
+FAIL: test_stored_items_failing_contract_are_dropped_on_merge (tests.test_opportunities.ReviewFixesTest.test_stored_items_failing_contract_are_dropped_on_merge)
+Ran 12 tests in 0.106s
+FAILED (failures=11)
+
+## GREEN: Python 전체
+Ran 90 tests in 0.252s
+OK
+
+## GREEN: Node 전체
+ℹ tests 103
+ℹ pass 103
+ℹ fail 0
+
+## 실제 수집 1회 (collectors/collect_events.py)
+devpost ok 6 / dacon ok 11 / wevity ok 15 / aisummit ok 1 — 정상 항목 33건 (이전 34건)
+제외: Devpost 'AIC Internal Competition -2026 (Agentic AI)' (internal 대회, stale 보존분 포함). stale 0건.
+data/events.json 및 옛 데이터는 건드리지 않음.

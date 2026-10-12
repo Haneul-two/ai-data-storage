@@ -5,3 +5,6 @@ __pycache__/
 venv/
 *.log
 .DS_Store
+docs/evidence/*.log
+docs/tasks/
+tools/run_claude.py
