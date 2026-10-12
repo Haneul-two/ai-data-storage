@@ -29,6 +29,10 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         run: python tools/diagnose_aisummit.py
 
+      - name: Diagnose AI EXPO robots response
+        if: github.event_name == 'workflow_dispatch'
+        run: python tools/diagnose_aiexpo.py
+
   node:
     runs-on: ubuntu-latest
     steps:
