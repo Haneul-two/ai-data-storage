@@ -7,16 +7,26 @@ from bs4 import BeautifulSoup
 from .. import rules
 from ..errors import FetchError, StructureError
 from ..urlsafe import is_safe_https_url
-from .base import CollectResult, domestic_region, effective_limit, fail_if_every_fetch_failed
+from .base import CollectResult, domestic_region, fail_if_every_fetch_failed
 from .dacon import infer_mode
 
 SOURCE_ID = "wevity"
 SOURCE_NAME = "위비티"
 SOURCE_URL = "https://www.wevity.com/?c=find&s=1&gub=1"
 LISTING_URL = "https://www.wevity.com/?c=find&s=1&gub=1&sp=name&sw=AI"
+PAGE_LIMIT = 6  # 목록 15개씩 최대 6페이지(gp=1..6) = 후보 최대 90건
+ITEM_LIMIT = 100  # 상세 조회 하드 상한. --max-items가 더 작으면 그 값
 _IX_RE = re.compile(r"[?&]ix=(\d+)")
 _PERIOD_RE = re.compile(r"(\d{4}[-./]\d{1,2}[-./]\d{1,2})\s*~\s*(\d{4}[-./]\d{1,2}[-./]\d{1,2})")
 _STATUS = {"접수중": "open", "마감임박": "open", "마감": "closed"}
+
+
+def page_url(page):
+    return LISTING_URL if page == 1 else f"{LISTING_URL}&gp={page}"
+
+
+def item_limit(max_items):
+    return ITEM_LIMIT if max_items is None else max(0, min(max_items, ITEM_LIMIT))
 
 
 def detail_url(ix):
@@ -109,10 +119,23 @@ def build_raw(row, detail):
     }
 
 
+def _is_candidate(row):
+    return rules.is_ai_related(row["title"]) and rules.classify_kind(row["title"], "contest")
+
+
 def collect(fetcher, now, max_items=None):
-    rows = parse_listing(fetcher.get(LISTING_URL).text)
-    rows = [r for r in rows if rules.is_ai_related(r["title"]) and rules.classify_kind(r["title"], "contest")]
-    rows = rows[:effective_limit(max_items)]
+    limit = item_limit(max_items)
+    rows, seen = [], set()
+    for page in range(1, PAGE_LIMIT + 1):
+        # 첫 페이지뿐 아니라 이후 페이지의 HTTP·구조 오류도 소스 실패로 넘겨 부분 결과가 완전 성공으로 보이지 않게 한다
+        new = [r for r in parse_listing(fetcher.get(page_url(page)).text) if r["ix"] not in seen]
+        if not new:
+            break  # 빈 페이지이거나 이미 본 페이지 반복
+        seen.update(r["ix"] for r in new)
+        rows.extend(r for r in new if _is_candidate(r))
+        if len(rows) >= limit:
+            break
+    rows = rows[:limit]
     items, failures = [], []
     for row in rows:
         try:
@@ -122,4 +145,4 @@ def collect(fetcher, now, max_items=None):
             continue
         items.append(build_raw(row, detail))
     fail_if_every_fetch_failed(len(rows), failures, "위비티")
-    return CollectResult(items, f"AI 관련 후보 {len(rows)}건 중 {len(items)}건 사용, 상세 조회 실패 {len(failures)}건")
+    return CollectResult(items, f"AI 관련 후보 {len(rows)}건({page}페이지까지 확인) 중 {len(items)}건 사용, 상세 조회 실패 {len(failures)}건")

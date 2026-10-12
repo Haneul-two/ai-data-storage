@@ -1,0 +1,68 @@
+# expanded sources GREEN — 2026-10-12T02:07:05Z
+## python -m unittest discover -s tests -v (요약)
+Ran 140 tests in 0.706s
+OK
+## python -m unittest tests/test_expanded_sources.py -v
+test_ended_event_is_kept_as_archived_not_active (tests.test_expanded_sources.AiFestaTest.test_ended_event_is_kept_as_archived_not_active) ... ok
+test_event_from_graph (tests.test_expanded_sources.AiFestaTest.test_event_from_graph) ... ok
+test_graph_without_event_is_error (tests.test_expanded_sources.AiFestaTest.test_graph_without_event_is_error) ... ok
+test_unprovided_fee_eligibility_and_deadline_stay_unknown (tests.test_expanded_sources.AiFestaTest.test_unprovided_fee_eligibility_and_deadline_stay_unknown) ... ok
+test_new_exact_hosts_only (tests.test_expanded_sources.AllowListTest.test_new_exact_hosts_only) ... ok
+test_ambiguous_two_events_is_error (tests.test_expanded_sources.JsonLdTest.test_ambiguous_two_events_is_error) ... ok
+test_dates_use_seoul_calendar_day (tests.test_expanded_sources.JsonLdTest.test_dates_use_seoul_calendar_day) ... ok
+test_invalid_dates_are_errors (tests.test_expanded_sources.JsonLdTest.test_invalid_dates_are_errors) ... ok
+test_no_event_or_bad_json_is_error_not_empty (tests.test_expanded_sources.JsonLdTest.test_no_event_or_bad_json_is_error_not_empty) ... ok
+test_non_korea_location_is_error (tests.test_expanded_sources.JsonLdTest.test_non_korea_location_is_error) ... ok
+test_single_list_and_graph_shapes (tests.test_expanded_sources.JsonLdTest.test_single_list_and_graph_shapes) ... ok
+test_contest_and_hackathon_win_over_festival (tests.test_expanded_sources.KindRulesTest.test_contest_and_hackathon_win_over_festival) ... ok
+test_course_and_job_exclusions_stay (tests.test_expanded_sources.KindRulesTest.test_course_and_job_exclusions_stay) ... ok
+test_festival_words_are_events (tests.test_expanded_sources.KindRulesTest.test_festival_words_are_events) ... ok
+test_ascii_tilde_and_nbsp_variants (tests.test_expanded_sources.NvidiaTest.test_ascii_tilde_and_nbsp_variants) ... ok
+test_hero_year_and_range (tests.test_expanded_sources.NvidiaTest.test_hero_year_and_range) ... ok
+test_item (tests.test_expanded_sources.NvidiaTest.test_item) ... ok
+test_missing_pieces_are_errors (tests.test_expanded_sources.NvidiaTest.test_missing_pieces_are_errors) ... ok
+test_program_session_times_do_not_shrink_the_period (tests.test_expanded_sources.NvidiaTest.test_program_session_times_do_not_shrink_the_period) ... ok
+test_reads_page_year_not_constant (tests.test_expanded_sources.NvidiaTest.test_reads_page_year_not_constant) ... ok
+test_status_open_only_with_register_cta (tests.test_expanded_sources.NvidiaTest.test_status_open_only_with_register_cta) ... ok
+test_title_year_must_match_hero_year (tests.test_expanded_sources.NvidiaTest.test_title_year_must_match_hero_year) ... ok
+test_all_three_collect_through_fetcher (tests.test_expanded_sources.OfficialFetchPathTest.test_all_three_collect_through_fetcher) ... ok
+test_redirect_to_other_host_is_blocked (tests.test_expanded_sources.OfficialFetchPathTest.test_redirect_to_other_host_is_blocked) ... ok
+test_robots_disallow_blocks_official_source (tests.test_expanded_sources.OfficialFetchPathTest.test_robots_disallow_blocks_official_source) ... ok
+test_seven_sources_with_existing_priority_first (tests.test_expanded_sources.RegistryTest.test_seven_sources_with_existing_priority_first) ... ok
+test_fee_and_eligibility_stay_unknown_without_evidence (tests.test_expanded_sources.SeochoTest.test_fee_and_eligibility_stay_unknown_without_evidence) ... ok
+test_item_from_official_jsonld (tests.test_expanded_sources.SeochoTest.test_item_from_official_jsonld) ... ok
+test_missing_jsonld_is_structure_error (tests.test_expanded_sources.SeochoTest.test_missing_jsonld_is_structure_error) ... ok
+test_offer_valid_from_is_not_registration_start (tests.test_expanded_sources.SeochoTest.test_offer_valid_from_is_not_registration_start) ... ok
+test_reads_page_values_not_constants (tests.test_expanded_sources.SeochoTest.test_reads_page_values_not_constants) ... ok
+test_street_address_and_contacts_are_not_stored (tests.test_expanded_sources.SeochoTest.test_street_address_and_contacts_are_not_stored) ... ok
+test_sub_program_states_do_not_close_the_festival (tests.test_expanded_sources.SeochoTest.test_sub_program_states_do_not_close_the_festival) ... ok
+test_default_limit_is_not_cut_back_to_twenty (tests.test_expanded_sources.WevityPagingTest.test_default_limit_is_not_cut_back_to_twenty) ... ok
+test_explicit_max_items_bounds_detail_fetches_and_paging (tests.test_expanded_sources.WevityPagingTest.test_explicit_max_items_bounds_detail_fetches_and_paging) ... ok
+test_first_page_structure_checks_are_kept (tests.test_expanded_sources.WevityPagingTest.test_first_page_structure_checks_are_kept) ... ok
+test_item_limit_function (tests.test_expanded_sources.WevityPagingTest.test_item_limit_function) ... ok
+test_later_page_failure_preserves_previous_data (tests.test_expanded_sources.WevityPagingTest.test_later_page_failure_preserves_previous_data) ... ok
+test_later_page_http_error_fails_the_source (tests.test_expanded_sources.WevityPagingTest.test_later_page_http_error_fails_the_source) ... ok
+test_later_page_structure_error_fails_the_source (tests.test_expanded_sources.WevityPagingTest.test_later_page_structure_error_fails_the_source) ... ok
+test_page_and_item_caps (tests.test_expanded_sources.WevityPagingTest.test_page_and_item_caps) ... ok
+test_repeated_or_empty_page_stops (tests.test_expanded_sources.WevityPagingTest.test_repeated_or_empty_page_stops) ... ok
+test_second_page_target_is_collected (tests.test_expanded_sources.WevityPagingTest.test_second_page_target_is_collected) ... ok
+Ran 43 tests in 0.469s
+OK
+## node --test tests/*.test.mjs
+ℹ tests 106
+ℹ pass 106
+ℹ fail 0
+## collect_events.py --offline
+[offline] opportunities 항목 109, curated 항목 0 — 계약 검증 통과
+
+# Codex 리뷰 보완 후 — 2026-10-12
+## python -m unittest discover -s tests
+Ran 142 tests in 0.677s
+OK
+## node --test tests/*.test.mjs
+ℹ tests 107
+ℹ pass 107
+ℹ fail 0
+## collect_events.py --offline
+[offline] opportunities 항목 109, curated 항목 0 — 계약 검증 통과
+## 데이터: seocho·nvidia·aifesta 3개만 재확인 병합 — 항목 109, sources 7개(6·10·89·1·1·1·1)

@@ -77,3 +77,29 @@
 - 보존: 초기 `4dedda4`/`0fb77d6` PR 브랜치와 원본 checkout은 삭제하지 않았다. 로컬 `feat/ai-opportunity-board`는 master 운영 데이터까지 fast-forward 동기화했다. `docs/tasks/`·`tools/run_claude.py`는 gitignore로 로컬 보관, 공개 제외.
 - 미확인: 예약 시각(cron)에 자동 발생한 첫 실행, 배포·실기기 성능 측정.
 - 규칙집 추가 없음.
+
+## 2026-10-12 — 공식 AI 행사 3종과 위비티 다중 페이지 수집 (로컬 구현, 원격 반영 전)
+
+- 계기: 사용자가 "AI 행사 수집 범위가 너무 작다. 2026 서초 AI 페스타, 엔비디아 AI 데이 서울 2026 등 주요 행사도 수집해달라"고 요청. 조사 중 위비티 AI 검색 2페이지 10번째의 고용24 국민참여 AI 고용서비스 발굴 온라인 해커톤(ix111124)을 놓친 것도 확인(1페이지만 보고 소스당 20건 상한이라서).
+- 구현(브랜치 feat/expanded-opportunity-sources, 기준 master cc4353f): 소스 `seocho`·`nvidia`·`aifesta` 추가와 공용 `sources/jsonld.py`(서초·AI Festa 2곳이 공유), `urlsafe` 허용 호스트 정확 일치 추가, `rules` 행사 정규식에 페스타·축제·festa·festival·AI Day 보완(해커톤>공모전>행사 우선과 강좌/채용 제외 유지), 위비티 최대 6페이지·상세 100건(`wevity.item_limit`/`page_url`). 기존 소스 우선순위는 그대로 두고 새 3종을 뒤에 등록.
+- 기존 테스트 변경 1건: `test_opportunities.py`의 위비티 `collect` 테스트가 2페이지를 요청하게 되어 빈 2페이지 fixture(`wevity_empty.html`)를 추가.
+- 검증: 새 `tests/test_expanded_sources.py` 43개를 먼저 작성해 RED(38 실패, `expanded-red.txt`) → 구현 후 Python 140 OK · Node 106 pass · `--offline` 통과(`expanded-green.txt`). 실제 수집 1회(약 4분): 7개 출처 모두 ok, 전체 39→109건(기존 39건 전부 보존). 위비티 89건(6페이지, 후보 89건, 상세 실패 0), 서초 AI 페스타(2026-10-17, 무료, 시민 누구나, 마감 null, sourceStatus unknown), NVIDIA AI Day Seoul 2026(2026-11-09~10 코엑스, 등록 CTA로 open, 마감·참가비 확인 필요), AI FESTA 26(2026-10-06~08, 종료), 고용24 해커톤(마감 2026-10-13) 모두 포함.
+- 설계 선택 이유: 서브 프로그램 "오픈예정/마감"이 축제 전체 닫힘으로 읽히지 않게 sourceStatus unknown·deadline null. NVIDIA는 프로그램 탭의 11월 10일 시간이 아니라 연도 포함 hero 한 줄만 기간으로 읽고 title 연도와 대조. 이후 페이지 오류는 부분 성공으로 숨기지 않고 소스 실패로 처리해 기존 데이터를 보존. 사양 `docs/collection-expansion.md` 점검: 자격 근거는 FAQ 페이지가 아니라 메인 본문의 "시민 누구나" 문구를 쓴 것만 정정.
+- 미실행(root 몫): 브라우저 검사, 원격 push·배포, Codex 독립 교차 리뷰. 이 항목은 완료로 기록하지 않았다.
+- 규칙집 추가: CLAUDE.md '사고에서 얻은 규칙'에 2줄(위비티 전용 한도, 공식 행사 서브 프로그램 상태).
+
+### 2026-10-12 — 확장 수집기 Codex 독립 리뷰 보완 (로컬, root 재리뷰·브라우저·배포 대기)
+
+- Codex 읽기 리뷰 결과: 핵심 구현과 실수집 7개 출처는 정상. 좁은 보완 3건만 지적돼 Claude가 수정.
+- ① 한국어 검색: NVIDIA 항목에 '엔비디아'·'데이'가 없어 "엔비디아 AI 데이 서울 2026"로 못 찾음 → 공식 영문 제목은 유지하고 tags에 `엔비디아`·`AI 데이`·`서울` 추가(총 6개). 회귀: `tests/filters.test.mjs`가 수집 데이터의 NVIDIA 항목을 실제 `applyFilters`(kind:event)로 검색.
+- ② NVIDIA dateNote의 '공식 hero 표기'는 구현 용어라 '공식 안내의 개최 일정 기준'으로 교체(파서·함수명·코드 주석은 그대로).
+- ③ 서초 fixture의 EventScheduled를 EventCancelled로 바꾸면 미래 취소 행사가 sourceStatus unknown(예정)으로 남던 문제 → `jsonld.read_event`가 schema `eventStatus`의 EventCancelled만 읽어 `closed` + dateNote '행사 취소'. EventPostponed 등 다른 값과 하위 프로그램 상태는 전체 행사에 적용하지 않음. RED(취소 회귀 1건·NVIDIA 문구 검사 실패 확인) 후 GREEN.
+- 데이터 반영: 전체 재수집(90개 위비티 등)을 피하고 seocho·nvidia·aifesta 3개만 해당 수집 모듈로 다시 읽어 기존 문서에 병합(다른 4개 출처·항목·상태 보존, 해당 3개 출처 status/itemCount/checkedAt만 갱신, 원자적 쓰기). 결과 109건, sources 7개 유지, itemCount 합 109 = items 109. 서초 AI 페스타는 현재 취소 아님(unknown 유지).
+- 검증: Python 142 OK · Node 107 pass · `--offline` 통과(`docs/evidence/expanded-green.txt`).
+- 미실행(root 몫): 수정분 재리뷰, 브라우저 검증, 원격 반영·배포. → 브라우저 검증은 아래에서 완료.
+
+### 2026-10-12 — 확장 로컬 브라우저 검증 및 Codex 독립 리뷰 기록 (원격 반영 전)
+
+- Codex 최신 실측: Python 142 OK · Node 107 pass · `collectors/collect_events.py --offline` 109건 계약 통과.
+- `tools/check_expanded_events.py`(Codex 작성): 실제 Edge, 데스크톱 1440·모바일 390 각 4검사(서초·NVIDIA 한국어 검색 1건, 가로 넘침 없음, 고용24 해커톤) = 8검사 통과, pageErrors 0. 증거 `docs/evidence/expanded-local.json`·`expanded-local-1440.png`·`expanded-local-390.png`. 도구는 Claude가 독립 리뷰했고 중대한 결함이 없어 수정하지 않았다.
+- 원격 push·배포·공개 URL 검사는 아직 진행하지 않았다. 성공으로 기록하지 않는다.

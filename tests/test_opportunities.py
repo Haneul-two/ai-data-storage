@@ -561,7 +561,8 @@ class WevityTest(unittest.TestCase):
         self.assertIsNone(d["homepage"])
 
     def test_collect_filters_locally_and_masks(self):
-        pages = {wevity.LISTING_URL: fixture("wevity_listing.html"), wevity.detail_url("111322"): fixture("wevity_detail.html")}
+        pages = {wevity.LISTING_URL: fixture("wevity_listing.html"), f"{wevity.LISTING_URL}&gp=2": fixture("wevity_empty.html"),
+                 wevity.detail_url("111322"): fixture("wevity_detail.html")}
         fetcher = FakeFetcher(pages)
         result = wevity.collect(fetcher, NOW, 20)
         self.assertEqual(len(result.items), 1)

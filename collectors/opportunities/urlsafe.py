@@ -5,6 +5,7 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 ALLOWED_HOST_SUFFIXES = ("devpost.com",)
 ALLOWED_HOSTS = {
     "wevity.com", "www.wevity.com", "dacon.io", "www.dacon.io", "aisummit.co.kr", "www.aisummit.co.kr",
+    "seochoai.kr", "www.seochoai.kr", "www.nvidia.com", "aifesta.kr", "www.aifesta.kr",
 }
 _TRACKING_PREFIXES = ("utm_",)
 

@@ -30,7 +30,7 @@ _AI_RE = re.compile(
 )
 _HACK_RE = re.compile(r"해커톤|해커 톤|hackathon", re.IGNORECASE)
 _CONTEST_RE = re.compile(r"공모전|경진대회|경연|콘테스트|챌린지|대회|contest|competition|challenge|datathon", re.IGNORECASE)
-_EVENT_RE = re.compile(r"컨퍼런스|콘퍼런스|박람회|세미나|밋업|포럼|엑스포|웨비나|summit|conference|expo|meetup|seminar|forum|webinar", re.IGNORECASE)
+_EVENT_RE = re.compile(r"컨퍼런스|콘퍼런스|박람회|세미나|밋업|포럼|엑스포|웨비나|페스타|축제|summit|conference|expo|meetup|seminar|forum|webinar|festa|festival|(?<![a-z])ai day", re.IGNORECASE)
 _EXCLUDE_RE = re.compile(r"부트캠프|bootcamp|수강생|교육생|강의|강좌|채용 ?공고|신입 ?채용|경력 ?채용|인턴 ?채용|job opening", re.IGNORECASE)
 
 _EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
