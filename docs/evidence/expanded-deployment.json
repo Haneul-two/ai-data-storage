@@ -1,0 +1,20 @@
+{
+  "pr": "https://github.com/Haneul-two/ai-data-storage/pull/2",
+  "mergeCommit": "04a31cd898be85fef74d81d1425a54d62e9f3da4",
+  "updateRun": 38208115725,
+  "updateConclusion": "success",
+  "dataCommit": "5b822b96069f121f4144944af46979be1c639988",
+  "pagesBuildStatus": "built",
+  "pagesBuildCommit": "5b822b96069f121f4144944af46979be1c639988",
+  "publicDataMatchesLatest": true,
+  "publicItems": 110,
+  "sourcesOk": 6,
+  "sourcesError": {"aisummit": "응답 크기 상한 초과; 기존 항목 1건 보존"},
+  "newOfficialSourcesOk": ["seocho", "nvidia", "aifesta"],
+  "publicBrowserChecks": 8,
+  "publicPageErrors": 0,
+  "endedEventOnlyClosed": true,
+  "pythonTests": 142,
+  "nodeTests": 107,
+  "scheduledTriggerVerified": false
+}

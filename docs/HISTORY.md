@@ -103,3 +103,13 @@
 - Codex 최신 실측: Python 142 OK · Node 107 pass · `collectors/collect_events.py --offline` 109건 계약 통과.
 - `tools/check_expanded_events.py`(Codex 작성): 실제 Edge, 데스크톱 1440·모바일 390 각 4검사(서초·NVIDIA 한국어 검색 1건, 가로 넘침 없음, 고용24 해커톤) = 8검사 통과, pageErrors 0. 증거 `docs/evidence/expanded-local.json`·`expanded-local-1440.png`·`expanded-local-390.png`. 도구는 Claude가 독립 리뷰했고 중대한 결함이 없어 수정하지 않았다.
 - 원격 push·배포·공개 URL 검사는 아직 진행하지 않았다. 성공으로 기록하지 않는다.
+
+## 2026-10-12 — 확장 PR #2 병합과 운영 반영 (실측)
+
+- 병합: PR https://github.com/Haneul-two/ai-data-storage/pull/2 MERGED. 구현 `e82b77ed20d7d191f221a42ad4d85ad0a1b9d37c` CI run 38208056185 success. merge `04a31cd898be85fef74d81d1425a54d62e9f3da4` Test run 38208115198 success, Pages run 38208115264 success. 병합 커밋의 Pages built 확인됨.
+- 운영 수동 update: run 38208115725 success, 수집 시각 2026-10-12T05:29:11Z, data commit `5b822b96069f121f4144944af46979be1c639988`.
+- 운영 데이터: 110건 / 7출처 — devpost 6 · dacon 10 · wevity 90 · aisummit 1 · seocho 1 · nvidia 1 · aifesta 1. **6출처 ok, aisummit error**(원인: 응답 크기 2.5MB 상한 초과). aisummit은 이전 항목 1건과 검증 시각을 보존했다. 7출처 모두 성공이라고 쓰지 않는다. 위비티는 새 조회 89건 + 사라진 기존 항목 stale 보존으로 90건. 새 공식 3출처는 모두 정상.
+- 공개 보드 검사: 실제 Edge 1440/390 총 8검사 통과, pageErrors 0(`docs/evidence/expanded-public.json`, `expanded-public-1440.png`, `expanded-public-390.png`). 별도 공개 검증에서 AI FESTA 26은 status closed 필터 1건(종료 표시), status open 0건.
+- Codex 최종 실측: `gh` Pages builds/latest status built, commit `5b822b96069f121f4144944af46979be1c639988`. 공개 JSON updatedAt 2026-10-12T05:29:11Z·110건이 로컬 운영 최신과 일치. 공개 browser 8검사 재통과·pageErrors 0. 증거 `docs/evidence/expanded-deployment.json`.
+- 미확인: 예약 시각(cron)에 자동 발생한 첫 실행, aisummit 크기 상한 초과 해소.
+- 이전 '로컬 109건·7곳 ok' 기록은 로컬 수집 당시 사실이며 운영 수집 결과와 다르다(위 항목이 현재).
