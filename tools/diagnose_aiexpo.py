@@ -25,6 +25,12 @@ def main():
                           "startDate": result.items[0]["startDate"], "endDate": result.items[0]["endDate"]}))
     except Exception as exc:
         print(json.dumps({"collect": "failed", "error": str(exc)}))
+    try:
+        data = aiexpo.parse_showala(fetcher.get(aiexpo.SHOWALA_URL).text, None)
+        print(json.dumps({"alternateCheck": "ok", "sourceUrl": aiexpo.SHOWALA_URL,
+                          "startDate": data["startDate"], "endDate": data["endDate"]}))
+    except Exception as exc:
+        print(json.dumps({"alternateCheck": "failed", "error": str(exc)}))
 
 
 if __name__ == "__main__":
