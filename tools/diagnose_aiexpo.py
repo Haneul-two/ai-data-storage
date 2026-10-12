@@ -20,7 +20,9 @@ def main():
             break
     try:
         result = aiexpo.collect(fetcher, None)
-        print(json.dumps({"collect": "ok", "items": len(result.items)}))
+        print(json.dumps({"collect": "ok", "items": len(result.items),
+                          "sourceUrl": result.items[0]["sourceUrl"],
+                          "startDate": result.items[0]["startDate"], "endDate": result.items[0]["endDate"]}))
     except Exception as exc:
         print(json.dumps({"collect": "failed", "error": str(exc)}))
 
