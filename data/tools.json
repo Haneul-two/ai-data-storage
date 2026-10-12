@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T04:14:51Z",
+  "updatedAt": "2026-10-09T04:44:56Z",
   "items": [
     {
       "name": "affaan-m/ECC",
@@ -14,9 +14,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-01-18",
-      "stars": 270766,
+      "stars": 275482,
       "language": "JavaScript",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-05",
       "trending": false
     },
     {
@@ -32,9 +32,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-07-22",
-      "stars": 250639,
+      "stars": 252085,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-09",
       "trending": false
     },
     {
@@ -50,27 +50,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2015-11-07",
-      "stars": 200660,
+      "stars": 200721,
       "language": "C++",
-      "pushed": "2026-10-02",
-      "trending": false
-    },
-    {
-      "name": "Significant-Gravitas/AutoGPT",
-      "desc": "AutoGPT는 모든 사람이 사용하고 구축할 수 있는 접근 가능한 AI에 대한 비전입니다. 우리의 임무는 귀하가 중요한 일에 집중할 수 있도록 도구를 제공하는 것입니다.",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "tags": [
-        "agentic-ai",
-        "agents",
-        "ai",
-        "artificial-intelligence",
-        "autonomous-agents"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-03-16",
-      "stars": 187652,
-      "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -86,9 +68,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-04-15",
-      "stars": 187637,
+      "stars": 189669,
       "language": "TypeScript",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-09",
+      "trending": false
+    },
+    {
+      "name": "Significant-Gravitas/AutoGPT",
+      "desc": "AutoGPT는 모든 사람이 사용하고 구축할 수 있는 접근 가능한 AI에 대한 비전입니다. 우리의 임무는 귀하가 중요한 일에 집중할 수 있도록 도구를 제공하는 것입니다.",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "tags": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "autonomous-agents"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-03-16",
+      "stars": 187488,
+      "language": "Python",
+      "pushed": "2026-10-09",
       "trending": false
     },
     {
@@ -122,9 +122,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-26",
-      "stars": 182031,
+      "stars": 182430,
       "language": "Go",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-09",
       "trending": false
     },
     {
@@ -140,9 +140,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-05",
-      "stars": 171836,
+      "stars": 172199,
       "language": "HTML",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-09",
       "trending": false
     },
     {
@@ -158,9 +158,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2018-10-29",
-      "stars": 166899,
+      "stars": 166866,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-09",
       "trending": false
     },
     {
@@ -176,63 +176,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-08-22",
-      "stars": 165177,
+      "stars": 165199,
       "language": "Python",
       "pushed": "2026-03-02",
-      "trending": false
-    },
-    {
-      "name": "langgenius/dify",
-      "desc": "에이전트 워크플로 개발을 위한 프로덕션 지원 플랫폼입니다.",
-      "url": "https://github.com/langgenius/dify",
-      "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-04-12",
-      "stars": 157706,
-      "language": "TypeScript",
-      "pushed": "2026-10-02",
-      "trending": false
-    },
-    {
-      "name": "langflow-ai/langflow",
-      "desc": "Langflow는 AI 기반 에이전트와 워크플로를 구축하고 배포하기 위한 강력한 도구입니다.",
-      "url": "https://github.com/langflow-ai/langflow",
-      "tags": [
-        "agents",
-        "chatgpt",
-        "generative-ai",
-        "large-language-models",
-        "multiagent"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-02-08",
-      "stars": 155445,
-      "language": "Python",
-      "pushed": "2026-10-02",
-      "trending": false
-    },
-    {
-      "name": "open-webui/open-webui",
-      "desc": "사용자 친화적인 AI 인터페이스(Ollama, OpenAI API 등 지원)",
-      "url": "https://github.com/open-webui/open-webui",
-      "tags": [
-        "ai",
-        "llm",
-        "llm-ui",
-        "llm-webui",
-        "llms"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-10-06",
-      "stars": 153759,
-      "language": "Python",
-      "pushed": "2026-10-01",
       "trending": false
     },
     {
@@ -248,9 +194,63 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-06-12",
-      "stars": 150696,
+      "stars": 158718,
       "language": "JavaScript",
-      "pushed": "2026-09-14",
+      "pushed": "2026-10-08",
+      "trending": false
+    },
+    {
+      "name": "langgenius/dify",
+      "desc": "에이전트 워크플로 개발을 위한 프로덕션 지원 플랫폼입니다.",
+      "url": "https://github.com/langgenius/dify",
+      "tags": [
+        "agent",
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-04-12",
+      "stars": 157949,
+      "language": "TypeScript",
+      "pushed": "2026-10-09",
+      "trending": false
+    },
+    {
+      "name": "langflow-ai/langflow",
+      "desc": "Langflow는 AI 기반 에이전트와 워크플로를 구축하고 배포하기 위한 강력한 도구입니다.",
+      "url": "https://github.com/langflow-ai/langflow",
+      "tags": [
+        "agents",
+        "chatgpt",
+        "generative-ai",
+        "large-language-models",
+        "multiagent"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-02-08",
+      "stars": 155553,
+      "language": "Python",
+      "pushed": "2026-10-07",
+      "trending": false
+    },
+    {
+      "name": "open-webui/open-webui",
+      "desc": "사용자 친화적인 AI 인터페이스(Ollama, OpenAI API 등 지원)",
+      "url": "https://github.com/open-webui/open-webui",
+      "tags": [
+        "ai",
+        "llm",
+        "llm-ui",
+        "llm-webui",
+        "llms"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-10-06",
+      "stars": 154074,
+      "language": "Python",
+      "pushed": "2026-10-08",
       "trending": false
     },
     {
@@ -266,9 +266,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-10-17",
-      "stars": 147372,
+      "stars": 147510,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-07",
+      "trending": false
+    },
+    {
+      "name": "shadcn-ui/ui",
+      "desc": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
+      "url": "https://github.com/shadcn-ui/ui",
+      "tags": [
+        "ai",
+        "base-ui",
+        "components",
+        "gen-ui",
+        "generative-ai"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-01-04",
+      "stars": 125219,
+      "language": "TypeScript",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -284,9 +302,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-19",
-      "stars": 120916,
+      "stars": 121088,
       "language": "Jupyter Notebook",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -302,9 +320,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-23",
-      "stars": 105864,
+      "stars": 106241,
       "language": "Jupyter Notebook",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-02",
       "trending": false
     },
     {
@@ -320,27 +338,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-08-13",
-      "stars": 103608,
+      "stars": 103816,
       "language": "Python",
-      "pushed": "2026-10-02",
-      "trending": false
-    },
-    {
-      "name": "hacksider/Deep-Live-Cam",
-      "desc": "단 하나의 이미지만으로 실시간 얼굴 교환 및 원클릭 비디오 딥페이크",
-      "url": "https://github.com/hacksider/Deep-Live-Cam",
-      "tags": [
-        "ai",
-        "ai-deep-fake",
-        "ai-face",
-        "ai-webcam",
-        "artificial-intelligence"
-      ],
-      "source": "GitHub",
-      "pubDate": "2023-09-24",
-      "stars": 96915,
-      "language": "Python",
-      "pushed": "2026-09-26",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -356,9 +356,27 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-31",
-      "stars": 95145,
+      "stars": 98629,
       "language": "TypeScript",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-09",
+      "trending": false
+    },
+    {
+      "name": "hacksider/Deep-Live-Cam",
+      "desc": "단 하나의 이미지만으로 실시간 얼굴 교환 및 원클릭 비디오 딥페이크",
+      "url": "https://github.com/hacksider/Deep-Live-Cam",
+      "tags": [
+        "ai",
+        "ai-deep-fake",
+        "ai-face",
+        "ai-webcam",
+        "artificial-intelligence"
+      ],
+      "source": "GitHub",
+      "pubDate": "2023-09-24",
+      "stars": 96955,
+      "language": "Python",
+      "pushed": "2026-10-09",
       "trending": false
     },
     {
@@ -374,7 +392,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 91197,
+      "stars": 91305,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-15",
       "trending": false
@@ -392,9 +410,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2012-07-19",
-      "stars": 91028,
+      "stars": 91088,
       "language": "C++",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-07",
       "trending": false
     },
     {
@@ -410,9 +428,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-03-13",
-      "stars": 89760,
+      "stars": 90319,
       "language": "Python",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-09",
       "trending": false
     },
     {
@@ -446,9 +464,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2016-10-21",
-      "stars": 83599,
+      "stars": 83630,
       "language": "",
-      "pushed": "2026-09-27",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -464,7 +482,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-17",
-      "stars": 83265,
+      "stars": 83313,
       "language": "",
       "pushed": "2026-02-05",
       "trending": false
@@ -482,7 +500,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2022-12-16",
-      "stars": 78773,
+      "stars": 78861,
       "language": "MDX",
       "pushed": "2026-03-11",
       "trending": false
@@ -500,7 +518,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-11-28",
-      "stars": 76320,
+      "stars": 76556,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-19",
       "trending": false
@@ -518,7 +536,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2021-03-03",
-      "stars": 69361,
+      "stars": 69583,
       "language": "Jupyter Notebook",
       "pushed": "2026-09-16",
       "trending": false
@@ -536,9 +554,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-05-03",
-      "stars": 68734,
+      "stars": 69041,
       "language": "",
-      "pushed": "2026-10-01",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -554,24 +572,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-08-05",
-      "stars": 65973,
+      "stars": 67358,
       "language": "Python",
-      "pushed": "2026-10-02",
-      "trending": false
-    },
-    {
-      "name": "jingyaogong/minimind",
-      "desc": "🧠\"대형 모델\"은 2시간 만에 64M 작은 매개변수 LLM을 0부터 완전히 훈련합니다! 단 2시간 만에 64M 매개변수 LLM을 처음부터 훈련하세요!",
-      "url": "https://github.com/jingyaogong/minimind",
-      "tags": [
-        "artificial-intelligence",
-        "large-language-model"
-      ],
-      "source": "GitHub",
-      "pubDate": "2024-07-27",
-      "stars": 63057,
-      "language": "Python",
-      "pushed": "2026-09-22",
+      "pushed": "2026-10-08",
       "trending": false
     },
     {
@@ -587,9 +590,24 @@
       ],
       "source": "GitHub",
       "pubDate": "2026-03-18",
-      "stars": 62482,
+      "stars": 64016,
       "language": "Python",
-      "pushed": "2026-09-30",
+      "pushed": "2026-10-04",
+      "trending": false
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "desc": "🧠\"대형 모델\"은 2시간 만에 64M 작은 매개변수 LLM을 0부터 완전히 훈련합니다! 단 2시간 만에 64M 매개변수 LLM을 처음부터 훈련하세요!",
+      "url": "https://github.com/jingyaogong/minimind",
+      "tags": [
+        "artificial-intelligence",
+        "large-language-model"
+      ],
+      "source": "GitHub",
+      "pubDate": "2024-07-27",
+      "stars": 63385,
+      "language": "Python",
+      "pushed": "2026-09-22",
       "trending": false
     },
     {
@@ -605,7 +623,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-03-31",
-      "stars": 55494,
+      "stars": 55495,
       "language": "TypeScript",
       "pushed": "2026-08-13",
       "trending": false
@@ -659,9 +677,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-01-27",
-      "stars": 31489,
+      "stars": 31635,
       "language": "Python",
-      "pushed": "2026-09-25",
+      "pushed": "2026-10-06",
       "trending": false
     },
     {
@@ -677,7 +695,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2025-04-02",
-      "stars": 12688,
+      "stars": 12695,
       "language": "Python",
       "pushed": "2026-05-31",
       "trending": false
@@ -695,7 +713,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-12-24",
-      "stars": 11216,
+      "stars": 11228,
       "language": "Python",
       "pushed": "2026-07-26",
       "trending": false
@@ -713,7 +731,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-09-21",
-      "stars": 9080,
+      "stars": 9082,
       "language": "Python",
       "pushed": "2026-01-28",
       "trending": false
@@ -731,9 +749,9 @@
       ],
       "source": "GitHub",
       "pubDate": "2024-06-05",
-      "stars": 8790,
+      "stars": 8836,
       "language": "Rust",
-      "pushed": "2026-10-02",
+      "pushed": "2026-10-09",
       "trending": false
     },
     {
@@ -749,7 +767,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-06-15",
-      "stars": 7489,
+      "stars": 7501,
       "language": "Python",
       "pushed": "2026-09-28",
       "trending": false
@@ -767,7 +785,7 @@
       ],
       "source": "GitHub",
       "pubDate": "2023-07-06",
-      "stars": 7279,
+      "stars": 7277,
       "language": "Python",
       "pushed": "2025-10-30",
       "trending": false
