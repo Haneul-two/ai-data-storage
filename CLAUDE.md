@@ -1,8 +1,8 @@
 # AI 기회 보드 — Claude Code 개발 가이드 (현재 상태·규칙)
 
 경과·검증·사고 기록은 `docs/HISTORY.md`, 사양은 `docs/spec*.md`, 작업 규칙 요약은 `AGENTS.md`.
-현재 상태(2026-10-12): **운영 활성화 승인됨, 원격 반영(push·Pages·매일 09시 갱신) 진행 중** — 완료 전까지 완료로 쓰지 않는다. 원격 master의 자동 데이터 갱신 3건은 보존하며 병합한다. `docs/tasks/`·`tools/run_claude.py`는 내부용이라 git 제외(로컬 보관).
-이전 상태(역사): 로컬 구현·검증 완료(데이터 전체33 = 활성23 + 종료9 + 마감1), 원격(push·workflow·Pages·예약) 미실행. 증거는 `docs/evidence/final-checks.txt`, 통과표는 `docs/verification.md`.
+현재 상태(2026-10-12): **운영 시작됨.** PR #1 병합(master d01cbf3), 첫 운영 수집(수동 workflow_dispatch run 38190817956) 성공, Pages 최신 빌드가 데이터 커밋 2427883과 동일, 공개 사이트 https://haneul-two.github.io/ai-data-storage/ 정상. 매일 09:00 KST 갱신 활성화(`ENABLE_OPPORTUNITY_UPDATES=true`)·교차 리뷰 반영 완료. 단, **예약 시각에 자동 발생한 첫 실행은 아직 없어 통과로 쓰지 않는다.** 원격 master의 자동 데이터 갱신 3건(ee68ae6→aa04b7e)은 보존 병합했다. `docs/tasks/`·`tools/run_claude.py`는 내부용이라 git 제외(로컬 보관). 증거·run·commit은 `docs/HISTORY.md`.
+이전 상태(역사, 운영 시작 전): 로컬 구현·검증 완료(데이터 전체33 = 활성23 + 종료9 + 마감1), 원격(push·workflow·Pages·예약) 미실행. 증거는 `docs/evidence/final-checks.txt`, 통과표는 `docs/verification.md`.
 
 ## 프로젝트 개요
 

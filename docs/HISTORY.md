@@ -63,3 +63,17 @@
 - 수정(`.github/workflows/update.yml`): job `permissions`에 `pages: write` 추가(`contents: write` 유지). `Commit changes` 직후·마지막 실패 표시 step 이전에 `Request Pages rebuild` step 추가. `gh api --method POST "repos/${GH_REPO}/pages/builds"`, `GH_TOKEN`·`GH_REPO`는 env로 전달(토큰 값 저장·출력 없음). 종료 코드 2(데이터 손상)에서는 실행하지 않고, 정상/전체 실패(1)는 tests 성공 후 새 상태 JSON이 반영된 최신 master를 재빌드한다.
 - 공식 근거: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site , https://docs.github.com/en/rest/pages/pages#request-a-github-pages-build
 - 상태: 실제 Actions runner에서 성공한 적 없다. 권한·재빌드 검증은 root가 실제 실행으로 한다. 작은 workflow 변경이라 YAML 텍스트 재현 테스트는 추가하지 않았다.
+
+### 2026-10-12 — 운영 시작 (실제 배포·첫 수집·공개 사이트 검증 완료)
+
+- 병합: PR https://github.com/Haneul-two/ai-data-storage/pull/1 MERGED(2026-10-12T01:09:52Z), master merge `d01cbf3f52424a7c5c6a39b9e215b6e02ec7bfba`. PR 최신 `0fb77d6`의 Python/Node GitHub 검사 모두 성공, 병합 master Test run 38190817171 success. 로컬 병합 후 Python 97 / Node 106 통과. 원격 최신 `aa04b7e`의 기존 데이터 갱신 3건은 그대로 보존 병합.
+- 활성화: 저장소 변수 `ENABLE_OPPORTUNITY_UPDATES=true` 실제 설정. cron `0 0 * * *` = 매일 09:00 KST. **첫 실행은 수동 `workflow_dispatch`이며 예약 시각에 자동 발생한 실행이 아니다.**
+- 첫 운영 수집: https://github.com/Haneul-two/ai-data-storage/actions/runs/38190817956 success. collect/tests/commit/Request Pages rebuild 전부 success. GitHub token `pages: write`로 Pages API 재빌드가 실제 작동함을 확인(이전 '실행 검증 전' 항목의 미확인 해소).
+- 데이터 커밋: `24278837f43816a68e6f6a8912911bc8cdf45d05`. Pages latest status `built`, 동일 commit. 최신 배포 run 38190931779 success. 중복 Pages 실행 38190931297은 cancelled이며 최종 성공 빌드가 있으므로 오류가 아니다.
+- 운영 화면: updatedAt 2026-10-12T01:10:08Z(10:10:08 KST). 전체 39건 / 활성 27(모집중 25 + 예정 2) / 종료 8 / 마감 4 / stale 5. Devpost 6 · DACON 10 · 위비티 22 · AI Summit 1, 네 출처 모두 ok. 출처 itemCount에는 보존된 예전 항목도 포함된다. stale 5는 화면에서 출처 재확인 표시로 보인다.
+- 공개 사이트 검사: `docs/evidence/deployment-check.json` 10/10, 콘솔 오류 0. 최신 dataset timestamp·items가 remote master와 일치, production에서 debug/now 무시, 검색 포커스, 저장 후 재접속, 상세 HTTPS 링크·포커스 복귀, 달력, 모바일 390 가로 넘침 없음.
+- 캡처: `docs/evidence/deployed-desktop.png`(1440×900), `deployed-mobile.png`(390×844)를 root가 직접 열어 확인.
+- 루트 코드리뷰 Pages 보완: 데이터 갱신 commit 뒤 legacy Pages 자동 빌드가 없다는 점을 리뷰에서 짚어 workflow에 `pages: write`와 `Request Pages rebuild` step을 넣었고, 위 첫 실행으로 작동을 확인했다.
+- 보존: 초기 `4dedda4`/`0fb77d6` PR 브랜치와 원본 checkout은 삭제하지 않았다. 로컬 `feat/ai-opportunity-board`는 master 운영 데이터까지 fast-forward 동기화했다. `docs/tasks/`·`tools/run_claude.py`는 gitignore로 로컬 보관, 공개 제외.
+- 미확인: 예약 시각(cron)에 자동 발생한 첫 실행, 배포·실기기 성능 측정.
+- 규칙집 추가 없음.

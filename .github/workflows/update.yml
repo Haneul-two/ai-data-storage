@@ -1,6 +1,6 @@
 name: Update AI Opportunities
 
-# 초안: 저장소 변수 ENABLE_OPPORTUNITY_UPDATES 가 'true'일 때만 어떤 트리거에서도 실행된다(기본 미설정 = 비활성).
+# 운영: 저장소 변수 ENABLE_OPPORTUNITY_UPDATES 가 'true'일 때만 어떤 트리거에서도 실행된다(기본 미설정 = 비활성).
 on:
   schedule:
     - cron: '0 0 * * *' # 매일 00:00 UTC = 09:00 KST

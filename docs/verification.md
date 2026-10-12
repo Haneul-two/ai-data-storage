@@ -1,7 +1,7 @@
 # 검증표 (frontend/backend 4대 축)
 
-기준일 2026-10-02, 로컬 검증. 증거 원문은 `docs/evidence/final-checks.txt`, 브라우저 35개 항목은 `docs/evidence/browser-check.json`.
-"통과"는 아래 증거로 관찰한 것만 쓴다. 원격(push·workflow 실행·Pages·예약)은 실행하지 않았다.
+기준일 2026-10-02 로컬 검증 + 2026-10-12 운영 확인. 증거 원문은 `docs/evidence/final-checks.txt`, 브라우저 35개 항목은 `docs/evidence/browser-check.json`.
+"통과"는 아래 증거로 관찰한 것만 쓴다. 원격은 2026-10-12에 push·병합·수동 workflow 실행·Pages 배포를 실제로 확인했다(아래). 예약 시각에 자동 발생한 첫 실행은 아직 없어 통과로 쓰지 않는다.
 
 ## Frontend
 
@@ -23,8 +23,9 @@
 
 ## 확인 못 한 중요 항목
 
-- 원격 Actions 실행(scheduled/dispatch)과 `continue-on-error`·`$GITHUB_OUTPUT` 동작: 러너에서 실행하지 않았다. 사람 승인 후 첫 실행에서 확인 필요.
-- GitHub Pages 운영 동작과 `design-lab/` 노출: 배포하지 않았다.
+- 원격 Actions: 수동 `workflow_dispatch` 첫 운영 수집(run 38190817956)에서 collect/tests/commit/Request Pages rebuild 전부 success, Pages API 재빌드 작동 확인(**확인함**). 단 **예약(cron) 시각에 자동 발생한 첫 실행은 미확인**이고 `continue-on-error` 실패 경로(종료 코드 1·2)도 러너에서 실행한 적 없다.
+- GitHub Pages 운영: https://haneul-two.github.io/ai-data-storage/ 배포·정상 확인(**확인함**, 최신 빌드 built = 데이터 커밋 2427883). `design-lab/`는 root에 포함돼 URL을 알면 접근 가능하며 링크만 하지 않는다(배포 제외 아님).
+- 공개 사이트 10/10 검사(`docs/evidence/deployment-check.json`, 콘솔 오류 0, 캡처 `deployed-desktop.png`·`deployed-mobile.png`)는 생성된 증거이며 이 목록의 미확인 항목(예약 첫 실행, 배포·실기기 성능 미측정, 원문 정확성, 실패 경로)까지 통과했다는 뜻이 아니다. 운영 수치: 전체 39 / 활성 27 / 종료 8 / 마감 4 / stale 5, 출처 4곳 ok.
 - 원문 자격·일정의 정확성: DACON 자격은 `확인 필요`, 위비티 마감은 날짜만, Devpost 한국 참가는 문구 휴리스틱. 화면은 불확실성을 그대로 표시하지만 원문과 일치한다는 보증은 아니다.
 - 위비티·DACON은 1페이지만 수집한다(그 밖 항목은 누락될 수 있음).
 - 갱신 캡처 12개(after-desktop/mobile, detail-desktop, calendar-desktop/mobile, empty-desktop/mobile, error-desktop/mobile, loading-desktop/mobile, no-results-desktop)는 root가 직접 열어 확인을 마쳤다.
