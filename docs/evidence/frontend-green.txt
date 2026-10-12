@@ -114,51 +114,51 @@ $ node --test tests/*.test.mjs
 
 ## 브라우저 스모크 (합성 데이터, repo 밖 임시 미리보기 서버 8013, Playwright chromium 1243, ?now=2026-10-02T03:00:00Z)
 PASS 검색 결과 1건 n=1
-PASS 검색 후 포커스 유지 
-PASS 빈 결과 + 초기화 버튼 
-PASS URL에 q 반영 + now 보존 
-PASS 초기화 후 7건 
-PASS 초기화 후 입력 비움 
-PASS 저장 즉시 aria-pressed 
-PASS 저장 후 포커스 유지 
-PASS 헤더 저장 개수 1 
-PASS 새로고침 후에도 저장 유지 
-PASS 저장 보기 1건 
-PASS URL saved=1 
+PASS 검색 후 포커스 유지
+PASS 빈 결과 + 초기화 버튼
+PASS URL에 q 반영 + now 보존
+PASS 초기화 후 7건
+PASS 초기화 후 입력 비움
+PASS 저장 즉시 aria-pressed
+PASS 저장 후 포커스 유지
+PASS 헤더 저장 개수 1
+PASS 새로고침 후에도 저장 유지
+PASS 저장 보기 1건
+PASS URL saved=1
 PASS 사라진 저장 1건 안내 일부 출처(Devpost (합성))를 갱신하지 못했어요. 해당 출처 항목은 이전에 확인한 시점 기준이에요. 저장한 1건은 현재 데이터에 없어요. 마감 후 목록에서 빠졌거나 출처에서 사라졌을 수 있어요. 저장 기록은 그대로 보관돼요.
-PASS 사라진 id 보존 
-PASS 손상 알림 
-PASS 저장 불가 알림 
-PASS 저장 불가여도 세션 내 pressed 
-PASS 기록 실패 알림 
-PASS 초기 포커스=닫기 
-PASS 다이얼로그 이름 
-PASS HTML 문자열은 텍스트로 
-PASS Tab이 다이얼로그 안에 머문다 
+PASS 사라진 id 보존
+PASS 손상 알림
+PASS 저장 불가 알림
+PASS 저장 불가여도 세션 내 pressed
+PASS 기록 실패 알림
+PASS 초기 포커스=닫기
+PASS 다이얼로그 이름
+PASS HTML 문자열은 텍스트로
+PASS Tab이 다이얼로그 안에 머문다
 PASS 외부 링크 noopener ["출처 확인","안내 페이지 열기"]
-PASS Esc 후 닫힘 
-PASS Esc 후 포커스 복귀 
-PASS 위험 URL 링크 없음 
-PASS 달력 제목 2026년 10월 
-PASS 마감/개최 마커 모두 
-PASS 일정 미정 안내 
-PASS 마커 클릭→상세 
-PASS 다음 달 
-PASS 오늘 
-PASS 목록으로 전환 
+PASS Esc 후 닫힘
+PASS Esc 후 포커스 복귀
+PASS 위험 URL 링크 없음
+PASS 달력 제목 2026년 10월
+PASS 마감/개최 마커 모두
+PASS 일정 미정 안내
+PASS 마커 클릭→상세
+PASS 다음 달
+PASS 오늘
+PASS 목록으로 전환
 PASS 모바일 달력 넘침 없음 sw=390
-PASS 모바일 agenda→상세 
-PASS 필터 패널 접힘 
-PASS 필터 펼침 
-PASS 필터 활성 개수 표시 
+PASS 모바일 agenda→상세
+PASS 필터 패널 접힘
+PASS 필터 펼침
+PASS 필터 활성 개수 표시
 PASS 모바일 터치 목표 44px []
 PASS debug=empty 배너+상태 아직 표시할 기회가 없어요  수집된 AI 행사·공모전·해커톤이 생기면 이곳에 나타나요.
 PASS debug=error 배너+상태 데이터를 불러오지 못했어요  네트워크 상태를 확인한 뒤 다시 시도해 주세요. 이전에 저장한 항목은 그대로 남
 PASS debug=loading 배너+상태 기회 목록을 불러오는 중이에요
-PASS localhost에서 작동 
-PASS __boardDebug 노출(로컬) 
-PASS 새로고침 중 disabled 
-PASS 완료 후 활성 
+PASS localhost에서 작동
+PASS __boardDebug 노출(로컬)
+PASS 새로고침 중 disabled
+PASS 완료 후 활성
 errors []
 46/46 passed
 ## 폭별 scrollWidth/clientWidth + 콘솔 오류
