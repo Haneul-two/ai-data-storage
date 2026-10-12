@@ -25,6 +25,10 @@ jobs:
       - name: Python unit tests
         run: python -m unittest discover -s tests -v
 
+      - name: Diagnose AI Summit response
+        if: github.event_name == 'workflow_dispatch'
+        run: python tools/diagnose_aisummit.py
+
   node:
     runs-on: ubuntu-latest
     steps:
