@@ -27,6 +27,7 @@ def main():
         print(json.dumps({
             "limit": limit, "bytes": len(text.encode("utf-8")), "truncated": page.truncated,
             "bodyOffset": text.find("<body"), "mainOffset": text.find("<main"),
+            "offsetUnit": "unicode characters",
             "visibleChars": len(visible), "parsed": parsed,
             "yearCounts": {year: visible.count(year) for year in ("2026", "2027")},
         }))
