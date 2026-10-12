@@ -1,0 +1,47 @@
+{
+  "base": "https://haneul-two.github.io/ai-data-storage/",
+  "checks": [
+    {
+      "width": 1440,
+      "brand": true,
+      "dateExclusionMatchesIndependentOracle": true,
+      "visible": 118,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "nvidiaKoreanSearch": true,
+      "seochoSearch": true,
+      "detailEscapeFocusReturn": true
+    },
+    {
+      "width": 390,
+      "brand": true,
+      "dateExclusionMatchesIndependentOracle": true,
+      "visible": 118,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "nvidiaKoreanSearch": true,
+      "seochoSearch": true,
+      "detailEscapeFocusReturn": true
+    }
+  ],
+  "pageErrors": [],
+  "stored": 165,
+  "visible": 118,
+  "sourceStatuses": {
+    "devpost": "ok",
+    "dacon": "ok",
+    "wevity": "ok",
+    "aisummit": "error",
+    "seocho": "ok",
+    "nvidia": "ok",
+    "aifesta": "ok",
+    "contestkorea": "ok",
+    "devevent": "ok",
+    "aiexpo": "ok"
+  },
+  "updatedAt": "2026-10-12T07:32:54Z"
+}
