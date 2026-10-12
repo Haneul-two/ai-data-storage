@@ -1,146 +1,106 @@
-# 🧠 AI-DATA-STORAGE
+# AI 기회 보드
 
-> 개인 AI 정보 창고 — 행사 · 뉴스 · 논문 · 채용 · 도구를 한 곳에서
+> 국내 전체와 한국에서 참가할 수 있는 해외 온라인 **AI 행사 · 공모전 · 해커톤**을 마감일 기준으로 비교하고 저장하는 개인용 보드.
 
-Linear + Vercel 스타일의 다크 대시보드. 정적 HTML + JSON 구조로 서버 없이 GitHub Pages에서 동작하며, GitHub Actions가 주 3회 데이터를 자동 갱신합니다.
+정적 HTML + ES modules + JSON 구조라 서버 없이 GitHub Pages에서 동작합니다. 데이터는 `collectors/opportunities/`(Python)가 만들고, 화면은 `data/opportunities.json`과 `data/ingest-status.json`만 읽습니다.
 
----
-
-## 카테고리 & 데이터 소스
-
-| 탭 | 소스 | 방식 |
-|---|---|---|
-| 📅 행사 | 수동 관리 (`data/events.json`) | 직접 편집 |
-| 📰 뉴스 | AI Times · TechCrunch AI · VentureBeat AI RSS | 자동 수집 |
-| 📄 논문 | arXiv 공식 API (cs.AI / cs.LG / cs.CL) | 자동 수집 |
-| 💼 채용 | 원티드 · RemoteOK | 자동 수집 |
-| 🛠 도구 | HuggingFace Papers/Models · GitHub | 자동 수집 |
+이전의 5개 카테고리(행사·뉴스·논문·채용·도구) 다크 대시보드는 전면 개편으로 대체되었습니다. `ai-events.html`과 `data/events.json` 외 카테고리 JSON, `collectors/collect_{news,papers,jobs,tools}.py`는 **보관만 하고 새 화면·자동 수집에서는 쓰지 않습니다**.
 
 ---
 
-## 🚀 GitHub Pages 배포 (원타임 설정)
+## 화면 기능
+
+- 유형 탭(전체·행사·공모전·해커톤, 실제 건수), 검색(제목·주최·태그·설명), 진행 상태·참가 방식 필터, 정렬(마감 / 개최일 / 최근 확인)
+- 목록 ↔ 월별 달력. 달력은 마감(●)과 개최 시작(◆)을 따로 표시하고 일요일 시작. 일정 미정 항목은 건수만 안내하고 목록에서 확인
+- 상세 패널(네이티브 `<dialog>`): 마감·개최·자격·참가비·상금·마지막 확인·출처 링크. Esc/닫기 후 원래 위치로 포커스 복귀
+- 내 저장(브라우저 localStorage). 데이터에서 사라진 저장 id는 지우지 않고 건수와 안내를 표시
+- 마감 임박 레일(최대 5건), 출처 상태(성공/확인 실패/접근 제한 + 마지막 성공 확인 시각)
+- 필터는 URL query 우선 → localStorage → 기본값. 잘못된 값은 기본값으로 복구
+
+### 날짜·상태 규칙
+
+기준 시간대는 Asia/Seoul. 정확한 `deadlineAt`은 절대 시각으로 비교하고 서울 날짜로 환산해 표시합니다(예: 10/26 17:00 EDT → 10/27 06:00 KST). 날짜만 있는 마감은 서울 당일 끝까지 유효하며 "마감 시간 확인 필요"를 붙입니다. 판정 순서는 `docs/spec.md` §3, 구현은 `assets/status.mjs`. 마감일을 모르는 행사가 개최 전이면 "모집중"이 아니라 "예정"입니다.
+
+---
+
+## 설치
+
+실행 기준은 Node 24, Python 3.11입니다. 화면(`index.html`)은 의존성이 없고, Python은 수집기와 테스트에만 씁니다.
+
+```powershell
+# Windows PowerShell
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -r requirements.txt
+```
 
 ```bash
-# 1. GitHub에 새 레포 생성 (Public, README 없이)
-
-# 2. 로컬에서 push
-cd C:\Users\caring\AI-DATA-STORAGE
-git remote add origin https://github.com/<USERNAME>/ai-data-storage.git
-git push -u origin master
+# POSIX (macOS/Linux)
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
 ```
 
-```
-3. GitHub 레포 Settings → Actions → General
-   → Workflow permissions → "Read and write permissions" ✓
+이하 명령은 Windows 기준(`.venv/Scripts/python.exe`)이며, POSIX에서는 `.venv/bin/python`으로 바꿉니다.
 
-4. Settings → Pages
-   → Source: Deploy from a branch
-   → Branch: master / root → Save
+## 로컬 실행
 
-5. 완료: https://<USERNAME>.github.io/ai-data-storage/
-```
-
----
-
-## 💻 로컬 실행
-
-`fetch()`는 `file://` 프로토콜에서 동작하지 않으므로 로컬 서버가 필요합니다.
+`fetch()`와 ES modules는 `file://`에서 동작하지 않으므로 HTTP 서버가 필요합니다.
 
 ```bash
-cd C:\Users\caring\AI-DATA-STORAGE
-python -m http.server 8000
-# 브라우저: http://localhost:8000
+.venv/Scripts/python.exe -m http.server 8012 --bind 127.0.0.1
+# 브라우저: http://127.0.0.1:8012/
 ```
 
----
+검증용 query (**localhost / 127.0.0.1에서만** 작동, GitHub Pages 등 다른 호스트에서는 무시하고 '검증 모드' 배너를 띄우지 않음):
 
-## 🔄 자동 업데이트
-
-GitHub Actions가 **월 · 수 · 금 09:00 KST** 자동 실행:
-
-1. `collectors/` 스크립트 4개 실행
-2. `data/*.json` 갱신
-3. 변경 사항 자동 커밋 & 푸시
-
-**수동 실행:** GitHub → Actions → "AI 데이터 자동 업데이트" → **Run workflow**
-
----
-
-## 📝 행사 직접 추가 / 수정
-
-`data/events.json`의 `items` 배열에 아래 형식으로 추가:
-
-```json
-{
-  "id": 6,
-  "type": "conference",
-  "typeLabel": "컨퍼런스",
-  "name": "행사 이름",
-  "subtitle": "부제목",
-  "startDate": "2026-09-01",
-  "endDate": "2026-09-03",
-  "time": "10:00 – 18:00",
-  "venue": "서울 코엑스",
-  "price": "무료",
-  "priceClass": "price-free",
-  "desc": "행사 상세 설명.",
-  "site": "https://example.com",
-  "siteLabel": "공식 사이트",
-  "pendingInfo": null
-}
-```
-
-| 필드 | 허용 값 |
+| query | 효과 |
 |---|---|
-| `type` | `"expo"` \| `"conference"` \| `"seminar"` |
-| `priceClass` | `"price-free"` \| `"price-paid"` \| `"price-tbd"` |
-| `startDate` / `endDate` | `"YYYY-MM-DD"` 또는 `null` |
-| `pendingInfo` | 미확정 안내 문자열 또는 `null` |
+| `?debug=loading` / `error` / `empty` | 로딩·오류·빈 데이터 상태에서 멈춤 |
+| `?now=2026-10-02T03:00:00Z` | 현재 시각 고정 |
 
----
+localhost에서는 `window.__boardDebug`(상태·항목 읽기, `setPhase()`)도 노출됩니다. 비밀값은 담지 않습니다.
 
-## 📁 파일 구조
-
-```
-AI-DATA-STORAGE/
-├── .github/
-│   └── workflows/
-│       └── update.yml        ← 자동 수집 스케줄 (월·수·금 09:00 KST)
-├── collectors/
-│   ├── collect_news.py       ← RSS 뉴스 수집
-│   ├── collect_papers.py     ← arXiv REST API
-│   ├── collect_jobs.py       ← 원티드 + RemoteOK
-│   └── collect_tools.py      ← HuggingFace + GitHub
-├── data/
-│   ├── events.json           ← 행사 (수동 관리, Actions가 건드리지 않음)
-│   ├── news.json             ← 뉴스 (자동 갱신)
-│   ├── papers.json           ← 논문 (자동 갱신)
-│   ├── jobs.json             ← 채용 (자동 갱신)
-│   └── tools.json            ← 도구 (자동 갱신)
-├── index.html                ← 대시보드 UI (정적 HTML)
-├── requirements.txt          ← Python 의존성
-├── README.md                 ← 이 파일
-├── CLAUDE.md                 ← Claude Code 개발 가이드
-└── DESIGN.md                 ← 디자인 시스템 문서
-```
-
----
-
-## 🔧 로컬 수집기 직접 실행
+## 테스트
 
 ```bash
-pip install -r requirements.txt
-
-python collectors/collect_news.py
-python collectors/collect_papers.py
-python collectors/collect_jobs.py
-python collectors/collect_tools.py
+node --test tests/*.test.mjs                                  # 날짜·상태·필터·정렬·달력·저장·데이터 로더·알림 (의존성 없음)
+.venv/Scripts/python.exe -m unittest discover -s tests -v     # 수집 파이프라인
+.venv/Scripts/python.exe collectors/collect_events.py --offline   # 네트워크 없이 기존 JSON·curated 계약만 검증
+.venv/Scripts/python.exe collectors/collect_events.py --dry-run   # 실제 조회, 파일은 쓰지 않음
 ```
+
+### 브라우저 검사(선택)
+
+실제 화면 동작(필터·상세 모달 포커스·달력·반응형·로딩/오류/빈 상태)을 확인하는 Playwright 스크립트입니다. 필수 의존성이 아니라서 `requirements.txt`에는 없으며, **설치된 Microsoft Edge**가 필요합니다(Playwright 브라우저 다운로드 없음, 매번 새 headless profile 사용). 위 HTTP 서버(8012)가 떠 있어야 합니다.
+
+```bash
+.venv/Scripts/python.exe -m pip install playwright==1.63.0
+.venv/Scripts/python.exe tools/browser_check.py     # POSIX: python tools/browser_check.py
+```
+
+캡처는 `docs/evidence/*.png`, 결과는 `docs/evidence/browser-check.json`에 저장됩니다.
 
 ---
 
-## 참고사항
+## 구조
 
-- `data/events.json`은 유일하게 **수동 관리** 파일입니다. GitHub Actions가 수정하지 않습니다.
-- 나머지 4개 JSON은 수집기가 **덮어씁니다**. 직접 수정해도 다음 Actions 실행 시 초기화됩니다.
-- 아카이브용 원본 파일은 `ai-events.html`로 보존되어 있습니다.
+```
+index.html            진입 HTML (마크업 골격만)
+tokens.css            색·글꼴·간격·반경·모션 토큰 (유일한 값 원천)
+assets/styles/*.css   base · layout · components · calendar · detail
+assets/*.mjs          순수 로직(브라우저·Node 공용): time, status, filters, calendar, storage, data, notices, format, safe-url, debug
+assets/*.js           DOM 모듈: app(진입), render, view-list/calendar/urgent/detail/controls, item-parts, dom, icons
+tests/*.test.mjs      node:test 회귀 테스트 (+ helpers.mjs 합성 데이터)
+design-lab/           디자인 비교 시안과 토큰 조절판 (메인에서 링크하지 않는 개발 자료)
+data/opportunities.json, data/ingest-status.json   수집기가 쓰는 화면용 데이터
+collectors/opportunities/   수집 파이프라인
+```
+
+보안 원칙: 외부 문자열은 `textContent`/text node로만 넣고 HTML 문자열을 주입하지 않습니다. 외부 링크는 userinfo 없는 `https`만 허용하며 `target="_blank" rel="noopener noreferrer"`로 엽니다.
+
+## 자동 업데이트
+
+`.github/workflows/update.yml`은 하루 1회(09:00 KST) 초안이며, 저장소 변수 `ENABLE_OPPORTUNITY_UPDATES == 'true'`일 때만 실행됩니다(기본 비활성). 변수를 켜는 것은 별도 승인 사항입니다. 수집기가 전부 실패(종료 코드 1)해도 tests 통과 후 `ingest-status.json`의 실패 상태를 commit하고 마지막에 workflow를 실패로 표시합니다. 기존 데이터 손상(종료 코드 2)은 commit하지 않습니다.
+
+## 배포
+
+GitHub Pages(Deploy from a branch, root). `design-lab/`도 root에 포함되므로 "배포 제외"가 아닙니다 — 링크하지 않을 뿐입니다. 완전히 제외하려면 이후 Pages artifact workflow가 필요합니다.

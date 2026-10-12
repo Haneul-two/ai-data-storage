@@ -1,0 +1,45 @@
+{
+  "lastAttemptAt": "2026-10-02T08:13:17Z",
+  "sources": [
+    {
+      "id": "devpost",
+      "name": "Devpost",
+      "url": "https://devpost.com/hackathons",
+      "status": "ok",
+      "checkedAt": "2026-10-02T08:13:17Z",
+      "lastSuccessAt": "2026-10-02T08:13:17Z",
+      "itemCount": 6,
+      "message": "후보 8건 중 7건 사용, 한국 참가 근거/마감 미확인 1건 제외, 조회 실패 0건 (계약 위반으로 1건 제외)"
+    },
+    {
+      "id": "dacon",
+      "name": "DACON",
+      "url": "https://dacon.io/competitions",
+      "status": "ok",
+      "checkedAt": "2026-10-02T08:13:17Z",
+      "lastSuccessAt": "2026-10-02T08:13:17Z",
+      "itemCount": 11,
+      "message": "AI 관련 후보 14건 중 14건 사용, 상세 조회 실패 0건"
+    },
+    {
+      "id": "wevity",
+      "name": "위비티",
+      "url": "https://www.wevity.com/?c=find&s=1&gub=1",
+      "status": "ok",
+      "checkedAt": "2026-10-02T08:13:17Z",
+      "lastSuccessAt": "2026-10-02T08:13:17Z",
+      "itemCount": 15,
+      "message": "AI 관련 후보 15건 중 15건 사용, 상세 조회 실패 0건"
+    },
+    {
+      "id": "aisummit",
+      "name": "AI Summit Seoul",
+      "url": "https://www.aisummit.co.kr/",
+      "status": "ok",
+      "checkedAt": "2026-10-02T08:13:17Z",
+      "lastSuccessAt": "2026-10-02T08:13:17Z",
+      "itemCount": 1,
+      "message": "노출 행사 2027년 2027-08-11~2027-08-13. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용"
+    }
+  ]
+}

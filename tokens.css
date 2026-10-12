@@ -1,0 +1,80 @@
+/* Hallmark · macrostructure: Workbench (filter rail / list / deadline rail) · tone: modern-minimal · anchor hue: cobalt 225 */
+/* Hallmark · pre-emit critique (자체 평가): P4 H4 E4 S4 R5 V3 — 모든 색·글꼴·간격·반경은 이 파일의 토큰만 참조한다 */
+
+:root {
+  /* color — Cobalt */
+  --color-page: #f5f7fb;
+  --color-surface: #ffffff;
+  --color-ink: #18243a;
+  --color-muted: #61708a;
+  --color-accent: #245de8;
+  --color-accent-strong: #1b49c0;
+  --color-accent-soft: #eaf0ff;
+  --color-line: #dce3ef;
+  --color-line-strong: #c3cee0;
+  --color-focus: #245de8;
+  --color-on-accent: #ffffff;
+  --color-scrim: rgba(24, 36, 58, 0.45);
+
+  /* status */
+  --color-open: #0b6b44;
+  --color-open-soft: #e4f5ec;
+  --color-upcoming: #8a5a00;
+  --color-upcoming-soft: #fff3d9;
+  --color-closed: #5a6579;
+  --color-closed-soft: #eceff5;
+  --color-warn: #8a5a00;
+  --color-warn-soft: #fff6e0;
+  --color-danger: #a8261c;
+  --color-danger-soft: #fdecea;
+
+  /* kind (유형 pill) */
+  --color-kind-event: #245de8;
+  --color-kind-event-soft: #eaf0ff;
+  --color-kind-contest: #0a6b68;
+  --color-kind-contest-soft: #e2f4f2;
+  --color-kind-hackathon: #8a4b00;
+  --color-kind-hackathon-soft: #fff0dc;
+
+  /* type */
+  --font-body: 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
+  --font-display: 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-title: 2.5rem;
+  --text-title-mobile: 1.75rem;
+  --leading-body: 1.6;
+  --leading-tight: 1.25;
+
+  /* space (4px 기반) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* shape */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --border: 1px solid var(--color-line);
+
+  /* layout */
+  --layout-max: 1400px;
+  --rail-filter: 220px;
+  --rail-urgent: 260px;
+  --tap: 44px;
+  --control: 40px;
+  --gutter: 32px;
+  --gutter-mobile: 16px;
+
+  /* motion */
+  --transition: 140ms ease;
+}

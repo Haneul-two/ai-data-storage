@@ -1,0 +1,37 @@
+최종 통합 검사 — 2026-10-02 (2차 리뷰 4건 보완 후, 로컬)
+
+## RED (수정 전, 새 회귀만 실행)
+Node tests/notices.test.mjs: 새 회귀 3건 중 로딩/오류 2건 FAIL (phase 미전달로 '미수집' 알림 노출)
+Python SecondReviewTest + WorkflowTest: 7건 중 5건 FAIL
+  - test_standard_exceptions_need_real_country_list ("(see rules)"가 True)
+  - test_curated_rejects_contract_violations
+  - test_fresh_source_result_must_meet_contract
+  - test_collector_failure_does_not_block_status_commit
+  - test_corrupt_data_exit_2_never_commits
+
+## GREEN
+.venv/Scripts/python.exe -m unittest discover -s tests -v   -> Ran 97 tests ... OK (이전 90, +7)
+node --test tests/*.test.mjs                                 -> tests 106, pass 106, fail 0 (이전 103, +3)
+.venv/Scripts/python.exe collectors/collect_events.py --offline
+  -> [offline] opportunities 항목 33, curated 항목 0 — 계약 검증 통과
+.venv/Scripts/python.exe tools/browser_check.py              -> {"passed": 35, "total": 35, "errors": []}
+  (Playwright 1.63.0, installed Edge, 새 headless profile, 서버 127.0.0.1:8012 root 소유 — 종료하지 않음)
+
+## 캡처 확인 (docs/evidence, 17:17 갱신분을 직접 열어 봄)
+loading-mobile.png: 스켈레톤만 보이고 '아직 수집된 기회가 없어요' 알림 없음
+error-mobile.png: '데이터를 불러오지 못했어요' 카드만 보이고 '미수집' 알림 없음
+그 외 갱신 캡처는 root가 직접 열어 확인 완료: after-desktop/mobile, detail-desktop, calendar-desktop/mobile, empty-desktop/mobile, error-desktop/mobile, loading-desktop/mobile, no-results-desktop (총 12개)
+
+## 데이터
+data/opportunities.json: 전체 33건 = 활성23(모집중21 + 예정2) + 종료9 + 마감1. (종료일 기준 아직 끝나지 않음 24건은 화면 활성 수가 아니다.)
+출처 4곳 모두 ok: devpost 6 / dacon 11 / wevity 15 / aisummit 1.
+이번 작업에서 네트워크 수집은 재실행하지 않았다(직전 작업의 실제 수집 결과 사용). 원본 events/news/papers/tools/jobs JSON 미수정.
+
+## root 독립 재실행 완료 (docs/evidence/codex-final-review.md)
+Python 97 OK, Node 106 exit0, offline 33/0 계약 통과, browser 35/35 오류0, 모든 항목 meets_contract True,
+연락처 마스킹 누락 0, git diff --check exit0. 기존 데이터 diff 없음, 기존 checkout의 CLAUDE.md 사용자 수정 보존.
+로컬 성능 1회: navigation 436.8ms, 리소스 28개(128432 bytes), DOM 897, 외부 리소스 0. 배포/실기기 성능은 미확인.
+
+## 실행하지 않은 것 (승인 대상/불가)
+원격 push, workflow 원격 실행(scheduled/dispatch), ENABLE_OPPORTUNITY_UPDATES 활성화, GitHub Pages 운영 확인, 커밋.
+update.yml 변경은 YAML 텍스트 회귀(WorkflowTest)로만 확인했고 Actions 러너에서 실행해 본 적이 없다.

@@ -1,0 +1,209 @@
+{
+  "checks": [
+    {
+      "name": "실데이터 표시",
+      "passed": true,
+      "detail": 23
+    },
+    {
+      "name": "데스크톱 CSS 너비",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "검색 결과와 입력 포커스",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "검색 URL 반영",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "검색 초기화",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "저장 재접속 유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "저장 목록 필터",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 초기 포커스",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 Tab 포커스 유지(배경 요소 진입 없음)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 Tab 포커스 유지(배경 요소 진입 없음)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 Tab 포커스 유지(배경 요소 진입 없음)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 Tab 포커스 유지(배경 요소 진입 없음)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 Tab 포커스 유지(배경 요소 진입 없음)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 Tab 포커스 유지(배경 요소 진입 없음)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 Tab 포커스 유지(배경 요소 진입 없음)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 Tab 포커스 유지(배경 요소 진입 없음)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "외부 링크 보안 속성",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상세 닫기 포커스 복귀",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "달력 월 이동",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "달력 오늘 복귀",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320px 가로 넘침",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "outside": []
+      }
+    },
+    {
+      "name": "375px 가로 넘침",
+      "passed": true,
+      "detail": {
+        "width": 375,
+        "scroll": 375,
+        "outside": []
+      }
+    },
+    {
+      "name": "390px 가로 넘침",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "outside": []
+      }
+    },
+    {
+      "name": "모바일 필터 펼침",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "모바일 터치 목표",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "모바일 달력 넘침",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "414px 가로 넘침",
+      "passed": true,
+      "detail": {
+        "width": 414,
+        "scroll": 414,
+        "outside": []
+      }
+    },
+    {
+      "name": "768px 가로 넘침",
+      "passed": true,
+      "detail": {
+        "width": 768,
+        "scroll": 768,
+        "outside": []
+      }
+    },
+    {
+      "name": "1024px 가로 넘침",
+      "passed": true,
+      "detail": {
+        "width": 1024,
+        "scroll": 1024,
+        "outside": []
+      }
+    },
+    {
+      "name": "1440px 가로 넘침",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "outside": []
+      }
+    },
+    {
+      "name": "empty 상태",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "error 상태",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "loading 상태",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "운영 호스트 debug 무시",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "브라우저 콘솔 오류 없음",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 35,
+  "errors": []
+}

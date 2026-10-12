@@ -1,0 +1,11 @@
+{
+  "_fixture": {"url": "https://devpost.com/api/hackathons?search=AI&status%5B%5D=open&challenge_type%5B%5D=online&page=1", "capturedAt": "2026-10-02T07:50:00Z", "note": "Row 1 is a trimmed real row; rows 2-5 are synthetic variants (invite-only, non-AI theme, offline, closed)."},
+  "hackathons": [
+    {"id": 30447, "title": "Build With AI: Basics", "displayed_location": {"icon": "globe", "location": "Online"}, "open_state": "open", "url": "https://learn-ai-basics.devpost.com/", "submission_period_dates": "Sep 22 - Oct 26, 2026", "themes": [{"id": 6, "name": "Machine Learning/AI"}, {"id": 23, "name": "Beginner Friendly"}], "prize_amount": "$<span data-currency-value>2,500</span>", "organization_name": "Devpost", "invite_only": false},
+    {"id": 90001, "title": "Synthetic Invite Only AI Jam", "displayed_location": {"icon": "globe", "location": "Online"}, "open_state": "open", "url": "https://invite-only-jam.devpost.com/", "submission_period_dates": "Oct 01 - Oct 30, 2026", "themes": [{"id": 6, "name": "Machine Learning/AI"}], "prize_amount": "", "organization_name": "Synthetic Org", "invite_only": true},
+    {"id": 90002, "title": "Synthetic Web Hackathon", "displayed_location": {"icon": "globe", "location": "Online"}, "open_state": "open", "url": "https://web-hack.devpost.com/", "submission_period_dates": "Oct 01 - Oct 30, 2026", "themes": [{"id": 25, "name": "Web"}], "prize_amount": "", "organization_name": "Synthetic Org", "invite_only": false},
+    {"id": 90003, "title": "Synthetic Paris AI Hackathon", "displayed_location": {"icon": "map-marker", "location": "Paris, France"}, "open_state": "open", "url": "https://paris-ai.devpost.com/", "submission_period_dates": "Oct 01 - Oct 30, 2026", "themes": [{"id": 6, "name": "Machine Learning/AI"}], "prize_amount": "", "organization_name": "Synthetic Org", "invite_only": false},
+    {"id": 90004, "title": "Synthetic Closed AI Hackathon", "displayed_location": {"icon": "globe", "location": "Online"}, "open_state": "ended", "url": "https://closed-ai.devpost.com/", "submission_period_dates": "Jan 01 - Jan 30, 2026", "themes": [{"id": 6, "name": "Machine Learning/AI"}], "prize_amount": "", "organization_name": "Synthetic Org", "invite_only": false}
+  ],
+  "meta": {"total_count": 5, "per_page": 9}
+}
