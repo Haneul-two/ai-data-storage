@@ -1,4 +1,4 @@
-// 오른쪽 레일: 마감 임박 + 출처 상태
+// 필터 아래 접힌 details: 마감 임박 + 출처 상태
 import { h, replaceChildrenOf } from './dom.js';
 import { getStatus, getDeadline } from './status.mjs';
 import { ddayLabel, formatDateShort, formatSeoulDateTime, SOURCE_STATUS_LABELS } from './format.mjs';
@@ -18,14 +18,14 @@ export function urgentItems(items, now) {
 export function renderUrgent(container, { items, now, onOpen }) {
   const list = urgentItems(items, now);
   replaceChildrenOf(container,
-    h('h2', {}, '마감 임박'),
+    h('summary', {}, h('span', {}, '마감 임박'), h('span', { class: 'rail-count' }, `${list.length}건`)),
     list.length
       ? h('ul', { class: 'urgent-list' }, list.map(({ item, deadline }) => h('li', {},
         h('button', { type: 'button', class: 'urgent-item', onclick: (e) => onOpen(item.id, e.currentTarget) },
           h('span', { class: 'urgent-title' }, item.title),
           h('span', { class: 'urgent-when' }, `${ddayLabel(deadline.daysLeft)} · ${formatDateShort(deadline.date)}`),
-          deadline.needsTimeCheck ? h('span', { class: 'urgent-when date-note' }, '마감 시간 확인 필요') : null))))
-      : h('p', { class: 'side-empty' }, '마감일이 확인된 모집중 기회가 아직 없어요.'));
+          deadline.needsTimeCheck ? h('span', { class: 'urgent-when date-note' }, '마감 시각 미확인') : null))))
+      : h('p', { class: 'side-empty' }, '마감일이 확인된 모집중 기회가 없습니다.'));
 }
 
 function sourceRow(source) {
@@ -42,11 +42,11 @@ function sourceRow(source) {
 export function renderSources(container, { data }) {
   const sources = data.sources || [];
   const note = data.updatedAt ? `마지막 갱신 ${formatSeoulDateTime(data.updatedAt)}` : '갱신 기록 없음';
-  const missing = data.statusLoaded ? null : h('p', { class: 'side-empty' }, '최근 수집 상태를 불러오지 못했어요. 저장된 출처 정보를 보여줘요.');
+  const missing = data.statusLoaded ? null : h('p', { class: 'side-empty' }, '최근 수집 상태를 불러오지 못했습니다. 저장된 출처 정보를 표시합니다.');
   replaceChildrenOf(container,
-    h('summary', { class: 'source-summary' }, h('span', {}, '출처 상태'), h('span', { class: 'source-summary-note' }, note)),
+    h('summary', {}, h('span', {}, '출처 상태'), h('span', { class: 'source-summary-note' }, note)),
     missing,
     sources.length
       ? h('ul', { class: 'source-list' }, sources.map(sourceRow))
-      : h('p', { class: 'side-empty' }, '등록된 출처 정보가 없어요.'));
+      : h('p', { class: 'side-empty' }, '등록된 출처 정보가 없습니다.'));
 }

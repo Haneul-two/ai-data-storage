@@ -1,0 +1,104 @@
+<!doctype html>
+<!-- AI Radar 밀도·구조 4안. 실제 data/opportunities.json 행을 렌더한다(서버 필요: http://127.0.0.1:8012/design-lab/radar/options.html). 시안 전용 1파일 — 선택안 A가 본 구현이다. -->
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Radar — 밀도·구조 4안</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../../tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--color-page);color:var(--color-ink);font-family:var(--font-body);line-height:var(--leading-body)}
+main{max-width:var(--layout-max);margin:0 auto;padding:var(--space-5) var(--gutter)}
+h1{font-size:var(--text-title);margin:0 0 var(--space-2)}
+.note{color:var(--color-muted);font-size:var(--text-sm);margin:0 0 var(--space-4);max-width:80ch}
+.tabs{display:inline-flex;padding:2px;background:var(--color-surface);border:var(--border);border-radius:var(--radius-md);margin-bottom:var(--space-3);flex-wrap:wrap}
+.tabs button{border:0;background:none;padding:0 var(--space-4);min-height:var(--control);border-radius:var(--radius-sm);font:inherit;font-weight:700;color:var(--color-muted);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--color-accent);color:var(--color-on-accent)}
+.why{margin:0 0 var(--space-3);font-size:var(--text-sm)}
+.board{background:var(--color-surface);border:var(--border);border-radius:var(--radius-md);overflow:hidden}
+.r{display:grid;gap:var(--space-4);padding:var(--space-3) var(--space-4);border-top:var(--border);align-items:start;font-size:var(--text-sm);font-variant-numeric:tabular-nums}
+.r:first-child{border-top:0}
+.t{font-weight:700;overflow-wrap:anywhere}.m{color:var(--color-muted);font-size:var(--text-xs)}
+.soon{color:var(--color-urgent);font-weight:800}
+/* A 연속 비교 행 (선택) */
+.A .r{grid-template-columns:minmax(0,1fr) 168px 168px 232px;min-height:96px}
+/* B 2줄 밀집 표 */
+.B .r{grid-template-columns:minmax(0,1fr) 150px 120px;padding:var(--space-2) var(--space-4);min-height:56px;align-items:center}
+.B .x{display:none}
+/* C 마감일 그룹 */
+.C .g{padding:var(--space-2) var(--space-4);background:var(--color-page);border-top:1px solid var(--color-line-strong);font-weight:700;font-size:var(--text-xs);color:var(--color-muted)}
+.C .r{grid-template-columns:minmax(0,1fr) 232px}
+.C .d{display:none}
+/* D 목록 + 상세 분할 */
+.D{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr)}
+.D .list{border-right:var(--border)}.D .r{grid-template-columns:minmax(0,1fr) auto;cursor:pointer}
+.D .r[aria-current=true]{background:var(--color-accent-soft)}
+.D .x,.D .d3{display:none}
+.pane{padding:var(--space-5);display:grid;gap:var(--space-3);align-content:start}
+.pane h2{margin:0;font-size:var(--text-xl)}
+@media(max-width:759px){.A .r,.B .r,.C .r{grid-template-columns:1fr}.D{grid-template-columns:1fr}}
+</style></head><body><main>
+<h1>AI Radar — 밀도·구조 4안</h1>
+<p class="note">같은 토큰, 같은 실제 데이터(노출 판정 <code>assets/visibility.mjs</code> 통과 항목만). 색은 무채색 + forest 단일 강조 + 임박 마감 amber뿐입니다. 이 페이지의 전환 버튼은 시안 비교용이며 제품 화면에는 없습니다.</p>
+<div class="tabs" id="tabs" role="group" aria-label="시안"></div>
+<p class="why" id="why"></p>
+<div id="out"></div>
+</main>
+<script type="module">
+import { isListed } from '../../assets/visibility.mjs';
+import { getDeadline } from '../../assets/status.mjs';
+import { deadlineText, formatRange, ddayLabel } from '../../assets/format.mjs';
+import { sortItems } from '../../assets/filters.mjs';
+
+const VARIANTS = {
+  A: ['A 연속 비교 행 (채택)', '열 머리글 정렬(제목·마감·개최·참가/상금). 한 행에서 비교에 필요한 값이 모두 보이고 스캔 방향이 하나다. 행 96px 안팎.'],
+  B: ['B 2줄 밀집 표', '한 화면에 가장 많이 보이지만 개최·참가 조건이 상세로 밀려 비교가 끊긴다. 마감 임박순 훑기 전용에는 좋음.'],
+  C: ['C 마감일 그룹', '날짜 머리글 아래 묶음. "이번 주 마감"에 강하나 정렬이 마감순에 고정되고 개최일·최근 확인 정렬과 맞지 않는다.'],
+  D: ['D 목록 + 상세 분할', '맥락 유지에는 좋지만 1440 미만과 모바일에서 두 단을 유지할 수 없고 비교 열이 줄어든다. 상세 드로어가 같은 효과를 낸다.'],
+};
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; };
+const now = Date.now();
+const doc = await (await fetch('../../data/opportunities.json')).json();
+const items = sortItems(doc.items.filter((i) => isListed(i, now)), 'deadline', now).slice(0, 8);
+
+function parts(item) {
+  const raw = getDeadline(item, now);
+  const t = deadlineText(raw);
+  const dd = raw.kind === 'none' ? '' : ddayLabel(raw.daysLeft);
+  return { dd, soon: raw.kind !== 'none' && raw.daysLeft <= 7, dl: raw.kind === 'none' ? '마감 미확인' : t.primary, note: t.note,
+    when: formatRange(item.startDate, item.endDate) || '개최 미확인', terms: [item.mode, item.region].filter(Boolean).join(' · ') };
+}
+function row(item, variant) {
+  const p = parts(item);
+  const r = el('div', 'r');
+  const title = el('div'); title.append(el('div', 't', item.title), el('div', 'm', [item.organizer, item.sourceName].filter(Boolean).join(' · ')));
+  const dl = el('div', 'd'); const dd = el('span', p.soon ? 'soon' : '', p.dd); dl.append(dd, document.createTextNode(` ${p.dl}`)); if (p.note) dl.append(el('div', 'm', p.note));
+  const when = el('div', 'd d3', p.when);
+  const terms = el('div', 'x', `${p.terms}${item.prize ? ` · 상금 ${item.prize}` : ''}`);
+  if (variant === 'A') r.append(title, dl, when, terms);
+  else if (variant === 'B') { r.append(title, dl, el('div', 'm', p.terms)); }
+  else if (variant === 'C') r.append(title, terms);
+  else r.append(title, dl);
+  return r;
+}
+function render(variant) {
+  const out = document.getElementById('out'); out.replaceChildren();
+  document.getElementById('why').textContent = VARIANTS[variant][1];
+  const board = el('div', `board ${variant}`);
+  if (variant === 'C') {
+    let last = null;
+    for (const item of items) { const raw = getDeadline(item, now); const key = raw.date || '마감 미확인'; if (key !== last) { board.append(el('div', 'g', key)); last = key; } board.append(row(item, 'C')); }
+  } else if (variant === 'D') {
+    const list = el('div', 'list'); const pane = el('div', 'pane');
+    const show = (item, rowEl) => { list.querySelectorAll('.r').forEach((r) => r.removeAttribute('aria-current')); rowEl.setAttribute('aria-current', 'true'); const p = parts(item); pane.replaceChildren(el('h2', '', item.title), el('div', 'm', item.organizer || ''), el('div', '', `마감 ${p.dl}`), el('div', '', `개최 ${p.when}`), el('div', '', p.terms)); };
+    items.forEach((item, i) => { const r = row(item, 'D'); r.addEventListener('click', () => show(item, r)); list.append(r); if (i === 0) show(item, r); });
+    board.append(list, pane);
+  } else {
+    if (variant === 'A') { const head = el('div', 'r m'); ['제목 · 주최', '마감', '개최', '참가 · 상금'].forEach((x) => head.append(el('div', '', x))); board.append(head); }
+    items.forEach((item) => board.append(row(item, variant)));
+  }
+  out.append(board);
+  document.querySelectorAll('#tabs button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === variant)));
+}
+for (const [key, [label]] of Object.entries(VARIANTS)) { const b = el('button', '', label); b.type = 'button'; b.dataset.v = key; b.addEventListener('click', () => render(key)); document.getElementById('tabs').append(b); }
+render('A');
+</script></body></html>

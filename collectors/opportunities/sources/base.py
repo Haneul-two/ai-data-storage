@@ -11,6 +11,7 @@ SOURCE_LIMIT = 20  # 소스당 하드 상한
 class CollectResult:
     items: list = field(default_factory=list)
     message: str = ""
+    closed_source_urls: list = field(default_factory=list)  # 목록에서 마감으로 확인한 AI 관련 행의 상세 URL(저장 안 함, 기존 항목 마감 전파용)
 
 
 @dataclass

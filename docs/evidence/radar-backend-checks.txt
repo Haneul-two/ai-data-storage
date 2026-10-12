@@ -1,0 +1,44 @@
+AI Radar 수집 확장 — 백엔드 검증 기록 (2026-10-12, 브랜치 feat/ai-radar-redesign)
+실행: .venv/Scripts/python.exe (Python 3.11). 네트워크가 필요한 것은 [3]뿐이다.
+
+[1] RED — 구현 전, 신규 테스트 파일만 실행: python -m unittest tests.test_radar_sources
+Ran 62 tests in 0.541s
+FAILED (failures=5, errors=51)
+(원인: 새 소스 모듈 없음, 허용 호스트 없음, prefix 읽기 없음, 교차 출처 중복·Devpost 페이지·위비티 종료 필터 미구현)
+실패/오류 테스트 56건 중 FAIL 줄만 아래에 둔다(나머지는 ImportError/AttributeError):
+FAIL: test_new_exact_hosts_only (tests.test_radar_sources.AllowListTest.test_new_exact_hosts_only)
+FAIL: test_event_start_date_also_identifies_a_duplicate (tests.test_radar_sources.CrossSourceDedupeTest.test_event_start_date_also_identifies_a_duplicate)
+FAIL: test_leading_organizer_tag_and_spacing_do_not_hide_duplicates (tests.test_radar_sources.CrossSourceDedupeTest.test_leading_organizer_tag_and_spacing_do_not_hide_duplicates)
+FAIL: test_same_title_and_deadline_from_two_sources_keeps_earlier_source (tests.test_radar_sources.CrossSourceDedupeTest.test_same_title_and_deadline_from_two_sources_keeps_earlier_source)
+FAIL: test_ten_sources_existing_priority_first (tests.test_radar_sources.RegistryTest.test_ten_sources_existing_priority_first)
+
+[2] GREEN — 구현 후 전체: python -m unittest discover -s tests -v
+Ran 206 tests in 1.613s
+
+OK
+신규 tests/test_radar_sources.py 64건 모두 통과(RED 때는 62건이었고, 이후 Dev-Event 제목 규칙 1건·콘테스트코리아 지역명 공백 1건을 구현과 함께 추가했다 — 이 2건은 RED를 따로 남기지 못했다)(-v 출력의 test_radar_sources 행 64개).
+기존 테스트 변경 2곳(의미 보존): test_expanded_sources.RegistryTest(소스 7→10, 기존 7개가 앞 우선순위를 유지하는지 단언),
+test_opportunities.FakeFetcher.get(url, prefix_bytes=None) 시그니처.
+python collectors/collect_events.py --offline → [offline] opportunities 항목 110, curated 항목 0 — 계약 검증 통과 (data/*.json 미수정)
+
+[3] 실제 공개 출처 dry-run(파일 미수정): python collectors/collect_events.py --dry-run
+start 2026-10-12T06:42:10Z
+[dry-run(파일 미수정)] 갱신=True 항목=164 시각=2026-10-12T06:42:11Z
+  - devpost: ok 항목 10 · 후보 15건 중 10건 사용, 한국 참가 근거/마감 미확인 5건 제외, 조회 실패 0건
+  - dacon: ok 항목 10 · AI 관련 후보 14건 중 14건 사용, 상세 조회 실패 0건
+  - wevity: ok 항목 90 · AI 관련 후보 53건(5페이지까지 확인) 중 53건 사용, 상세 조회 실패 0건
+  - aisummit: ok 항목 1 · 노출 행사 2027년 2027-08-11~2027-08-13. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용
+  - seocho: ok 항목 1 · 행사 2026-10-17~2026-10-17 서초문화예술공원
+  - nvidia: ok 항목 1 · 행사 2026-11-09~2026-11-10 코엑스, 등록 버튼 있음
+  - aifesta: ok 항목 1 · 행사 2026-10-06~2026-10-08 코엑스 C홀
+  - contestkorea: ok 항목 25 · AI 활성 후보 54건(14페이지 확인) 중 54건 사용, 상세 조회·검증 실패 0건
+  - devevent: ok 항목 24 · 월별 항목 97건 중 AI 진행·예정 33건 사용(비AI·지난 행사·날짜 미확정·비HTTPS 링크 제외 64건)
+  - aiexpo: ok 항목 1 · 행사 2027-04-14~2027-04-16 서울 COEX 1층 Hall A
+
+real	4m33.425s
+user	0m0.000s
+sys	0m0.031s
+end 2026-10-12T06:46:44Z
+요청 수(robots 포함, 계측 run 1회): 257건. 약 4분 30초(요청 간격 1초 포함).
+
+[독립 리뷰 후 보완 2026-10-12] python -m unittest discover -s tests: Ran 214 tests OK (오프라인 fixture, 전체 수집 미실행). wevity/contestkorea 조기중단 제거, 교차출처 중복 키 태그 보존, Dev-Event sourceUrl·해외 오프라인 제외, Fetcher prefix 검증.

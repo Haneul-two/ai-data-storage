@@ -113,3 +113,19 @@
 - Codex 최종 실측: `gh` Pages builds/latest status built, commit `5b822b96069f121f4144944af46979be1c639988`. 공개 JSON updatedAt 2026-10-12T05:29:11Z·110건이 로컬 운영 최신과 일치. 공개 browser 8검사 재통과·pageErrors 0. 증거 `docs/evidence/expanded-deployment.json`.
 - 미확인: 예약 시각(cron)에 자동 발생한 첫 실행, aisummit 크기 상한 초과 해소.
 - 이전 '로컬 109건·7곳 ok' 기록은 로컬 수집 당시 사실이며 운영 수집 결과와 다르다(위 항목이 현재).
+
+## 2026-10-12 — AI Radar 재설계·신청 마감 제외·수집 10출처 확장 (로컬 구현·검증 완료, 원격 배포 전)
+
+- 요청과 확정 조건: AI 티가 나지 않는 전문가용 탐색 디자인(이름 AI Radar), 오늘 기준 신청 마감 제외, 수집 범위 확장. 사용자 확정 — 국내 + 한국 참가 해외 온라인, 공개 출처만·차단 우회 없음·운영 LLM 토큰 0, 한국 현재 시각에 확정 마감이 지난 항목은 탐색에서 제외, 시각 없는 마감(dateOnly)은 한국 당일 끝까지, 마감 미확정 미래 항목은 '확인 필요'로 유지. 사양 `docs/ai-radar-spec.md`, 디자인 `design.md`·`design-lab/radar/DESIGN.md`.
+- 역할: GPT 6.1 SOL(max)가 웹 검색·설계·독립 캡처 리뷰, Claude가 기존 파일 구현, Codex가 독립 코드·실측 리뷰. 브랜치 `feat/ai-radar-redesign`.
+- 화면: 비교 목록(데스크톱 열 머리글, 모바일 한 행에 마감·개최·참가·저장), 마감 임박·출처 상태는 필터 하단 접이식. 마감·종료는 `assets/visibility.mjs` 한 곳에서 판정해 목록·검색·건수·저장·달력·임박·상세 진입에서 제외한다(데이터 보관은 유지, 마감·종료 필터 삭제, 옛 `status=closed`는 all로 변환).
+- 수집: 출처 7→10곳(콘테스트코리아·Dev-Event·AI EXPO KOREA). 위비티는 종료 행 상세를 읽지 않음(상세 약 89→53건), Devpost는 meta 기준 최대 5페이지·상세 20건, 교차 출처 중복 제거, aisummit은 앞 1MB 읽기. 한도·요청 수는 `docs/sources.md`. workflow 수집 step 18분·job 25분(기존 15분). 요청 수 해석: 소스별 상한 합계 약 250요청이지만 단정적 hard 상한은 아니고, 실측 1회가 robots·redirect 포함 257요청 약 4분 30초였다. 러너 지연을 요청당 3초로 가정해도 250요청 ≈ 12.5분이라 step 18분 안에 들게 잡았다.
+- 사양 대비 독립 점검 6건(audit §0): 종료 행 상세 낭비, Devpost 14건 누락(1페이지만 읽음), 연도 포함 힌트 URL과 연도 하드코딩 금지 충돌, aisummit 2.5MB 로컬 미재현, 출처 간 중복, 개인 참가 판정 한계. 반려한 후보와 사유는 `docs/evidence/radar-source-audit.md` 참조(긴 목록은 여기 복제하지 않음).
+- 검증(루트 독립 실행): Python **214 OK**, Node **118 pass**, 실제 Edge `tools/check_radar_ui.py` **98/98**·pageerror 0, 폭 320/375/390/414/768/1024/1280/1440 가로 넘침 0. 신규 `tests/test_radar_sources.py` RED 62건 중 56건 실패 → GREEN(`radar-backend-checks.txt`). 마감 직전/정각/직후, dateOnly 한국 날 경계, 옛 status=closed→all, 저장 id 보존, 달력·상세·임박·건수 일치, 열린 상세가 마감 시 닫힘, 키보드, 축소 모션, 오류/로딩/빈 상태 확인. 증거 `docs/evidence/radar-*.txt`·`radar-*.png`.
+- 독립 리뷰 보완: wevity/contestkorea의 "현재 페이지가 전부 closed면 중단" 조기 중단 제거(등록순이라 뒷페이지에 활성이 있을 수 있음), 교차 출처 중복 키에서 의미 있는 `[Track1]` 같은 태그 보존(같은 날짜 Track1/Track2 보존), Dev-Event `sourceUrl`을 읽은 README 월 anchor로 고정·해외 오프라인 제외, Fetcher prefix 읽기 `1..maxBytes` 검증.
+- 실수 기록:
+  - 태블릿 폭 결함: 가로 넘침 0이었지만 768px에서 첫 행 제목 폭이 30px(저장 버튼 36px)이었다. 수정 후 768 **710px**, 모바일 390 160→**332px**. 폭별 제목 최소 폭을 실측하는 검사로 바꿨다(`radar-layout-red.txt` RED).
+  - Windows 일회성 Python 결과 경로에 `/tmp/radar`를 써서 수집 검증 중 경로 오류가 1회 났다(작업 기록 기준, repo 로그에는 남지 않음). 실제 Windows Temp 절대 경로를 쓴다.
+  - 온오프믹스 robots 선검증 누락 1회: 조사 중 robots 전문을 끝까지 읽기 전에 목록 페이지를 1회 요청했다. robots는 `Disallow: /`(우리 UA 비허용)였다. 그 응답은 폐기했고 저장·구현에 쓰지 않았으며 이후 요청·구현은 없다. 운영 Fetcher는 요청 전 robots 검사를 계속 강제한다.
+- **미완료·미검증**: ① root의 최종 실수집(`data/opportunities.json` 갱신 1회)이 진행 중이다 — 완료 후 이 파일에 건수·출처별 상태를 추가한다. 예전 dry-run의 164건(이전 183건 표기 포함)은 현재 데이터가 아니다. ② 원격 재설계 배포는 아직 진행하지 않았다(이미 승인된 운영 업데이트 범위로 진행 예정, 배포 완료는 확인 전까지 단정하지 않음). ③ 예약 cron 자동 첫 실행 미검증. ④ 실제 10출처 모두 ok는 이전 dry-run 1회의 결과일 뿐이며 원격에서 모두 ok라는 보장은 없다. ⑤ aisummit 2.5MB 초과 해소 여부는 운영 수집으로만 확인된다.
+- 규칙집 추가: `AGENTS.md`·`CLAUDE.md` '사고에서 얻은 규칙'에 제목 최소 폭 실측, 현재 페이지 closed만으로 중단 금지, Windows Temp 절대 경로(AGENTS만). 스킬 규칙 폴더는 수정하지 않았다(코드·회귀에 이미 반영된 교훈).

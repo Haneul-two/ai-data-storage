@@ -95,3 +95,11 @@ test('로딩/오류 중에도 브라우저 저장 경고는 유지한다', () =>
 test('ready 빈 데이터에서만 미수집 안내가 나온다', () => {
   assert.deepEqual(idsOf(base({ phase: 'ready', data: EMPTY })), ['no-data']);
 });
+
+test('열려 있던 상세가 마감되어 닫히면 제목과 함께 안내한다', () => {
+  const n = buildNotices(base({ expiredTitle: 'Vision Hack' })).find((x) => x.id === 'detail-expired');
+  assert.ok(n);
+  assert.match(n.text, /Vision Hack/);
+  assert.match(n.text, /제외/);
+  assert.equal(buildNotices(base()).some((x) => x.id === 'detail-expired'), false);
+});

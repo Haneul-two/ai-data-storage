@@ -12,6 +12,9 @@ SOURCE_ID = "aisummit"
 SOURCE_NAME = "AI Summit Seoul"
 SOURCE_URL = "https://www.aisummit.co.kr/"
 MAIN_URL = "https://www.aisummit.co.kr/"
+# 운영 환경에서 이 페이지 응답이 2.5MB 상한을 넘은 적이 있다(로컬 실측은 약 0.6MB, 기간·장소는 앞 25~30% 안). 상한을 올리지 않고
+# 앞쪽 1MB만 읽는다. 그 안에서 연도 포함 기간을 못 찾으면 추측하지 않고 오류로 둔다.
+PREFIX_BYTES = 1_000_000
 _RANGE_RE = re.compile(r"(20\d\d)\s*\.\s*(\d{1,2})\s*\.\s*(\d{1,2})\s*\([^)]*\)\s*[-–~]\s*(\d{1,2})\s*\.\s*(\d{1,2})")
 _PART_RE = r"{label}\s*(20\d\d)\s*년\s*(\d{{1,2}})\s*월\s*(\d{{1,2}})\s*-\s*(\d{{1,2}})\s*일"
 
@@ -67,7 +70,8 @@ def _span(part):
 
 
 def collect(fetcher, now, max_items=None):
-    data = parse_main(fetcher.get(MAIN_URL).text)
+    page = fetcher.get(MAIN_URL, prefix_bytes=PREFIX_BYTES)
+    data = parse_main(page.text)
     year = data["startDate"][:4]
     notes = [f"{label} {_span(part)}" for label, part in (("컨퍼런스", data["conference"]), ("EXPO", data["expo"])) if part]
     venue = data["venue"] or ""
@@ -82,6 +86,8 @@ def collect(fetcher, now, max_items=None):
         "sourceStatus": "unknown",
     }
     message = f"노출 행사 {year}년 {data['startDate']}~{data['endDate']}"
+    if getattr(page, "truncated", False):
+        message += f". 큰 응답이라 앞 {PREFIX_BYTES // 1000}KB만 읽음"
     if data["titleYear"] and data["titleYear"] != year:
         message += f". 경고: 페이지 title은 {data['titleYear']}년 표기, 본문 노출 행사({year}) 기준 사용"
     return CollectResult([raw], message)

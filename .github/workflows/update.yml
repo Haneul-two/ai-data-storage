@@ -14,7 +14,7 @@ jobs:
   update:
     if: vars.ENABLE_OPPORTUNITY_UPDATES == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     permissions:
       contents: write
       pages: write
@@ -35,6 +35,7 @@ jobs:
       - name: Collect opportunities
         id: collect
         continue-on-error: true
+        timeout-minutes: 18 # 요청 간격 1초 × 최대 약 250요청(소스 상한 합) + 지연 여유. 초과해도 tests·commit 단계가 남도록 job보다 짧게 둔다
         run: |
           set +e
           python collectors/collect_events.py

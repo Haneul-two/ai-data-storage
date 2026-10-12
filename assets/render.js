@@ -2,10 +2,11 @@
 import { h, replaceChildrenOf } from './dom.js';
 import { icon } from './icons.js';
 import { applyFilters, selectItems, facetCounts, activeFilterCount, DEFAULT_FILTERS } from './filters.mjs';
-import { orphanIds } from './storage.mjs';
+import { listedSavedCount, hiddenSavedIds } from './visibility.mjs';
+import { getStatus, getDeadline } from './status.mjs';
 import { buildNotices } from './notices.mjs';
 import { seoulDate } from './time.mjs';
-import { formatDateKo } from './format.mjs';
+import { formatDateKo, formatSeoulDateTime } from './format.mjs';
 import { createChoiceGroup } from './view-controls.js';
 import { renderRows } from './view-list.js';
 import { renderCalendar } from './view-calendar.js';
@@ -18,11 +19,10 @@ const KIND_OPTIONS = [
   { value: 'hackathon', label: '해커톤' },
 ];
 const STATUS_OPTIONS = [
-  { value: 'all', label: '전체 (종료 제외)' },
+  { value: 'all', label: '전체' },
   { value: 'open', label: '모집중' },
   { value: 'upcoming', label: '예정' },
   { value: 'ongoing', label: '진행중' },
-  { value: 'closed', label: '마감·종료' },
   { value: 'unknown', label: '일정 미정' },
 ];
 const MODE_OPTIONS = [
@@ -50,9 +50,10 @@ export function createRenderer(els, actions) {
   };
   els.viewSwitch.append(viewButtons.list, viewButtons.calendar);
 
-  const savedCount = h('span', { class: 'btn-count' }, '0');
-  els.savedToggle.append(icon('bookmark'), h('span', { class: 'btn-text' }, '내 저장'), savedCount);
-  els.savedToggle.addEventListener('click', () => actions.setFilters({ saved: !els.savedToggle.matches('[aria-pressed="true"]') }));
+  const savedCount = h('span', { class: 'nav-count' }, '0');
+  els.savedToggle.append('저장', savedCount);
+  els.savedToggle.addEventListener('click', () => actions.setFilters({ saved: true }));
+  els.navExplore.addEventListener('click', () => actions.setFilters({ saved: false }));
 
   const refreshIcon = icon('refresh');
   const refreshLabel = h('span', { class: 'btn-text' }, '새로고침');
@@ -72,6 +73,9 @@ export function createRenderer(els, actions) {
   let noticeSignature = '';
   let sideKey = null;
   let lastSideData = null;
+  let contentSignature = null;
+  let dataVersion = 0;
+  let lastDataRef = null;
 
   function renderNotices(state, orphanCount) {
     const notices = buildNotices({
@@ -83,6 +87,7 @@ export function createRenderer(els, actions) {
       refreshFailed: state.refreshFailed,
       orphanCount,
       savedView: state.filters.saved,
+      expiredTitle: state.expiredTitle,
     });
     const signature = JSON.stringify(notices);
     if (signature === noticeSignature) return;
@@ -95,23 +100,25 @@ export function createRenderer(els, actions) {
     els.content.setAttribute('aria-busy', state.phase === 'loading' ? 'true' : 'false');
     if (state.phase === 'loading') {
       replaceChildrenOf(els.content, h('div', { class: 'skeleton', role: 'status' },
-        h('span', { class: 'visually-hidden' }, '기회 목록을 불러오는 중이에요'),
+        h('span', { class: 'visually-hidden' }, '기회 목록을 불러오는 중입니다'),
         [1, 2, 3].map(() => h('div', { class: 'skeleton-row', 'aria-hidden': 'true' }))));
       return;
     }
     if (state.phase === 'error') {
-      replaceChildrenOf(els.content, stateCard('데이터를 불러오지 못했어요', '네트워크 상태를 확인한 뒤 다시 시도해 주세요. 이전에 저장한 항목은 그대로 남아 있어요.', { label: '다시 시도', onClick: () => actions.retry() }));
+      replaceChildrenOf(els.content, stateCard('데이터를 불러오지 못했습니다', '네트워크 상태를 확인한 뒤 다시 시도하세요. 저장한 항목은 그대로 유지됩니다.', { label: '다시 시도', onClick: () => actions.retry() }));
       return;
     }
     if (items.length === 0) {
-      replaceChildrenOf(els.content, stateCard('아직 표시할 기회가 없어요', '수집된 AI 행사·공모전·해커톤이 생기면 이곳에 나타나요.', null));
+      replaceChildrenOf(els.content, stateCard('표시할 기회가 없습니다', '수집된 AI 공모전·해커톤·행사가 생기면 이곳에 표시됩니다.', null));
       return;
     }
     if (selected.length === 0) {
       if (filters.saved && state.savedIds.length === 0) {
-        replaceChildrenOf(els.content, stateCard('아직 저장한 기회가 없어요', '목록에서 저장 버튼을 누르면 이곳에 모여요.', { label: '전체 목록 보기', onClick: () => actions.setFilters({ saved: false }) }));
+        replaceChildrenOf(els.content, stateCard('저장한 기회가 없습니다', '목록에서 저장을 누르면 이곳에 모입니다.', { label: '전체 목록 보기', onClick: () => actions.setFilters({ saved: false }) }));
+      } else if (filters.saved && !filters.q && ctx.savedHidden > 0) {
+        replaceChildrenOf(els.content, stateCard('표시할 저장 항목이 없습니다', '신청이 마감된 저장 항목은 목록에서 제외됩니다. 저장 기록은 보관됩니다.', { label: '전체 목록 보기', onClick: () => actions.setFilters({ saved: false }) }));
       } else {
-        replaceChildrenOf(els.content, stateCard('조건에 맞는 기회가 없어요', '검색어나 필터를 바꾸거나 초기화해 보세요.', { label: '필터 초기화', onClick: () => actions.resetFilters() }));
+        replaceChildrenOf(els.content, stateCard('조건에 맞는 기회가 없습니다', '검색어나 필터를 바꾸거나 초기화하세요.', { label: '필터 초기화', onClick: () => actions.resetFilters() }));
       }
       return;
     }
@@ -132,9 +139,37 @@ export function createRenderer(els, actions) {
   // 저장 토글처럼 목록을 다시 그리지 않아야 하는 갱신(포커스 유지): 저장 개수와 알림만 바꾼다
   function renderSaveChrome(state) {
     const items = state.data ? state.data.items : [];
-    const orphans = state.phase === 'ready' ? orphanIds(state.savedIds, items) : [];
-    savedCount.textContent = String(state.savedIds.length - orphans.length);
-    renderNotices(state, orphans.length);
+    const now = state.now();
+    const hidden = state.phase === 'ready' ? hiddenSavedIds(state.savedIds, items, now) : [];
+    savedCount.textContent = String(state.phase === 'ready' ? listedSavedCount(state.savedIds, items, now) : state.savedIds.length);
+    renderNotices(state, hidden.length);
+    return hidden.length;
+  }
+
+  // 시간만 흘러 바뀐 것이 없으면 목록을 다시 그리지 않는다(키보드 포커스 유지)
+  function contentKey(state, selected, savedHidden, now) {
+    if (state.data !== lastDataRef) { lastDataRef = state.data; dataVersion += 1; }
+    const rows = selected.map((item) => {
+      const d = getDeadline(item, now);
+      return [item.id, getStatus(item, now), d.daysLeft, d.date];
+    });
+    const { filters } = state;
+    return JSON.stringify([state.phase, dataVersion, filters.view, filters.view === 'calendar' ? state.month : null,
+      filters.saved, filters.q, filters.saved ? state.savedIds.length : 0, savedHidden, rows]);
+  }
+
+  function drawContent(state, selected, items, ctx) {
+    const key = contentKey(state, selected, ctx.savedHidden, ctx.now);
+    if (key === contentSignature) return;
+    contentSignature = key;
+    const active = document.activeElement;
+    const focusKey = active && els.content.contains(active) ? (active.dataset.openId ? ['openId', active.dataset.openId] : active.dataset.saveId ? ['saveId', active.dataset.saveId] : null) : null;
+    renderContent(state, selected, items, ctx);
+    if (focusKey && document.activeElement === document.body) {
+      const attr = focusKey[0] === 'openId' ? 'data-open-id' : 'data-save-id';
+      const target = els.content.querySelector(`[${attr}="${CSS.escape(focusKey[1])}"]`);
+      if (target) target.focus();
+    }
   }
 
   function render(state) {
@@ -146,6 +181,7 @@ export function createRenderer(els, actions) {
       now,
       sources: state.data ? state.data.sources : [],
       savedSet,
+      savedHidden: 0,
       onOpen: actions.openDetail,
       onToggleSave: actions.toggleSave,
     };
@@ -156,10 +192,11 @@ export function createRenderer(els, actions) {
     const counts = facetCounts(ready ? items : [], filters, filterCtx);
     const activeTotal = ready ? applyFilters(items, { ...DEFAULT_FILTERS }, filterCtx).length : 0;
 
-    els.today.textContent = `${formatDateKo(seoulDate(now))} · 서울 기준`;
-    els.introCount.textContent = ready ? `· 진행 중인 기회 ${activeTotal}건` : '';
+    els.today.textContent = `${formatDateKo(seoulDate(now))} 서울 기준`;
+    els.updated.textContent = state.data && state.data.updatedAt ? `데이터 갱신 ${formatSeoulDateTime(state.data.updatedAt).slice(5)}` : '';
+    els.navExplore.setAttribute('aria-pressed', String(!filters.saved));
     els.savedToggle.setAttribute('aria-pressed', String(filters.saved));
-    els.savedToggle.setAttribute('aria-label', filters.saved ? '내 저장 목록 보기 끄기' : '내 저장 목록만 보기');
+    els.savedToggle.setAttribute('aria-label', '저장한 기회만 보기');
 
     refreshLabel.textContent = state.refreshing ? '불러오는 중' : '새로고침';
     els.refresh.disabled = state.refreshing;
@@ -176,20 +213,25 @@ export function createRenderer(els, actions) {
     viewButtons.list.setAttribute('aria-pressed', String(filters.view === 'list'));
     viewButtons.calendar.setAttribute('aria-pressed', String(filters.view === 'calendar'));
 
+    ctx.savedHidden = renderSaveChrome(state) || 0;
+
     if (state.phase === 'loading') els.resultCount.textContent = '불러오는 중…';
     else if (state.phase === 'error') els.resultCount.textContent = '';
-    else els.resultCount.textContent = `${filters.saved ? '내 저장 ' : '조건에 맞는 기회 '}${selected.length}건`;
+    else {
+      els.resultCount.textContent = filters.saved ? `저장 ${selected.length}건` : `${selected.length}건`;
+      if (!filters.saved && selected.length !== activeTotal) els.resultCount.append(h('small', {}, ` / 진행 중 ${activeTotal}건`));
+    }
 
-    renderSaveChrome(state);
-    renderContent(state, selected, items, ctx);
+    drawContent(state, selected, items, ctx);
 
-    const key = `${state.data ? state.data.updatedAt : 'none'}|${state.data ? state.data.items.length : 0}|${seoulDate(now)}|${state.phase}`;
+    const minute = Math.floor(now / 60000);
+    const key = `${state.data ? state.data.updatedAt : 'none'}|${state.data ? state.data.items.length : 0}|${minute}|${state.phase}`;
     if (key !== sideKey || state.data !== lastSideData) {
       sideKey = key;
       lastSideData = state.data;
       renderUrgent(els.urgent, { items: ready ? items : [], now, onOpen: actions.openDetail });
       if (state.data) renderSources(els.sources, { data: state.data });
-      else replaceChildrenOf(els.sources, h('summary', { class: 'source-summary' }, '출처 상태'));
+      else replaceChildrenOf(els.sources, h('summary', {}, '출처 상태'));
     }
   }
 

@@ -14,8 +14,8 @@ test('기본 필터는 마감·종료 항목을 제외한다', () => {
   assert.deepEqual(run({}).sort(), ['a', 'c', 'd', 'f']);
 });
 
-test('상태 필터: 마감·종료는 closed+ended를 함께 보여준다', () => {
-  assert.deepEqual(run({ status: 'closed' }).sort(), ['b', 'e']);
+test('예전 closed 상태 값은 all로 바뀌어 마감·종료를 다시 보여주지 않는다', () => {
+  assert.deepEqual(run(sanitizeFilters({ status: 'closed' })).sort(), ['a', 'c', 'd', 'f']);
 });
 
 test('상태 필터: open / upcoming / ongoing / unknown', () => {
@@ -35,7 +35,8 @@ test('검색: 제목·주최·태그·설명을 대소문자 구분 없이 찾�
   assert.deepEqual(run({ q: 'vision' }), ['a']);
   assert.deepEqual(run({ q: 'beta corp' }), ['c']);
   assert.deepEqual(run({ q: 'IMAGE MODELS' }), ['a']);
-  assert.deepEqual(run({ q: '공모전', status: 'closed' }), ['b']);
+  assert.deepEqual(run({ q: '공모전' }), []); // 마감된 b(데이터 공모전)는 검색에서도 빠진다
+  assert.deepEqual(run({ q: '대회' }), ['d']);
 });
 
 test('검색: 여러 단어는 모두 포함해야 한다', () => {
@@ -46,7 +47,7 @@ test('검색: 여러 단어는 모두 포함해야 한다', () => {
 test('저장 필터는 같은 조건에서 저장 id만 남긴다', () => {
   const c = { now: NOW, savedIds: new Set(['a', 'b', 'zzz']) };
   assert.deepEqual(run({ saved: true }, c), ['a']);
-  assert.deepEqual(run({ saved: true, status: 'closed' }, c), ['b']);
+  assert.deepEqual(run({ saved: true, status: 'open' }, c), ['a']); // 저장했어도 마감된 b는 목록에 나오지 않는다
 });
 
 test('facetCounts: 각 탭 수는 그 탭을 눌렀을 때의 결과 수와 같다', () => {
@@ -56,7 +57,7 @@ test('facetCounts: 각 탭 수는 그 탭을 눌렀을 때의 결과 수와 같�
     const n = applyFilters(sampleItems(), { ...filters, kind }, ctx).length;
     assert.equal(counts.kind[kind], n, `kind=${kind}`);
   }
-  for (const status of ['all', 'open', 'upcoming', 'ongoing', 'closed', 'unknown']) {
+  for (const status of ['all', 'open', 'upcoming', 'ongoing', 'unknown']) {
     const n = applyFilters(sampleItems(), { ...filters, status }, ctx).length;
     assert.equal(counts.status[status], n, `status=${status}`);
   }
@@ -72,9 +73,9 @@ test('sanitizeFilters: 잘못된 값은 기본값으로 되돌린다', () => {
 });
 
 test('sanitizeFilters: 유효한 값은 유지하고 q는 다듬어 길이를 제한한다', () => {
-  const f = sanitizeFilters({ kind: 'contest', status: 'closed', mode: 'hybrid', sort: 'start', view: 'calendar', saved: true, q: '  ' + 'x'.repeat(300) + ' ' });
+  const f = sanitizeFilters({ kind: 'contest', status: 'open', mode: 'hybrid', sort: 'start', view: 'calendar', saved: true, q: '  ' + 'x'.repeat(300) + ' ' });
   assert.equal(f.kind, 'contest');
-  assert.equal(f.status, 'closed');
+  assert.equal(f.status, 'open');
   assert.equal(f.sort, 'start');
   assert.equal(f.view, 'calendar');
   assert.equal(f.saved, true);

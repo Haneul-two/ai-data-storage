@@ -1,0 +1,104 @@
+/* 비교 목록 행. 데스크톱: 제목·마감·개최·참가/상금·저장 열 정렬. 모바일: 같은 정보를 세로로 */
+.opp-board { background: var(--color-surface); border: var(--border); border-radius: var(--radius-md); }
+.opp-head, .opp {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 168px 168px 232px 84px;
+  grid-template-areas: "title deadline when terms save";
+  gap: var(--space-4);
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+.opp-head {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-line-strong);
+  background: var(--color-page);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+.opp-head span:nth-child(1) { grid-area: title; }
+.opp-head span:nth-child(2) { grid-area: deadline; }
+.opp-head span:nth-child(3) { grid-area: when; }
+.opp-head span:nth-child(4) { grid-area: terms; }
+
+.opp-list > li + li { border-top: var(--border); }
+.opp {
+  position: relative;
+  min-height: 96px;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  align-items: start;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+.opp:hover { background: var(--color-page); }
+
+.opp-title-cell { grid-area: title; min-width: 0; display: grid; gap: 2px; }
+.opp-title { font-size: var(--text-md); line-height: var(--leading-tight); }
+.opp-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-ink);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+.opp-open:hover { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+.opp-org { color: var(--color-muted); font-size: var(--text-sm); overflow-wrap: anywhere; }
+.opp-src { color: var(--color-muted); font-size: var(--text-xs); overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.opp-src > * + *::before { content: ' · '; font-weight: 400; color: var(--color-muted); }
+
+.opp-cell { min-width: 0; font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
+.opp-cell.is-deadline { grid-area: deadline; }
+.opp-cell.is-when { grid-area: when; }
+.opp-cell.is-terms { grid-area: terms; }
+.opp-cell dd { display: grid; gap: 2px; overflow-wrap: anywhere; }
+.opp-cell dt { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.line-muted { color: var(--color-muted); font-size: var(--text-xs); }
+.date-note { font-size: var(--text-xs); font-weight: 400; color: var(--color-muted); }
+.date-unknown { color: var(--color-muted); }
+.opp-save { grid-area: save; justify-self: end; }
+.opp-save .btn { min-height: calc(var(--control) - 4px); }
+
+/* 960~1279: 필터는 접히고 목록이 전폭. 참가/상금을 둘째 줄로 */
+@media (max-width: 1279px) {
+  .opp-head, .opp {
+    grid-template-columns: minmax(0, 1fr) 150px 150px 84px;
+    grid-template-areas: "title deadline when save" "terms terms terms terms";
+  }
+  .opp-head span:nth-child(4) { display: none; }
+  .opp-cell.is-terms dd { grid-auto-flow: column; justify-content: start; gap: var(--space-4); }
+}
+
+/* 960 미만: 라벨 있는 세로 행. 제목은 전체 너비, 저장은 맨 아래 별도 행 */
+@media (max-width: 959px) {
+  .opp-head { display: none; }
+  .opp {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "title title" "deadline when" "terms terms" "save save";
+    gap: var(--space-2) var(--space-3);
+    padding: var(--space-3);
+  }
+  .opp-cell.is-terms dd { grid-auto-flow: row; }
+  .opp-save { justify-self: stretch; }
+  .opp-save .btn { width: 100%; }
+  .opp-cell dt {
+    position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto;
+    color: var(--color-muted); font-size: var(--text-xs); font-weight: 700;
+  }
+  .opp-cell { padding-top: var(--space-2); border-top: var(--border); }
+  .opp-save .btn { min-height: var(--tap); }
+  .opp-open { display: flex; align-items: center; min-height: var(--tap); }
+}
+
+/* 좁은 폰(360 미만): 마감·개최도 한 줄씩 */
+@media (max-width: 359px) {
+  .opp { grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "deadline" "when" "terms" "save"; }
+}

@@ -9,8 +9,10 @@ import { monthOf, shiftMonth } from './calendar.mjs';
 import { createRenderer } from './render.js';
 import { createDetail } from './view-detail.js';
 import { syncSaveButton } from './item-parts.js';
+import { isListed } from './visibility.mjs';
 
 const SEARCH_DEBOUNCE_MS = 200;
+const CLOCK_TICK_MS = 15000; // 분 단위 마감 제외를 따라가기 위한 점검 주기
 const EMPTY_DATA = { items: [], dropped: 0, sources: [], updatedAt: null, lastAttemptAt: null, statusLoaded: true };
 
 const debug = parseDebug(location.search, location.hostname);
@@ -19,8 +21,8 @@ const storage = getStorage(window);
 
 const $ = (id) => document.getElementById(id);
 const els = {
-  debugBanner: $('debug-banner'), today: $('today'), savedToggle: $('saved-toggle'), refresh: $('refresh'),
-  introCount: $('intro-count'), searchField: $('search-field'), kindTabs: $('kind-tabs'), notices: $('notices'),
+  debugBanner: $('debug-banner'), today: $('today'), updated: $('updated'), navExplore: $('nav-explore'), savedToggle: $('saved-toggle'), refresh: $('refresh'),
+  searchField: $('search-field'), kindTabs: $('kind-tabs'), notices: $('notices'),
   rail: $('filter-rail'), railToggle: $('rail-toggle'), statusOptions: $('status-options'), modeOptions: $('mode-options'),
   resetFilters: $('reset-filters'), resultsHeading: $('results-heading'), resultCount: $('result-count'),
   sort: $('sort'), viewSwitch: $('view-switch'), content: $('content'), urgent: $('urgent'), sources: $('sources'),
@@ -36,6 +38,7 @@ const state = {
   saveFailure: null,
   refreshing: false,
   refreshFailed: false,
+  expiredTitle: null, // 열려 있던 상세가 마감으로 닫혔을 때 안내할 제목
   month: monthOf(getNow()),
   now: getNow,
 };
@@ -43,7 +46,7 @@ const state = {
 // ---- 검색 입력: 한 번만 만들고 다시 그리지 않는다(포커스·캐럿 유지) ----
 const searchInput = h('input', {
   id: 'q', type: 'search', class: 'search-input', autocomplete: 'off', maxlength: '100',
-  placeholder: '제목·주최·태그로 검색 (예: LLM, 해커톤)', value: state.filters.q,
+  placeholder: '제목·주최·태그 검색  예: LLM, 해커톤', value: state.filters.q,
 });
 els.searchField.append(icon('search'), searchInput);
 let searchTimer = null;
@@ -78,6 +81,7 @@ function setFilters(patch) {
 function resetFilters() {
   clearTimeout(searchTimer);
   searchInput.value = '';
+  state.expiredTitle = null;
   setFilters({ q: '', kind: 'all', status: 'all', mode: 'all', saved: false });
 }
 
@@ -117,8 +121,40 @@ const detail = createDetail({
 
 function openDetail(id, opener) {
   const item = state.data && state.data.items.find((i) => i.id === id);
-  if (item) detail.open(item, opener);
+  if (!item) return;
+  if (!isListed(item, getNow())) { // 화면을 그린 뒤 마감 시각이 지난 항목은 열지 않고 목록에서 뺀다
+    state.expiredTitle = item.title;
+    renderer.render(state);
+    return;
+  }
+  if (state.expiredTitle) { state.expiredTitle = null; renderer.renderSaveChrome(state); }
+  detail.open(item, opener);
 }
+
+// 열린 상세가 마감됐거나 데이터에서 사라졌으면 닫고 이유를 알린다
+function revalidateDetail() {
+  if (!detail.isOpen()) return;
+  const item = state.data && state.data.items.find((i) => i.id === detail.currentId());
+  if (item && isListed(item, getNow())) return;
+  state.expiredTitle = detail.currentTitle();
+  detail.close();
+  renderer.render(state);
+  if (document.activeElement === document.body) els.resultsHeading.focus();
+}
+
+// ---- 시간 경과: 렌더 뒤 마감 시각이 지나면 목록·건수·상세를 다시 맞춘다 ----
+let lastMinute = Math.floor(getNow() / 60000);
+function syncClock(force) {
+  const minute = Math.floor(getNow() / 60000);
+  if (!force && minute === lastMinute) return;
+  lastMinute = minute;
+  if (state.phase !== 'ready') return;
+  revalidateDetail();
+  renderer.render(state);
+}
+setInterval(() => { if (!document.hidden) syncClock(false); }, CLOCK_TICK_MS);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) syncClock(true); });
+window.addEventListener('focus', () => syncClock(true));
 
 // ---- 달력 ----
 function changeMonth(step) {
@@ -154,6 +190,7 @@ async function refresh() {
     state.data = await fetchData();
     state.phase = 'ready';
     state.refreshFailed = false;
+    state.expiredTitle = null;
   } catch {
     // 이미 불러온 데이터가 있으면 그대로 보여주고 실패를 알린다
     if (state.data) state.refreshFailed = true;
@@ -161,8 +198,12 @@ async function refresh() {
   }
   state.refreshing = false;
   renderer.render(state);
+  revalidateDetail();
   if (document.activeElement === document.body) els.refresh.focus();
 }
+
+// 예전 status=closed 링크는 주소창에서도 정리한다
+if (new URLSearchParams(location.search).get('status') === 'closed') syncUrl();
 
 const actions = { setFilters, resetFilters, toggleSave, openDetail, changeMonth, refresh, retry: load };
 const renderer = createRenderer(els, actions);
@@ -172,7 +213,7 @@ if (debug.enabled) {
   const parts = [];
   if (debug.mode) parts.push(`debug=${debug.mode}`);
   if (debug.nowMs !== null) parts.push(`now=${new Date(debug.nowMs).toISOString()}`);
-  els.debugBanner.textContent = `검증 모드 — ${parts.join(' · ')} (테스트용 화면이에요)`;
+  els.debugBanner.textContent = `검증 모드 — ${parts.join(' · ')} (테스트용 화면)`;
   els.debugBanner.hidden = false;
 }
 if (isLocalHost(location.hostname)) {

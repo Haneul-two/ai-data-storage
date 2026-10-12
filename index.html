@@ -1,23 +1,22 @@
 <!doctype html>
 <!--
-  Hallmark · macrostructure: Workbench (filter rail / opportunity list / deadline rail) · nav: compact top bar · footer: none (도구형 화면)
-  Hallmark · theme: Cobalt (custom) · tone: modern-minimal · anchor hue: cobalt 225 · enrichment: none — typography and data only
-  Hallmark · pre-emit critique (자체 평가, 5점 만점): Philosophy 4 · Hierarchy 4 · Execution 4 · Specificity 4 · Restraint 5 · Variety 3
-  Design stamp: AI 기회 보드 · 2026-10-02 · tokens.css가 유일한 색·글꼴·간격·반경 원천
+  AI Radar · 마감 중심 비교 목록 + 맥락 유지 상세. 상단 바 · 검색 · 유형/정렬/보기 · (필터 | 비교 목록).
+  tokens.css가 유일한 색·글꼴·간격·반경 원천이다. 구조와 근거는 design-lab/radar/DESIGN.md.
   이전 5개 카테고리 대시보드는 ai-events.html(보관본)과 data/*.json(미사용)로만 남아 있다.
 -->
 <html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI 기회 보드 — AI 행사·공모전·해커톤</title>
-  <meta name="description" content="국내 전체와 한국에서 참가 가능한 해외 온라인 AI 행사·공모전·해커톤을 마감일 기준으로 비교하는 개인용 보드">
-  <meta name="theme-color" content="#f5f7fb">
+  <title>AI Radar — AI 공모전·해커톤·행사 탐색</title>
+  <meta name="description" content="국내와 한국에서 참가할 수 있는 해외 온라인 AI 공모전·해커톤·행사를 마감일 기준으로 비교합니다.">
+  <meta name="theme-color" content="#f6f7f5">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="assets/styles/base.css">
   <link rel="stylesheet" href="assets/styles/layout.css">
   <link rel="stylesheet" href="assets/styles/components.css">
+  <link rel="stylesheet" href="assets/styles/rows.css">
   <link rel="stylesheet" href="assets/styles/calendar.css">
   <link rel="stylesheet" href="assets/styles/detail.css">
   <script type="module" src="assets/app.js"></script>
@@ -27,33 +26,37 @@
   <div id="debug-banner" class="debug-banner" role="status" hidden></div>
 
   <header class="topbar">
-    <div class="brand">
-      <span class="brand-ko">AI 기회 보드</span>
-      <span class="brand-en">AI Opportunity Board</span>
-    </div>
-    <span id="today" class="topbar-today"></span>
-    <div class="topbar-actions">
-      <button id="saved-toggle" type="button" class="btn" aria-pressed="false" aria-label="내 저장 목록만 보기"></button>
-      <button id="refresh" type="button" class="btn" aria-label="새로고침"></button>
-    </div>
+    <p class="brand"><span class="brand-ai">AI</span> Radar</p>
+    <nav class="topnav" aria-label="보기 전환">
+      <button id="nav-explore" type="button" class="nav-btn" aria-pressed="true">탐색</button>
+      <button id="saved-toggle" type="button" class="nav-btn" aria-pressed="false" aria-label="저장한 기회만 보기"></button>
+    </nav>
+    <p class="topbar-meta"><span id="today"></span><span id="updated"></span></p>
+    <button id="refresh" type="button" class="btn" aria-label="새로고침"></button>
   </header>
 
   <main class="page">
-    <section class="intro" aria-labelledby="page-title">
-      <h1 id="page-title">다음 도전을 찾아보세요</h1>
-      <p class="intro-scope">국내 전체와 한국에서 참가할 수 있는 해외 온라인 AI 행사·공모전·해커톤 <span id="intro-count" class="intro-count"></span></p>
+    <h1 class="visually-hidden">AI Radar — 한국에서 참가할 수 있는 AI 공모전·해커톤·행사</h1>
 
-      <div class="search">
-        <label class="visually-hidden" for="q">제목·주최·태그·설명 검색</label>
-        <div class="search-field" id="search-field"></div>
-      </div>
+    <div class="search">
+      <label class="visually-hidden" for="q">제목·주최·태그·설명 검색</label>
+      <div class="search-field" id="search-field"></div>
+    </div>
+    <p class="scope">국내 및 한국에서 참가할 수 있는 해외 온라인 AI 공모전·해커톤·행사 · 신청이 마감된 항목은 제외</p>
 
-      <div class="tabs">
-        <div id="kind-tabs" class="tab-group" role="group" aria-label="유형"></div>
-      </div>
-    </section>
+    <div id="notices" class="notices" aria-live="polite"></div>
 
-    <div id="notices" class="notices"></div>
+    <div class="toolbar">
+      <div id="kind-tabs" class="tab-group" role="group" aria-label="유형"></div>
+      <p id="result-count" class="toolbar-count" aria-live="polite"></p>
+      <label class="visually-hidden" for="sort">정렬</label>
+      <select id="sort" class="select">
+        <option value="deadline">마감 임박순</option>
+        <option value="start">개최일 빠른 순</option>
+        <option value="verified">최근 확인 순</option>
+      </select>
+      <div id="view-switch" class="view-switch" role="group" aria-label="보기 방식"></div>
+    </div>
 
     <div class="board">
       <aside id="filter-rail" class="filter-rail" aria-label="필터">
@@ -68,31 +71,18 @@
             <div id="mode-options" class="option-list" role="group" aria-labelledby="mode-heading"></div>
           </section>
           <button id="reset-filters" type="button" class="btn">필터 초기화</button>
+          <details id="urgent" class="rail-details"></details>
+          <details id="sources" class="rail-details"></details>
         </div>
       </aside>
 
       <section id="results" class="results" aria-labelledby="results-heading">
         <h2 id="results-heading" class="visually-hidden" tabindex="-1">기회 목록</h2>
-        <div class="toolbar">
-          <p id="result-count" class="toolbar-count" aria-live="polite"></p>
-          <label class="visually-hidden" for="sort">정렬</label>
-          <select id="sort" class="select">
-            <option value="deadline">마감 가까운 순</option>
-            <option value="start">개최일 빠른 순</option>
-            <option value="verified">최근 확인 순</option>
-          </select>
-          <div id="view-switch" class="view-switch" role="group" aria-label="보기 방식"></div>
-        </div>
         <div id="content" aria-busy="true"></div>
       </section>
-
-      <aside class="urgent-rail" aria-label="마감 임박과 출처 상태">
-        <section id="urgent" class="side-card"></section>
-        <details id="sources" class="side-card"></details>
-      </aside>
     </div>
   </main>
 
-  <noscript><p class="notice notice-warn">이 화면은 JavaScript가 필요해요.</p></noscript>
+  <noscript><p class="notice notice-warn">이 화면은 JavaScript가 필요합니다.</p></noscript>
 </body>
 </html>

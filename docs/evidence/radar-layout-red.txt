@@ -1,0 +1,23 @@
+수정 전(RED) 실측 — 폭별 첫 행(default, 한글 공모전 title) 검사. 이후 수정으로 GREEN 전환, 최종 결과는 radar-frontend-checks.txt
+FAIL 폭 320: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 125, 'orgWidth': 125, 'rowHeight': 371.9, 'scroll': 320}
+PASS 폭 320: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 320: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [209, 516, 44], 'title': [29, 516, 125, 62]}
+FAIL 폭 375: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 152, 'orgWidth': 152, 'rowHeight': 313, 'scroll': 375}
+PASS 폭 375: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 375: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [264, 464, 44], 'title': [29, 464, 152, 44]}
+FAIL 폭 390: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 160, 'orgWidth': 160, 'rowHeight': 313, 'scroll': 390}
+PASS 폭 390: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 390: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [279, 464, 44], 'title': [29, 464, 160, 44]}
+FAIL 폭 414: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 172, 'orgWidth': 172, 'rowHeight': 313, 'scroll': 414}
+PASS 폭 414: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 414: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [303, 443, 44], 'title': [29, 443, 172, 44]}
+FAIL 폭 768: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 30, 'orgWidth': 30, 'rowHeight': 633.5, 'scroll': 768}
+FAIL 폭 768: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': True, 'toggle': False, 'head': True, 'labeled': False}
+FAIL 폭 768: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [645, 441, 36], 'title': [265, 441, 30, 312]}
+PASS 폭 1024: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 286, 'orgWidth': 286, 'rowHeight': 126.3, 'scroll': 1024}
+FAIL 폭 1024: 레이아웃 모드(필터 접힘·머리글 열) | {'rail': True, 'toggle': False, 'head': True, 'labeled': False}
+PASS 폭 1280: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 258, 'orgWidth': 258, 'rowHeight': 110.1, 'scroll': 1280}
+PASS 폭 1280: 레이아웃 모드(필터 고정·머리글 열) | {'rail': True, 'toggle': False, 'head': True, 'labeled': False}
+PASS 폭 1440: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 338, 'orgWidth': 338, 'rowHeight': 96, 'scroll': 1440}
+PASS 폭 1440: 레이아웃 모드(필터 고정·머리글 열) | {'rail': True, 'toggle': False, 'head': True, 'labeled': False}
+passed 90/98

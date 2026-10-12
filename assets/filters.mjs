@@ -1,9 +1,10 @@
 // 필터 상태 정의·검증, 필터/정렬/건수 계산. 순수 함수.
 import { getStatus, getDeadline } from './status.mjs';
 import { toMs } from './time.mjs';
+import { isListed } from './visibility.mjs';
 
 export const KINDS = ['all', 'event', 'contest', 'hackathon'];
-export const STATUS_FILTERS = ['all', 'open', 'upcoming', 'ongoing', 'closed', 'unknown'];
+export const STATUS_FILTERS = ['all', 'open', 'upcoming', 'ongoing', 'unknown'];
 export const MODES = ['all', 'online', 'offline', 'hybrid'];
 export const SORTS = ['deadline', 'start', 'verified'];
 export const VIEWS = ['list', 'calendar'];
@@ -30,9 +31,7 @@ export function sanitizeFilters(raw) {
 }
 
 function matchesStatus(status, filter) {
-  if (filter === 'all') return status !== 'closed' && status !== 'ended';
-  if (filter === 'closed') return status === 'closed' || status === 'ended';
-  return status === filter;
+  return filter === 'all' || status === filter;
 }
 
 function searchText(item) {
@@ -53,6 +52,7 @@ function matchesQuery(item, q) {
 // skip: 건수 계산 시 제외할 차원 ('kind' | 'status' | 'mode')
 function filterWith(items, f, { now, savedIds }, skip) {
   return items.filter((item) => {
+    if (!isListed(item, now)) return false; // 어떤 차원을 건너뛰어도 마감 선필터는 풀리지 않는다
     if (skip !== 'kind' && f.kind !== 'all' && item.kind !== f.kind) return false;
     if (skip !== 'mode' && f.mode !== 'all' && item.mode !== f.mode) return false;
     if (skip !== 'status' && !matchesStatus(getStatus(item, now), f.status)) return false;

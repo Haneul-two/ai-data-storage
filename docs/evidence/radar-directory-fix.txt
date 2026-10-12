@@ -1,0 +1,60 @@
+DevEvent ID 결함 수정 증거 (2026-10-12)
+
+[원인]
+normalize_item의 id = stable_id(source_id, sourceUrl). DevEvent의 sourceUrl은 실제로 읽은 README의 월 anchor(예: .../Dev-Event#26년-10월)라 같은 월의 행사가
+모두 같은 ID가 되었고, pipeline._collect_source의 seen 중복 제거가 33건 중 1건만 남겼다. 실제 README의 행사 landing url 33개는 서로 모두 달랐다(중복 url 0).
+
+[수정]
+collectors/opportunities/rules.py normalize_item: id를 stable_id(source_id, url if source_id == "devevent" else sourceUrl)로. 다른 9출처 ID 규칙 불변, sourceUrl은 README anchor 그대로.
+같은 landing url의 서로 다른 회차는 실제 데이터에 없어(33개 모두 고유) 기간 구분은 넣지 않았다. 제목은 ID에 쓰지 않아 제목이 바뀌어도 ID 유지.
+
+[RED] tests.test_radar_sources.DevEventIdentityTest (수정 전 실행)
+FF.
+======================================================================
+FAIL: test_distinct_events_keep_distinct_ids_through_collect_source (tests.test_radar_sources.DevEventIdentityTest.test_distinct_events_keep_distinct_ids_through_collect_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_radar_sources.py", line 709, in test_distinct_events_keep_distinct_ids_through_collect_source
+    self.assertEqual(len(items), len(raws))
+AssertionError: 1 != 7
+
+======================================================================
+FAIL: test_ids_survive_full_run_merge_and_are_stable_across_reruns_and_title_edits (tests.test_radar_sources.DevEventIdentityTest.test_ids_survive_full_run_merge_and_are_stable_across_reruns_and_title_edits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\caring\Projects\ai-data-storage-events\tests\test_radar_sources.py", line 725, in test_ids_survive_full_run_merge_and_are_stable_across_reruns_and_title_edits
+    self.assertEqual(len(first["document"]["items"]), len(raws))
+AssertionError: 1 != 7
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.021s
+
+FAILED (failures=2)
+(_collect_source·pipeline.run dry-run 경로 모두 7건 중 1건만 남음. 다른 출처 ID 불변 회귀 테스트는 수정 전에도 통과)
+
+[GREEN] 같은 테스트 3건 OK. 전체 Python: Ran 217 tests OK. Node: 118 pass / 0 fail.
+검증 항목: _collect_source에서 fixture 7건 → ID 7개·보존 7건, pipeline.run(dry_run) 병합 후 items 7·itemCount 7, 재실행 같은 ID, 제목 변경에도 같은 ID,
+sourceUrl이 README anchor 유지, 다른 출처(devpost·dacon·wevity·contestkorea·aiexpo)의 ID가 sourceUrl 기준 그대로.
+
+[실데이터 갱신] 이번 작업에서 raw.githubusercontent.com README를 1회 GET(110396자)해 임시 파일(repo 밖)에 저장했고, 그 응답으로 devevent만 교체했다.
+정규화·검증 → 기존 문서의 devevent 항목만 교체 → pipeline._dedupe → source.itemCount 실산출 → atomic_write_json. 다른 9출처를 다시 읽지 않았다.
+같은 저장 응답으로 갱신 스크립트를 2회 실행했다(두 번째는 재실행 멱등 확인, 새 GET 없음). 최종 updatedAt/lastAttemptAt=2026-10-12T07:03:57Z.
+후보 33건 중 24건 남음. 나머지 9건은 _dedupe가 앞 순위 출처의 같은 기회로 판정해 제외:
+  - 2026 고용24 국민참여 AI 고용서비스 발굴 온라인 해커톤 | https://www.국민참여고용서비스발굴온라인해커톤.com
+  - 2026 KoMaP AI 경진대회 | https://komap.ai/front/competition2026
+  - 2026 AI 농산물 가격예측 해커톤 | https://hackathon.imaginationgroup.co.kr/nongnet
+  - 합성 미세구조 기반 재료 물성 예측 AI 경진대회 | https://daker.ai/public/hackathons/synthetic-microstructure-property-prediction-ai
+  - AI Platform Build Challenge 예선 | https://daker.ai/public/hackathons/ai-platform-build-challenge-prelims
+  - 항만 문제해결을 위한 AI 기술 공모전 | https://dacon.io/competitions/official/236771/overview/description
+  - 2026 DATA·AI 분석 경진대회 | https://aida.kisti.re.kr/competition/main/competition/COMP_000000000000050/detail.do
+  - NVIDIA AI Day Seoul 2026 | https://www.nvidia.com/ko-kr/ai-days/
+  - 국부펀드 KIC, AI 에이전트 공모전 | https://daker.ai/public/hackathons/kic-ai-agent-competition
+
+[전후 비교]
+- 다른 9출처 items 전후 dict 동일: True (141건 = 141건)
+- 다른 9출처 sources 행(checkedAt·lastSuccessAt·itemCount·message·status) 전후 동일: True
+- devevent: 1건 → 24건, status ok
+- 출처별 건수: {'devpost': 10, 'dacon': 10, 'wevity': 90, 'aisummit': 1, 'seocho': 1, 'nvidia': 1, 'aifesta': 1, 'contestkorea': 26, 'devevent': 24, 'aiexpo': 1}
+- 합계 165 = items 165; 이전 142건(devevent 1건 포함)
+- 10출처 존재, 모두 ok: ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok']
+- data/ingest-status.json sources == opportunities.json sources: True

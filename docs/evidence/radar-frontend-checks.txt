@@ -1,0 +1,119 @@
+AI Radar UI 검증 2026-10-12 16:25 KST
+통과 98 / 98
+폭별 레이아웃 검사(제목 폭·모드·저장 버튼)는 수정 전 RED 실측이 docs/evidence/radar-layout-red.txt 에 보존되어 있다.
+
+PASS 실데이터 행 표시(건수 고정 안 함) | 118
+PASS 브라우저 제목 AI Radar | AI Radar — AI 공모전·해커톤·행사 탐색
+PASS 브랜드 AI Radar
+PASS 구 브랜드·디버그 문구 비노출
+PASS 데스크톱 CSS 너비 1440
+PASS 상단 바 높이 60 | 60
+PASS 검색 입력 높이 44
+PASS 필터 레일 폭 약 200 | 200
+PASS 오른쪽 중복 임박 레일 없음
+PASS 마감 임박·출처 상태는 필터 하단 details
+PASS 데스크톱 행 높이 96~140 | 96
+PASS 열 머리글 표시 | 제목 · 주최
+마감
+개최
+참가 · 상금
+PASS 행 즉시 노출: 제목·마감·개최·참가·확인/출처·저장
+PASS 상태 옵션에 마감·종료 없음 | ['전체\n118', '모집중\n109', '예정\n8', '진행중\n1', '일정 미정\n0']
+PASS 목록에 마감·종료 상태 없음 | ['모집중', '예정', '진행중']
+PASS 1440 가로 넘침 0 | {'width': 1440, 'scroll': 1440, 'outside': []}
+PASS 검색 URL 반영 | http://127.0.0.1:8012/?q=Multimodal
+PASS 검색 중 입력 포커스 유지
+PASS 검색 결과가 줄거나 같음 | 1
+PASS 검색 포커스·캐럿 유지(빈 결과 후에도)
+PASS 초기화 후 검색 비움
+PASS 모집중 필터: 모든 행이 모집중
+PASS 유형 탭 건수 = 목록 건수(전체) | {'전체': 118, '행사': 22, '공모전': 82, '해커톤': 14}
+PASS 저장이 새로고침 후에도 유지
+PASS 저장 보기: 저장 항목만
+PASS 상세 초기 포커스는 닫기 버튼
+PASS 상세 Tab 포커스가 배경으로 새지 않음
+PASS 상세 드로어 폭 520~560, 우측 정렬 | {'x': 900, 'y': 0, 'width': 540, 'height': 900}
+PASS 상세 외부 링크 보안 속성
+PASS 상세에 원문 안내 링크와 저장 버튼
+PASS 상세 닫은 뒤 행 제목으로 포커스 복귀
+PASS 달력 월 이동·오늘 복귀
+PASS 달력 마커로 상세 진입 | 88
+PASS 콘솔 오류 없음(실데이터 데스크톱) | []
+PASS 모바일 320px 가로 넘침 0 | {'width': 320, 'scroll': 320, 'outside': []}
+PASS 모바일 360px 가로 넘침 0 | {'width': 360, 'scroll': 360, 'outside': []}
+PASS 모바일 390px 가로 넘침 0 | {'width': 390, 'scroll': 390, 'outside': []}
+PASS 모바일 행에 마감·개최·참가·저장 모두 표시
+PASS 모바일 열 머리글 숨김
+PASS 모바일 검색·유형 탭·정렬·보기 전환 모두 보임
+PASS 모바일 터치 목표 44px 이상 | []
+PASS 모바일 필터 펼침
+PASS 모바일 달력 가로 넘침 0 | {'width': 390, 'scroll': 390, 'outside': []}
+PASS 모바일 상세는 전체 화면 | {'x': 19.98604965209961, 'y': 0, 'width': 390.00000381469727, 'height': 844}
+PASS loading 상태 표시
+PASS 로딩 중에는 미수집 알림을 띄우지 않음
+PASS empty 상태 표시
+PASS empty 상태 가로 넘침 0 | {'width': 390, 'scroll': 390, 'outside': []}
+PASS error 상태 표시
+PASS error 상태 가로 넘침 0 | {'width': 390, 'scroll': 390, 'outside': []}
+PASS 폭 320: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 262, 'orgWidth': 262, 'rowHeight': 431, 'scroll': 320}
+PASS 폭 320: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 320: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 786, 44], 'title': [29, 423, 262, 44]}
+PASS 폭 375: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 317, 'orgWidth': 317, 'rowHeight': 373.5, 'scroll': 375}
+PASS 폭 375: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 375: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 676, 44], 'title': [29, 371, 317, 44]}
+PASS 폭 390: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 332, 'orgWidth': 332, 'rowHeight': 373.5, 'scroll': 390}
+PASS 폭 390: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 390: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 676, 44], 'title': [29, 371, 332, 44]}
+PASS 폭 414: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 356, 'orgWidth': 356, 'rowHeight': 373.5, 'scroll': 414}
+PASS 폭 414: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 414: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 676, 44], 'title': [29, 371, 356, 44]}
+PASS 폭 768: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 710, 'orgWidth': 710, 'rowHeight': 373.5, 'scroll': 768}
+PASS 폭 768: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
+PASS 폭 768: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 676, 44], 'title': [29, 371, 710, 44]}
+PASS 폭 1024: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 510, 'orgWidth': 510, 'rowHeight': 126.3, 'scroll': 1024}
+PASS 폭 1024: 레이아웃 모드(필터 접힘·머리글 열) | {'rail': False, 'toggle': True, 'head': True, 'labeled': False}
+PASS 폭 1280: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 258, 'orgWidth': 258, 'rowHeight': 110.1, 'scroll': 1280}
+PASS 폭 1280: 레이아웃 모드(필터 고정·머리글 열) | {'rail': True, 'toggle': False, 'head': True, 'labeled': False}
+PASS 폭 1440: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 338, 'orgWidth': 338, 'rowHeight': 96, 'scroll': 1440}
+PASS 폭 1440: 레이아웃 모드(필터 고정·머리글 열) | {'rail': True, 'toggle': False, 'head': True, 'labeled': False}
+PASS 노출: 확정 마감 전·오늘 날짜만·미확정 행사 | ['LIVE 정확 마감 14시', 'LIVE 오늘 날짜만 마감', 'LIVE 미확정 미래 행사', '아주 긴 한국어 제목 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전']
+PASS 제외: 시각 지난 exact·어제 날짜·출처 closed | ['LIVE 정확 마감 14시', 'LIVE 오늘 날짜만 마감', 'LIVE 미확정 미래 행사', '아주 긴 한국어 제목 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전']
+PASS 오늘 날짜만 마감은 시각 미확인 표시 | LIVE 오늘 날짜만 마감
+
+합성 주최
+
+공모전모집중합성 출처확인 10.12 09:00
+
+마감
+D-day 2026.10.12 (월)
+마감 시각 미확인
+개최
+미확인
+참가·상금
+온라인 · 해외 온라인
+참가 자격 확인 필요
+저장
+PASS 미확정 미래 행사는 마감 미확인
+PASS 유형 탭 건수가 노출 목록과 일치 | {'전체': 4, '행사': 1, '공모전': 1, '해커톤': 2}
+PASS 결과 건수 표시 일치 | 4건
+PASS 긴 제목·긴 URL·긴 상금 가로 넘침 0 (1440) | {'width': 1440, 'scroll': 1440, 'outside': []}
+PASS 긴 제목·긴 URL·긴 상금 가로 넘침 0 (390) | {'width': 390, 'scroll': 390, 'outside': []}
+PASS 달력에 제외 항목 없음
+PASS 임박 목록에 제외 항목 없음
+PASS status=closed URL은 all로 변환 | {'q': '', 'kind': 'all', 'status': 'all', 'mode': 'all', 'sort': 'deadline', 'view': 'list', 'saved': False}
+PASS URL에서도 closed 제거 | http://127.0.0.1:8012/?now=2026-10-12T00%3A00%3A00Z
+PASS 저장된 closed 필터값도 all 처리
+PASS 저장 건수는 노출 가능한 1건만 센다
+PASS 저장 보기에 마감 저장 항목 비노출 | ['LIVE 정확 마감 14시']
+PASS 마감 저장 안내 알림 | 저장한 2건은 신청이 마감됐거나 현재 데이터에 없어 목록에 표시하지 않습니다. 저장 기록은 보관됩니다.
+PASS 저장 id 삭제 없음 | ['dead-exact', 'live-exact', 'gone-id']
+PASS 시간 경과 전: 14시 마감 항목 노출 | ['LIVE 정확 마감 14시', 'LIVE 오늘 날짜만 마감', 'LIVE 미확정 미래 행사', '아주 긴 한국어 제목 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전 인공지능 데이터 활용 공모전']
+PASS 열린 상세가 마감되면 닫힌다
+PASS 닫힌 이유 안내
+PASS 시간 경과로 목록에서 제외 | ['LIVE 오늘 날짜만 마감', 'LIVE 미확정 미래 행사']
+PASS 시간 경과 후 검색 입력 포커스·값 유지
+PASS 시간 경과 후 오늘 날짜만 마감은 유지
+PASS 시간 경과 후 유형 탭 건수 갱신
+PASS reduced-motion: 상세 애니메이션 없음
+PASS 운영 호스트 debug·now 무시
+PASS 전체 콘솔·페이지 오류 없음 | []
