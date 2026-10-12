@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 from .. import rules
 from ..errors import FetchError, StructureError
-from ..urlsafe import is_safe_https_url
+from ..urlsafe import canonical_url, is_safe_https_url
 from .base import CollectResult
 
 SOURCE_ID = "aiexpo"
@@ -88,11 +88,14 @@ def collect(fetcher, now, max_items=None):
         page = fetcher.get(OVERVIEW_URL)
     except FetchError as exc:
         try:
-            data = parse_showala(fetcher.get(SHOWALA_URL).text, now)
+            alternate_page = fetcher.get(SHOWALA_URL)
+            if canonical_url(alternate_page.url) != canonical_url(SHOWALA_URL):
+                raise StructureError("SHOWALA 최종 확인 URL이 행사 상세 경로와 다름")
+            data = parse_showala(alternate_page.text, now)
         except FetchError as alternate:
             status = "blocked" if "blocked" in (exc.status, alternate.status) else "error"
             raise FetchError(status, f"공식 사이트: {exc}; SHOWALA: {alternate}") from alternate
-        source_url = SHOWALA_URL
+        source_url = alternate_page.url
         recovery = f"직접 조회 실패({exc.status}); 한국전시산업진흥회 SHOWALA로 확인. "
     else:
         data = parse_overview(page.text)

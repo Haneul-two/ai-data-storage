@@ -131,6 +131,21 @@ class AiExpoRecoveryTest(unittest.TestCase):
         with self.assertRaises(FetchError):
             aiexpo.collect(f, NOW)
 
+    def test_alternate_final_url_must_be_the_same_record(self):
+        class RedirectedFetcher(FakeFetcher):
+            def get(self, url, prefix_bytes=None):
+                page = super().get(url, prefix_bytes)
+                if url == ALTERNATE:
+                    page.url = self.final_url
+                return page
+
+        for final_url in ("https://www.wevity.com/", "https://www.showala.com/ex/ex_detail.php?idx=1"):
+            f = RedirectedFetcher({aiexpo.OVERVIEW_URL: FetchError("blocked", "202"),
+                                   ALTERNATE: fixture("aiexpo_showala.html")})
+            f.final_url = final_url
+            with self.subTest(url=final_url), self.assertRaises(StructureError):
+                aiexpo.collect(f, NOW)
+
 
 if __name__ == "__main__":
     unittest.main()
