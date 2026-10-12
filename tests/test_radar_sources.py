@@ -497,9 +497,15 @@ class PrefixFetchTest(unittest.TestCase):
         result = aisummit.collect(fetcher, NOW, 20)
         self.assertEqual((result.items[0]["startDate"], result.items[0]["endDate"]), ("2027-08-11", "2027-08-13"))
 
-    def test_info_beyond_the_prefix_is_an_error_not_a_guess(self):
+    def test_aisummit_collects_when_main_starts_after_the_old_prefix(self):
         fetcher, _, _ = make_fetcher({"https://www.aisummit.co.kr/robots.txt": OK_ROBOTS,
                                       aisummit.MAIN_URL: FakeResp(200, self.big_main(padding_before=1_500_000))})
+        result = aisummit.collect(fetcher, NOW, 20)
+        self.assertEqual((result.items[0]["startDate"], result.items[0]["endDate"]), ("2027-08-11", "2027-08-13"))
+
+    def test_info_beyond_the_safe_cap_is_an_error_not_a_guess(self):
+        fetcher, _, _ = make_fetcher({"https://www.aisummit.co.kr/robots.txt": OK_ROBOTS,
+                                      aisummit.MAIN_URL: FakeResp(200, self.big_main(padding_before=2_600_000))})
         with self.assertRaises(StructureError):
             aisummit.collect(fetcher, NOW, 20)
 

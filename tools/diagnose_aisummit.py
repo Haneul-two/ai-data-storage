@@ -12,7 +12,7 @@ from collectors.opportunities.sources import aisummit
 
 def main():
     page = Fetcher().get(aisummit.MAIN_URL, prefix_bytes=MAX_BYTES)
-    for limit in (aisummit.PREFIX_BYTES, MAX_BYTES):
+    for limit in (1_000_000, aisummit.PREFIX_BYTES):
         text = page.text.encode("utf-8")[:limit].decode("utf-8", "replace")
         soup = BeautifulSoup(text, "html.parser")
         for tag in soup(["script", "style", "noscript"]):

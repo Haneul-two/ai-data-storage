@@ -20,6 +20,7 @@
 - 마감 임박(최대 5건)·출처 상태(성공/확인 실패/접근 제한 + 마지막 성공 확인 시각)는 필터 하단 접이식 영역
 - 필터는 URL query 우선 → localStorage → 기본값. 잘못된 값은 기본값으로 복구
 - 수집 출처 10곳: 기존 7곳(Devpost · DACON · 위비티 · AI Summit Seoul · 서초 AI 페스타 · NVIDIA AI Day Seoul · AI FESTA) + 새 3곳(콘테스트코리아 · Dev-Event · AI EXPO KOREA). 공식 행사 출처는 지정한 사이트만 매일 다시 확인하며 웹 전체 행사 발견을 보장하지 않습니다. 출처별 한도·한계는 `docs/sources.md`, 검토 후 반려한 후보와 사유는 [`docs/evidence/radar-source-audit.md`](docs/evidence/radar-source-audit.md). 운영 중 AI API 호출·토큰 사용은 없습니다.
+- AI Summit 응답 진단: `python tools/diagnose_aisummit.py`. 기존 robots/호스트/2.5MB 제한으로 읽고 크기·본문 위치·날짜 파싱 결과만 출력합니다. `Test` workflow를 수동 실행하면 같은 진단을 GitHub runner에서도 수행합니다.
 
 ### 날짜·상태 규칙
 

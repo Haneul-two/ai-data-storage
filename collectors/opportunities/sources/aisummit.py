@@ -6,15 +6,16 @@ from bs4 import BeautifulSoup
 
 from .. import rules
 from ..errors import StructureError
+from ..http import MAX_BYTES
 from .base import CollectResult
 
 SOURCE_ID = "aisummit"
 SOURCE_NAME = "AI Summit Seoul"
 SOURCE_URL = "https://www.aisummit.co.kr/"
 MAIN_URL = "https://www.aisummit.co.kr/"
-# 운영 환경에서 이 페이지 응답이 2.5MB 상한을 넘은 적이 있다(로컬 실측은 약 0.6MB, 기간·장소는 앞 25~30% 안). 상한을 올리지 않고
-# 앞쪽 1MB만 읽는다. 그 안에서 연도 포함 기간을 못 찾으면 추측하지 않고 오류로 둔다.
-PREFIX_BYTES = 1_000_000
+# GitHub runner에서는 main이 약 1.32MB 뒤에서 시작한다(로컬 약 0.21MB).
+# 기존 응답 상한까지 읽고 멈춘다. 그 안에 연도 포함 기간이 없으면 추측하지 않고 오류로 둔다.
+PREFIX_BYTES = MAX_BYTES
 _RANGE_RE = re.compile(r"(20\d\d)\s*\.\s*(\d{1,2})\s*\.\s*(\d{1,2})\s*\([^)]*\)\s*[-–~]\s*(\d{1,2})\s*\.\s*(\d{1,2})")
 _PART_RE = r"{label}\s*(20\d\d)\s*년\s*(\d{{1,2}})\s*월\s*(\d{{1,2}})\s*-\s*(\d{{1,2}})\s*일"
 
