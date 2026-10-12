@@ -1,5 +1,13 @@
 # 검증표 (frontend/backend 4대 축)
 
+## AI Summit 오류 수정·운영 검증 (2026-10-12)
+
+- Python 229개·Node 118개 통과. 운영 응답을 반영한 1.5MB 앞 padding은 성공, 2.6MB 뒤 날짜는 오류 처리. 기존 전역 2.5MB/robots/redirect 제한 유지.
+- GPT-6 Astra 독립 리뷰 통과(수집기 87개 별도 실행), 읽기 전용 공개 검증 도구 후속 리뷰 통과.
+- PR #4 병합, 운영 수집 run 38223091709 성공. 데이터 d2cece2 Pages built 일치. AI Summit status=ok, 기존 ID 보존, verifiedAt=lastSuccessAt=2026-10-12T08:21:49Z로 실제 run 시각과 대조.
+- 공개 Edge 1440/390에서 AI Summit 실패 알림 없음·목록 정상·가로 넘침 없음·pageerror 0. 운영 데이터 165건 오프라인 계약 검증 통과. 증거 `evidence/aisummit-production.json`, `aisummit-public-1440.png`, `aisummit-public-390.png`.
+- 현재 9개 출처 ok, 별도로 AI EXPO robots.txt HTTP 202 때문에 blocked이며 이전 데이터 보존. 자동 cron 첫 실행은 여전히 미검증. 아래 로컬 대기·예전 수치는 과거 검증 기록이다.
+
 ## AI Radar 재설계·마감 제외·수집 확장 (2026-10-12, 로컬)
 
 원격 재설계 배포 전이다. 현재 데이터 건수와 출처별 ok는 root의 최종 수집 후 `HISTORY.md`에 기록하며, 아래 표에는 쓰지 않는다. 예전 dry-run 164/183건을 현재 데이터로 쓰지 않는다.

@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-12T08:08:00Z",
+  "resolved": true,
+  "productionRun": "38218333647",
+  "productionError": "AI Summit 노출 행사 기간(연도 포함)을 읽지 못함",
+  "currentPrefixBytes": 1000000,
+  "globalMaxBytes": 2500000,
+  "localMain": {
+    "url": "https://www.aisummit.co.kr/",
+    "responseBytes": 590217,
+    "truncated": false,
+    "bodyOffset": 168329,
+    "parseSuccessful": true,
+    "startDate": "2027-08-11",
+    "endDate": "2027-08-13",
+    "titleYear": "2026"
+  },
+  "rootCauseStatus": "GitHub runner: main absent within first 1MB; main at Unicode offset 1323672 and valid dates within first 2.5MB. Global safe cap unchanged.",
+  "editingBlocker": "Resolved by explicit user authorization for Codex direct edits.",
+  "productionChanged": true,
+  "resolvedAt": "2026-10-12T08:28:48Z",
+  "resolutionPr": 4,
+  "resolutionRun": "38223091709"
+}

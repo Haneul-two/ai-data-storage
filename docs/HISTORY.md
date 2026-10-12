@@ -6,6 +6,9 @@
 - 원인 실측: GitHub 진단 run 38222377812. 앞 1MB에는 main이 없고 날짜 파싱 실패, 앞 2.5MB에는 main 문자열 위치 1,323,672와 2027-08-11~13 기간이 있어 파싱 성공. 로컬은 main 문자열 위치 212,176, 전체 590,217 bytes여서 기존 1MB 제한으로도 성공했다. 위치는 유니코드 문자 단위이며 읽기 제한은 바이트 단위다.
 - 수정: AI Summit만 기존 MAX_BYTES(2.5MB)까지 읽고 멈춤. 전역 크기 제한·robots·허용 호스트·redirect·timeout 유지. 날짜를 찾지 못하면 기존처럼 오류·이전 데이터 보존. UI 경고를 강제로 숨기지 않는다.
 - 검증: 실제 구조를 반영한 1.5MB 앞 padding 회귀 테스트가 수정 전 실패, 수정 후 성공. 2.6MB 뒤 행사 정보는 계속 오류. 전체 Python 229·Node 118 통과. 다른 모델(GPT-6 Astra) 독립 리뷰에서 차단 이슈 없음, 수집기 87개 테스트 직접 통과. 수정 후 GitHub runner run 38222751100도 동일 현상 재현과 2.5MB 날짜 파싱 성공. 운영 갱신·Pages 검증 결과는 아래에 기록한다.
+- 운영 반영: PR #4 병합 8e1a7a4, 운영 수집 38223091709 성공, 데이터 d2cece2ec94cfd757a5998257dcbe5ce1e2e400d Pages built 확인. AI Summit status=ok, 기존 ID aisummit-57beffb6a815 보존, verifiedAt=lastSuccessAt=2026-10-12T08:21:49Z(이번 run 수집 시작 시각과 일치).
+- 공개 검증: `tools/check_aisummit_public.py`로 1440/390 Edge 확인. AI Summit 실패 알림 없음, 목록 정상, 가로 넘침 없음, pageerror 0. 증거 `docs/evidence/aisummit-production.json`, `aisummit-public-1440.png`, `aisummit-public-390.png`. 독립 리뷰에서 지적한 최신성은 실제 run 시각과 별도로 대조했다.
+- 별도 관측: 이번 전체 수집에서는 AI EXPO robots.txt가 HTTP 202를 반환해 blocked. 다른 9개 출처는 ok. 이 별도 차단을 우회하거나 성공으로 바꾸지 않았으며 기존 데이터를 보존한다. AI Summit 수정 완료와 전체 출처 모두 성공을 혼동하지 않는다.
 
 
 ## 2026-10-02 — AI 기회 보드 전면 개편

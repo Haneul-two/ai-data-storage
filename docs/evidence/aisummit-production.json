@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-12T08:28:48.901984+00:00",
+  "source": {
+    "id": "aisummit",
+    "name": "AI Summit Seoul",
+    "url": "https://www.aisummit.co.kr/",
+    "status": "ok",
+    "checkedAt": "2026-10-12T08:21:49Z",
+    "lastSuccessAt": "2026-10-12T08:21:49Z",
+    "itemCount": 1,
+    "message": "노출 행사 2027년 2027-08-11~2027-08-13. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용"
+  },
+  "id": "aisummit-57beffb6a815",
+  "verifiedAt": "2026-10-12T08:21:49Z",
+  "sourceStatuses": {
+    "devpost": "ok",
+    "dacon": "ok",
+    "wevity": "ok",
+    "aisummit": "ok",
+    "seocho": "ok",
+    "nvidia": "ok",
+    "aifesta": "ok",
+    "contestkorea": "ok",
+    "devevent": "ok",
+    "aiexpo": "blocked"
+  },
+  "checks": [
+    {
+      "width": 1440,
+      "sourceFailureNoticeAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "sourceFailureNoticeAbsent": true,
+      "overflow": false
+    }
+  ],
+  "pageErrors": [],
+  "productionRun": "38223091709",
+  "dataCommit": "d2cece2ec94cfd757a5998257dcbe5ce1e2e400d",
+  "pagesStatus": "built",
+  "pythonTests": 229,
+  "nodeTests": 118,
+  "independentReview": "GPT-6 Astra: passed"
+}
