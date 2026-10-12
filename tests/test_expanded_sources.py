@@ -72,8 +72,8 @@ class AllowListTest(unittest.TestCase):
 
 
 class RegistryTest(unittest.TestCase):
-    def test_seven_sources_with_existing_priority_first(self):
-        self.assertEqual([s.id for s in default_sources()], ["devpost", "dacon", "wevity", "aisummit", "seocho", "nvidia", "aifesta"])
+    def test_existing_seven_sources_keep_priority_first(self):
+        self.assertEqual([s.id for s in default_sources()][:7], ["devpost", "dacon", "wevity", "aisummit", "seocho", "nvidia", "aifesta"])
 
 
 class JsonLdTest(unittest.TestCase):

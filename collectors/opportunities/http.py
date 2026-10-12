@@ -22,6 +22,7 @@ _REDIRECT_CODES = (301, 302, 303, 307, 308)
 class FetchResult:
     text: str
     url: str
+    truncated: bool = False
 
 
 class Fetcher:
@@ -41,9 +42,9 @@ class Fetcher:
                 self._sleep(wait)
         self._last = self._monotonic()
 
-    def _request(self, url, check_robots=True):
-        """redirect를 직접 따라가며 매 단계 허용목록과 robots를 요청 전에 재검증한다. (status, body, final_url).
-        robots.txt 자체를 가져올 때만 check_robots=False(재귀 방지)."""
+    def _request(self, url, check_robots=True, prefix_bytes=None):
+        """redirect를 직접 따라가며 매 단계 허용목록과 robots를 요청 전에 재검증한다. (status, body, final_url, truncated).
+        robots.txt 자체를 가져올 때만 check_robots=False(재귀 방지). prefix_bytes가 있으면 그 바이트까지만 읽고 오류 없이 멈춘다."""
         for _ in range(self.max_redirects + 1):
             if not is_fetch_allowed(url):
                 raise FetchError("blocked", f"허용되지 않은 URL: {url}")
@@ -62,12 +63,16 @@ class Fetcher:
                         raise FetchError("error", f"Location 없는 redirect: {url}")
                     url = urljoin(url, location)
                     continue
-                body = bytearray()
+                body, truncated = bytearray(), False
                 for chunk in resp.iter_content(chunk_size=65536):
                     body.extend(chunk)
+                    if prefix_bytes is not None and len(body) > prefix_bytes:
+                        del body[prefix_bytes:]
+                        truncated = True
+                        break
                     if len(body) > self.max_bytes:
                         raise FetchError("error", f"응답 크기 상한 초과: {url}")
-                return resp.status_code, bytes(body), url
+                return resp.status_code, bytes(body), url, truncated
             finally:
                 resp.close()
         raise FetchError("error", f"redirect 한도({self.max_redirects}) 초과")
@@ -76,7 +81,7 @@ class Fetcher:
         host = urlsplit(url).hostname.lower()
         if host not in self._robots:
             try:
-                status, body, _ = self._request(f"https://{host}/robots.txt", check_robots=False)
+                status, body, _, _ = self._request(f"https://{host}/robots.txt", check_robots=False)
                 if status == 200:
                     self._robots[host] = RobotsRules(body.decode("utf-8", "replace"))
                 elif status in (404, 410):
@@ -96,10 +101,14 @@ class Fetcher:
         if not self._robots_for(url).allowed(self.user_agent, path):
             raise FetchError("blocked", f"robots.txt가 조회를 허용하지 않음: {parts.hostname}{parts.path}")
 
-    def get(self, url):
+    def get(self, url, prefix_bytes=None):
+        """prefix_bytes: 필요한 정보가 문서 앞쪽에 있는 큰 페이지에서만 쓴다. 허용목록·robots·redirect·상태 검증은 그대로이고
+        상한(max_bytes)을 올리는 것이 아니라 prefix_bytes까지만 읽고 끊는다(truncated=True)."""
+        if prefix_bytes is not None and not 1 <= prefix_bytes <= self.max_bytes:
+            raise ValueError(f"prefix_bytes는 1 이상 max_bytes({self.max_bytes}) 이하여야 함: {prefix_bytes}")
         if not is_fetch_allowed(url):
             raise FetchError("blocked", f"허용되지 않은 URL: {url}")
-        status, body, final = self._request(url)
+        status, body, final, truncated = self._request(url, prefix_bytes=prefix_bytes)
         if status != 200:
             raise FetchError("error", f"HTTP {status}: {url}")
-        return FetchResult(text=body.decode("utf-8", "replace"), url=final)
+        return FetchResult(text=body.decode("utf-8", "replace"), url=final, truncated=truncated)

@@ -64,7 +64,7 @@ class FakeFetcher:
         self.pages = pages
         self.calls = []
 
-    def get(self, url):
+    def get(self, url, prefix_bytes=None):
         self.calls.append(url)
         value = self.pages.get(url)
         if value is None:

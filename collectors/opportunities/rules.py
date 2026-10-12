@@ -217,7 +217,7 @@ def normalize_item(raw, source_id, verified_at):
 
     status = raw.get("sourceStatus") if raw.get("sourceStatus") in SOURCE_STATUSES else "unknown"
     return {
-        "id": stable_id(source_id, source_url),
+        "id": stable_id(source_id, url if source_id == "devevent" else source_url),  # devevent는 sourceUrl이 README 월 anchor 공통이라 행사 landing url로 가른다
         "kind": raw["kind"],
         "title": title,
         "organizer": _opt_text(raw.get("organizer")),

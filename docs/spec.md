@@ -1,5 +1,7 @@
 # AI 기회 보드 — 전면 개편 사양서
 
+> **AI Radar 갱신(2026-10-12)**: 화면 이름은 AI Radar. 신청이 끝난 항목은 탐색에서 제외한다(§3 갱신). 아래 본문의 '마감·종료 필터로 조회' 규칙은 이 갱신으로 대체된다. 기획 `docs/ai-radar-spec.md`, 출처 `docs/sources.md`. 원본/보관 데이터 계약(90일 보관 등)은 그대로다.
+
 ## 1. 목표와 근거
 
 사용자 요청: `$make-it https://github.com/Haneul-two/ai-data-storage 이거 지금 내 환경에서의 최신 기준으로 개선하고 싶어. 이번엔 AI 행사와 공모전, 해커톤의 정보만 추릴 수 있도록. 아예 UI/UX부터 모든 걸 다 바꿔줘`.
@@ -23,11 +25,13 @@ P2를 제외해야 하면 완전히 제외하고 보고한다. 계정/서버 DB/
 
 ## 3. 흐름과 상태
 
-목록 로딩 → 검색·필터 → 상세 → 공식 안내 또는 저장. 저장은 브라우저 localStorage에만 유지한다. 목록/달력/저장 목록은 같은 필터와 데이터 계약을 사용한다. 상세 닫기·Esc 후 원래 포커스로 복귀한다. 종료 항목은 기본 제외, 마감·종료 필터에서 조회 가능하다.
+목록 로딩 → 검색·필터 → 상세 → 공식 안내 또는 저장. 저장은 브라우저 localStorage에만 유지한다. 목록/달력/저장 목록은 같은 필터와 데이터 계약을 사용한다. 상세 닫기·Esc 후 원래 포커스로 복귀한다. **AI Radar 갱신: 신청이 끝난 항목(closed/ended)은 어떤 필터로도 조회하지 않는다.** 데이터에는 남기되(보관) 목록·검색·건수·저장·달력·임박·상세 진입에서 제외한다.
 
 **상태 판정 (위에서부터 첫 일치)**: ① 종료일이 서울 오늘보다 이전 → ended ② 출처가 명시 closed(`sourceStatus`) → closed ③ 정확한 deadlineAt이 now 이전 → closed ④ 국내 date-only deadlineDate가 서울 오늘보다 이전 → closed ⑤ 접수 시작일이 미래 → upcoming ⑥ sourceStatus open 또는 알려진 deadline이 미래 → open ⑦ 오늘이 개최 기간 → ongoing ⑧ startDate가 미래 → upcoming ⑨ 나머지 → unknown. 개최일만 있는 event는 모집중이라고 추측하지 않는다. date-only 마감은 당일을 포함하며 '시간 확인 필요'를 표시한다.
 
-**상태 필터**: 활성(all: closed/ended 제외) / 모집중(open) / 예정(upcoming) / 진행중(ongoing) / 마감·종료(closed+ended) / 미정(unknown).
+**노출 규칙(AI Radar)**: 위 판정 결과가 closed/ended면 숨긴다(`assets/visibility.mjs`, 한국 현재 시각 기준). exact 마감은 현재 시각 이상이면 노출·이후 제외, dateOnly는 한국 당일 끝까지 노출하고 '시간 확인 필요', 마감 미확정 미래 항목은 '확인 필요'로 남긴다(신청 가능 확정으로 표시하지 않음). 현재 시각이 바뀌면 다시 판정한다. 열린 상세는 마감 시각을 넘기면 닫는다. 옛 `status=closed` URL/저장 설정은 전체(all)로 바꾼다. 저장 id는 마감으로 사라져도 지우지 않는다.
+
+**상태 필터**: 전체(all, 노출 가능한 항목) / 모집중(open) / 예정(upcoming) / 진행중(ongoing) / 미정(unknown). 마감·종료 필터는 없다.
 
 **URL·저장 규칙**: 필터는 URL query가 있으면 URL 우선, 없으면 localStorage, 잘못된 값은 기본값. 저장 id가 데이터에서 사라져도 id는 보존하고 저장 목록에 사라진 건수와 안내를 표시한다. `?debug`와 `?now`는 localhost/127.0.0.1에서만 작동하고 테스트 모드 배너를 표시한다. GitHub Pages production은 이를 무시한다.
 
@@ -105,7 +109,7 @@ Opportunity 필수 키:
 
 공개 페이지를 소수 요청하고 robots를 존중한다. 현재 온오프믹스는 일반 User-agent 자동 수집을 금지하므로 자동 소스에서 제외한다. Devpost 공개 목록 API는 200과 구조를 실측했다. 국내 후보는 위비티와 데이콘 공개 목록이다. 구조를 확인하고 작동하는 parser만 연결한다(P0는 실제 국내 소스 1개 이상 + Devpost). parser 구조를 확인하지 못한 소스는 error/blocked로 기록한다. 로그인/차단 우회는 하지 않는다.
 
-허용 네트워크 호스트: devpost.com 및 *.devpost.com, www.wevity.com/wevity.com, dacon.io/www.dacon.io, 공식행사 adapter 사용 시 www.aisummit.co.kr/aisummit.co.kr. 모든 URL은 공인 HTTPS hostname + port 443 + userinfo 없음을 검증하며 redirect에도 같은 정책을 적용한다. 외부 apply URL은 fetch하지 않고 HTTPS 안전 링크로만 보일 수 있다.
+(AI Radar 갱신: 아래 호스트에 공식행사 adapter 호스트와 신규 `www.contestkorea.com`·`aiexpo.co.kr`·`raw.githubusercontent.com`이 정확한 이름으로 더해졌다. 상세 `docs/sources.md`.) 허용 네트워크 호스트: devpost.com 및 *.devpost.com, www.wevity.com/wevity.com, dacon.io/www.dacon.io, 공식행사 adapter 사용 시 www.aisummit.co.kr/aisummit.co.kr. 모든 URL은 공인 HTTPS hostname + port 443 + userinfo 없음을 검증하며 redirect에도 같은 정책을 적용한다. 외부 apply URL은 fetch하지 않고 HTTPS 안전 링크로만 보일 수 있다.
 
 ## 8. 가정과 조절값
 
@@ -114,4 +118,4 @@ Opportunity 필수 키:
 - 새 브랜드 이름은 `AI 기회 보드`, 밝은 Cobalt 계열의 Workbench 구조 — tokens.css와 design.md에서 바꿀 수 있다.
 - 기존 다크 대시보드는 전면 개편 승인에 따라 교체한다. 이전 카테고리 파일은 삭제하지 않는다.
 - 기본 정렬은 마감 가까운 순, 미확정은 마지막 — JS domain 모듈에서 변경.
-- 수집은 소스별 상한 20개, 타임아웃 15초, 요청 간격 1초, 하루 1회 09:00 KST — 수집 설정과 workflow에서 변경.
+- 수집은 소스별 상한 20개(위비티·콘테스트코리아·Dev-Event는 전용 한도, `docs/sources.md`), 타임아웃 15초, 요청 간격 1초, 하루 1회 09:00 KST — 수집 설정과 workflow에서 변경. 수집 step 18분·job 25분.

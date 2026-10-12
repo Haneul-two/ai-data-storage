@@ -6,8 +6,10 @@ import { KIND_LABELS, MODE_LABELS, ddayLabel } from './format.mjs';
 import { itemFlags } from './data.mjs';
 import { safeHttpsUrl } from './safe-url.mjs';
 
+const SOON_DAYS = 7;
+
 export function kindPill(item) {
-  return h('span', { class: `pill pill-${item.kind}` }, KIND_LABELS[item.kind]);
+  return h('span', { class: 'kind' }, KIND_LABELS[item.kind]);
 }
 
 export function statusBadge(item, now) {
@@ -17,17 +19,18 @@ export function statusBadge(item, now) {
 
 export function ddayBadge(item, now) {
   if (getStatus(item, now) !== 'open') return null;
-  const label = ddayLabel(getDeadline(item, now).daysLeft);
-  return label ? h('span', { class: 'dday' }, label) : null;
+  const { daysLeft } = getDeadline(item, now);
+  const label = ddayLabel(daysLeft);
+  return label ? h('span', { class: daysLeft <= SOON_DAYS ? 'dday is-soon' : 'dday' }, label) : null;
 }
 
-// '출처 재확인 필요' · '수집 지연' · '참가 조건 확인 필요'
-export function flagBadges(item, sources, now) {
+// '출처 재확인 필요' · '수집 지연' · '참가 조건 확인 필요'. 행에서는 참가 열이 자격을 직접 보여주므로 skipEligibility로 뺀다
+export function flagBadges(item, sources, now, { skipEligibility = false } = {}) {
   const f = itemFlags(item, sources, now);
   const flags = [];
   if (f.recheck) flags.push('출처 재확인 필요');
   else if (f.sourceDelayed) flags.push('수집 지연');
-  if (f.eligibilityCheck) flags.push('참가 조건 확인 필요');
+  if (f.eligibilityCheck && !skipEligibility) flags.push('참가 조건 확인 필요');
   return flags.map((text) => h('span', { class: 'flag' }, text));
 }
 

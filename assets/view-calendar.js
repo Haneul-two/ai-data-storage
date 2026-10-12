@@ -63,10 +63,10 @@ export function renderCalendar(container, { items, now, month, onMonth, onOpen, 
     h('div', { class: 'cal-grid', role: 'group', 'aria-label': `${month.year}년 ${month.month}월 달력` },
       WEEKDAYS_KO.map((d) => h('div', { class: 'cal-dow' }, d)),
       grid.flat().map((day) => cell(day, byDate.get(day.date) || [], today, onOpen))),
-    monthHasEntries ? null : h('p', { class: 'cal-empty' }, '이 달에는 표시할 일정이 없어요. 다른 달을 확인해 보세요.'),
+    monthHasEntries ? null : h('p', { class: 'cal-empty' }, '이 달에는 표시할 일정이 없습니다. 다른 달을 확인하세요.'),
     undated.length
       ? h('div', { class: 'cal-undated' },
-        h('span', {}, `일정 미정 ${undated.length}건은 달력에 표시되지 않아요.`),
+        h('span', {}, `일정 미정 ${undated.length}건은 달력에 표시되지 않습니다.`),
         h('button', { type: 'button', class: 'btn', onclick: onShowList }, '목록에서 보기'))
       : null,
     agenda(month, byDate, onOpen)));

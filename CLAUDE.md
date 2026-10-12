@@ -1,7 +1,8 @@
 # AI 기회 보드 — Claude Code 개발 가이드 (현재 상태·규칙)
 
 경과·검증·사고 기록은 `docs/HISTORY.md`, 사양은 `docs/spec*.md`, 작업 규칙 요약은 `AGENTS.md`.
-현재 상태(2026-10-12): **운영 시작됨.** PR #1 병합(master d01cbf3), 첫 운영 수집(수동 workflow_dispatch run 38190817956) 성공, Pages 최신 빌드가 데이터 커밋 2427883과 동일, 공개 사이트 https://haneul-two.github.io/ai-data-storage/ 정상. 매일 09:00 KST 갱신 활성화(`ENABLE_OPPORTUNITY_UPDATES=true`)·교차 리뷰 반영 완료. 단, **예약 시각에 자동 발생한 첫 실행은 아직 없어 통과로 쓰지 않는다.** 원격 master의 자동 데이터 갱신 3건(ee68ae6→aa04b7e)은 보존 병합했다. `docs/tasks/`·`tools/run_claude.py`는 내부용이라 git 제외(로컬 보관). 증거·run·commit은 `docs/HISTORY.md`.
+현재 상태(2026-10-12, AI Radar): **로컬 재설계·신청 마감 제외·10출처 수집 확장 구현·검증 완료(Python 214 OK · Node 118 pass · `tools/check_radar_ui.py` 98/98 pageerror 0), 원격 재설계 배포 대기.** 최종 실수집은 root가 진행 중이라 현재 데이터 건수는 최종 수집 후 `docs/HISTORY.md`에 기록한다(예전 dry 164/183건을 현재 데이터로 쓰지 않는다). 기존 운영 승인은 유지되며 원격 반영은 그 범위에서 하되 배포 완료는 확인 전까지 단정하지 않는다. 예약 cron 자동 첫 실행 미검증. 기획 `docs/ai-radar-spec.md`.
+이전 상태(운영 시작, 역사): **운영 시작됨.** PR #1 병합(master d01cbf3), 첫 운영 수집(수동 workflow_dispatch run 38190817956) 성공, Pages 최신 빌드가 데이터 커밋 2427883과 동일, 공개 사이트 https://haneul-two.github.io/ai-data-storage/ 정상. 매일 09:00 KST 갱신 활성화(`ENABLE_OPPORTUNITY_UPDATES=true`)·교차 리뷰 반영 완료. 단, **예약 시각에 자동 발생한 첫 실행은 아직 없어 통과로 쓰지 않는다.** 원격 master의 자동 데이터 갱신 3건(ee68ae6→aa04b7e)은 보존 병합했다. `docs/tasks/`·`tools/run_claude.py`는 내부용이라 git 제외(로컬 보관). 증거·run·commit은 `docs/HISTORY.md`.
 확장 운영 반영(2026-10-12): PR #2 병합(구현 e82b77e, CI 38208056185 success; merge 04a31cd, Test 38208115198·Pages 38208115264 success). 운영 수동 update run 38208115725 success, 수집 2026-10-12T05:29:11Z, data commit 5b822b9. 운영 데이터 110건 / 7출처(devpost 6 · dacon 10 · wevity 90 · aisummit 1 · seocho 1 · nvidia 1 · aifesta 1), **6출처 ok + aisummit error** — 원인: 응답 크기 2.5MB 상한 초과, 이전 항목 1건과 검증 시각 보존. 7출처 모두 성공이라고 쓰지 않는다. 위비티는 새 조회 89건 + 사라진 기존 항목 stale 보존 = 90건. 새 공식 3출처(seocho·nvidia·aifesta)는 모두 정상. 공개 보드 실Edge 1440/390 8검사 통과·pageErrors 0(`docs/evidence/expanded-public.json`·png), AI FESTA 26은 status closed 1건·open 0건. data commit 5b822b9의 Pages built 확인됨(builds/latest built, 공개 JSON updatedAt 2026-10-12T05:29:11Z·110건이 로컬 운영 최신과 일치, 공개 browser 8검사 재통과·pageErrors 0; `docs/evidence/expanded-deployment.json`). **예약 시각 자동 실행은 아직 미검증.** 과거 로컬 109건 성공 기록은 `docs/HISTORY.md`에 보존.
 이전 상태(역사, 운영 시작 전): 로컬 구현·검증 완료(데이터 전체33 = 활성23 + 종료9 + 마감1), 원격(push·workflow·Pages·예약) 미실행. 증거는 `docs/evidence/final-checks.txt`, 통과표는 `docs/verification.md`.
 
@@ -14,10 +15,11 @@
 ```
 index.html ─ tokens.css + assets/styles/*.css
            └ assets/app.js ─ render.js ─ view-*.js ─ item-parts.js ─ dom.js/icons.js
-                     └ 순수 로직(.mjs, Node 테스트 대상): time · status · filters · calendar · storage · data · notices · format · safe-url · debug
+                     └ 순수 로직(.mjs, Node 테스트 대상): time · status · visibility · filters · calendar · storage · data · notices · format · safe-url · debug
 data/opportunities.json, ingest-status.json  ←  collectors/opportunities/ (백엔드 영역)
 ```
 
+- 신청 마감(closed/ended) 제외 판정은 `assets/visibility.mjs` 한 곳에서 한다(한국 현재 시각 기준, dateOnly는 한국 당일 끝까지). 화면 코드에 따로 거르지 않는다 — 목록·검색·건수·저장·달력·임박·상세가 어긋나지 않게 하기 위해서다.
 - 로직(`.mjs`)은 DOM을 만지지 않고 `now`를 인자로 받는다. DOM 코드(`.js`)에는 판정 로직을 넣지 않는다.
 - 화면 갱신: 선택 그룹·검색 입력·헤더 버튼은 한 번 만들고 값만 바꾼다(포커스·캐럿 유지). 결과 영역만 다시 그린다.
 
@@ -48,6 +50,8 @@ data/opportunities.json, ingest-status.json  ←  collectors/opportunities/ (백
 - 저장 토글이 목록 전체를 다시 그리면 키보드 포커스를 잃는다 → 버튼 상태만 동기화하고, 저장 보기에서만 다시 그린 뒤 포커스를 복원한다.
 - 좁은 화면의 달력 칸은 마커 버튼이 44px을 못 만든다 → 칸에는 점만, 클릭은 월 일정 목록(agenda)에서 받는다.
 - 모바일 보조 버튼(`calc(--control - …)`)이 36px로 줄어든 적이 있다 → 터치 목표는 `--control`(모바일 44px) 미만으로 줄이지 않는다.
+- 가로 overflow 0만 보고 통과시키면 태블릿 첫 제목이 30px이어도 놓친다 → 폭별 제목 최소 폭을 실측한다(상세는 AGENTS.md).
+- 목록 현재 페이지가 closed뿐이라 뒷페이지가 없다고 판정하면 활성 항목을 놓친다 → 위비티·콘테스트코리아는 빈/반복 페이지와 상한에서만 멈춘다.
 - 검증할 때 브라우저 대기 조건을 `.opp`만 쓰면 달력 화면에서 시간초과가 난다 → `.opp, .state, .cal`.
 
 ## 명령
@@ -59,6 +63,7 @@ node --test tests/*.test.mjs
 .venv/Scripts/python.exe collectors/collect_events.py --dry-run
 .venv/Scripts/python.exe collectors/collect_events.py --offline
 .venv/Scripts/python.exe tools/browser_check.py   # 선택: playwright==1.63.0 + installed Edge, 서버 8012 필요
+.venv/Scripts/python.exe tools/check_radar_ui.py  # AI Radar 화면 검사(폭 320~1440, 제목 최소 폭 포함), 서버 8012 필요
 ```
 
 예약 수집(`update.yml`)은 변수 `ENABLE_OPPORTUNITY_UPDATES=true`가 있어야만 동작한다. 켜는 것은 사용자 승인 사항.

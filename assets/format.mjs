@@ -56,7 +56,7 @@ export function deadlineText(deadline) {
     return { primary: `${formatDateKo(deadline.date)} ${formatSeoulTime(deadline.ms)}`, note: '서울 시간 기준' };
   }
   if (deadline.kind === 'dateOnly') {
-    return { primary: formatDateKo(deadline.date), note: '마감 시간 확인 필요' };
+    return { primary: formatDateKo(deadline.date), note: '마감 시각 미확인' };
   }
   return { primary: '마감일 미확인', note: null };
 }

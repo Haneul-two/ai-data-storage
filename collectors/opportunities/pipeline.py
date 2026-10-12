@@ -1,6 +1,7 @@
 """수집 실행·병합·검증·원자적 저장. 원격 실패가 기존 데이터를 훼손하지 않도록 설계한다."""
 import json
 import os
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -97,7 +98,20 @@ def atomic_write_json(path, doc):
     os.replace(tmp, path)
 
 
-def _collect_source(spec, fetcher, now, now_iso, max_items):
+def _propagate_closed(result, previous_items, spec_id, seen):
+    """목록에서 마감으로 확인된 기존 항목만 sourceStatus=closed로 복사한다. 본문을 다시 읽지 않았으므로 verifiedAt·나머지 필드는 그대로,
+    기존 data에 없는 행은 저장하지 않으며 단순히 사라진 항목은 건드리지 않는다."""
+    observed = {canonical_url(u) for u in result.closed_source_urls}
+    closed = []
+    for old in previous_items:
+        if (old["sourceId"] == spec_id and old["id"] not in seen and old["sourceStatus"] != "closed"
+                and canonical_url(old["sourceUrl"]) in observed and rules.meets_contract(old)):
+            seen.add(old["id"])
+            closed.append(dict(old, sourceStatus="closed", stale=False))
+    return closed
+
+
+def _collect_source(spec, fetcher, now, now_iso, max_items, previous_items=()):
     """(source_status 일부, 정규화된 항목 목록). 실패해도 예외를 밖으로 내보내지 않는다."""
     try:
         result = spec.collect(fetcher, now, max_items)
@@ -113,7 +127,9 @@ def _collect_source(spec, fetcher, now, now_iso, max_items):
         elif item["id"] not in seen:
             seen.add(item["id"])
             items.append(item)
-    message = result.message + (f" (계약 위반으로 {skipped}건 제외)" if skipped else "")
+    closed = _propagate_closed(result, previous_items, spec.id, seen)
+    items.extend(closed)
+    message = result.message + (f" (계약 위반으로 {skipped}건 제외)" if skipped else "") + (f" (목록 마감 확인 {len(closed)}건)" if closed else "")
     return {"status": "ok", "message": message}, items
 
 
@@ -127,16 +143,44 @@ def _same_opportunity(owner, item, url_key):
     return owner["title"].casefold() == item["title"].casefold()
 
 
+_LEADING_TAG_RE = re.compile(r"^\s*(?:\[([^\]]*)\]|【([^】]*)】)\s*")
+
+
+def _squash(text):
+    return re.sub(r"[\W_]+", "", text.casefold())
+
+
+def _same_event_key(item):
+    """다른 출처가 같은 공모전·행사를 서로 다른 주소로 싣는 경우를 잡는 키: (제목의 공백·기호를 정규화한 값, 마감일 또는 개최 시작일).
+    앞의 [..] 표기는 내용이 이 항목의 주최와 정확히 같을 때만 뗀다([Track1]·[Seoul] 같은 의미 있는 태그는 보존 — 누락보다 중복이 안전).
+    날짜가 없으면 None — 제목만으로는 서로 다른 회차를 합칠 수 있어 합치지 않는다."""
+    when = item["deadlineDate"] or item["startDate"]
+    title, organizer = item["title"], _squash(item.get("organizer") or "")
+    while organizer:
+        m = _LEADING_TAG_RE.match(title)
+        if not m or _squash(m[1] or m[2] or "") != organizer:
+            break
+        title = title[m.end():]
+    title = _squash(title)
+    return (title, when) if when and title else None
+
+
 def _dedupe(items, order):
     ranked = sorted(items, key=lambda i: (order.get(i["sourceId"], len(order)), i["id"]))
-    kept, by_id, by_url = [], set(), {}
+    kept, by_id, by_url, by_event = [], set(), {}, {}
     for item in ranked:
         key = canonical_url(item["url"])
         owner = by_url.get(key)
+        event_key = _same_event_key(item)
+        twin = by_event.get(event_key) if event_key else None
         if item["id"] in by_id or (owner is not None and owner["sourceId"] != item["sourceId"] and _same_opportunity(owner, item, key)):
+            continue
+        if twin is not None and twin["sourceId"] != item["sourceId"]:
             continue
         by_id.add(item["id"])
         by_url.setdefault(key, item)
+        if event_key:
+            by_event.setdefault(event_key, item)
         kept.append(item)
     return kept
 
@@ -158,7 +202,7 @@ def run(output_path, status_path=None, curated_path=None, fetcher=None, sources=
 
     statuses, fresh = [], {}
     for spec in specs:
-        outcome, items = _collect_source(spec, fetcher, now, now_iso, max_items)
+        outcome, items = _collect_source(spec, fetcher, now, now_iso, max_items, old_items)
         statuses.append({
             "id": spec.id, "name": spec.name, "url": spec.url, "status": outcome["status"], "checkedAt": now_iso,
             "lastSuccessAt": now_iso if items is not None else (old_sources.get(spec.id) or {}).get("lastSuccessAt"),

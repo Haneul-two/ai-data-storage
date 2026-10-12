@@ -1,5 +1,7 @@
 # 수집 소스 사실과 한계
 
+> **AI Radar(2026-10-12, 로컬 구현)**: 출처 10곳(기존 7 + 콘테스트코리아·Dev-Event·AI EXPO KOREA). 이 문서 아래 본문 중 7곳 기준 서술(허용 호스트·위비티·Devpost·aisummit·우선순위·한계)은 '## AI Radar 변경(2026-10-12)'가 우선한다. 반려한 후보와 사유는 [`evidence/radar-source-audit.md`](evidence/radar-source-audit.md)(여기에 긴 목록을 복제하지 않는다). 현재 데이터 건수·출처별 ok는 최종 수집 후 `HISTORY.md`에 기록한다. **원격 재설계 배포 전**이며 원격에서 10출처 모두 ok라는 보장은 없다.
+
 기준일 2026-10-02 실측(공식 행사 3종·위비티 다중 페이지는 2026-10-12 추가). 구현: `collectors/opportunities/sources/`. 실행: `.venv/Scripts/python.exe collectors/collect_events.py [--dry-run|--offline] [--output PATH] [--max-items N]`.
 
 ## 공통 정책
@@ -56,11 +58,26 @@
 
 - `https://www.aifesta.kr/`. 본문은 JS 앱(`#root`)이라 비어 있고 head의 JSON-LD `@graph` 안 `Event`를 읽는다(WebSite·Organization은 무시). 참가비·신청 마감·자격은 제공되지 않아 `확인 필요`. 종료한 행사도 90일 정책으로 저장되고 화면 기본(활성) 목록에서는 빠진다.
 
+## AI Radar 변경(2026-10-12, 로컬)
+
+- 허용 호스트 추가(정확한 이름만): `www.contestkorea.com`, `aiexpo.co.kr`(www는 301 이동이라 허용 안 함), `raw.githubusercontent.com`. 우선순위는 기존 7곳 뒤에 contestkorea > devevent > aiexpo.
+- **위비티**: 종료 라벨 행은 상세를 읽지 않는다. 목록이 등록순이라 마감이 단조롭지 않으므로, 한 페이지가 전부 종료여도 멈추지 않고 빈 페이지·반복 페이지·상한(6페이지·상세 100건)에서만 멈춘다. 상세 요청 약 89→53건(실측).
+- **Devpost**: 목록 meta 총 건수 기준으로 최대 5페이지, 상세 기본 20건(실측 총 23건=3페이지). 한도를 채우면 다음 페이지를 읽지 않고, 이후 페이지 오류는 소스 실패.
+- **콘테스트코리아(`contestkorea`)**: 서버 렌더링 GET. 제목 검색 'AI' 최대 12페이지 + '인공지능' 최대 3페이지, 상세 최대 60건. 접수기간은 상세의 연도 포함 `YYYY.MM.DD ~ YYYY.MM.DD`만 쓰고 날짜만 제공(`deadlineAt` null). 목록 마감과 상세 마감이 다르거나 접수중인데 마감이 지났으면 그 항목을 실패로 센다. 심사기간은 개최일이 아니라 `startDate/endDate` null. 현재 페이지가 전부 마감이어도 뒷페이지가 없다고 판정하지 않는다.
+- **Dev-Event(`devevent`)**: GitHub raw README 1회(약 120KB), 항목 100 상한. 접수 범위는 날짜만, 원문 시각은 `dateNote`. 일반 세미나는 제목에도 AI 단어가 있어야 하고 해커톤·대회는 AI 태그로 인정. 해외 지명 오프라인(온라인 병행 포함)은 한국 참가 확인 불가라 제외. 행사 landing 링크는 읽지 않고 저장만. `sourceUrl`은 읽은 README의 월 anchor, landing은 `url`. 디렉터리 표기라 날짜·참가비는 원문 확인 필요.
+- **AI EXPO KOREA(`aiexpo`)**: `/전시회-개요/` 한 장의 개요 표에서 행사명·기간(연도는 페이지에서 읽음)·장소·주최. 접수 마감·참가비·자격 확인 필요.
+- **AI Summit Seoul(`aisummit`)**: 응답 앞 1MB만 읽고 그 안에서 연도 포함 기간을 못 찾으면 추측하지 않고 오류. 응답 전체 2.5MB cap은 유지. 2.5MB 초과 원인은 로컬(메인 586KB)에서 재현하지 못했고 운영 실수집으로만 해소 여부를 알 수 있다.
+- **교차 출처 중복**: 제목(공백·기호 정규화)+마감일(없으면 개최 시작일)이 같은 다른 출처 항목은 먼저 등록된 출처 하나만 남긴다. 앞 `[..]`는 그 항목의 주최명과 정확히 같을 때만 뗀다(`[Track1]`·`[Seoul]`은 보존 — 누락보다 중복 몇 건이 안전). 날짜가 없으면 합치지 않는다. 같은 날짜의 Track1/Track2는 보존.
+- `Fetcher.get(prefix_bytes)`는 `1 <= prefix_bytes <= max_bytes`가 아니면 요청 전에 `ValueError`.
+- `--max-items`는 목록형 소스(위비티·Devpost·콘테스트코리아·Dev-Event)의 상세/항목 수 상한.
+- **요청 수와 시간**: 소스별 하드 상한 합계는 약 250요청(robots 제외)이라고 보지만 이는 단정할 수 있는 절대 상한이 아니다. 실측 1회(2026-10-12)는 robots·redirect를 포함해 257요청, 약 4분 30초(요청 간격 1초, 요청당 평균 약 1.05초)였다. GitHub 러너는 지연이 클 수 있어 요청당 3초로 가정하면 250요청 ≈ 12.5분이라, workflow는 수집 step `timeout-minutes: 18`, job `25`(기존 15)로 두어 step이 초과해도 tests·commit·실패 표시가 남게 했다.
+- 정확한 요청 URL과 소스별 목록/상세 요청 최대치는 audit 문서 §3·§4.
+
 ## 저장·병합 규칙
 
 - 전체 원격 실패 시 `data/opportunities.json`은 바이트 불변이고 `data/ingest-status.json`만 갱신된다. 부분 실패는 성공 소스만 교체하고 실패 소스 행·`verifiedAt`·`lastSuccessAt`을 보존한다.
 - 성공 소스에서 사라진 활성 항목은 `stale=true`(verifiedAt 유지), 종료 후 90일이 지난 항목만 제외한다. 날짜가 없는 항목은 verifiedAt 기준.
-- id = `소스id-sha1(canonical sourceUrl)[:12]`. 서로 다른 소스가 같은 canonical `url`을 가리키면 소스 우선순위(devpost > dacon > wevity > aisummit > seocho > nvidia > aifesta)로 한 건만 남긴다.
+- id = `소스id-sha1(canonical sourceUrl)[:12]`. 서로 다른 소스가 같은 canonical `url`을 가리키면 소스 우선순위(devpost > dacon > wevity > aisummit > seocho > nvidia > aifesta > contestkorea > devevent > aiexpo)로 한 건만 남긴다.
 - 기존 JSON이 손상됐거나 계약을 어기면 종료 코드 2로 중단하고 어떤 파일도 쓰지 않는다. 종료 코드 1은 모든 소스 실패.
 - `data/curated.json`(수동 입력, `schemaVersion: 2`, 전체 항목 계약)은 현재 비어 있다. 값이 있으면 검증 후 병합하며 자동 재확인은 하지 않는다(각 항목의 `verifiedAt`이 입력 시점). 기존 `data/events.json`은 건드리지 않는다.
 
@@ -77,8 +94,9 @@
 ## 알려진 한계
 
 - DACON은 1페이지(14건 수준)만 본다. 위비티는 6페이지·후보 90건 상한이라 그 뒤 항목은 누락될 수 있고, 한 번의 수집에 약 4분(요청 간격 1초)이 든다.
+- 콘테스트코리아·위비티의 응모 대상은 원문 표기이며 개인/팀/기업 구분은 하지 않는다. Dev-Event는 커뮤니티 큐레이션이라 제목에 AI 단어가 없는 일반 세미나는 놓칠 수 있다.
 - 공식 행사 3곳은 지정한 사이트만 매일 확인한다. 웹 전체의 다른 행사는 발견하지 못하며, 사이트 마크업이 바뀌면 오류로 표시되고 이전 데이터가 보존된다.
 - 위비티는 종료·마감 항목(2026-10-12 수집 기준 37건)도 목록에 있어 보드의 마감·종료 필터에 쌓인다.
 - AI Summit Seoul은 2026-10-12 운영 수집에서 응답이 2.5MB 상한을 넘어 error였다. 이전 항목 1건과 검증 시각만 보존되며 상한 해소 전까지 신선한 값이 아니다.
 - Devpost 한국 참가 판정은 상세 페이지의 문구 휴리스틱이다. 문구가 바뀌면 안전하게 제외 쪽으로 동작한다.
-- 온오프믹스는 일반 UA 자동 수집을 금지해 제외했다.
+- 온오프믹스는 일반 UA 자동 수집을 금지해 제외했다(robots `Disallow: /`).

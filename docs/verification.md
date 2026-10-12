@@ -1,5 +1,29 @@
 # 검증표 (frontend/backend 4대 축)
 
+## AI Radar 재설계·마감 제외·수집 확장 (2026-10-12, 로컬)
+
+원격 재설계 배포 전이다. 현재 데이터 건수와 출처별 ok는 root의 최종 수집 후 `HISTORY.md`에 기록하며, 아래 표에는 쓰지 않는다. 예전 dry-run 164/183건을 현재 데이터로 쓰지 않는다.
+
+| 항목 | 판정 | 증거와 관찰 |
+|---|---|---|
+| Python 회귀 | 통과(루트 독립 실행) | `python -m unittest discover -s tests` **214 OK**. 오프라인 fixture, 전체 수집 미실행. 신규 `tests/test_radar_sources.py`는 RED 62건 중 56건 실패 → GREEN, 이후 2건 추가(그 2건은 RED 미보존). 조기 중단 누락 방지, Track1/Track2 같은 날짜 보존, DevEvent `sourceUrl`이 읽은 월 anchor·해외 오프라인 제외, Fetcher prefix 1..maxBytes 게이트 포함. `docs/evidence/radar-backend-checks.txt` |
+| Node 회귀 | 통과(루트 독립 실행) | `node --test tests/*.test.mjs` **118 pass**. `tests/visibility.test.mjs`: 마감 직전/정각/직후, dateOnly 한국 날짜 경계, 옛 `status=closed`→all, 저장 id 보존 |
+| UI 실제 Edge | 통과 | `tools/check_radar_ui.py` **98/98**, pageerror 0. `docs/evidence/radar-frontend-checks.txt`, 캡처 `radar-desktop/mobile/detail/w768/w1024/root-preview.png` |
+| 폭별 레이아웃 | 통과 | 320/375/390/414/768/1024/1280/1440 가로 넘침 0. 수정 전 RED: 768에서 첫 제목 폭 **30px**·모바일 390 160px 등(`radar-layout-red.txt`) → 수정 후 768 **710px**, 390 **332px** |
+| 마감 제외 동작 | 통과 | 마감 직전/정각/직후, dateOnly 한국 날 경계, 옛 status=closed→all, 저장 ID 보존, 달력·상세·임박·건수 일치, 열린 상세가 마감 시 닫힘 |
+| 접근성·상태 | 통과 | 키보드, 축소 모션, 오류/로딩/빈 상태 |
+| 실제 공개 출처 dry-run | 이전 시점 1회 | 10출처 모두 ok였던 dry-run 1회(257요청, 약 4분 30초, 파일 미수정; `radar-backend-checks.txt` [3]). **이 결과는 당시 dry-run일 뿐 현재 데이터가 아니며 원격에서 10출처 모두 ok라는 보장도 아니다.** aisummit 운영 2.5MB 초과 해소는 운영 수집으로만 확인 가능 |
+| 최종 실수집(`data/*.json` 갱신) | 진행 중 | root 몫. 완료 후 `HISTORY.md`에 기록 |
+| 원격 재설계 배포 | 미진행 | 이미 승인된 운영 업데이트 범위로 root가 진행. 배포 완료 단정 금지 |
+| 예약 cron 자동 첫 실행 | 미검증 | 기존과 같음 |
+| 독립 리뷰 | 완료 | 설계·캡처 리뷰 GPT 6.1 SOL(max), 구현 Claude, 코드·실측 독립 리뷰 Codex. `docs/evidence/radar-source-audit.md` 말미에 적힌 '교차 리뷰 미호출'은 audit 작성 시점 기록이며 이후 독립 리뷰가 반영됐다 |
+
+기준: 사용자 확정 — 국내 + 한국 참가 해외 온라인, 공개만·우회 없음·운영 LLM 0, 한국 현재 시각 확정 마감 전 탐색 제외, dateOnly는 오늘까지, 미확정 미래는 '확인 필요'로 유지.
+
+---
+
+(아래는 AI Radar 이전 검증표. 당시 기준을 보존한다.)
+
 기준일 2026-10-02 로컬 검증 + 2026-10-12 운영 확인. 증거 원문은 `docs/evidence/final-checks.txt`, 브라우저 35개 항목은 `docs/evidence/browser-check.json`.
 "통과"는 아래 증거로 관찰한 것만 쓴다. 원격은 2026-10-12에 push·병합·수동 workflow 실행·Pages 배포를 실제로 확인했다(아래). 예약 시각에 자동 발생한 첫 실행은 아직 없어 통과로 쓰지 않는다.
 

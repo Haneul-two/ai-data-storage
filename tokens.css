@@ -1,40 +1,42 @@
-/* Hallmark · macrostructure: Workbench (filter rail / list / deadline rail) · tone: modern-minimal · anchor hue: cobalt 225 */
-/* Hallmark · pre-emit critique (자체 평가): P4 H4 E4 S4 R5 V3 — 모든 색·글꼴·간격·반경은 이 파일의 토큰만 참조한다 */
+/* AI Radar · 구조적 업무 도구: 무채색 바탕 + 짙은 forest 단일 강조 + 절제된 amber(임박 마감)만 사용 */
+/* 모든 색·글꼴·간격·반경은 이 파일의 토큰만 참조한다. design-lab 이전 시안 호환을 위해 이전 토큰 이름은 유지하고 값만 바꿨다. */
 
 :root {
-  /* color — Cobalt */
-  --color-page: #f5f7fb;
+  /* color */
+  --color-page: #f6f7f5;
   --color-surface: #ffffff;
-  --color-ink: #18243a;
-  --color-muted: #61708a;
-  --color-accent: #245de8;
-  --color-accent-strong: #1b49c0;
-  --color-accent-soft: #eaf0ff;
-  --color-line: #dce3ef;
-  --color-line-strong: #c3cee0;
-  --color-focus: #245de8;
+  --color-ink: #202622;
+  --color-muted: #66706a;
+  --color-accent: #16604a;
+  --color-accent-strong: #0f4a39;
+  --color-accent-soft: #e6efea;
+  --color-line: #dde2de;
+  --color-line-strong: #c5ccc7;
+  --color-focus: #16604a;
   --color-on-accent: #ffffff;
-  --color-scrim: rgba(24, 36, 58, 0.45);
+  --color-scrim: rgba(32, 38, 34, 0.4);
 
   /* status */
-  --color-open: #0b6b44;
-  --color-open-soft: #e4f5ec;
-  --color-upcoming: #8a5a00;
-  --color-upcoming-soft: #fff3d9;
-  --color-closed: #5a6579;
-  --color-closed-soft: #eceff5;
+  --color-open: #16604a;
+  --color-open-soft: #e6efea;
+  --color-upcoming: #66706a;
+  --color-upcoming-soft: #eff1ee;
+  --color-closed: #66706a;
+  --color-closed-soft: #eff1ee;
+  --color-urgent: #8a5a00;
+  --color-urgent-soft: #fff4dc;
   --color-warn: #8a5a00;
-  --color-warn-soft: #fff6e0;
+  --color-warn-soft: #fff4dc;
   --color-danger: #a8261c;
   --color-danger-soft: #fdecea;
 
-  /* kind (유형 pill) */
-  --color-kind-event: #245de8;
-  --color-kind-event-soft: #eaf0ff;
-  --color-kind-contest: #0a6b68;
-  --color-kind-contest-soft: #e2f4f2;
-  --color-kind-hackathon: #8a4b00;
-  --color-kind-hackathon-soft: #fff0dc;
+  /* kind: 유형은 색이 아니라 글자로 구분한다 (이전 시안 호환용 중립값) */
+  --color-kind-event: #202622;
+  --color-kind-event-soft: #eff1ee;
+  --color-kind-contest: #202622;
+  --color-kind-contest-soft: #eff1ee;
+  --color-kind-hackathon: #202622;
+  --color-kind-hackathon-soft: #eff1ee;
 
   /* type */
   --font-body: 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
@@ -43,11 +45,11 @@
   --text-sm: 0.875rem;
   --text-md: 1rem;
   --text-lg: 1.125rem;
-  --text-xl: 1.375rem;
-  --text-title: 2.5rem;
-  --text-title-mobile: 1.75rem;
-  --leading-body: 1.6;
-  --leading-tight: 1.25;
+  --text-xl: 1.25rem;
+  --text-title: 1.5rem;
+  --text-title-mobile: 1.25rem;
+  --leading-body: 1.5;
+  --leading-tight: 1.3;
 
   /* space (4px 기반) */
   --space-1: 4px;
@@ -60,21 +62,24 @@
   --space-8: 64px;
 
   /* shape */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 6px;
   --radius-pill: 999px;
   --border: 1px solid var(--color-line);
 
   /* layout */
-  --layout-max: 1400px;
-  --rail-filter: 220px;
-  --rail-urgent: 260px;
+  --layout-max: 1360px;
+  --rail-filter: 200px;
+  --rail-urgent: 0px;
+  --topbar: 60px;
+  --drawer: 540px;
   --tap: 44px;
   --control: 40px;
-  --gutter: 32px;
+  --gutter: 24px;
   --gutter-mobile: 16px;
 
-  /* motion */
-  --transition: 140ms ease;
+  /* motion: 동작에 대한 반응만, 100~180ms */
+  --transition: 120ms ease;
+  --transition-drawer: 160ms ease-out;
 }

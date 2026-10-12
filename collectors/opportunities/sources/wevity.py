@@ -120,12 +120,17 @@ def build_raw(row, detail):
 
 
 def _is_candidate(row):
+    """AI 단어 경계·유형 판정을 통과하고 종료(마감)로 표시되지 않은 행. 종료 행은 상세를 읽지 않는다(보드에서도 제외된다)."""
+    return row["sourceStatus"] != "closed" and _is_ai_row(row)
+
+
+def _is_ai_row(row):
     return rules.is_ai_related(row["title"]) and rules.classify_kind(row["title"], "contest")
 
 
 def collect(fetcher, now, max_items=None):
     limit = item_limit(max_items)
-    rows, seen = [], set()
+    rows, seen, closed = [], set(), []
     for page in range(1, PAGE_LIMIT + 1):
         # 첫 페이지뿐 아니라 이후 페이지의 HTTP·구조 오류도 소스 실패로 넘겨 부분 결과가 완전 성공으로 보이지 않게 한다
         new = [r for r in parse_listing(fetcher.get(page_url(page)).text) if r["ix"] not in seen]
@@ -133,8 +138,9 @@ def collect(fetcher, now, max_items=None):
             break  # 빈 페이지이거나 이미 본 페이지 반복
         seen.update(r["ix"] for r in new)
         rows.extend(r for r in new if _is_candidate(r))
+        closed.extend(detail_url(r["ix"]) for r in new if r["sourceStatus"] == "closed" and _is_ai_row(r))  # 상세는 읽지 않고 기존 항목의 마감 전파용으로만 관찰
         if len(rows) >= limit:
-            break
+            break  # 목록은 등록순이라 접수 마감 순서가 아니다 → 종료 행만 있는 페이지 뒤에도 진행 중 항목이 있을 수 있어 페이지 상한까지 읽는다
     rows = rows[:limit]
     items, failures = [], []
     for row in rows:
@@ -145,4 +151,4 @@ def collect(fetcher, now, max_items=None):
             continue
         items.append(build_raw(row, detail))
     fail_if_every_fetch_failed(len(rows), failures, "위비티")
-    return CollectResult(items, f"AI 관련 후보 {len(rows)}건({page}페이지까지 확인) 중 {len(items)}건 사용, 상세 조회 실패 {len(failures)}건")
+    return CollectResult(items, f"AI 관련 후보 {len(rows)}건({page}페이지까지 확인) 중 {len(items)}건 사용, 상세 조회 실패 {len(failures)}건", closed)

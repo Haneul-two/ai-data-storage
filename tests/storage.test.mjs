@@ -82,10 +82,10 @@ test('serializeFilters: 기본값은 URL에서 생략한다', () => {
 });
 
 test('resolveFilters: URL 값이 저장값보다 우선한다', () => {
-  const stored = { ...DEFAULT_FILTERS, kind: 'contest', status: 'closed' };
+  const stored = { ...DEFAULT_FILTERS, kind: 'contest', status: 'open' };
   const f = resolveFilters('?kind=event', stored);
   assert.equal(f.kind, 'event');
-  assert.equal(f.status, 'closed'); // URL에 없는 키는 저장값
+  assert.equal(f.status, 'open'); // URL에 없는 키는 저장값
 });
 
 test('resolveFilters: URL이 없으면 저장값, 둘 다 없으면 기본값', () => {
@@ -94,7 +94,7 @@ test('resolveFilters: URL이 없으면 저장값, 둘 다 없으면 기본값', 
 });
 
 test('resolveFilters: URL의 잘못된 값은 저장값이 아니라 기본값으로 안전하게 되돌린다', () => {
-  const f = resolveFilters('?status=bogus&kind=news&view=zzz', { ...DEFAULT_FILTERS, status: 'closed' });
+  const f = resolveFilters('?status=bogus&kind=news&view=zzz', { ...DEFAULT_FILTERS, status: 'open' });
   assert.equal(f.status, DEFAULT_FILTERS.status);
   assert.equal(f.kind, DEFAULT_FILTERS.kind);
   assert.equal(f.view, DEFAULT_FILTERS.view);

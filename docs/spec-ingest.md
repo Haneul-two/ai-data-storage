@@ -1,5 +1,7 @@
 # 공개 기회 수집 파이프라인
 
+> **AI Radar 갱신(2026-10-12)**: 출처가 10곳으로 늘었다(콘테스트코리아·Dev-Event·AI EXPO KOREA 추가). 소스별 목록 깊이·한도·반려 후보는 `docs/sources.md`와 `docs/evidence/radar-source-audit.md`. 아래 '소스당 최대20개'는 기본값이며 위비티·Devpost·콘테스트코리아·Dev-Event는 전용 한도를 쓴다. 신청이 끝난 항목은 수집 후에도 데이터에 보관하지만 화면 노출에서 제외한다(spec.md §3). 서로 다른 출처가 같은 공모전을 실으면 제목+마감일(없으면 개최 시작일)이 같을 때 먼저 등록된 출처 하나만 남긴다.
+
 상위 계약: `spec.md`. 신규 `collectors/opportunities/`에 source parser, 검증/정규화, 저장/CLI 책임을 분리한다. 기존 `collectors/collect_events.py`는 신규 CLI로 이어지는 얇은 entrypoint로 Claude가 교체한다.
 
 - 실제 확인 가능한 Devpost와 국내 공개 소스를 수집한다. 소스당 최대20개, HTTP timeout15s, 명시 User-agent, robots 확인·캐시, 요청 간격1s. 허용 호스트(devpost.com·*.devpost.com, www.wevity.com/wevity.com, dacon.io/www.dacon.io, 공식행사 adapter 사용 시 www.aisummit.co.kr/aisummit.co.kr)만 fetch한다. 주소 자체의 공인 HTTPS hostname+port443+userinfo 없음을 검증하고 redirect도 같은 정책이다. 외부 apply URL은 fetch하지 않고 HTTPS 안전 링크로만 보일 수 있다. parser 구조 미확인 소스는 error/blocked로 기록하며, P0는 실제 국내 소스 1개 이상과 Devpost만 연결한다.

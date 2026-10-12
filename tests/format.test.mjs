@@ -32,7 +32,7 @@ test('deadlineText: 정확한 시각은 서울 날짜·시각과 기준 안내',
 
 test('deadlineText: 날짜만 있으면 시간 확인 필요를 붙인다', () => {
   const d = getDeadline(makeItem({ deadlineDate: '2026-10-05' }), NOW);
-  assert.deepEqual(deadlineText(d), { primary: '2026.10.05 (월)', note: '마감 시간 확인 필요' });
+  assert.deepEqual(deadlineText(d), { primary: '2026.10.05 (월)', note: '마감 시각 미확인' });
 });
 
 test('deadlineText: 없으면 추측하지 않고 미확인이라고 쓴다', () => {

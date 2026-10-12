@@ -33,6 +33,7 @@ export function createDetail({ getContext, onToggleSave, onClosed }) {
   document.body.appendChild(dialog);
   let opener = null;
   let currentId = null;
+  let currentTitle = null;
 
   dialog.addEventListener('click', (e) => {
     if (e.target === dialog) dialog.close();
@@ -48,6 +49,7 @@ export function createDetail({ getContext, onToggleSave, onClosed }) {
     const ctx = getContext();
     opener = openerEl || document.activeElement;
     currentId = item.id;
+    currentTitle = item.title;
     const link = externalLink(item.url, '안내 페이지 열기', 'btn btn-primary');
     if (link) link.appendChild(icon('external'));
     replaceChildrenOf(dialog,
@@ -55,7 +57,7 @@ export function createDetail({ getContext, onToggleSave, onClosed }) {
         h('span', { class: 'detail-bar-title' }, '상세 정보'),
         h('button', { type: 'button', class: 'icon-btn', autofocus: true, 'aria-label': '상세 정보 닫기', onclick: () => dialog.close() }, icon('close'))),
       h('div', { class: 'detail-body' },
-        h('div', { class: 'opp-badges' }, kindPill(item), statusBadge(item, ctx.now), ddayBadge(item, ctx.now), flagBadges(item, ctx.sources, ctx.now)),
+        h('p', { class: 'detail-meta' }, kindPill(item), statusBadge(item, ctx.now), ddayBadge(item, ctx.now), flagBadges(item, ctx.sources, ctx.now)),
         h('h2', { class: 'detail-title', id: 'detail-title' }, item.title),
         item.organizer ? h('p', { class: 'detail-org' }, item.organizer) : null,
         item.description ? h('p', { class: 'detail-desc' }, item.description) : null,
@@ -63,7 +65,7 @@ export function createDetail({ getContext, onToggleSave, onClosed }) {
         h('div', { class: 'detail-actions' },
           link,
           saveButton(item, ctx.savedSet.has(item.id), onToggleSave)),
-        link ? null : h('p', { class: 'side-empty' }, '안전하게 열 수 있는 안내 링크가 없어요. 출처 확인 링크를 이용해 주세요.')));
+        link ? null : h('p', { class: 'side-empty' }, '안전하게 열 수 있는 안내 링크가 없습니다. 출처 확인 링크를 이용하세요.')));
     dialog.showModal();
   }
 
@@ -72,5 +74,6 @@ export function createDetail({ getContext, onToggleSave, onClosed }) {
     isOpen: () => dialog.open,
     close: () => dialog.close(),
     currentId: () => currentId,
+    currentTitle: () => currentTitle,
   };
 }

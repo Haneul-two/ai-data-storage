@@ -12,11 +12,26 @@ SOURCE_ID = "devpost"
 SOURCE_NAME = "Devpost"
 SOURCE_URL = "https://devpost.com/hackathons"
 LISTING_URL = "https://devpost.com/api/hackathons?search=AI&status%5B%5D=open&challenge_type%5B%5D=online&page=1"
-DEFAULT_MAX = 10  # 상세 요청 수를 줄이기 위한 Devpost 기본 상한
+PAGE_LIMIT = 5  # 목록 9건씩 최대 5페이지(meta 총 건수가 그보다 적으면 거기까지). 2026-10 실측 총 23건=3페이지
+DEFAULT_MAX = 20  # 상세 요청 수 상한(소스 하드 상한과 같다). 1페이지만 읽던 때는 10건이었다
 _MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
 _HACK_TITLE_RE = re.compile(r"hackathon", re.IGNORECASE)
 _CONTEST_TITLE_RE = re.compile(r"\b(?:competition|contest)\b", re.IGNORECASE)
 _PERIOD_RE = re.compile(r"([A-Za-z]{3})[a-z]*\s+(\d{1,2})(?:,\s*(\d{4}))?\s*-\s*(?:([A-Za-z]{3})[a-z]*\s+)?(\d{1,2}),\s*(\d{4})")
+
+
+def page_url(page):
+    return LISTING_URL if page == 1 else LISTING_URL.replace("page=1", f"page={page}")
+
+
+def _page_count(text):
+    """meta의 총 건수/페이지당 건수로 필요한 목록 페이지 수. 읽을 수 없으면 1페이지."""
+    try:
+        meta = json.loads(text).get("meta") or {}
+        total, per_page = int(meta["total_count"]), int(meta["per_page"])
+    except (ValueError, KeyError, TypeError, AttributeError):
+        return 1
+    return min(PAGE_LIMIT, -(-total // per_page)) if total > 0 and per_page > 0 else 1
 
 
 def parse_listing(text):
@@ -127,7 +142,14 @@ def build_raw(candidate, detail):
 
 def collect(fetcher, now, max_items=None):
     limit = effective_limit(DEFAULT_MAX if max_items is None else max_items)
-    candidates = parse_listing(fetcher.get(LISTING_URL).text)[:limit]
+    first = fetcher.get(LISTING_URL).text
+    candidates, pages = parse_listing(first), _page_count(first)
+    for page in range(2, pages + 1):
+        if len(candidates) >= limit:
+            break
+        # 이후 페이지의 HTTP·구조 오류도 소스 실패로 넘겨 부분 결과가 완전 성공으로 보이지 않게 한다
+        candidates.extend(parse_listing(fetcher.get(page_url(page)).text))
+    candidates = candidates[:limit]
     items, failures, skipped = [], [], 0
     for cand in candidates:
         try:
