@@ -1,25 +1,25 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-12T02:10:52Z",
-  "lastAttemptAt": "2026-10-12T02:10:52Z",
+  "updatedAt": "2026-10-12T05:29:11Z",
+  "lastAttemptAt": "2026-10-12T05:29:11Z",
   "sources": [
     {
       "id": "devpost",
       "name": "Devpost",
       "url": "https://devpost.com/hackathons",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:02:47Z",
-      "lastSuccessAt": "2026-10-12T02:02:47Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 6,
-      "message": "후보 7건 중 6건 사용, 한국 참가 근거/마감 미확인 1건 제외, 조회 실패 0건 (계약 위반으로 1건 제외)"
+      "message": "후보 7건 중 6건 사용, 한국 참가 근거/마감 미확인 1건 제외, 조회 실패 0건"
     },
     {
       "id": "dacon",
       "name": "DACON",
       "url": "https://dacon.io/competitions",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:02:47Z",
-      "lastSuccessAt": "2026-10-12T02:02:47Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 10,
       "message": "AI 관련 후보 14건 중 14건 사용, 상세 조회 실패 0건"
     },
@@ -28,28 +28,28 @@
       "name": "위비티",
       "url": "https://www.wevity.com/?c=find&s=1&gub=1",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:02:47Z",
-      "lastSuccessAt": "2026-10-12T02:02:47Z",
-      "itemCount": 89,
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
+      "itemCount": 90,
       "message": "AI 관련 후보 89건(6페이지까지 확인) 중 89건 사용, 상세 조회 실패 0건"
     },
     {
       "id": "aisummit",
       "name": "AI Summit Seoul",
       "url": "https://www.aisummit.co.kr/",
-      "status": "ok",
-      "checkedAt": "2026-10-12T02:02:47Z",
+      "status": "error",
+      "checkedAt": "2026-10-12T05:29:11Z",
       "lastSuccessAt": "2026-10-12T02:02:47Z",
       "itemCount": 1,
-      "message": "노출 행사 2027년 2027-08-11~2027-08-13. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용"
+      "message": "응답 크기 상한 초과: https://www.aisummit.co.kr/"
     },
     {
       "id": "seocho",
       "name": "서초 AI 페스타",
       "url": "https://seochoai.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:10:52Z",
-      "lastSuccessAt": "2026-10-12T02:10:52Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 1,
       "message": "행사 2026-10-17~2026-10-17 서초문화예술공원"
     },
@@ -58,8 +58,8 @@
       "name": "NVIDIA AI Day Seoul",
       "url": "https://www.nvidia.com/ko-kr/ai-days/",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:10:52Z",
-      "lastSuccessAt": "2026-10-12T02:10:52Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 1,
       "message": "행사 2026-11-09~2026-11-10 코엑스, 등록 버튼 있음"
     },
@@ -68,8 +68,8 @@
       "name": "AI FESTA",
       "url": "https://www.aifesta.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:10:52Z",
-      "lastSuccessAt": "2026-10-12T02:10:52Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 1,
       "message": "행사 2026-10-06~2026-10-08 코엑스 C홀"
     }
@@ -100,7 +100,7 @@
       "sourceUrl": "https://multimodal-ai-hackathon-2026-7.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "원문 마감 2026-10-14 14:45 (UTC-04:00), 서울 기준 2026-10-15 03:45",
       "sourceStatus": "open",
       "stale": false
@@ -132,10 +132,10 @@
       "sourceUrl": "https://aws-cds-partner.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-10-02T08:13:17Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "원문 마감 2026-10-28 16:00 (UTC-04:00), 서울 기준 2026-10-29 05:00",
       "sourceStatus": "open",
-      "stale": true
+      "stale": false
     },
     {
       "id": "devpost-7fc301aa2dbf",
@@ -164,7 +164,7 @@
       "sourceUrl": "https://nebiusglobalaihackathon.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "원문 마감 2026-10-30 13:00 (UTC-04:00), 서울 기준 2026-10-31 02:00",
       "sourceStatus": "open",
       "stale": false
@@ -196,7 +196,7 @@
       "sourceUrl": "https://learn-ai-basics.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "원문 마감 2026-10-26 17:00 (UTC-04:00), 서울 기준 2026-10-27 06:00",
       "sourceStatus": "open",
       "stale": false
@@ -228,7 +228,7 @@
       "sourceUrl": "https://opencv26.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "원문 마감 2026-10-27 02:45 (UTC-04:00), 서울 기준 2026-10-27 15:45",
       "sourceStatus": "open",
       "stale": false
@@ -260,7 +260,7 @@
       "sourceUrl": "https://paypalaihackathon.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "원문 마감 2026-11-12 15:00 (UTC-05:00), 서울 기준 2026-11-13 05:00",
       "sourceStatus": "open",
       "stale": false
@@ -293,7 +293,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236693/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 원문이 대회 시작일보다 앞서 사용하지 않음. 마감 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -328,7 +328,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236736/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 2026-07-29 23:59 KST(DACON 표기). 대회 기간은 접수 기간이 아니며 신청 마감은 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -364,7 +364,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236743/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 2026-09-01 10:00 KST(DACON 표기). 대회 기간은 접수 기간이 아니며 신청 마감은 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -397,7 +397,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236771/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 2026-11-01 10:00 KST(DACON 표기). 대회 기간은 접수 기간이 아니며 신청 마감은 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -432,7 +432,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236694/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -465,7 +465,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236754/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 2026-09-29 10:00 KST(DACON 표기). 대회 기간은 접수 기간이 아니며 신청 마감은 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -498,7 +498,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236753/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 2026-09-29 09:59 KST(DACON 표기). 대회 기간은 접수 기간이 아니며 신청 마감은 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -534,7 +534,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236727/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 원문이 대회 시작일보다 앞서 사용하지 않음. 마감 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -567,7 +567,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236749/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 2026-09-29 09:59 KST(DACON 표기). 대회 기간은 접수 기간이 아니며 신청 마감은 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -603,7 +603,7 @@
       "sourceUrl": "https://dacon.io/competitions/official/236767/overview/",
       "sourceId": "dacon",
       "sourceName": "DACON",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "제출 마감 2026-09-20 09:59 KST(DACON 표기). 대회 기간은 접수 기간이 아니며 신청 마감은 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -633,7 +633,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111258",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -663,7 +663,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110879",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -693,7 +693,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111454",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -723,7 +723,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110931",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -753,7 +753,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111279",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -813,7 +813,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110914",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -843,7 +843,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111214",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -873,7 +873,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=103817",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -903,7 +903,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110970",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -933,7 +933,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110633",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -963,7 +963,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110218",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -993,7 +993,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111550",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1023,7 +1023,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111199",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1053,7 +1053,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111273",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1083,7 +1083,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110622",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1113,7 +1113,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111483",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1143,7 +1143,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110951",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1173,7 +1173,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111060",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1203,7 +1203,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111430",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1233,7 +1233,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111322",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1263,7 +1263,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111553",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1293,7 +1293,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110988",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1323,7 +1323,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110697",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1353,7 +1353,37 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=109173",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
+      "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
+      "sourceStatus": "open",
+      "stale": false
+    },
+    {
+      "id": "wevity-4803d535f764",
+      "kind": "contest",
+      "title": "[제천문화관광재단] 2026 시민 AI영상 공모전",
+      "organizer": "제천문화관광재단",
+      "description": "접수기간: 2026. 9. 28.(월) ~ 11. 20.(금) 23:59까지",
+      "tags": [
+        "AI"
+      ],
+      "mode": "unknown",
+      "region": "미정",
+      "country": "KR",
+      "startDate": null,
+      "endDate": null,
+      "registrationStartDate": "2026-09-28",
+      "deadlineDate": "2026-11-20",
+      "deadlineAt": null,
+      "eligibility": "기타",
+      "eligibilityVerified": true,
+      "fee": "확인 필요",
+      "prize": "총 1천만원이하 / 1등 100만원",
+      "url": "https://jccf.or.kr/",
+      "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111490",
+      "sourceId": "wevity",
+      "sourceName": "위비티",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1383,7 +1413,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111449",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "unknown",
       "stale": false
@@ -1413,7 +1443,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110676",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1443,7 +1473,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110072",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1473,7 +1503,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111047",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1503,7 +1533,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111280",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1533,7 +1563,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111278",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1563,7 +1593,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110855",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1593,7 +1623,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111164",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1623,7 +1653,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=109988",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1653,7 +1683,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110615",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1683,7 +1713,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110398",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1713,7 +1743,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111124",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1743,7 +1773,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111087",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1773,7 +1803,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111306",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1803,7 +1833,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111155",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1833,7 +1863,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111059",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1863,7 +1893,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110783",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1893,7 +1923,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110664",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -1923,7 +1953,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110953",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1953,7 +1983,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110647",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1983,7 +2013,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111455",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2013,7 +2043,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110632",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2043,7 +2073,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111065",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2073,7 +2103,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110908",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2103,7 +2133,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111132",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2133,7 +2163,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110023",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2163,7 +2193,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110590",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2193,7 +2223,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110738",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2223,7 +2253,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110765",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2253,7 +2283,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110945",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2283,7 +2313,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111222",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2313,7 +2343,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111205",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2343,7 +2373,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111185",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2373,7 +2403,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111122",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2403,7 +2433,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111038",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2433,7 +2463,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111242",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2463,7 +2493,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110273",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2493,7 +2523,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110604",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2523,7 +2553,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111104",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2553,7 +2583,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111006",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2583,7 +2613,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111346",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2613,7 +2643,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111271",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2643,7 +2673,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111024",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2673,7 +2703,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110605",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2703,7 +2733,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111461",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2733,7 +2763,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110659",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2763,7 +2793,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110277",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2793,7 +2823,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111021",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2823,7 +2853,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111385",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2853,7 +2883,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110770",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2883,7 +2913,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111299",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2913,7 +2943,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111315",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2943,7 +2973,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110776",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -2973,7 +3003,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110606",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -3003,7 +3033,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111265",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -3033,7 +3063,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110799",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3063,7 +3093,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110817",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3093,7 +3123,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111223",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3123,7 +3153,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110909",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -3153,7 +3183,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110679",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3183,7 +3213,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111390",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3213,7 +3243,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111220",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3243,7 +3273,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110623",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -3273,7 +3303,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111062",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-10-12T02:02:47Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
       "stale": false
@@ -3337,7 +3367,7 @@
       "sourceUrl": "https://seochoai.kr/",
       "sourceId": "seocho",
       "sourceName": "서초 AI 페스타",
-      "verifiedAt": "2026-10-12T02:10:52Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "공식 개최 10:00~18:00 (공식 사이트 기준). 일부 프로그램은 별도 사전예약이 있어 프로그램별 신청 상태는 공식 사이트에서 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -3372,7 +3402,7 @@
       "sourceUrl": "https://www.nvidia.com/ko-kr/ai-days/",
       "sourceId": "nvidia",
       "sourceName": "NVIDIA AI Day Seoul",
-      "verifiedAt": "2026-10-12T02:10:52Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "공식 안내의 개최 일정 기준 행사 기간. 세션·워크숍 시간은 프로그램별로 다르고 등록 마감과 참가비는 공식 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -3404,7 +3434,7 @@
       "sourceUrl": "https://www.aifesta.kr/",
       "sourceId": "aifesta",
       "sourceName": "AI FESTA",
-      "verifiedAt": "2026-10-12T02:10:52Z",
+      "verifiedAt": "2026-10-12T05:29:11Z",
       "dateNote": "공식 개최 2026-10-06 10:00 ~ 2026-10-08 16:00 (공식 사이트 기준). 참가비와 신청 마감은 공식 사이트에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false

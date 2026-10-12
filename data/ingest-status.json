@@ -1,23 +1,23 @@
 {
-  "lastAttemptAt": "2026-10-12T02:10:52Z",
+  "lastAttemptAt": "2026-10-12T05:29:11Z",
   "sources": [
     {
       "id": "devpost",
       "name": "Devpost",
       "url": "https://devpost.com/hackathons",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:02:47Z",
-      "lastSuccessAt": "2026-10-12T02:02:47Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 6,
-      "message": "후보 7건 중 6건 사용, 한국 참가 근거/마감 미확인 1건 제외, 조회 실패 0건 (계약 위반으로 1건 제외)"
+      "message": "후보 7건 중 6건 사용, 한국 참가 근거/마감 미확인 1건 제외, 조회 실패 0건"
     },
     {
       "id": "dacon",
       "name": "DACON",
       "url": "https://dacon.io/competitions",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:02:47Z",
-      "lastSuccessAt": "2026-10-12T02:02:47Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 10,
       "message": "AI 관련 후보 14건 중 14건 사용, 상세 조회 실패 0건"
     },
@@ -26,28 +26,28 @@
       "name": "위비티",
       "url": "https://www.wevity.com/?c=find&s=1&gub=1",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:02:47Z",
-      "lastSuccessAt": "2026-10-12T02:02:47Z",
-      "itemCount": 89,
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
+      "itemCount": 90,
       "message": "AI 관련 후보 89건(6페이지까지 확인) 중 89건 사용, 상세 조회 실패 0건"
     },
     {
       "id": "aisummit",
       "name": "AI Summit Seoul",
       "url": "https://www.aisummit.co.kr/",
-      "status": "ok",
-      "checkedAt": "2026-10-12T02:02:47Z",
+      "status": "error",
+      "checkedAt": "2026-10-12T05:29:11Z",
       "lastSuccessAt": "2026-10-12T02:02:47Z",
       "itemCount": 1,
-      "message": "노출 행사 2027년 2027-08-11~2027-08-13. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용"
+      "message": "응답 크기 상한 초과: https://www.aisummit.co.kr/"
     },
     {
       "id": "seocho",
       "name": "서초 AI 페스타",
       "url": "https://seochoai.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:10:52Z",
-      "lastSuccessAt": "2026-10-12T02:10:52Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 1,
       "message": "행사 2026-10-17~2026-10-17 서초문화예술공원"
     },
@@ -56,8 +56,8 @@
       "name": "NVIDIA AI Day Seoul",
       "url": "https://www.nvidia.com/ko-kr/ai-days/",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:10:52Z",
-      "lastSuccessAt": "2026-10-12T02:10:52Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 1,
       "message": "행사 2026-11-09~2026-11-10 코엑스, 등록 버튼 있음"
     },
@@ -66,8 +66,8 @@
       "name": "AI FESTA",
       "url": "https://www.aifesta.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-12T02:10:52Z",
-      "lastSuccessAt": "2026-10-12T02:10:52Z",
+      "checkedAt": "2026-10-12T05:29:11Z",
+      "lastSuccessAt": "2026-10-12T05:29:11Z",
       "itemCount": 1,
       "message": "행사 2026-10-06~2026-10-08 코엑스 C홀"
     }
