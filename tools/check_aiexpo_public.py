@@ -27,6 +27,10 @@ def main():
     assert len(items) == 1, items
     item = items[0]
     assert item["id"] == "aiexpo-119c9024b15a"
+    assert item["sourceUrl"] in (
+        "https://aiexpo.co.kr/%ec%a0%84%ec%8b%9c%ed%9a%8c-%ea%b0%9c%ec%9a%94/",
+        "https://www.showala.com/ex/ex_detail.php?idx=4273",
+    )
     assert item["verifiedAt"] == args.expected_at
     assert (item["startDate"], item["endDate"]) == ("2027-04-14", "2027-04-16")
     assert len(status["sources"]) == 10 and all(s["status"] == "ok" for s in status["sources"]), status

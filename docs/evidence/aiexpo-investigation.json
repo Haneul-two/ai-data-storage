@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-12",
+  "failingRun": "38225828342",
+  "robotsObservations": [
+    {"environment": "GitHub runner", "status": 202, "bytes": 179, "htmlChallenge": true, "attempts": 2},
+    {"environment": "local", "status": 200, "bytes": 157, "htmlChallenge": false}
+  ],
+  "cause": "GitHub execution environment sometimes receives an access challenge instead of robots.txt; content fetch is blocked without verified permission.",
+  "independentPublicRecord": "https://www.showala.com/ex/ex_detail.php?idx=4273",
+  "alternateVerifiedRun": "38261272189",
+  "alternateVerifiedDates": ["2027-04-14", "2027-04-16"],
+  "guards": ["robots", "exact host allowlist", "HTTPS certificate verification", "redirect", "2.5MB cap", "matching event identity and dates", "same final record", "no expired fallback"],
+  "primaryHttpChallengeBypassed": false,
+  "runtimeLlmCalls": 0,
+  "pythonTests": 241,
+  "nodeTests": 118,
+  "independentReviews": ["GPT-6 SOL static review passed; final-URL suggestion applied", "Claude static review passed; tests executed by root"],
+  "unavailableReview": "GPT-6 Astra usage limit; not counted as passed",
+  "productionPr": 5,
+  "productionRun": "38262223254"
+}

@@ -1,5 +1,13 @@
 # 검증표 (frontend/backend 4대 축)
 
+## AI EXPO 갱신 오류·운영 검증 (2026-10-12)
+
+- Python 241·Node 118 통과. 신규 12개 회귀로 대체 확인·출처 기록·기존 ID·잘못된 행사/연도/기간·이전 회차·robots/redirect/상한·두 경로 모두 실패 시 bytes 보존 검증. HTTP 안전 정책은 변경하지 않았다.
+- GPT-6 SOL 및 Claude 정적 교차 리뷰 통과. 최종 응답 URL 관련 개선 반영. 두 모델은 테스트를 실행하지 않았고 root가 실행했다.
+- PR #5 병합, 운영 run 38262223254 성공, 데이터 0fa3c6e Pages built 일치. 10출처 모두 ok, AI EXPO verifiedAt=lastSuccessAt=2026-10-12T14:20:56Z로 이번 run 시각과 엄격히 대조. 이번 운영은 기본 사이트 정상 응답, 독립 대체 경로는 별도 GitHub run 38261272189에서 실조회/파싱 확인.
+- 공개 Edge 1440/390에서 모든 출처 실패 알림 없음·목록 정상·overflow 없음·pageerror 0. 기존 행사 ID 유지·중복 없음, 데이터 169건 오프라인 계약 통과. 증거 `evidence/aiexpo-production.json`, `aiexpo-public-1440.png`, `aiexpo-public-390.png`.
+- 자동 cron 첫 실행은 미검증. 아래 표의 AI EXPO 차단/로컬 대기는 이 수정 이전의 역사적 관측이다. 대체 전시 기록의 다른 회차 등록 경로는 변경 시 재검토해야 한다.
+
 ## AI Summit 오류 수정·운영 검증 (2026-10-12)
 
 - Python 229개·Node 118개 통과. 운영 응답을 반영한 1.5MB 앞 padding은 성공, 2.6MB 뒤 날짜는 오류 처리. 기존 전역 2.5MB/robots/redirect 제한 유지.

@@ -1,5 +1,10 @@
 # HISTORY
 
+## 2026-10-13 — AI EXPO 복구 최종 확인
+
+- 01:04 UTC(10:04 KST) 공개 상태 재확인: 10개 출처 모두 ok, 마지막 수집 시각 2026-10-12T14:20:56Z. Edge 1440/390에서 실패 알림 없음·목록 정상 확인. 이전 검증 캡처·시각은 역사적 증거로 보존했다.
+- 기록 저장 중 도구 연결 종료가 있었으나 문서·증거 쓰기는 적용돼 있었다. git 상태와 결과 파일을 먼저 확인해 완료된 전체 수집을 중복 실행하지 않았다.
+
 ## 2026-10-12 — AI EXPO 갱신 실패 후속 수정
 
 - 원인: GitHub run 38225828342에서 robots.txt가 HTTP 202·179 bytes HTML challenge를 두 번 반환. 정상 정책을 확인할 수 없어 본문을 읽지 않고 차단했다. 로컬과 다른 GitHub 실행에서는 200이어서 실행 환경에 따라 반복되는 접근 확인임을 확인했다.
@@ -7,6 +12,8 @@
 - 실제 대체 경로: GitHub run 38261272189에서 SHOWALA robots/본문 조회·기간 파싱 성공(2027-04-14~16). 해당 실행에서는 원본 사이트도 200으로 정상 응답했으므로 실제 차단 회복과 독립 대체 경로 조회를 구분해서 기록한다.
 - 검증: 신규 12개 회귀, 전체 Python 241·Node 118 통과. GPT-6 SOL 정적 교차 리뷰의 최종 URL 기록 개선 반영, Claude 정적 교차 리뷰 차단 이슈 없음. 두 리뷰 모두 테스트 직접 실행은 하지 않았고 root가 실행했다. GPT-6 Astra 리뷰는 사용량 한도로 실패했으며 통과로 기록하지 않는다.
 - 보안/데이터: challenge 우회·UA 위장·robots/SSL 검증 약화 없음, 운영 LLM 호출 0. 원본 checkout/events.json 보존, 민감 연락처 없는 최소 fixture. 두 확인 경로가 모두 실패하면 이전 데이터 bytes와 verifiedAt 보존. `www.seoulmesse.com` 조사에서 TLS 검증 실패해 대체 경로로 채택하지 않았다.
+- 운영: PR #5 병합 9c6a449, run 38262223254 성공. 데이터 0fa3c6eabe2e48a8aa3b7dc499c843c25ac09d1d Pages built 일치, 10개 출처 모두 ok. 이 실행에서는 AI EXPO 직접 사이트가 정상 응답했고, 별도 runner 진단으로 대체 경로도 조회/파싱되는 것을 확인했다. 이번 실행이 대체 경로로 복구된 것처럼 기록하지 않는다.
+- 공개 검증: `tools/check_aiexpo_public.py --expected-at 2026-10-12T14:20:56Z` 통과. status의 checkedAt/lastSuccessAt와 항목 verifiedAt 모두 이번 run 시각과 일치, 기존 aiexpo-119c9024b15a ID 유지, 항목 1개. Edge 1440/390에서 모든 실패 알림 없음·목록 정상·overflow 없음·pageerror 0. 데이터 169건 오프라인 계약 통과, 공개 122건 확인. 증거 `docs/evidence/aiexpo-production.json`, `aiexpo-public-1440.png`, `aiexpo-public-390.png`.
 
 
 ## 2026-10-12 — AI Summit 갱신 오류 후속 수정
