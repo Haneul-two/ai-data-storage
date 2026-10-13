@@ -1,8 +1,8 @@
-# AI Radar (AI 기회 보드)
+# AI Radar
 
-> 국내 전체와 한국에서 참가할 수 있는 해외 온라인 **AI 행사 · 공모전 · 해커톤** 중 **아직 신청할 수 있는 것**을 마감일 기준으로 비교하고 저장하는 개인용 보드. 화면 이름은 AI Radar(브라우저 제목 포함)이며 저장소·운영 URL 이름은 그대로다.
+> 국내 전체와 한국에서 참가할 수 있는 해외 온라인 **AI 행사 · 공모전 · 해커톤** 중 **아직 신청할 수 있는 것**을 마감일 기준으로 비교하고 저장하는 개인용 보드. 화면 이름은 AI Radar(브라우저 제목 포함)이다. 폴더·저장소·운영 URL도 `ai-radar`로 맞출 예정이며 **아직 적용 전**이다(현재 운영 주소는 아래 참고).
 
-> 상태: 재설계(AI Radar)·신청 마감 제외·수집 확장은 **로컬 구현·검증까지 끝났고 원격 배포 전**이다. 운영 사이트는 아직 이전 화면이다. 현재 데이터 건수는 최종 수집 후 `docs/HISTORY.md`에 기록한다.
+> 상태: 재설계(AI Radar)·신청 마감 제외·10출처 수집 확장은 **2026-10-12 운영 반영 완료**(PR #3~#5)이며 10출처 모두 정상이다. 데이터 건수는 갱신마다 달라지므로 `docs/HISTORY.md`의 시점별 기록을 본다. 이름 변경(`ai-data-storage` → `ai-radar`)은 준비만 끝났고 사용자 확인·적용·새 주소 배포 검증 전이다.
 
 정적 HTML + ES modules + JSON 구조라 서버 없이 GitHub Pages에서 동작합니다. 데이터는 `collectors/opportunities/`(Python)가 만들고, 화면은 `data/opportunities.json`과 `data/ingest-status.json`만 읽습니다.
 
@@ -113,4 +113,4 @@ collectors/opportunities/   수집 파이프라인
 
 ## 배포
 
-운영 URL: https://haneul-two.github.io/ai-data-storage/ . GitHub Pages(Deploy from a branch, root). `design-lab/`도 root에 포함되므로 "배포 제외"가 아닙니다 — 링크하지 않을 뿐입니다. 완전히 제외하려면 이후 Pages artifact workflow가 필요합니다.
+운영 URL: https://haneul-two.github.io/ai-data-storage/ (현재, rename 적용 전). 저장소를 `Haneul-two/ai-radar`로 바꾸면 https://haneul-two.github.io/ai-radar/ 가 새 주소이며, 적용·검증 전까지 새 주소를 운영 사실로 쓰지 않는다. GitHub Pages(Deploy from a branch, root). `design-lab/`도 root에 포함되므로 "배포 제외"가 아닙니다 — 링크하지 않을 뿐입니다. 완전히 제외하려면 이후 Pages artifact workflow가 필요합니다.

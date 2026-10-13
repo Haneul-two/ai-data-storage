@@ -2,6 +2,7 @@
 
 기존 CLAUDE.md와 AGENTS.md의 작업 규칙을 먼저 읽고 적용한다. 이 파일은 배포 이후의 최신 상태를 기록한다.
 
+- 2026-10-13 이름 정리 준비: 폴더 `C:/Users/caring/Projects/ai-radar`, 저장소 `Haneul-two/ai-radar`, 공개 URL https://haneul-two.github.io/ai-radar/ 로 바꿀 예정. **전환 준비 완료, 사용자 확인·이름 변경·새 주소 배포 검증 전**이며 현재 폴더·저장소·운영 주소는 그대로다. 아래 과거 URL·검증 사실은 역사적 기록이다.
 - PR #3 병합으로 AI Radar 재설계·한국시간 신청 마감 제외·10출처 수집 확장을 공개 보드에 반영했다. https://haneul-two.github.io/ai-data-storage/.
 - 수동 운영 수집 38218333647 성공, 데이터 커밋 e94ce06871b91f372319f8fe19e228575beca497 Pages built 확인. 현재 보관 165건·노출 118건·마감/종료 제외 47건이며 갱신과 날짜에 따라 달라진다.
 - 검사: Python 228·Node 118·Edge UI 98 통과. 공개 데스크톱/모바일에서 독립 날짜 계산과 실제 노출 ID 일치, 한국어 행사 검색, 상세 Escape·포커스 복귀, 가로 넘침 없음, pageerror 0.

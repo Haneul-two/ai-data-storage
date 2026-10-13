@@ -1,5 +1,11 @@
 # HISTORY
 
+## 2026-10-13 — 이름 정리(ai-radar) 준비
+
+- 요청: 화면 제목이 AI Radar이므로 폴더명·저장소명·사이트 주소도 맞추고 싶다는 요청. 목표 — 폴더 `ai-radar`, 저장소 `Haneul-two/ai-radar`, 공개 URL https://haneul-two.github.io/ai-radar/ .
+- 준비 범위: README 소개·상태·운영 URL 문구, `tools/check_aisummit_public.py`·`check_aiexpo_public.py`의 BASE, AGENTS.override.md·`.claude/rules/ai-radar-state.md` 상태 기록. `index.html`의 상대 경로와 workflow의 `github.repository` 동적 참조는 이름 변경과 호환됨을 읽기로 확인했다. 수집 UA `ai-opportunity-board/1.0`, 가상환경, localStorage key, 데이터는 바꾸지 않았다.
+- **미적용**: 폴더 이동, 저장소 rename, remote 변경, 커밋·푸시·배포, 새 주소 검증은 하지 않았다. 사용자 확인 후 root가 적용하며 새 주소 Pages 빌드 확인 전에는 새 URL을 운영 사실로 쓰지 않는다. 이전 기록·증거의 옛 URL은 역사로 보존한다.
+
 ## 2026-10-13 — AI EXPO 복구 최종 확인
 
 - 01:04 UTC(10:04 KST) 공개 상태 재확인: 10개 출처 모두 ok, 마지막 수집 시각 2026-10-12T14:20:56Z. Edge 1440/390에서 실패 알림 없음·목록 정상 확인. 이전 검증 캡처·시각은 역사적 증거로 보존했다.

@@ -2,6 +2,7 @@
 
 작업 전에 [AGENTS.md](AGENTS.md)와 [CLAUDE.md](CLAUDE.md)를 읽고 기존 작업 규칙을 적용한다. 이 보완 파일은 운영 상태와 검증 시점을 갱신한다. 기존 파일 편집은 Claude, 새 파일 작성·조사·검증은 Codex라는 사용자 규칙은 유지하며, 이번 AI Summit·AI EXPO 갱신 오류 수정은 사용자 `너가 수정해줘` 승인과 후속 진행 요청으로 Codex가 직접 편집했다.
 
+- 2026-10-13 이름 정리 준비: 폴더 `C:/Users/caring/Projects/ai-radar`, 저장소 `Haneul-two/ai-radar`, 공개 URL https://haneul-two.github.io/ai-radar/ 로 바꿀 예정. **전환 준비 완료, 사용자 확인·이름 변경·새 주소 배포 검증 전**이며 현재 폴더·저장소·운영 주소는 그대로다. 아래 과거 URL·검증 사실은 역사적 기록이다.
 - 2026-10-12: AI Radar 재설계·신청 마감 제외·10개 출처 확장을 **운영 반영했다**. PR #3 병합, 공개 사이트 https://haneul-two.github.io/ai-data-storage/.
 - Python 228개·Node 118개·실제 Edge UI 98개 통과. GPT 6.1 SOL(max) 디자인 조사·리뷰, Claude 구현, Codex 독립 코드·화면 검증 완료.
 - 수동 운영 수집 run 38218333647 성공. 데이터 커밋 e94ce06871b91f372319f8fe19e228575beca497과 Pages built 일치. 보관 165건, 공개 노출 118건(공모전 82·행사 22·해커톤 14), 마감·종료 47건 제외. 수치는 날짜와 갱신에 따라 변한다.
