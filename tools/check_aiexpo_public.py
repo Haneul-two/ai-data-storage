@@ -8,7 +8,7 @@ import requests
 from playwright.sync_api import expect, sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = "https://haneul-two.github.io/ai-data-storage/"
+BASE = "https://haneul-two.github.io/ai-radar/"
 
 
 def main():

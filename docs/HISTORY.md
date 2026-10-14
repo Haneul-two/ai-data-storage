@@ -1,5 +1,23 @@
 # HISTORY
 
+## 2026-10-14 — 이름 정리(ai-radar) 적용: 폴더·저장소·remote 완료, 새 주소 배포 검증 후속
+
+- 승인: 사용자 `이어서진행해줘`로 root가 추천안을 적용했다. 이 항목은 그 결과를 상태 문서에 동기화한 기록이다(Claude 편집, Codex 독립 리뷰 예정).
+- 폴더: 활성 폴더를 `C:/Users/caring/Projects/ai-radar`로 이동했다. 원본 `AI-DATA-STORAGE` checkout은 보호 유지.
+- 환경: 기존 `.venv`는 이동 시 실행기 절대 경로가 달라지므로 `C:/Users/caring/Projects/_backups/ai-radar-venv-20261014`로 이동·보존(삭제 없음)하고, 새 폴더 `.venv`를 동일한 13개 버전으로 복구했다.
+- 저장소: GitHub PATCH 성공 — `Haneul-two/ai-radar`, homepage https://haneul-two.github.io/ai-radar/, description `AI Radar 국내참가AI행사공모전해커톤탐색`. **기존 저장소의 이름 변경이며 새 저장소 생성이 아니다.** rename 전에 기존 원격의 최신 자동 데이터 갱신을 보존 병합했다.
+- remote: origin을 `https://github.com/Haneul-two/ai-radar.git`로 변경, `git ls-remote` master 791a56c 성공. Pages API html_url은 새 주소이고 source는 master/root 그대로.
+- 호환 검증(새 경로): Python 3.11.15/pip 24 CLI 동작, 전체 Python 241 OK · Node 118 pass, 현재 데이터 175건 `--offline` 계약 통과.
+- 예약 실행 확인: run 38508066853(2026-10-14T03:47:32Z)과 38352906516(2026-10-13T05:44:01Z) 모두 event=schedule·conclusion=success. 이로써 "예약 cron 첫 실행 미검증"은 해소됐다. 단 cron 설정은 UTC 00:00(KST 09:00)이고 실제 실행은 위 시각이므로 정시에 실행됐다고 단정하지 않는다.
+- **후속(미실시)**: 새 주소 https://haneul-two.github.io/ai-radar/ 의 Pages build 확인, 공개 JSON 일치, PC/모바일 브라우저 검증. 완료 전에는 새 URL을 정상 서비스로 쓰지 않는다. 이전 주소는 자동 연결되지 않아 사용자가 북마크를 갱신해야 한다.
+- 보존: 아래 2026-10-13 준비 항목의 "미적용" 서술, 과거 URL, 증거 기록은 당시 사실이므로 바꾸지 않았다.
+
+## 2026-10-13 — 이름 정리(ai-radar) 준비
+
+- 요청: 화면 제목이 AI Radar이므로 폴더명·저장소명·사이트 주소도 맞추고 싶다는 요청. 목표 — 폴더 `ai-radar`, 저장소 `Haneul-two/ai-radar`, 공개 URL https://haneul-two.github.io/ai-radar/ .
+- 준비 범위: README 소개·상태·운영 URL 문구, `tools/check_aisummit_public.py`·`check_aiexpo_public.py`의 BASE, AGENTS.override.md·`.claude/rules/ai-radar-state.md` 상태 기록. `index.html`의 상대 경로와 workflow의 `github.repository` 동적 참조는 이름 변경과 호환됨을 읽기로 확인했다. 수집 UA `ai-opportunity-board/1.0`, 가상환경, localStorage key, 데이터는 바꾸지 않았다.
+- **미적용**: 폴더 이동, 저장소 rename, remote 변경, 커밋·푸시·배포, 새 주소 검증은 하지 않았다. 사용자 확인 후 root가 적용하며 새 주소 Pages 빌드 확인 전에는 새 URL을 운영 사실로 쓰지 않는다. 이전 기록·증거의 옛 URL은 역사로 보존한다.
+
 ## 2026-10-13 — AI EXPO 복구 최종 확인
 
 - 01:04 UTC(10:04 KST) 공개 상태 재확인: 10개 출처 모두 ok, 마지막 수집 시각 2026-10-12T14:20:56Z. Edge 1440/390에서 실패 알림 없음·목록 정상 확인. 이전 검증 캡처·시각은 역사적 증거로 보존했다.
