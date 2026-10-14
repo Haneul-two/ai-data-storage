@@ -74,3 +74,10 @@
 - `tools/run_claude.py`의 `.cmd` 조건부 위험은 이 환경에 해당하지 않는다(`shutil.which('claude')`·`Get-Command` 모두 `C:/Users/caring/.local/bin/claude.EXE`). 내부 전용이며 사용자 승인 범위의 고정 명세 파일만 전달하고, 독립 읽기 호출은 `--read-only`.
 - Codex 리뷰 보완(2026-10-12, 로컬): NVIDIA 한국어 검색 태그·dateNote 문구·JSON-LD EventCancelled→closed 반영. Python 142 · Node 107 · offline 통과, 3개 출처만 재확인 병합(109건, 출처 7곳 유지). **수정분 재리뷰·브라우저 검증·원격 반영은 root 몫으로 대기.**
 - 확장 운영 반영 실측(2026-10-12, 공개): PR #2 병합(merge 04a31cd, Test 38208115198·Pages 38208115264 success), 운영 수동 update run 38208115725 success(data commit 5b822b9). 110건, **6출처 ok + aisummit error**(응답 2.5MB 상한 초과, 이전 1건·검증 시각 보존; 부분 실패로 기록하며 7출처 성공이 아님). 공개 보드 실Edge 1440/390 8검사 통과·pageErrors 0(`docs/evidence/expanded-public.json`·png). 종료 필터 2검사: AI FESTA 26 status closed 1건(종료 표시), status open 0건. 5b822b9의 Pages built 확인(builds/latest built, 공개 JSON updatedAt 2026-10-12T05:29:11Z·110건 일치, 공개 browser 8검사 재통과·pageErrors 0; `docs/evidence/expanded-deployment.json`). **예약 자동 실행은 미확인.** 위 '로컬 109건' 항목은 과거 로컬 기록으로 보존한다.
+
+## 이름 변경(ai-radar) 최신 검증 — 2026-10-14
+
+- 병합·배포: PR #6 병합 2cc8744, 새 저장소 Test 38531497891·Pages 38531500212 success, Pages API built=2cc8744. 중복 Pages 38531498169는 cancelled라 통과에 세지 않는다.
+- 공개 검사(`tools/check_naming_public.py`, 2026-10-14T07:59:28Z 실실행 통과): https://haneul-two.github.io/ai-radar/ 공개 JSON이 로컬 배포본과 정확히 일치(datasetUpdatedAt 2026-10-14T03:47:46Z, 보관 175·노출 118, 10출처 ok). Edge 1440/390에서 브랜드·title AI Radar, notice 없음, `AI EXPO` 검색에 기존 ID aiexpo-119c9024b15a 포함, 가로 넘침 0, pageerror·requestfailed 0. 증거 `docs/evidence/naming-production.json`·`naming-public-1440.png`·`naming-public-390.png`.
+- 환경: Python 241 · Node 118 통과(기록됨), 옛 venv 백업 보존·동일 13개 복구. `ENABLE_OPPORTUNITY_UPDATES=true` 승계, 이름 변경 후 별도 전체 수집은 하지 않았고 현재 데이터·설정 호환성만 확인했다.
+- 한계: 위 검사 범위 밖(실기기, 다음 예약 수집 등)까지 통과했다는 뜻이 아니다. 도구 첫 실패는 검증 조건 오류(HISTORY 참조)였고 앱 변경은 없었다.

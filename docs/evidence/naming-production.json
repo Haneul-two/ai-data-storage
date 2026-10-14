@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-14T07:59:28.429968+00:00",
+  "url": "https://haneul-two.github.io/ai-radar/",
+  "datasetUpdatedAt": "2026-10-14T03:47:46Z",
+  "storedItems": 175,
+  "sourceStatuses": {
+    "devpost": "ok",
+    "dacon": "ok",
+    "wevity": "ok",
+    "aisummit": "ok",
+    "seocho": "ok",
+    "nvidia": "ok",
+    "aifesta": "ok",
+    "contestkorea": "ok",
+    "devevent": "ok",
+    "aiexpo": "ok"
+  },
+  "checks": [
+    {
+      "width": 1440,
+      "titleAndBrand": true,
+      "noticesEmpty": true,
+      "resultCount": "118건",
+      "search": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "titleAndBrand": true,
+      "noticesEmpty": true,
+      "resultCount": "118건",
+      "search": true,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "repository": "https://github.com/Haneul-two/ai-radar",
+  "folder": "C:/Users/caring/Projects/ai-radar",
+  "environmentBackup": "C:/Users/caring/Projects/_backups/ai-radar-venv-20261014",
+  "environmentPackages": 13,
+  "pythonTests": 241,
+  "nodeTests": 118,
+  "mergedPr": 6,
+  "deployedCommit": "2cc8744fe024d1f88c6eb94bc88ead6b4d48f1e3",
+  "pagesRun": "38531500212",
+  "testRun": "38531497891",
+  "pagesStatus": "built"
+}

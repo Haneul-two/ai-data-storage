@@ -1,6 +1,6 @@
 # HISTORY
 
-## 2026-10-14 — 이름 정리(ai-radar) 적용: 폴더·저장소·remote 완료, 새 주소 배포 검증 후속
+## 2026-10-14 — 이름 정리(ai-radar) 적용: 폴더·저장소·remote·새 주소 배포 검증 완료
 
 - 승인: 사용자 `이어서진행해줘`로 root가 추천안을 적용했다. 이 항목은 그 결과를 상태 문서에 동기화한 기록이다(Claude 편집, Codex 독립 리뷰 예정).
 - 폴더: 활성 폴더를 `C:/Users/caring/Projects/ai-radar`로 이동했다. 원본 `AI-DATA-STORAGE` checkout은 보호 유지.
@@ -9,7 +9,10 @@
 - remote: origin을 `https://github.com/Haneul-two/ai-radar.git`로 변경, `git ls-remote` master 791a56c 성공. Pages API html_url은 새 주소이고 source는 master/root 그대로.
 - 호환 검증(새 경로): Python 3.11.15/pip 24 CLI 동작, 전체 Python 241 OK · Node 118 pass, 현재 데이터 175건 `--offline` 계약 통과.
 - 예약 실행 확인: run 38508066853(2026-10-14T03:47:32Z)과 38352906516(2026-10-13T05:44:01Z) 모두 event=schedule·conclusion=success. 이로써 "예약 cron 첫 실행 미검증"은 해소됐다. 단 cron 설정은 UTC 00:00(KST 09:00)이고 실제 실행은 위 시각이므로 정시에 실행됐다고 단정하지 않는다.
-- **후속(미실시)**: 새 주소 https://haneul-two.github.io/ai-radar/ 의 Pages build 확인, 공개 JSON 일치, PC/모바일 브라우저 검증. 완료 전에는 새 URL을 정상 서비스로 쓰지 않는다. 이전 주소는 자동 연결되지 않아 사용자가 북마크를 갱신해야 한다.
+- **새 주소 배포 검증(완료, root 실측)**: PR #6 병합 2cc8744fe024d1f88c6eb94bc88ead6b4d48f1e3, 새 저장소 Test 38531497891·Pages 38531500212 success, Pages API built=2cc8744. 중복 Pages 38531498169는 cancelled라 통과에 세지 않는다. 2026-10-14T07:59:28Z `tools/check_naming_public.py` 실실행 통과 — https://haneul-two.github.io/ai-radar/ 공개 JSON이 로컬 배포본과 정확히 일치(datasetUpdatedAt 2026-10-14T03:47:46Z, 보관 175·노출 118, 10출처 모두 ok), Edge 1440/390 브랜드·title AI Radar, notice 없음, `AI EXPO` 검색 결과에 기존 ID aiexpo-119c9024b15a 1건, overflow 0, pageerror/requestfailed 0. 증거 `docs/evidence/naming-production.json`·`naming-public-1440.png`·`naming-public-390.png`. 정상 서비스 표현은 이 검증 범위에 한한다. 이전 주소는 자동 연결되지 않아 사용자가 북마크를 갱신해야 한다.
+- 환경·설정: 새 경로 폴더/remote·GitHub homepage 완료, 원본 폴더 보호, 옛 venv 백업 `C:/Users/caring/Projects/_backups/ai-radar-venv-20261014/` 보존·동일 13개 복구. `ENABLE_OPPORTUNITY_UPDATES=true` 승계, schedule 실제 성공 2회는 위에 기록. 이름 변경 후 별도 전체 수집은 중복 실행하지 않고 현재 데이터·설정 호환성만 확인했다.
+- 검증 도구 실수: `check_naming_public.py` 첫 실행이 실패했다. 원인은 앱이 아니라 검증 조건 — 첫 검색 결과를 AI EXPO라 단정했으나 `AI Summit Seoul & EXPO`도 검색에 맞는 정당한 결과였다. 앱 변경 없이 조건을 검색어 포함 + 지정 ID 포함으로 고쳐 통과시켰다.
+- 편집 권한 기록: `.claude/rules/ai-radar-state.md`는 민감 파일 권한으로 편집이 거부돼 이번에 고치지 못했고 우회하지 않았다. 그 파일의 "2026-10-13 이름 정리 준비 … 검증 전" 문구는 과거 기록이며, 최신 사실은 `AGENTS.override.md`·`README.md`·이 HISTORY를 따른다.
 - 보존: 아래 2026-10-13 준비 항목의 "미적용" 서술, 과거 URL, 증거 기록은 당시 사실이므로 바꾸지 않았다.
 
 ## 2026-10-13 — 이름 정리(ai-radar) 준비

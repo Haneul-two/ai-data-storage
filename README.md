@@ -1,8 +1,8 @@
 # AI Radar
 
-> 국내 전체와 한국에서 참가할 수 있는 해외 온라인 **AI 행사 · 공모전 · 해커톤** 중 **아직 신청할 수 있는 것**을 마감일 기준으로 비교하고 저장하는 개인용 보드. 화면 이름은 AI Radar(브라우저 제목 포함)이다. 폴더·저장소·공개 URL 이름도 `ai-radar`로 **변경을 마쳤다**(2026-10-14). 새 주소의 Pages 빌드·화면 검증은 후속이다(아래 배포 참고).
+> 국내 전체와 한국에서 참가할 수 있는 해외 온라인 **AI 행사 · 공모전 · 해커톤** 중 **아직 신청할 수 있는 것**을 마감일 기준으로 비교하고 저장하는 개인용 보드. 화면 이름은 AI Radar(브라우저 제목 포함)이다. 폴더·저장소·공개 URL 이름도 `ai-radar`로 **변경을 마쳤다**(2026-10-14). 새 주소의 Pages 빌드와 공개 화면 검증도 마쳤다(아래 배포 참고).
 
-> 상태: 재설계(AI Radar)·신청 마감 제외·10출처 수집 확장은 **2026-10-12 운영 반영 완료**(PR #3~#5)이며 10출처 모두 정상이다. 데이터 건수는 갱신마다 달라지므로 `docs/HISTORY.md`의 시점별 기록을 본다. 이름 변경(`ai-data-storage` → `ai-radar`)은 활성 폴더·GitHub 저장소·origin 모두 완료됐고, **새 주소(`/ai-radar/`)의 Pages 빌드·브라우저 검증만 후속**이다.
+> 상태: 재설계(AI Radar)·신청 마감 제외·10출처 수집 확장은 **2026-10-12 운영 반영 완료**(PR #3~#5)이며 10출처 모두 정상이다. 데이터 건수는 갱신마다 달라지므로 `docs/HISTORY.md`의 시점별 기록을 본다. 이름 변경(`ai-data-storage` → `ai-radar`)은 활성 폴더·GitHub 저장소·origin 모두 완료됐고, **새 주소(`/ai-radar/`)의 Pages 빌드(PR #6 병합 2cc8744, built)와 공개 브라우저 검증(2026-10-14)도 통과**했다.
 
 정적 HTML + ES modules + JSON 구조라 서버 없이 GitHub Pages에서 동작합니다. 데이터는 `collectors/opportunities/`(Python)가 만들고, 화면은 `data/opportunities.json`과 `data/ingest-status.json`만 읽습니다.
 
@@ -113,4 +113,4 @@ collectors/opportunities/   수집 파이프라인
 
 ## 배포
 
-공개 URL: https://haneul-two.github.io/ai-radar/ (저장소 `Haneul-two/ai-radar`, 기존 저장소의 이름 변경). GitHub Pages API의 주소와 source(master/root)는 새 이름으로 확인했지만, **새 주소의 Pages 빌드와 브라우저 검증은 아직 하지 않았다** — 검증 전까지 새 주소가 정상 서비스 중이라고 단정하지 않는다. 이전 주소 https://haneul-two.github.io/ai-data-storage/ 는 GitHub이 자동으로 연결해 주지 않는 과거 URL이므로, 북마크는 직접 새 주소로 바꿔야 한다. GitHub Pages(Deploy from a branch, root). `design-lab/`도 root에 포함되므로 "배포 제외"가 아닙니다 — 링크하지 않을 뿐입니다. 완전히 제외하려면 이후 Pages artifact workflow가 필요합니다.
+공개 URL: https://haneul-two.github.io/ai-radar/ (저장소 `Haneul-two/ai-radar`, 기존 저장소의 이름 변경). GitHub Pages API의 주소와 source(master/root)를 새 이름으로 확인했고, PR #6 병합 2cc8744의 Pages 빌드가 built임을 확인했다. 2026-10-14T07:59:28Z `tools/check_naming_public.py` 실행에서 공개 JSON이 로컬 배포본과 일치하고(보관 175건·노출 118건, 10출처 모두 ok) Edge 1440/390 화면(제목·브랜드 AI Radar, 알림 없음, 가로 넘침 0, pageerror·requestfailed 0)이 통과했다 — 이 실제 검증 범위 안에서만 새 주소가 정상 서비스 중이라고 쓴다(증거 `docs/evidence/naming-production.json`). 이전 주소 https://haneul-two.github.io/ai-data-storage/ 는 GitHub이 자동으로 연결해 주지 않는 과거 URL이므로, 북마크는 직접 새 주소로 바꿔야 한다. GitHub Pages(Deploy from a branch, root). `design-lab/`도 root에 포함되므로 "배포 제외"가 아닙니다 — 링크하지 않을 뿐입니다. 완전히 제외하려면 이후 Pages artifact workflow가 필요합니다.
