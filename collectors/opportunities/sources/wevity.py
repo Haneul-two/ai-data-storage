@@ -8,6 +8,7 @@ from .. import rules
 from ..errors import FetchError, StructureError
 from ..urlsafe import is_safe_https_url
 from .base import CollectResult, domestic_region, fail_if_every_fetch_failed
+from . import wevity_body
 from .dacon import infer_mode
 
 SOURCE_ID = "wevity"
@@ -80,8 +81,9 @@ def parse_detail(text):
     homepage = (fields.get("홈페이지") or {}).get("href")
     descriptions = []
     body = soup.select_one("#viewContents")
+    body_text = body.get_text("\n") if body is not None else ""
     if body is not None:
-        for line in body.get_text("\n").splitlines():
+        for line in body_text.splitlines():
             line = line.strip().lstrip("■▶●◆※-· ").strip()
             if len(line) >= 25:
                 descriptions.append(line)
@@ -97,24 +99,29 @@ def parse_detail(text):
         "period": period, "target": (fields.get("응모대상") or {}).get("text") or None,
         "organizer": (fields.get("주최/주관") or {}).get("text") or None,
         "homepage": homepage if homepage and not own_site and is_safe_https_url(homepage) else None,
-        "prize": prize, "descriptions": descriptions,
+        "prize": prize, "descriptions": descriptions, "body": body_text,
     }
 
 
 def build_raw(row, detail):
     title = row["title"]
+    body = detail.get("body", "")
+    kind = rules.classify_kind(title, "contest")
     mode = infer_mode(title, "")
+    if mode == "unknown":  # 제목에 방식이 없을 때만 본문 접수·진행 문장으로 판단
+        mode = wevity_body.infer_mode(body, kind)
     start, end = detail["period"] if detail["period"] else (None, None)
+    deadline_at = wevity_body.deadline_at(body, end)
     target = detail["target"]
     page = detail_url(row["ix"])
     return {
-        "kind": rules.classify_kind(title, "contest"), "title": title, "organizer": detail["organizer"] or row["organizer"],
+        "kind": kind, "title": title, "organizer": detail["organizer"] or row["organizer"],
         "description": next((d for d in detail["descriptions"] if d not in title), title), "tags": ["AI"], "mode": mode,
         "region": domestic_region(mode), "country": "KR",
-        "startDate": None, "endDate": None, "registrationStartDate": start, "deadlineDate": end, "deadlineAt": None,
-        "eligibility": target or rules.UNKNOWN_TEXT, "eligibilityVerified": bool(target), "fee": rules.UNKNOWN_TEXT,
+        "startDate": None, "endDate": None, "registrationStartDate": start, "deadlineDate": end, "deadlineAt": deadline_at,
+        "eligibility": target or rules.UNKNOWN_TEXT, "eligibilityVerified": bool(target), "fee": wevity_body.fee(body) or rules.UNKNOWN_TEXT,
         "prize": detail["prize"], "url": detail["homepage"] or page, "sourceUrl": page, "sourceName": SOURCE_NAME,
-        "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)" if end else "접수 기간 확인 필요",
+        "dateNote": ("마감 시각은 위비티 상세 본문 기준" if deadline_at else "날짜만 제공(시각 미확인, 접수기간 원문 기준)") if end else "접수 기간 확인 필요",
         "sourceStatus": row["sourceStatus"],
     }
 
