@@ -560,6 +560,19 @@ class WevityTest(unittest.TestCase):
         self.assertEqual(d["prize"], "다양한 혜택 / 1등 500만원")
         self.assertIsNone(d["homepage"])
 
+    def test_build_raw_reads_mode_deadline_time_and_fee_from_body(self):
+        html = fixture("wevity_detail.html").replace(
+            "<div>문의:", "<div>■ 접수기간 : 2026. 9. 21.(월) ~ 10. 10.(토) 18:00까지</div><div>- 접수 방법 : 구글폼 제출</div>"
+                          "<div>- 참가비: 무료</div><div>문의:")
+        row = {"ix": "111322", "title": "2026 AI 활용 숏폼 영상 공모전", "organizer": None, "sourceStatus": "open"}
+        raw = wevity.build_raw(row, wevity.parse_detail(html))
+        self.assertEqual((raw["mode"], raw["region"]), ("online", "국내 온라인"))
+        self.assertEqual(raw["deadlineAt"], "2026-10-10T18:00:00+09:00")
+        self.assertEqual(raw["fee"], "무료")
+        self.assertIn("본문", raw["dateNote"])
+        plain = wevity.build_raw(row, wevity.parse_detail(fixture("wevity_detail.html")))
+        self.assertEqual((plain["mode"], plain["deadlineAt"], plain["fee"]), ("unknown", None, "확인 필요"))
+
     def test_collect_filters_locally_and_masks(self):
         pages = {wevity.LISTING_URL: fixture("wevity_listing.html"), f"{wevity.LISTING_URL}&gp=2": fixture("wevity_empty.html"),
                  wevity.detail_url("111322"): fixture("wevity_detail.html")}
